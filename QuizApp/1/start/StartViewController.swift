@@ -10,9 +10,9 @@ import UIKit
 class StartViewController: UIViewController {
 
     @IBOutlet weak var image: UIImageView?
-    @IBOutlet weak var button: UIButton?
     override func viewDidLoad() {
         super.viewDidLoad()
+        setBackground()
         
        
 //        let storyboard = UIStoryboard(name: "StartViewController", bundle: nil)
@@ -27,20 +27,13 @@ class StartViewController: UIViewController {
     
     func setBackground(){
         image?.image = UIImage(named: "Logo")
-        button?.setTitle("next", for: .normal)
         //self.view.backgroundColor = UIColor.
-    }
-    
-    @IBAction func didTapButton(){
-            // gọi storyboard
         let storyboard = UIStoryboard(name: "Introduce1ViewController", bundle: nil)
         let introduce1 = storyboard.instantiateViewController(withIdentifier: "Introduce1ViewController") as! Introduce1ViewController
         let rootView = UINavigationController(rootViewController: introduce1)
-        present(rootView,animated:true)
+        SceneDelegate.shared?.changeRootController(rootView)
+        
     }
-    
-    
-    
 
     /*
     // MARK: - Navigation

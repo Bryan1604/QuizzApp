@@ -7,34 +7,30 @@
 
 import UIKit
 
-class Introduce1ViewController: UIViewController {
+class Introduce2ViewController: UIViewController {
 
-    var currentPage = 0
+    var currentPage = 1
     
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var image: UIImageView!
     @IBOutlet var label: UILabel!
-    @IBOutlet var button: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackground()
-        print("check")
     }
     
     func setBackground(){
-        image.image = UIImage(named: "Illustration")
-        label.text = "Tạo các câu đố được chơi game trở nên đơn giản"
+        image.image = UIImage(named: "Illustration-3")
+        label.text = "Tìm các câu đố để kiểm tra kiến ​​thức của bạn"
         pageControl.currentPage = currentPage
     }
     
     @IBAction func didTapButton(){
-        print("check")
-        let storyboard2 = UIStoryboard(name: "Introduce2ViewController", bundle: nil)
-        let introduce2 = storyboard2.instantiateViewController(withIdentifier: "Introduce2ViewController") as! Introduce2ViewController
-        navigationController?.pushViewController(introduce2, animated: true)
-        //present(introduce1, animated: true)
-        print("check2")
+        let storyboard = UIStoryboard(name: "Introduce3ViewController", bundle: nil)
+        let introduce1 = storyboard.instantiateViewController(withIdentifier: "Introduce3ViewController") as! Introduce3ViewController
+        navigationController?.pushViewController(introduce1, animated: true)
+        
     }
     
 
@@ -48,4 +44,10 @@ class Introduce1ViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
+
+struct Page{
+    let image: String
+    let title: String
+    let currentPage: Int
 }
