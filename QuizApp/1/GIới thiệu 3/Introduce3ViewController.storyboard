@@ -32,6 +32,9 @@
                                 <rect key="frame" x="167" y="760" width="80" height="70"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Button"/>
+                                <connections>
+                                    <action selector="didTapButton" destination="665-1G-bwW" eventType="touchUpInside" id="ZLD-Hc-Bcx"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AG8-kK-6l3">
                                 <rect key="frame" x="32" y="76" width="350" height="509.5"/>

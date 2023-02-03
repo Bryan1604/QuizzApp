@@ -25,9 +25,11 @@ class Introduce3ViewController: UIViewController {
         pageControl.currentPage = currentPage
     }
     
-//    @IBAction func didTapButton(){
-//        let storyboard4 = UIStoryboard(name: "", bundle: <#T##Bundle?#>)
-//    }
+    @IBAction func didTapButton(){
+        let storyboard4 = UIStoryboard(name: "Introduce4ViewController", bundle: nil)
+        let introduce4 = storyboard4.instantiateViewController(withIdentifier: "Introduce4ViewController") as! Introduce4ViewController
+        navigationController?.pushViewController(introduce4, animated: false)
+    }
     /*
     // MARK: - Navigation
 
