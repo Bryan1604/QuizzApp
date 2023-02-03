@@ -12,7 +12,7 @@ class Introduce1ViewController: UIViewController {
     var currentPage = 0
     
     @IBOutlet var pageControl: UIPageControl!
-    @IBOutlet var image: UIImageView!
+    //@IBOutlet var image: UIImageView!
     @IBOutlet var label: UILabel!
     @IBOutlet var button: UIButton!
     
@@ -23,18 +23,15 @@ class Introduce1ViewController: UIViewController {
     }
     
     func setBackground(){
-        image.image = UIImage(named: "Illustration")
+        //image.image = UIImage(named: "Illustration")
         label.text = "Tạo các câu đố được chơi game trở nên đơn giản"
         pageControl.currentPage = currentPage
     }
     
     @IBAction func didTapButton(){
-        print("check")
         let storyboard2 = UIStoryboard(name: "Introduce2ViewController", bundle: nil)
         let introduce2 = storyboard2.instantiateViewController(withIdentifier: "Introduce2ViewController") as! Introduce2ViewController
         navigationController?.pushViewController(introduce2, animated: true)
-        //present(introduce1, animated: true)
-        print("check2")
     }
     
 

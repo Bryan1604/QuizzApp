@@ -12,65 +12,76 @@
         <!--Introduce1 View Controller-->
         <scene sceneID="4pa-ig-iBl">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CW8-c4-Jkb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="Introduce1ViewController" id="k98-dg-tki" customClass="Introduce1ViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Introduce1ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k98-dg-tki" customClass="Introduce1ViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FE7-C4-nvX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="nZl-dn-sSh">
-                                <rect key="frame" x="149" y="735" width="116" height="26"/>
+                                <rect key="frame" x="149" y="702" width="116" height="26"/>
                                 <color key="pageIndicatorTintColor" name="Color"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="linkColor"/>
                             </pageControl>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xBg-wc-MPo">
-                                <rect key="frame" x="32" y="92" width="350" height="526.5"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTp-Bw-S8U">
-                                <rect key="frame" x="32" y="682.5" width="350" height="20.5"/>
+                                <rect key="frame" x="32" y="649.5" width="350" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mq5-o7-8fb">
-                                <rect key="frame" x="173.5" y="793" width="67" height="37"/>
+                                <rect key="frame" x="167" y="760" width="80" height="70"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Button"/>
                                 <connections>
                                     <action selector="didTapButton" destination="k98-dg-tki" eventType="touchUpInside" id="xHW-ks-7mD"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Got-Ka-UxY">
+                                <rect key="frame" x="32" y="92" width="350" height="493.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Illustration" translatesAutoresizingMaskIntoConstraints="NO" id="xBg-wc-MPo">
+                                        <rect key="frame" x="0.0" y="131.5" width="350" height="231"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.38823529411764707" green="0.61176470588235299" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="xBg-wc-MPo" firstAttribute="centerY" secondItem="Got-Ka-UxY" secondAttribute="centerY" id="N2E-io-NYT"/>
+                                    <constraint firstItem="xBg-wc-MPo" firstAttribute="centerX" secondItem="Got-Ka-UxY" secondAttribute="centerX" id="hhJ-u6-aZk"/>
+                                    <constraint firstAttribute="trailing" secondItem="xBg-wc-MPo" secondAttribute="trailing" id="re5-am-ZpS"/>
+                                    <constraint firstItem="xBg-wc-MPo" firstAttribute="leading" secondItem="Got-Ka-UxY" secondAttribute="leading" id="xkr-9L-Xgr"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8FV-uu-XDo"/>
-                        <color key="backgroundColor" red="0.57254901960000004" green="0.73725490199999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.38823529411764707" green="0.61176470588235299" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HTp-Bw-S8U" firstAttribute="centerX" secondItem="8FV-uu-XDo" secondAttribute="centerX" id="0OB-gn-WMK"/>
-                            <constraint firstItem="HTp-Bw-S8U" firstAttribute="top" secondItem="xBg-wc-MPo" secondAttribute="bottom" constant="64" id="DX3-wN-kic"/>
-                            <constraint firstItem="nZl-dn-sSh" firstAttribute="top" secondItem="HTp-Bw-S8U" secondAttribute="bottom" constant="32" id="Ebd-Aw-UF9"/>
+                            <constraint firstItem="8FV-uu-XDo" firstAttribute="trailing" secondItem="Got-Ka-UxY" secondAttribute="trailing" constant="32" id="1Fk-Eq-g1I"/>
+                            <constraint firstItem="nZl-dn-sSh" firstAttribute="top" secondItem="HTp-Bw-S8U" secondAttribute="bottom" constant="32" id="5bd-wa-oDS"/>
+                            <constraint firstItem="Got-Ka-UxY" firstAttribute="leading" secondItem="8FV-uu-XDo" secondAttribute="leading" constant="32" id="DVa-Ie-bes"/>
                             <constraint firstItem="Mq5-o7-8fb" firstAttribute="centerX" secondItem="8FV-uu-XDo" secondAttribute="centerX" id="GP1-Eq-XBE"/>
-                            <constraint firstAttribute="bottom" secondItem="nZl-dn-sSh" secondAttribute="bottom" constant="135" id="LAV-G8-6Od"/>
-                            <constraint firstItem="xBg-wc-MPo" firstAttribute="centerX" secondItem="8FV-uu-XDo" secondAttribute="centerX" id="LF8-7A-jVF"/>
-                            <constraint firstItem="8FV-uu-XDo" firstAttribute="trailing" secondItem="xBg-wc-MPo" secondAttribute="trailing" constant="32" id="Pe4-gu-Nc9"/>
-                            <constraint firstItem="Mq5-o7-8fb" firstAttribute="top" secondItem="nZl-dn-sSh" secondAttribute="bottom" constant="32" id="Yrx-b8-zS6"/>
-                            <constraint firstItem="8FV-uu-XDo" firstAttribute="bottom" secondItem="Mq5-o7-8fb" secondAttribute="bottom" constant="32" id="cNo-gg-45z"/>
-                            <constraint firstItem="xBg-wc-MPo" firstAttribute="leading" secondItem="8FV-uu-XDo" secondAttribute="leading" constant="32" id="cva-e0-Zrq"/>
+                            <constraint firstItem="Got-Ka-UxY" firstAttribute="top" secondItem="8FV-uu-XDo" secondAttribute="top" constant="48" id="Jpc-rq-pd4"/>
+                            <constraint firstItem="HTp-Bw-S8U" firstAttribute="top" secondItem="Got-Ka-UxY" secondAttribute="bottom" constant="64" id="W2H-at-x3W"/>
+                            <constraint firstItem="8FV-uu-XDo" firstAttribute="bottom" secondItem="Mq5-o7-8fb" secondAttribute="bottom" constant="32" id="YRV-Ax-tJj"/>
                             <constraint firstItem="8FV-uu-XDo" firstAttribute="trailing" secondItem="HTp-Bw-S8U" secondAttribute="trailing" constant="32" id="egx-uC-dq2"/>
                             <constraint firstItem="nZl-dn-sSh" firstAttribute="centerX" secondItem="8FV-uu-XDo" secondAttribute="centerX" id="hOJ-VJ-5Y8"/>
-                            <constraint firstItem="xBg-wc-MPo" firstAttribute="top" secondItem="8FV-uu-XDo" secondAttribute="top" constant="48" id="hyK-Za-SHG"/>
+                            <constraint firstItem="Mq5-o7-8fb" firstAttribute="top" secondItem="nZl-dn-sSh" secondAttribute="bottom" constant="32" id="txb-iW-yUM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="button" destination="Mq5-o7-8fb" id="4hf-vr-GuO"/>
-                        <outlet property="image" destination="xBg-wc-MPo" id="4pa-R6-ecn"/>
                         <outlet property="label" destination="HTp-Bw-S8U" id="tEi-UK-hzo"/>
                         <outlet property="pageControl" destination="nZl-dn-sSh" id="km3-Ma-w98"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CW8-c4-Jkb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-414" y="71"/>
+            <point key="canvasLocation" x="-414.49275362318843" y="70.982142857142847"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Button" width="56" height="56"/>
+        <image name="Illustration" width="312" height="231"/>
         <namedColor name="Color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

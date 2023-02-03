@@ -21,15 +21,15 @@ class Introduce2ViewController: UIViewController {
     }
     
     func setBackground(){
-        image.image = UIImage(named: "Illustration-3")
+        image.image = UIImage(named: "Illustration-1")
         label.text = "Tìm các câu đố để kiểm tra kiến ​​thức của bạn"
         pageControl.currentPage = currentPage
     }
     
     @IBAction func didTapButton(){
-        let storyboard = UIStoryboard(name: "Introduce3ViewController", bundle: nil)
-        let introduce1 = storyboard.instantiateViewController(withIdentifier: "Introduce3ViewController") as! Introduce3ViewController
-        navigationController?.pushViewController(introduce1, animated: true)
+        let storyboard3 = UIStoryboard(name: "Introduce3ViewController", bundle: nil)
+        let introduce3 = storyboard3.instantiateViewController(withIdentifier: "Introduce3ViewController") as! Introduce3ViewController
+        navigationController?.pushViewController(introduce3, animated: true)
         
     }
     
@@ -46,8 +46,3 @@ class Introduce2ViewController: UIViewController {
     */
 }
 
-struct Page{
-    let image: String
-    let title: String
-    let currentPage: Int
-}

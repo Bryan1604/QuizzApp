@@ -13,7 +13,7 @@ class Introduce3ViewController: UIViewController {
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var image: UIImageView!
     @IBOutlet var label: UILabel!
-    
+    @IBOutlet var button: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackground()
@@ -24,6 +24,10 @@ class Introduce3ViewController: UIViewController {
         label.text = "Tham gia thử thách cùng bạn bè"
         pageControl.currentPage = currentPage
     }
+    
+//    @IBAction func didTapButton(){
+//        let storyboard4 = UIStoryboard(name: "", bundle: <#T##Bundle?#>)
+//    }
     /*
     // MARK: - Navigation
 
