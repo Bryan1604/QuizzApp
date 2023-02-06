@@ -29,7 +29,7 @@ class Introduce2ViewController: UIViewController {
     @IBAction func didTapButton(){
         let storyboard3 = UIStoryboard(name: "Introduce3ViewController", bundle: nil)
         let introduce3 = storyboard3.instantiateViewController(withIdentifier: "Introduce3ViewController") as! Introduce3ViewController
-        navigationController?.pushViewController(introduce3, animated: true)
+        navigationController?.pushViewController(introduce3, animated: false)
         
     }
     

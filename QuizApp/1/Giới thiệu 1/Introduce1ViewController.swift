@@ -31,7 +31,7 @@ class Introduce1ViewController: UIViewController {
     @IBAction func didTapButton(){
         let storyboard2 = UIStoryboard(name: "Introduce2ViewController", bundle: nil)
         let introduce2 = storyboard2.instantiateViewController(withIdentifier: "Introduce2ViewController") as! Introduce2ViewController
-        navigationController?.pushViewController(introduce2, animated: true)
+        navigationController?.pushViewController(introduce2, animated: false)
     }
     
 
