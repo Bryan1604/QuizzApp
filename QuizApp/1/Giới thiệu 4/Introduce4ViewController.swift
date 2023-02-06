@@ -18,15 +18,18 @@ class Introduce4ViewController: UIViewController {
         super.viewDidLoad()
         setBackground()
 
+        setbutton(button: signInButton, text: "Đăng nhập", radius: 20)
+        setbutton(button: signUpButton, text: "Đăng kí", radius: 20)
         // Do any additional setup after loading the view.
     }
     
     func setBackground(){
         registerBox?.layer.cornerRadius = 20
         registerBox.backgroundColor = .white.withAlphaComponent(0.2)
-        
-       // signInButton.layer.cornerRadius = 50
-        signUpButton.layer.cornerRadius = 20
+    }
+    func setbutton(button: UIButton ,text: String, radius: Int){
+        button.layer.cornerRadius = CGFloat(radius)
+        button.setTitle(text, for: .normal)
     }
     
 
