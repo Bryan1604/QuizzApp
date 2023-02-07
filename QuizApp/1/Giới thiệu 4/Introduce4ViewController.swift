@@ -32,6 +32,11 @@ class Introduce4ViewController: UIViewController {
         button.setTitle(text, for: .normal)
     }
     
+    @IBAction func didTapSignInButton(){
+        let storyboard = UIStoryboard(name: "SignInViewController", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController? else { return }
+        navigationController?.pushViewController(vc, animated: true)
+    }
 
     /*
     // MARK: - Navigation

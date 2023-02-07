@@ -62,6 +62,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Button">
                                             <color key="baseBackgroundColor" red="0.38823529411764707" green="0.61176470588235299" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapSignInButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3ij-3E-dNH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
