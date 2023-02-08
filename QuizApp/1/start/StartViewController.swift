@@ -28,10 +28,15 @@ class StartViewController: UIViewController {
     func setBackground(){
         image?.image = UIImage(named: "Logo")
         //self.view.backgroundColor = UIColor.
-        let storyboard = UIStoryboard(name: "Introduce1ViewController", bundle: nil)
-        let introduce1 = storyboard.instantiateViewController(withIdentifier: "Introduce1ViewController") as! Introduce1ViewController
-        let rootView = UINavigationController(rootViewController: introduce1)
+//        let storyboard = UIStoryboard(name: "Introduce1ViewController", bundle: nil)
+//        let introduce1 = storyboard.instantiateViewController(withIdentifier: "Introduce1ViewController") as! Introduce1ViewController
+//        let rootView = UINavigationController(rootViewController: introduce1)
+        print("check1")
+        let storyboard = UIStoryboard(name: "TutorialViewController", bundle: nil)
+        let tutorial = storyboard.instantiateViewController(withIdentifier: "TutorialViewController") as! TutorialViewController
+        let rootView = UINavigationController(rootViewController: tutorial)
         SceneDelegate.shared?.changeRootController(rootView)
+        print("check2")
         
     }
 

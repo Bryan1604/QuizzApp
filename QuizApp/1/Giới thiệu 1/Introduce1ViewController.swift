@@ -9,23 +9,22 @@ import UIKit
 
 class Introduce1ViewController: UIViewController {
 
-    var currentPage = 0
+    //var currentPage = 0
     
-    @IBOutlet var pageControl: UIPageControl!
+    //@IBOutlet var pageControl: UIPageControl!
     //@IBOutlet var image: UIImageView!
-    @IBOutlet var label: UILabel!
+    //@IBOutlet var label: UILabel!
     @IBOutlet var button: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBackground()
+        //setBackground()
         print("check")
     }
     
     func setBackground(){
         //image.image = UIImage(named: "Illustration")
-        label.text = "Tạo các câu đố được chơi game trở nên đơn giản"
-        pageControl.currentPage = currentPage
+        //pageControl.currentPage = currentPage
     }
     
     @IBAction func didTapButton(){
