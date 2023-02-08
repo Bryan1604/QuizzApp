@@ -1,5 +1,5 @@
 //
-//  ForgotPassword1ViewController.swift
+//  ForgotPassword2ViewController.swift
 //  QuizApp
 //
 //  Created by ZYYX Intern on 08/02/2023.
@@ -7,14 +7,15 @@
 
 import UIKit
 
-class ForgotPassword1ViewController: UIViewController {
+class ForgotPassword2ViewController: UIViewController {
 
-    @IBOutlet weak var SendBtn: UIButton?
+    @IBOutlet weak var reSetPasswordBtn: UIButton?
     
+    var iconClick = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        setButtonProperty(button: SendBtn!)
-        
+
+        setButtonProperty(button: reSetPasswordBtn!)
         // Do any additional setup after loading the view.
     }
     
@@ -22,12 +23,14 @@ class ForgotPassword1ViewController: UIViewController {
         button.layer.cornerRadius = 20
     }
     
-    @IBAction func didTapSendBtn(){
-        let storyboard = UIStoryboard(name: "ForgotPassword2Storyboard", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ForgotPassword2ViewController") as! ForgotPassword2ViewController
-        navigationController?.pushViewController(vc, animated: true)
+    @IBAction func iconAction(sender: AnyObject){
+        if iconClick{
+            
+        }
     }
+    
 
+    
     /*
     // MARK: - Navigation
 

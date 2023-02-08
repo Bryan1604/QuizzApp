@@ -24,12 +24,36 @@
 		3F7744A029933BCE00DC3181 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F77449F29933BCE00DC3181 /* SignUpViewController.swift */; };
 		3F7744A429935AEB00DC3181 /* ForgotPassword1Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744A329935AEB00DC3181 /* ForgotPassword1Storyboard.storyboard */; };
 		3F7744A629935B0100DC3181 /* ForgotPassword1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7744A529935B0100DC3181 /* ForgotPassword1ViewController.swift */; };
+		3F7744A82993754400DC3181 /* ForgotPassword2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7744A72993754400DC3181 /* ForgotPassword2ViewController.swift */; };
+		3F7744AA2993755500DC3181 /* ForgotPassword2Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744A92993755500DC3181 /* ForgotPassword2Storyboard.storyboard */; };
+		3F7744C02993803800DC3181 /* SVN-Gilroy Thin Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744AC2993803800DC3181 /* SVN-Gilroy Thin Italic.otf */; };
+		3F7744C12993803800DC3181 /* SVN-Gilroy Light Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744AD2993803800DC3181 /* SVN-Gilroy Light Italic.otf */; };
+		3F7744C22993803800DC3181 /* SVN-Gilroy XBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744AE2993803800DC3181 /* SVN-Gilroy XBold.otf */; };
+		3F7744C32993803800DC3181 /* SVN-Gilroy Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744AF2993803800DC3181 /* SVN-Gilroy Bold.otf */; };
+		3F7744C42993803800DC3181 /* SVN-Gilroy Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744B02993803800DC3181 /* SVN-Gilroy Bold Italic.otf */; };
+		3F7744C52993803800DC3181 /* SVN-Gilroy Heavy Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744B12993803800DC3181 /* SVN-Gilroy Heavy Italic.otf */; };
+		3F7744C62993803800DC3181 /* SVN-Gilroy Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744B22993803800DC3181 /* SVN-Gilroy Black.otf */; };
+		3F7744C72993803800DC3181 /* SVN-Gilroy Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744B32993803800DC3181 /* SVN-Gilroy Medium.otf */; };
+		3F7744C82993803800DC3181 /* SVN-Gilroy Xlight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744B42993803800DC3181 /* SVN-Gilroy Xlight.otf */; };
+		3F7744C92993803800DC3181 /* SVN-Gilroy Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744B52993803800DC3181 /* SVN-Gilroy Thin.otf */; };
+		3F7744CA2993803800DC3181 /* SVN-Gilroy Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744B62993803800DC3181 /* SVN-Gilroy Italic.otf */; };
+		3F7744CB2993803800DC3181 /* SVN-Gilroy SemiBold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744B72993803800DC3181 /* SVN-Gilroy SemiBold Italic.otf */; };
+		3F7744CC2993803800DC3181 /* SVN-Gilroy Medium Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744B82993803800DC3181 /* SVN-Gilroy Medium Italic.otf */; };
+		3F7744CD2993803800DC3181 /* SVN-Gilroy XBold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744B92993803800DC3181 /* SVN-Gilroy XBold Italic.otf */; };
+		3F7744CE2993803800DC3181 /* SVN-Gilroy Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744BA2993803800DC3181 /* SVN-Gilroy Light.otf */; };
+		3F7744CF2993803800DC3181 /* SVN-Gilroy Black Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744BB2993803800DC3181 /* SVN-Gilroy Black Italic.otf */; };
+		3F7744D02993803800DC3181 /* SVN-Gilroy SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744BC2993803800DC3181 /* SVN-Gilroy SemiBold.otf */; };
+		3F7744D12993803800DC3181 /* SVN-Gilroy Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744BD2993803800DC3181 /* SVN-Gilroy Heavy.otf */; };
+		3F7744D22993803800DC3181 /* SVN-Gilroy Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744BE2993803800DC3181 /* SVN-Gilroy Regular.otf */; };
+		3F7744D32993803800DC3181 /* SVN-Gilroy Xlight Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744BF2993803800DC3181 /* SVN-Gilroy Xlight Italic.otf */; };
 		3FBE1314298CE09800DA0374 /* Introduce2ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE1313298CE09800DA0374 /* Introduce2ViewController.storyboard */; };
 		3FBE1316298CE0FC00DA0374 /* Introduce2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE1315298CE0FC00DA0374 /* Introduce2ViewController.swift */; };
 		3FBE1318298CE32800DA0374 /* Introduce3ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE1317298CE32800DA0374 /* Introduce3ViewController.storyboard */; };
+		62EEC2B4F53E9A7C4F6B7118 /* Pods_QuizApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB4B24EF070F916C1CB5938 /* Pods_QuizApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		327532C6F51B91C57BB3D1CC /* Pods-QuizApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizApp.release.xcconfig"; path = "Target Support Files/Pods-QuizApp/Pods-QuizApp.release.xcconfig"; sourceTree = "<group>"; };
 		3F46CC5C298D069500BAA945 /* Introduce3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduce3ViewController.swift; sourceTree = "<group>"; };
 		3F46CC5E298D0ABE00BAA945 /* Introduce4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduce4ViewController.swift; sourceTree = "<group>"; };
 		3F46CC60298D0ADD00BAA945 /* Introduce4ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduce4ViewController.storyboard; sourceTree = "<group>"; };
@@ -49,9 +73,33 @@
 		3F77449F29933BCE00DC3181 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3F7744A329935AEB00DC3181 /* ForgotPassword1Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword1Storyboard.storyboard; sourceTree = "<group>"; };
 		3F7744A529935B0100DC3181 /* ForgotPassword1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword1ViewController.swift; sourceTree = "<group>"; };
+		3F7744A72993754400DC3181 /* ForgotPassword2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword2ViewController.swift; sourceTree = "<group>"; };
+		3F7744A92993755500DC3181 /* ForgotPassword2Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword2Storyboard.storyboard; sourceTree = "<group>"; };
+		3F7744AC2993803800DC3181 /* SVN-Gilroy Thin Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Thin Italic.otf"; sourceTree = "<group>"; };
+		3F7744AD2993803800DC3181 /* SVN-Gilroy Light Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Light Italic.otf"; sourceTree = "<group>"; };
+		3F7744AE2993803800DC3181 /* SVN-Gilroy XBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy XBold.otf"; sourceTree = "<group>"; };
+		3F7744AF2993803800DC3181 /* SVN-Gilroy Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Bold.otf"; sourceTree = "<group>"; };
+		3F7744B02993803800DC3181 /* SVN-Gilroy Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Bold Italic.otf"; sourceTree = "<group>"; };
+		3F7744B12993803800DC3181 /* SVN-Gilroy Heavy Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Heavy Italic.otf"; sourceTree = "<group>"; };
+		3F7744B22993803800DC3181 /* SVN-Gilroy Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Black.otf"; sourceTree = "<group>"; };
+		3F7744B32993803800DC3181 /* SVN-Gilroy Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Medium.otf"; sourceTree = "<group>"; };
+		3F7744B42993803800DC3181 /* SVN-Gilroy Xlight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Xlight.otf"; sourceTree = "<group>"; };
+		3F7744B52993803800DC3181 /* SVN-Gilroy Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Thin.otf"; sourceTree = "<group>"; };
+		3F7744B62993803800DC3181 /* SVN-Gilroy Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Italic.otf"; sourceTree = "<group>"; };
+		3F7744B72993803800DC3181 /* SVN-Gilroy SemiBold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy SemiBold Italic.otf"; sourceTree = "<group>"; };
+		3F7744B82993803800DC3181 /* SVN-Gilroy Medium Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Medium Italic.otf"; sourceTree = "<group>"; };
+		3F7744B92993803800DC3181 /* SVN-Gilroy XBold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy XBold Italic.otf"; sourceTree = "<group>"; };
+		3F7744BA2993803800DC3181 /* SVN-Gilroy Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Light.otf"; sourceTree = "<group>"; };
+		3F7744BB2993803800DC3181 /* SVN-Gilroy Black Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Black Italic.otf"; sourceTree = "<group>"; };
+		3F7744BC2993803800DC3181 /* SVN-Gilroy SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy SemiBold.otf"; sourceTree = "<group>"; };
+		3F7744BD2993803800DC3181 /* SVN-Gilroy Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Heavy.otf"; sourceTree = "<group>"; };
+		3F7744BE2993803800DC3181 /* SVN-Gilroy Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Regular.otf"; sourceTree = "<group>"; };
+		3F7744BF2993803800DC3181 /* SVN-Gilroy Xlight Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Xlight Italic.otf"; sourceTree = "<group>"; };
 		3FBE1313298CE09800DA0374 /* Introduce2ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduce2ViewController.storyboard; sourceTree = "<group>"; };
 		3FBE1315298CE0FC00DA0374 /* Introduce2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduce2ViewController.swift; sourceTree = "<group>"; };
 		3FBE1317298CE32800DA0374 /* Introduce3ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduce3ViewController.storyboard; sourceTree = "<group>"; };
+		9CB4B24EF070F916C1CB5938 /* Pods_QuizApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C084D1C06FE4366EA40702B3 /* Pods-QuizApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizApp.debug.xcconfig"; path = "Target Support Files/Pods-QuizApp/Pods-QuizApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62EEC2B4F53E9A7C4F6B7118 /* Pods_QuizApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +156,8 @@
 			children = (
 				3F76B1B12987AD5B00E963F3 /* QuizApp */,
 				3F76B1B02987AD5B00E963F3 /* Products */,
+				AEB7A34DC781CCCD7E434DAE /* Pods */,
+				73A99BB9305CB1DCC30AE499 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +180,7 @@
 				3F76B1BB2987AD5D00E963F3 /* Assets.xcassets */,
 				3F76B1BD2987AD5D00E963F3 /* LaunchScreen.storyboard */,
 				3F76B1C02987AD5D00E963F3 /* Info.plist */,
+				3F7744AB2993803800DC3181 /* Font */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -141,7 +193,7 @@
 			path = start;
 			sourceTree = "<group>";
 		};
-		3F76B1C72987AD8A00E963F3 /* Giới thiệu 1 */ = {
+		3F76B1C72987AD8A00E963F3 /* Giới thiệu 1 */ = {
 			isa = PBXGroup;
 			children = (
 				3F76B1D12987BCC700E963F3 /* Introduce1ViewController.swift */,
@@ -151,7 +203,7 @@
 			path = "Giới thiệu 1";
 			sourceTree = "<group>";
 		};
-		3F76B1C92987ADA900E963F3 /* Giới thiệu 2 */ = {
+		3F76B1C92987ADA900E963F3 /* Giới thiệu 2 */ = {
 			isa = PBXGroup;
 			children = (
 				3FBE1315298CE0FC00DA0374 /* Introduce2ViewController.swift */,
@@ -161,7 +213,7 @@
 			path = "Giới thiệu 2";
 			sourceTree = "<group>";
 		};
-		3F76B1CA2987ADCD00E963F3 /* GIới thiệu 3 */ = {
+		3F76B1CA2987ADCD00E963F3 /* GIới thiệu 3 */ = {
 			isa = PBXGroup;
 			children = (
 				3FBE1317298CE32800DA0374 /* Introduce3ViewController.storyboard */,
@@ -171,7 +223,7 @@
 			path = "GIới thiệu 3";
 			sourceTree = "<group>";
 		};
-		3F76B1CB2987ADE400E963F3 /* Giới thiệu 4 */ = {
+		3F76B1CB2987ADE400E963F3 /* Giới thiệu 4 */ = {
 			isa = PBXGroup;
 			children = (
 				3F46CC5E298D0ABE00BAA945 /* Introduce4ViewController.swift */,
@@ -185,10 +237,10 @@
 			isa = PBXGroup;
 			children = (
 				3F76B1C62987AD7500E963F3 /* start */,
-				3F76B1C72987AD8A00E963F3 /* Giới thiệu 1 */,
-				3F76B1C92987ADA900E963F3 /* Giới thiệu 2 */,
-				3F76B1CA2987ADCD00E963F3 /* GIới thiệu 3 */,
-				3F76B1CB2987ADE400E963F3 /* Giới thiệu 4 */,
+				3F76B1C72987AD8A00E963F3 /* Giới thiệu 1 */,
+				3F76B1C92987ADA900E963F3 /* Giới thiệu 2 */,
+				3F76B1CA2987ADCD00E963F3 /* GIới thiệu 3 */,
+				3F76B1CB2987ADE400E963F3 /* Giới thiệu 4 */,
 			);
 			path = 1;
 			sourceTree = "<group>";
@@ -205,8 +257,55 @@
 		3F7744A229935A0600DC3181 /* Forgot password 2 */ = {
 			isa = PBXGroup;
 			children = (
+				3F7744A72993754400DC3181 /* ForgotPassword2ViewController.swift */,
+				3F7744A92993755500DC3181 /* ForgotPassword2Storyboard.storyboard */,
 			);
 			path = "Forgot password 2";
+			sourceTree = "<group>";
+		};
+		3F7744AB2993803800DC3181 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				3F7744AC2993803800DC3181 /* SVN-Gilroy Thin Italic.otf */,
+				3F7744AD2993803800DC3181 /* SVN-Gilroy Light Italic.otf */,
+				3F7744AE2993803800DC3181 /* SVN-Gilroy XBold.otf */,
+				3F7744AF2993803800DC3181 /* SVN-Gilroy Bold.otf */,
+				3F7744B02993803800DC3181 /* SVN-Gilroy Bold Italic.otf */,
+				3F7744B12993803800DC3181 /* SVN-Gilroy Heavy Italic.otf */,
+				3F7744B22993803800DC3181 /* SVN-Gilroy Black.otf */,
+				3F7744B32993803800DC3181 /* SVN-Gilroy Medium.otf */,
+				3F7744B42993803800DC3181 /* SVN-Gilroy Xlight.otf */,
+				3F7744B52993803800DC3181 /* SVN-Gilroy Thin.otf */,
+				3F7744B62993803800DC3181 /* SVN-Gilroy Italic.otf */,
+				3F7744B72993803800DC3181 /* SVN-Gilroy SemiBold Italic.otf */,
+				3F7744B82993803800DC3181 /* SVN-Gilroy Medium Italic.otf */,
+				3F7744B92993803800DC3181 /* SVN-Gilroy XBold Italic.otf */,
+				3F7744BA2993803800DC3181 /* SVN-Gilroy Light.otf */,
+				3F7744BB2993803800DC3181 /* SVN-Gilroy Black Italic.otf */,
+				3F7744BC2993803800DC3181 /* SVN-Gilroy SemiBold.otf */,
+				3F7744BD2993803800DC3181 /* SVN-Gilroy Heavy.otf */,
+				3F7744BE2993803800DC3181 /* SVN-Gilroy Regular.otf */,
+				3F7744BF2993803800DC3181 /* SVN-Gilroy Xlight Italic.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		73A99BB9305CB1DCC30AE499 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CB4B24EF070F916C1CB5938 /* Pods_QuizApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AEB7A34DC781CCCD7E434DAE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C084D1C06FE4366EA40702B3 /* Pods-QuizApp.debug.xcconfig */,
+				327532C6F51B91C57BB3D1CC /* Pods-QuizApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,9 +315,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F76B1C32987AD5D00E963F3 /* Build configuration list for PBXNativeTarget "QuizApp" */;
 			buildPhases = (
+				EDE9C434C7B2DEB3E853000D /* [CP] Check Pods Manifest.lock */,
 				3F76B1AB2987AD5B00E963F3 /* Sources */,
 				3F76B1AC2987AD5B00E963F3 /* Frameworks */,
 				3F76B1AD2987AD5B00E963F3 /* Resources */,
+				2C0F0CB09B7B9D25EEFF974E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,20 +368,83 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7744C32993803800DC3181 /* SVN-Gilroy Bold.otf in Resources */,
 				3F76B1BF2987AD5D00E963F3 /* LaunchScreen.storyboard in Resources */,
+				3F7744C92993803800DC3181 /* SVN-Gilroy Thin.otf in Resources */,
+				3F7744D02993803800DC3181 /* SVN-Gilroy SemiBold.otf in Resources */,
+				3F7744C42993803800DC3181 /* SVN-Gilroy Bold Italic.otf in Resources */,
+				3F7744C72993803800DC3181 /* SVN-Gilroy Medium.otf in Resources */,
+				3F7744D32993803800DC3181 /* SVN-Gilroy Xlight Italic.otf in Resources */,
 				3FBE1314298CE09800DA0374 /* Introduce2ViewController.storyboard in Resources */,
+				3F7744CA2993803800DC3181 /* SVN-Gilroy Italic.otf in Resources */,
 				3F77449E29933BB900DC3181 /* SignUpViewController.storyboard in Resources */,
 				3F76B1D42987BCE300E963F3 /* Introduce1ViewController.storyboard in Resources */,
+				3F7744C02993803800DC3181 /* SVN-Gilroy Thin Italic.otf in Resources */,
 				3FBE1318298CE32800DA0374 /* Introduce3ViewController.storyboard in Resources */,
 				3F76B1BC2987AD5D00E963F3 /* Assets.xcassets in Resources */,
+				3F7744CC2993803800DC3181 /* SVN-Gilroy Medium Italic.otf in Resources */,
+				3F7744CF2993803800DC3181 /* SVN-Gilroy Black Italic.otf in Resources */,
+				3F7744C82993803800DC3181 /* SVN-Gilroy Xlight.otf in Resources */,
+				3F7744C52993803800DC3181 /* SVN-Gilroy Heavy Italic.otf in Resources */,
+				3F7744C62993803800DC3181 /* SVN-Gilroy Black.otf in Resources */,
 				3F46CC692991477900BAA945 /* SignInViewController.storyboard in Resources */,
 				3F76B1BA2987AD5B00E963F3 /* Main.storyboard in Resources */,
+				3F7744D12993803800DC3181 /* SVN-Gilroy Heavy.otf in Resources */,
 				3F46CC61298D0ADD00BAA945 /* Introduce4ViewController.storyboard in Resources */,
+				3F7744C12993803800DC3181 /* SVN-Gilroy Light Italic.otf in Resources */,
+				3F7744D22993803800DC3181 /* SVN-Gilroy Regular.otf in Resources */,
+				3F7744AA2993755500DC3181 /* ForgotPassword2Storyboard.storyboard in Resources */,
+				3F7744CB2993803800DC3181 /* SVN-Gilroy SemiBold Italic.otf in Resources */,
+				3F7744C22993803800DC3181 /* SVN-Gilroy XBold.otf in Resources */,
+				3F7744CD2993803800DC3181 /* SVN-Gilroy XBold Italic.otf in Resources */,
 				3F7744A429935AEB00DC3181 /* ForgotPassword1Storyboard.storyboard in Resources */,
+				3F7744CE2993803800DC3181 /* SVN-Gilroy Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C0F0CB09B7B9D25EEFF974E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuizApp/Pods-QuizApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuizApp/Pods-QuizApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuizApp/Pods-QuizApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDE9C434C7B2DEB3E853000D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuizApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F76B1AB2987AD5B00E963F3 /* Sources */ = {
@@ -293,6 +457,7 @@
 				3F46CC5F298D0ABE00BAA945 /* Introduce4ViewController.swift in Sources */,
 				3F46CC5D298D069500BAA945 /* Introduce3ViewController.swift in Sources */,
 				3F46CC672991475400BAA945 /* SignInViewController.swift in Sources */,
+				3F7744A82993754400DC3181 /* ForgotPassword2ViewController.swift in Sources */,
 				3F76B1B32987AD5B00E963F3 /* AppDelegate.swift in Sources */,
 				3F7744A029933BCE00DC3181 /* SignUpViewController.swift in Sources */,
 				3F76B1B52987AD5B00E963F3 /* SceneDelegate.swift in Sources */,
@@ -438,6 +603,7 @@
 		};
 		3F76B1C42987AD5D00E963F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C084D1C06FE4366EA40702B3 /* Pods-QuizApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -466,6 +632,7 @@
 		};
 		3F76B1C52987AD5D00E963F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 327532C6F51B91C57BB3D1CC /* Pods-QuizApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
