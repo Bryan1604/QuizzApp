@@ -13,11 +13,13 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var signInGoogleBtn: UIButton?
     @IBOutlet weak var signInFacebookBtn: UIButton?
     @IBOutlet weak var signInAppleBtn: UIButton?
+    @IBOutlet weak var signUpLabel: UILabel?
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setAllButton()
         
+        clickLabel(label: signUpLabel!)
         // Do any additional setup after loading the view.
     }
     func setAllButton(){
@@ -51,6 +53,17 @@ class SignInViewController: UIViewController {
             button.layer.borderWidth = 1
         }
         
+    }
+    
+    func clickLabel(label : UILabel){
+        label.isUserInteractionEnabled = true
+        let guestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(labelClicked(_:)))
+        label.addGestureRecognizer(guestureRecognizer)
+    }
+    @objc func labelClicked(_ sender: Any){
+        let storyboard = UIStoryboard(name: "SignUpViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     /*
