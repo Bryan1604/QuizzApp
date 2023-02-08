@@ -172,6 +172,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="forgotPassword" destination="HAa-Rk-q3o" id="Nrp-fk-Lsk"/>
                         <outlet property="signInAppleBtn" destination="9Xf-GP-IUP" id="z5V-mM-MV7"/>
                         <outlet property="signInBtn" destination="Icy-IG-2wn" id="UYu-g6-EFJ"/>
                         <outlet property="signInFacebookBtn" destination="3Us-63-fqT" id="DkK-kE-SoC"/>

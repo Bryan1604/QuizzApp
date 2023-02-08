@@ -14,13 +14,13 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var signInFacebookBtn: UIButton?
     @IBOutlet weak var signInAppleBtn: UIButton?
     @IBOutlet weak var signUpLabel: UILabel?
+    @IBOutlet weak var forgotPassword: UILabel?
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setAllButton()
-        
         clickLabel(label: signUpLabel!)
-        // Do any additional setup after loading the view.
+        clickLabel(label: forgotPassword!)
     }
     func setAllButton(){
         setButtonProperty(button: signInFacebookBtn!,
@@ -39,30 +39,40 @@ class SignInViewController: UIViewController {
     func setButtonProperty( button: UIButton, text: String, image: String ){
         button.setTitle(text, for: .normal)
         button.setImage(UIImage(named: image), for: .normal)
-        
         button.layer.cornerRadius = 20
         
         if(text == "Đăng nhập"){
             button.backgroundColor = UIColor(rgb: 0x639CFD)
             button.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal)
-
         }else{
             button.backgroundColor = UIColor(rgb: 0xFFFFFF)
             button.setTitleColor(UIColor(rgb: 0x0C092A), for: .normal)
             button.layer.borderColor = UIColor.systemBlue.cgColor
             button.layer.borderWidth = 1
         }
-        
     }
     
     func clickLabel(label : UILabel){
         label.isUserInteractionEnabled = true
-        let guestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(labelClicked(_:)))
-        label.addGestureRecognizer(guestureRecognizer)
+        if(label.text == "Đăng kí ngay") {
+           let guestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(signUpLabelClicked(_:)))
+            label.addGestureRecognizer(guestureRecognizer)
+        }
+        else{
+            let guestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(forgotPasswordLabelClicked(_:)))
+            label.addGestureRecognizer(guestureRecognizer)
+        }
+        
     }
-    @objc func labelClicked(_ sender: Any){
+    @objc func signUpLabelClicked(_ sender: Any){
         let storyboard = UIStoryboard(name: "SignUpViewController", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func forgotPasswordLabelClicked(_ sender: Any){
+        let storyboard = UIStoryboard(name: "ForgotPassword1Storyboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ForgotPassword1ViewController") as! ForgotPassword1ViewController
         navigationController?.pushViewController(vc, animated: true)
     }
 

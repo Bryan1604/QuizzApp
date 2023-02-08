@@ -197,6 +197,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="signInLabel" destination="KaH-MU-VXL" id="ISl-Jq-YWx"/>
                         <outlet property="signUpBtn" destination="M5b-9e-EBz" id="Lwx-hl-ccl"/>
                     </connections>
                 </viewController>

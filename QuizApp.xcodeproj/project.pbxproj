@@ -22,6 +22,8 @@
 		3F76B1D42987BCE300E963F3 /* Introduce1ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F76B1D32987BCE300E963F3 /* Introduce1ViewController.storyboard */; };
 		3F77449E29933BB900DC3181 /* SignUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F77449D29933BB900DC3181 /* SignUpViewController.storyboard */; };
 		3F7744A029933BCE00DC3181 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F77449F29933BCE00DC3181 /* SignUpViewController.swift */; };
+		3F7744A429935AEB00DC3181 /* ForgotPassword1Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7744A329935AEB00DC3181 /* ForgotPassword1Storyboard.storyboard */; };
+		3F7744A629935B0100DC3181 /* ForgotPassword1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7744A529935B0100DC3181 /* ForgotPassword1ViewController.swift */; };
 		3FBE1314298CE09800DA0374 /* Introduce2ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE1313298CE09800DA0374 /* Introduce2ViewController.storyboard */; };
 		3FBE1316298CE0FC00DA0374 /* Introduce2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE1315298CE0FC00DA0374 /* Introduce2ViewController.swift */; };
 		3FBE1318298CE32800DA0374 /* Introduce3ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE1317298CE32800DA0374 /* Introduce3ViewController.storyboard */; };
@@ -45,6 +47,8 @@
 		3F76B1D32987BCE300E963F3 /* Introduce1ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduce1ViewController.storyboard; sourceTree = "<group>"; };
 		3F77449D29933BB900DC3181 /* SignUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpViewController.storyboard; sourceTree = "<group>"; };
 		3F77449F29933BCE00DC3181 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3F7744A329935AEB00DC3181 /* ForgotPassword1Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword1Storyboard.storyboard; sourceTree = "<group>"; };
+		3F7744A529935B0100DC3181 /* ForgotPassword1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword1ViewController.swift; sourceTree = "<group>"; };
 		3FBE1313298CE09800DA0374 /* Introduce2ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduce2ViewController.storyboard; sourceTree = "<group>"; };
 		3FBE1315298CE0FC00DA0374 /* Introduce2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduce2ViewController.swift; sourceTree = "<group>"; };
 		3FBE1317298CE32800DA0374 /* Introduce3ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduce3ViewController.storyboard; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 		3F46CC65299146F000BAA945 /* Forgot password */ = {
 			isa = PBXGroup;
 			children = (
+				3F7744A229935A0600DC3181 /* Forgot password 2 */,
+				3F7744A1299359F100DC3181 /* Forgot password 1 */,
 			);
 			path = "Forgot password";
 			sourceTree = "<group>";
@@ -187,6 +193,22 @@
 			path = 1;
 			sourceTree = "<group>";
 		};
+		3F7744A1299359F100DC3181 /* Forgot password 1 */ = {
+			isa = PBXGroup;
+			children = (
+				3F7744A329935AEB00DC3181 /* ForgotPassword1Storyboard.storyboard */,
+				3F7744A529935B0100DC3181 /* ForgotPassword1ViewController.swift */,
+			);
+			path = "Forgot password 1";
+			sourceTree = "<group>";
+		};
+		3F7744A229935A0600DC3181 /* Forgot password 2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Forgot password 2";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,6 +276,7 @@
 				3F46CC692991477900BAA945 /* SignInViewController.storyboard in Resources */,
 				3F76B1BA2987AD5B00E963F3 /* Main.storyboard in Resources */,
 				3F46CC61298D0ADD00BAA945 /* Introduce4ViewController.storyboard in Resources */,
+				3F7744A429935AEB00DC3181 /* ForgotPassword1Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +289,7 @@
 			files = (
 				3F76B1D02987AF0700E963F3 /* StartViewController.swift in Sources */,
 				3F76B1D22987BCC700E963F3 /* Introduce1ViewController.swift in Sources */,
+				3F7744A629935B0100DC3181 /* ForgotPassword1ViewController.swift in Sources */,
 				3F46CC5F298D0ABE00BAA945 /* Introduce4ViewController.swift in Sources */,
 				3F46CC5D298D069500BAA945 /* Introduce3ViewController.swift in Sources */,
 				3F46CC672991475400BAA945 /* SignInViewController.swift in Sources */,
