@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -22,11 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="nZl-dn-sSh">
-                                <rect key="frame" x="149" y="702" width="116" height="26"/>
-                                <color key="pageIndicatorTintColor" name="Color"/>
-                                <color key="currentPageIndicatorTintColor" systemColor="linkColor"/>
-                            </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tạo các câu đố được chơi game trở nên đơn giản" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTp-Bw-S8U">
                                 <rect key="frame" x="32" y="619.5" width="350" height="50.5"/>
                                 <fontDescription key="fontDescription" name="SVN-GilroyBold" family="SVN-Gilroy" pointSize="24"/>
@@ -62,21 +56,19 @@
                         <constraints>
                             <constraint firstItem="HTp-Bw-S8U" firstAttribute="centerX" secondItem="8FV-uu-XDo" secondAttribute="centerX" id="0OB-gn-WMK"/>
                             <constraint firstItem="8FV-uu-XDo" firstAttribute="trailing" secondItem="Got-Ka-UxY" secondAttribute="trailing" constant="32" id="1Fk-Eq-g1I"/>
-                            <constraint firstItem="nZl-dn-sSh" firstAttribute="top" secondItem="HTp-Bw-S8U" secondAttribute="bottom" constant="32" id="5bd-wa-oDS"/>
                             <constraint firstItem="Got-Ka-UxY" firstAttribute="leading" secondItem="8FV-uu-XDo" secondAttribute="leading" constant="32" id="DVa-Ie-bes"/>
                             <constraint firstItem="Mq5-o7-8fb" firstAttribute="centerX" secondItem="8FV-uu-XDo" secondAttribute="centerX" id="GP1-Eq-XBE"/>
                             <constraint firstItem="Got-Ka-UxY" firstAttribute="top" secondItem="8FV-uu-XDo" secondAttribute="top" constant="48" id="Jpc-rq-pd4"/>
                             <constraint firstItem="HTp-Bw-S8U" firstAttribute="top" secondItem="Got-Ka-UxY" secondAttribute="bottom" constant="64" id="W2H-at-x3W"/>
+                            <constraint firstItem="Mq5-o7-8fb" firstAttribute="top" secondItem="HTp-Bw-S8U" secondAttribute="bottom" constant="90" id="Xnt-oX-7jS"/>
                             <constraint firstItem="8FV-uu-XDo" firstAttribute="bottom" secondItem="Mq5-o7-8fb" secondAttribute="bottom" constant="32" id="YRV-Ax-tJj"/>
                             <constraint firstItem="8FV-uu-XDo" firstAttribute="trailing" secondItem="HTp-Bw-S8U" secondAttribute="trailing" constant="32" id="egx-uC-dq2"/>
-                            <constraint firstItem="nZl-dn-sSh" firstAttribute="centerX" secondItem="8FV-uu-XDo" secondAttribute="centerX" id="hOJ-VJ-5Y8"/>
-                            <constraint firstItem="Mq5-o7-8fb" firstAttribute="top" secondItem="nZl-dn-sSh" secondAttribute="bottom" constant="32" id="txb-iW-yUM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="button" destination="Mq5-o7-8fb" id="4hf-vr-GuO"/>
+                        <outlet property="image" destination="xBg-wc-MPo" id="BSW-ji-Ixq"/>
                         <outlet property="label" destination="HTp-Bw-S8U" id="tEi-UK-hzo"/>
-                        <outlet property="pageControl" destination="nZl-dn-sSh" id="km3-Ma-w98"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CW8-c4-Jkb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -90,8 +82,5 @@
         <namedColor name="Color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

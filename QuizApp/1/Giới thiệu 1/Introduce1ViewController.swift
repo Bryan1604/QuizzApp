@@ -12,14 +12,14 @@ class Introduce1ViewController: UIViewController {
     //var currentPage = 0
     
     //@IBOutlet var pageControl: UIPageControl!
-    //@IBOutlet var image: UIImageView!
-    //@IBOutlet var label: UILabel!
+    @IBOutlet var image: UIImageView!
+    @IBOutlet var label: UILabel!
     @IBOutlet var button: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //setBackground()
-        print("check")
+        //print("check")
     }
     
     func setBackground(){

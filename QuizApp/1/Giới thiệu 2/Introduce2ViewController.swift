@@ -11,19 +11,19 @@ class Introduce2ViewController: UIViewController {
 
     var currentPage = 1
     
-    @IBOutlet var pageControl: UIPageControl!
-    @IBOutlet var image: UIImageView!
-    @IBOutlet var label: UILabel!
-    
+//    @IBOutlet var pageControl: UIPageControl!
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var button: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBackground()
+        //setBackground()
     }
     
     func setBackground(){
-        image.image = UIImage(named: "Illustration-1")
-        label.text = "Tìm các câu đố để kiểm tra kiến ​​thức của bạn"
-        pageControl.currentPage = currentPage
+        //image.image = UIImage(named: "Illustration-1")
+        //label.text = "Tìm các câu đố để kiểm tra kiến ​​thức của bạn"
+        //pageControl.currentPage = currentPage
     }
     
     @IBAction func didTapButton(){

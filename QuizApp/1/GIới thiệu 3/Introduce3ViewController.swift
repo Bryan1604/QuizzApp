@@ -8,21 +8,21 @@
 import UIKit
 
 class Introduce3ViewController: UIViewController {
-    var currentPage = 2
+    //var currentPage = 2
     
-    @IBOutlet var pageControl: UIPageControl!
-    @IBOutlet var image: UIImageView!
-    @IBOutlet var label: UILabel!
-    @IBOutlet var button: UIButton!
+    //@IBOutlet var pageControl: UIPageControl!
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var button: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBackground()
+        //setBackground()
     }
     
     func setBackground(){
-        image.image = UIImage(named: "Illustration-2")
-        label.text = "Tham gia thử thách cùng bạn bè"
-        pageControl.currentPage = currentPage
+        //image.image = UIImage(named: "Illustration-2")
+        //label.text = "Tham gia thử thách cùng bạn bè"
+        //pageControl.currentPage = currentPage
     }
     
     @IBAction func didTapButton(){

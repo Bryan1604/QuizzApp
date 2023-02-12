@@ -25,7 +25,7 @@ class TutorialViewController: UIPageViewController{
         super.viewDidLoad()
         setup()
         style()
-        
+        layout()
         setViewControllers([subViewController[0]], direction:.forward, animated: false, completion: nil)
     }
 
@@ -39,9 +39,21 @@ extension TutorialViewController{
         pageControl.addTarget(self, action: #selector(pageControlTapped(_:)), for: .valueChanged)
         
         // create an array of view controler
-        let page1 = Introduce1ViewController()
-        let page2 = Introduce2ViewController()
-        let page3 = Introduce3ViewController()
+        //page 1
+        let storyboard1 = UIStoryboard(name: "Introduce1ViewController", bundle: nil)
+        let page1 = storyboard1.instantiateViewController(withIdentifier: "Introduce1ViewController") as! Introduce1ViewController
+        
+        //page 2
+        let storyboard2 = UIStoryboard(name: "Introduce2ViewController", bundle: nil)
+        let page2 = storyboard2.instantiateViewController(withIdentifier: "Introduce2ViewController") as! Introduce2ViewController
+        //page 3
+        
+        let storyboard3 = UIStoryboard(name: "Introduce3ViewController", bundle: nil)
+        let page3 = storyboard3.instantiateViewController(withIdentifier: "Introduce3ViewController") as! Introduce3ViewController
+        
+//        let page1 = Introduce1ViewController()
+//        let page2 = Introduce2ViewController()
+//        let page3 = Introduce3ViewController()
         
         subViewController.append(page1)
         subViewController.append(page2)
