@@ -11,7 +11,7 @@ class Introduce2ViewController: UIViewController {
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var label: UILabel!
-    //@IBOutlet weak var button: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         //setBackground()
