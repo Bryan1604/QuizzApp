@@ -7,6 +7,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SVN-Gilroy Bold.otf">
+            <string>SVN-GilroyBold</string>
+        </array>
+        <array key="SVN-Gilroy Regular.otf">
+            <string>SVN-Gilroy</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Introduce4 View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -17,10 +25,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Oj-cg-b8q">
-                                <rect key="frame" x="32" y="144" width="350" height="374"/>
+                                <rect key="frame" x="32" y="144" width="350" height="383"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Illustration-3" translatesAutoresizingMaskIntoConstraints="NO" id="rKZ-Iu-mDt">
-                                        <rect key="frame" x="3.5" y="50" width="343" height="274"/>
+                                        <rect key="frame" x="3.5" y="54.5" width="343" height="274"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.38823529411764707" green="0.61176470588235299" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -30,38 +38,40 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f03-td-Pnv">
-                                <rect key="frame" x="16" y="582" width="382" height="264"/>
+                                <rect key="frame" x="16" y="591" width="382" height="255"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLx-Xx-otN">
-                                        <rect key="frame" x="16" y="192" width="350" height="56"/>
+                                        <rect key="frame" x="16" y="183" width="350" height="56"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="gWf-U3-FWt"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="SVN-GilroyBold" family="SVN-Gilroy" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng nhập hoặc đăng kí" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM9-qg-fhV">
-                                        <rect key="frame" x="16" y="24" width="350" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng nhập hoặc đăng ký" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM9-qg-fhV">
+                                        <rect key="frame" x="16" y="24" width="350" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="SVN-GilroyBold" family="SVN-Gilroy" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng nhập hoặc tạo tài khoản để làm bài kiểm tra, tham gia thử thách, v.v." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKM-32-ds4">
-                                        <rect key="frame" x="16" y="57" width="350" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="16" y="59.5" width="350" height="29.5"/>
+                                        <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="14"/>
+                                        <color key="textColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKh-to-YwJ">
-                                        <rect key="frame" x="16" y="120" width="350" height="56"/>
+                                        <rect key="frame" x="16" y="111" width="350" height="56"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="Iqm-ua-Z2p"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="SVN-GilroyBold" family="SVN-Gilroy" pointSize="16"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Button">
-                                            <color key="baseBackgroundColor" red="0.38823529411764707" green="0.61176470588235299" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="didTapSignInButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3ij-3E-dNH"/>
                                         </connections>
@@ -111,6 +121,9 @@
     </scenes>
     <resources>
         <image name="Illustration-3" width="343" height="274"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

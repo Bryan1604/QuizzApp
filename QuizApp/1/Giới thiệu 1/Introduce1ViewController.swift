@@ -13,12 +13,11 @@ class Introduce1ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setBackground()
     }
     
-    func setBackground(){
-        //image.image = UIImage(named: "Illustration")
-        //pageControl.currentPage = currentPage
-    }
+//    func setBackground(){
+//        //image.image = UIImage(named: "Illustration")
+//        //pageControl.currentPage = currentPage
+//    }
     
 }

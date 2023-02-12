@@ -16,16 +16,10 @@ class Introduce3ViewController: UIViewController {
         //setBackground()
     }
     
-    func setBackground(){
-        //image.image = UIImage(named: "Illustration-2")
-        //label.text = "Tham gia thử thách cùng bạn bè"
-        //pageControl.currentPage = currentPage
-    }
-    
-//    @IBAction func didTapButton(){
-//        let storyboard4 = UIStoryboard(name: "Introduce4ViewController", bundle: nil)
-//        let introduce4 = storyboard4.instantiateViewController(withIdentifier: "Introduce4ViewController") as! Introduce4ViewController
-//        navigationController?.pushViewController(introduce4, animated: false)
+//    func setBackground(){
+//        //image.image = UIImage(named: "Illustration-2")
+//        //label.text = "Tham gia thử thách cùng bạn bè"
+//        //pageControl.currentPage = currentPage
 //    }
     
     

@@ -11,9 +11,8 @@ class TutorialViewController: UIPageViewController{
    
     lazy var subViewController = [UIViewController]()
     let pageControl = UIPageControl()
-    let initialPage = 0
-    
     let nextButton = UIButton()
+    let initialPage = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,7 +110,6 @@ extension TutorialViewController{
         }else{
             goToNextPage()
         }
-       
     }
 }
 
