@@ -22,24 +22,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tạo các câu đố được chơi game trở nên đơn giản" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTp-Bw-S8U">
-                                <rect key="frame" x="32" y="619.5" width="350" height="50.5"/>
+                                <rect key="frame" x="32" y="636.5" width="350" height="50.5"/>
                                 <fontDescription key="fontDescription" name="SVN-GilroyBold" family="SVN-Gilroy" pointSize="24"/>
                                 <color key="textColor" name="Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mq5-o7-8fb">
-                                <rect key="frame" x="167" y="760" width="80" height="70"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Button"/>
-                                <connections>
-                                    <action selector="didTapButton" destination="k98-dg-tki" eventType="touchUpInside" id="xHW-ks-7mD"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Got-Ka-UxY">
-                                <rect key="frame" x="32" y="92" width="350" height="463.5"/>
+                                <rect key="frame" x="32" y="92" width="350" height="480.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Illustration" translatesAutoresizingMaskIntoConstraints="NO" id="xBg-wc-MPo">
-                                        <rect key="frame" x="0.0" y="116.5" width="350" height="231"/>
+                                        <rect key="frame" x="0.0" y="125" width="350" height="231"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.38823529411764707" green="0.61176470588235299" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -57,16 +49,13 @@
                             <constraint firstItem="HTp-Bw-S8U" firstAttribute="centerX" secondItem="8FV-uu-XDo" secondAttribute="centerX" id="0OB-gn-WMK"/>
                             <constraint firstItem="8FV-uu-XDo" firstAttribute="trailing" secondItem="Got-Ka-UxY" secondAttribute="trailing" constant="32" id="1Fk-Eq-g1I"/>
                             <constraint firstItem="Got-Ka-UxY" firstAttribute="leading" secondItem="8FV-uu-XDo" secondAttribute="leading" constant="32" id="DVa-Ie-bes"/>
-                            <constraint firstItem="Mq5-o7-8fb" firstAttribute="centerX" secondItem="8FV-uu-XDo" secondAttribute="centerX" id="GP1-Eq-XBE"/>
                             <constraint firstItem="Got-Ka-UxY" firstAttribute="top" secondItem="8FV-uu-XDo" secondAttribute="top" constant="48" id="Jpc-rq-pd4"/>
                             <constraint firstItem="HTp-Bw-S8U" firstAttribute="top" secondItem="Got-Ka-UxY" secondAttribute="bottom" constant="64" id="W2H-at-x3W"/>
-                            <constraint firstItem="Mq5-o7-8fb" firstAttribute="top" secondItem="HTp-Bw-S8U" secondAttribute="bottom" constant="90" id="Xnt-oX-7jS"/>
-                            <constraint firstItem="8FV-uu-XDo" firstAttribute="bottom" secondItem="Mq5-o7-8fb" secondAttribute="bottom" constant="32" id="YRV-Ax-tJj"/>
+                            <constraint firstItem="8FV-uu-XDo" firstAttribute="bottom" secondItem="HTp-Bw-S8U" secondAttribute="bottom" constant="175" id="Zgh-RY-lE6"/>
                             <constraint firstItem="8FV-uu-XDo" firstAttribute="trailing" secondItem="HTp-Bw-S8U" secondAttribute="trailing" constant="32" id="egx-uC-dq2"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="button" destination="Mq5-o7-8fb" id="4hf-vr-GuO"/>
                         <outlet property="image" destination="xBg-wc-MPo" id="BSW-ji-Ixq"/>
                         <outlet property="label" destination="HTp-Bw-S8U" id="tEi-UK-hzo"/>
                     </connections>
@@ -77,7 +66,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Button" width="56" height="56"/>
         <image name="Illustration" width="312" height="231"/>
         <namedColor name="Color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

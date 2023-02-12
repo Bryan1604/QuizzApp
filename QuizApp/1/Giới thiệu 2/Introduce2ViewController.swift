@@ -8,13 +8,10 @@
 import UIKit
 
 class Introduce2ViewController: UIViewController {
-
-    var currentPage = 1
     
-//    @IBOutlet var pageControl: UIPageControl!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var button: UIButton!
+    //@IBOutlet weak var button: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         //setBackground()
@@ -26,23 +23,12 @@ class Introduce2ViewController: UIViewController {
         //pageControl.currentPage = currentPage
     }
     
-    @IBAction func didTapButton(){
-        let storyboard3 = UIStoryboard(name: "Introduce3ViewController", bundle: nil)
-        let introduce3 = storyboard3.instantiateViewController(withIdentifier: "Introduce3ViewController") as! Introduce3ViewController
-        navigationController?.pushViewController(introduce3, animated: false)
-        
-    }
+//    @IBAction func didTapButton(){
+//        let storyboard3 = UIStoryboard(name: "Introduce3ViewController", bundle: nil)
+//        let introduce3 = storyboard3.instantiateViewController(withIdentifier: "Introduce3ViewController") as! Introduce3ViewController
+//        navigationController?.pushViewController(introduce3, animated: false)
+//        
+//    }
     
-
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
 

@@ -21,25 +21,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tìm các câu đố để kiểm tra kiến ​​thức của bạn" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dx0-H5-XJi">
-                                <rect key="frame" x="32" y="619.5" width="350" height="50.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tìm các câu đố để kiểm tra kiến ​​thức của bạn" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dx0-H5-XJi">
+                                <rect key="frame" x="32" y="636.5" width="350" height="50.5"/>
                                 <fontDescription key="fontDescription" name="SVN-GilroyBold" family="SVN-Gilroy" pointSize="24"/>
                                 <color key="textColor" name="Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkC-RZ-cfd">
-                                <rect key="frame" x="167" y="760" width="80" height="70"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Button"/>
-                                <connections>
-                                    <action selector="didTapButton" destination="vqT-pT-6kx" eventType="touchUpInside" id="Rx4-oH-La1"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17N-pX-bY2">
-                                <rect key="frame" x="32" y="92" width="350" height="463.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17N-pX-bY2">
+                                <rect key="frame" x="32" y="92" width="350" height="480.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Illustration-1" translatesAutoresizingMaskIntoConstraints="NO" id="9cD-Cp-o7e">
-                                        <rect key="frame" x="0.0" y="42" width="350" height="380"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Illustration-1" translatesAutoresizingMaskIntoConstraints="NO" id="9cD-Cp-o7e">
+                                        <rect key="frame" x="0.0" y="50.5" width="350" height="380"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.38823529411764707" green="0.61176470588235299" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,16 +48,14 @@
                         <constraints>
                             <constraint firstItem="Hvj-Gm-vGr" firstAttribute="trailing" secondItem="Dx0-H5-XJi" secondAttribute="trailing" constant="32" id="3Gf-QT-o7b"/>
                             <constraint firstItem="Hvj-Gm-vGr" firstAttribute="trailing" secondItem="17N-pX-bY2" secondAttribute="trailing" constant="32" id="Gyp-9b-vHc"/>
-                            <constraint firstItem="Hvj-Gm-vGr" firstAttribute="bottom" secondItem="kkC-RZ-cfd" secondAttribute="bottom" constant="32" id="U8r-Mb-HBR"/>
+                            <constraint firstItem="Hvj-Gm-vGr" firstAttribute="bottom" secondItem="Dx0-H5-XJi" secondAttribute="bottom" constant="175" id="Lk3-vJ-cel"/>
                             <constraint firstItem="Dx0-H5-XJi" firstAttribute="centerX" secondItem="Hvj-Gm-vGr" secondAttribute="centerX" id="dVt-rF-huA"/>
                             <constraint firstItem="17N-pX-bY2" firstAttribute="leading" secondItem="Hvj-Gm-vGr" secondAttribute="leading" constant="32" id="gnB-3Y-fxd"/>
                             <constraint firstItem="17N-pX-bY2" firstAttribute="top" secondItem="Hvj-Gm-vGr" secondAttribute="top" constant="48" id="i1I-cN-2pp"/>
-                            <constraint firstItem="kkC-RZ-cfd" firstAttribute="centerX" secondItem="Hvj-Gm-vGr" secondAttribute="centerX" id="oqe-Zs-kgH"/>
                             <constraint firstItem="Dx0-H5-XJi" firstAttribute="top" secondItem="17N-pX-bY2" secondAttribute="bottom" constant="64" id="us0-UB-N8y"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="button" destination="kkC-RZ-cfd" id="aIe-C5-jrf"/>
                         <outlet property="image" destination="9cD-Cp-o7e" id="Arc-aM-P01"/>
                         <outlet property="label" destination="Dx0-H5-XJi" id="0Dx-e0-82x"/>
                     </connections>
@@ -76,7 +66,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Button" width="56" height="56"/>
         <image name="Illustration-1" width="261" height="380"/>
         <namedColor name="Color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
