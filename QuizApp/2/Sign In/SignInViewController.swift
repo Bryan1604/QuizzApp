@@ -23,33 +23,15 @@ class SignInViewController: UIViewController {
         clickLabel(label: forgotPassword!)
     }
     func setAllButton(){
-        setButtonProperty(button: signInFacebookBtn!,
-                          text: "Đăng nhập bằng Facebook",
-                          image: "Facebook")
-        setButtonProperty(button: signInGoogleBtn!,
-                          text: "Đăng nhập bằng Google",
-                          image: "Google")
-        setButtonProperty(button: signInAppleBtn!,
-                          text: "Đăng nhập bằng Apple ID",
-                          image: "Apple")
-        setButtonProperty(button: signInBtn! ,
-                          text: "Đăng nhập",
-                          image: "")
+        setButtonProperty(button: signInFacebookBtn!)
+        setButtonProperty(button: signInGoogleBtn!)
+        setButtonProperty(button: signInAppleBtn!)
+        setButtonProperty(button: signInBtn!)
     }
-    func setButtonProperty( button: UIButton, text: String, image: String ){
-        button.setTitle(text, for: .normal)
-        button.setImage(UIImage(named: image), for: .normal)
+    func setButtonProperty( button: UIButton){
         button.layer.cornerRadius = 20
-        
-        if(text == "Đăng nhập"){
-            button.backgroundColor = UIColor(rgb: 0x639CFD)
-            button.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal)
-        }else{
-            button.backgroundColor = UIColor(rgb: 0xFFFFFF)
-            button.setTitleColor(UIColor(rgb: 0x0C092A), for: .normal)
-            button.layer.borderColor = UIColor.systemBlue.cgColor
-            button.layer.borderWidth = 1
-        }
+        button.layer.borderColor = UIColor.systemBlue.cgColor
+        button.layer.borderWidth = 1
     }
     
     func clickLabel(label : UILabel){

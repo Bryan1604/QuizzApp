@@ -104,10 +104,10 @@ extension TutorialViewController{
     
     // change page when nextButton tapped
     @objc func nextButtonTapped(_ sender: UIButton){
-        pageControl.currentPage += 1
         if pageControl.currentPage >= subViewController.count-1 {
             moveToLoginPage()
         }else{
+            pageControl.currentPage += 1
             goToNextPage()
         }
     }
@@ -123,7 +123,6 @@ extension TutorialViewController{
                            completion: completion)
     }
     func moveToLoginPage(animated: Bool = true, completion: ((Bool) -> Void)? = nil){
-        print("check")
         let storyboard = UIStoryboard(name: "Introduce4ViewController", bundle: nil)
         let login = storyboard.instantiateViewController(withIdentifier: "Introduce4ViewController") as! Introduce4ViewController
         let rootView = UINavigationController(rootViewController: login)

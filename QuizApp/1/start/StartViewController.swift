@@ -7,10 +7,11 @@
 
 import UIKit
 
+let defaults = UserDefaults.standard
 
 class StartViewController: UIViewController {
 
-    let defaults = UserDefaults.standard
+    //let defaults = UserDefaults.standard
     @IBOutlet weak var image: UIImageView?
     
     override func viewDidLoad() {
@@ -21,9 +22,8 @@ class StartViewController: UIViewController {
     
     func setBackground(){
         image?.image = UIImage(named: "Logo")
-        defaults.set(true, forKey: "showTutorial")
-        
-        if defaults.bool(forKey: "showTutorial") {
+        let showTutorial = defaults.bool(forKey: "showTutorial")
+        if showTutorial == true {
             let storyboard = UIStoryboard(name: "TutorialViewController", bundle: nil)
             let tutorial = storyboard.instantiateViewController(withIdentifier: "TutorialViewController") as! TutorialViewController
             let rootView = UINavigationController(rootViewController: tutorial)
