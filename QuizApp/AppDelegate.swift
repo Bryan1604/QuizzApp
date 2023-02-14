@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UserDefaults.standard.register(defaults: ["showTutorial" : true])
+        IQKeyboardManager.shared.enable = true
 
+//        IQKeyboardManager.sharedManager().enable = true   // kich hoat IQKeyboardManager
+//        IQKeyboardManager.sharedManager().previousNextDisplayMode = IQPreviousNextDisplayMode.Default  // icon button previous/next/done tren toolbar
+//        IQKeyboardManager.sharedManager().shouldShowToolbarPlaceholder = false // placeholder trong textField's
+//        IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true  // tap ben ngoai ban phim se thoat khoi textField's
+//        IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "OK"  // text button Done
+//        IQKeyboardManager.shared.enableDebugging = true  //  enableDebugging = true
         return true
     }
 
