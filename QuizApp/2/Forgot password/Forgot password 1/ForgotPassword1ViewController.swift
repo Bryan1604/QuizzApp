@@ -10,7 +10,7 @@ import UIKit
 class ForgotPassword1ViewController: UIViewController {
 
     @IBOutlet weak var SendBtn: UIButton?
-    
+    @IBOutlet weak var insertText: UITextField?
     override func viewDidLoad() {
         super.viewDidLoad()
         setButtonProperty(button: SendBtn!)

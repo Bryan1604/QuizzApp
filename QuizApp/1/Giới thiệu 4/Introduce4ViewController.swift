@@ -36,6 +36,14 @@ class Introduce4ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "SignInViewController", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController? else { return }
         navigationController?.pushViewController(vc, animated: true)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    @IBAction func ditTapSignUpButton(){
+        let storyboard = UIStoryboard(name: "SignUpViewController", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController? else { return }
+        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.isNavigationBarHidden = true
     }
 
     /*

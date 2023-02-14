@@ -164,8 +164,8 @@
 		3F46CC65299146F000BAA945 /* Forgot password */ = {
 			isa = PBXGroup;
 			children = (
-				3F7744A229935A0600DC3181 /* Forgot password 2 */,
 				3F7744A1299359F100DC3181 /* Forgot password 1 */,
+				3F7744A229935A0600DC3181 /* Forgot password 2 */,
 			);
 			path = "Forgot password";
 			sourceTree = "<group>";

@@ -49,6 +49,9 @@
                                         <fontDescription key="fontDescription" name="SVN-GilroyBold" family="SVN-Gilroy" pointSize="16"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="ditTapSignUpButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="G78-14-rrL"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng nhập hoặc đăng ký" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM9-qg-fhV">
                                         <rect key="frame" x="16" y="24" width="350" height="23.5"/>

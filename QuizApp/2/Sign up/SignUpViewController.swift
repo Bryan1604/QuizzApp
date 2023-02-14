@@ -30,7 +30,18 @@ class SignUpViewController: UIViewController {
     }
     
     @objc func signInLabelClicked(_ sender: Any){
-        navigationController?.popViewController(animated: true)
+        if let viewControllers = navigationController?.viewControllers{
+            // check signIn view has been in navigation controller yet
+            let storyboard = UIStoryboard(name: "SignInViewController", bundle: nil)
+            guard let vc = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController? else { return }
+            
+            if viewControllers.contains(vc){
+                navigationController?.popViewController(animated: true)
+            }
+            else{
+                navigationController?.pushViewController(vc, animated: true)
+            }
+        }
     }
     
 }

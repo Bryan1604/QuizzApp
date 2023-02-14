@@ -15,13 +15,21 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var signInAppleBtn: UIButton?
     @IBOutlet weak var signUpLabel: UILabel?
     @IBOutlet weak var forgotPassword: UILabel?
+    
+    @IBOutlet weak var phoneNumber: UITextField?
+    @IBOutlet weak var password: UITextField?
+    @IBOutlet weak var hidden: UIButton?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setAllButton()
         clickLabel(label: signUpLabel!)
         clickLabel(label: forgotPassword!)
+        
+        password?.isSecureTextEntry = true
     }
+    
     func setAllButton(){
         setButtonProperty(button: signInFacebookBtn!)
         setButtonProperty(button: signInGoogleBtn!)
@@ -68,6 +76,23 @@ class SignInViewController: UIViewController {
     }
     */
 
+}
+
+extension SignInViewController{
+    @IBAction func hiddenPassword(){
+        hiddenAction()
+    }
+    
+    func hiddenAction(){
+        if password?.isSecureTextEntry == true{
+            password?.isSecureTextEntry = false
+            hidden?.setImage(UIImage(named:"eye"), for: .normal)
+        }else{
+            password?.isSecureTextEntry = true
+            hidden?.setImage(UIImage(named:"eye-slash"), for: .normal)
+        }
+    }
+    
 }
 
 

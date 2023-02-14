@@ -28,16 +28,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qvs-lX-Xuz" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="761"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="741"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tạo tài khoản" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dww-DF-MH9">
-                                                <rect key="frame" x="16" y="81" width="152" height="25.5"/>
+                                                <rect key="frame" x="16" y="61" width="152" height="25.5"/>
                                                 <fontDescription key="fontDescription" name="SVN-GilroyBold" family="SVN-Gilroy" pointSize="24"/>
                                                 <color key="textColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfX-rM-ef8">
-                                                <rect key="frame" x="16" y="291.5" width="382" height="77"/>
+                                                <rect key="frame" x="16" y="271.5" width="382" height="77"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email hoặc số điện thoại" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIb-nP-e5j">
                                                         <rect key="frame" x="0.0" y="0.0" width="135" height="13"/>
@@ -67,7 +67,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSC-eT-OVK">
-                                                <rect key="frame" x="16" y="388.5" width="382" height="73"/>
+                                                <rect key="frame" x="16" y="368.5" width="382" height="73"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mật khẩu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vr4-ye-lrS">
                                                         <rect key="frame" x="0.0" y="0.0" width="52" height="13"/>
@@ -97,7 +97,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RU7-lE-piv">
-                                                <rect key="frame" x="16" y="586.5" width="382" height="48"/>
+                                                <rect key="frame" x="16" y="566.5" width="382" height="48"/>
                                                 <color key="backgroundColor" red="0.38823529410000002" green="0.61176470589999998" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="CPB-zO-Fi5"/>
@@ -109,7 +109,7 @@
                                                 </state>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yd7-Jp-uqa">
-                                                <rect key="frame" x="16" y="716" width="382" height="13"/>
+                                                <rect key="frame" x="16" y="696" width="382" height="13"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="RdJ-uQ-Drr">
                                                         <rect key="frame" x="45" y="0.0" width="292" height="13"/>
@@ -138,7 +138,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCN-dL-jaH">
-                                                <rect key="frame" x="16" y="194.5" width="382" height="77"/>
+                                                <rect key="frame" x="16" y="174.5" width="382" height="77"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email hoặc số điện thoại" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwC-gO-UBd">
                                                         <rect key="frame" x="0.0" y="0.0" width="135" height="13"/>
@@ -168,7 +168,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Q7-u2-4ZW">
-                                                <rect key="frame" x="16" y="481.5" width="382" height="73"/>
+                                                <rect key="frame" x="16" y="461.5" width="382" height="73"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập lại mật khẩu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3k6-Ys-wLx">
                                                         <rect key="frame" x="0.0" y="0.0" width="101" height="13"/>
@@ -198,7 +198,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bằng cách nhấp vào đăng ký, bạn đồng ý với Điều khoản và Điều kiện Sử dụng của chúng tôi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Rd-dE-0wu">
-                                                <rect key="frame" x="16" y="654.5" width="382" height="29.5"/>
+                                                <rect key="frame" x="16" y="634.5" width="382" height="29.5"/>
                                                 <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="14"/>
                                                 <color key="textColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -207,7 +207,7 @@
                                         <constraints>
                                             <constraint firstItem="QSC-eT-OVK" firstAttribute="top" secondItem="jfX-rM-ef8" secondAttribute="bottom" constant="20" id="1uK-qp-ogu"/>
                                             <constraint firstAttribute="trailing" secondItem="yd7-Jp-uqa" secondAttribute="trailing" constant="16" id="25b-jj-9xm"/>
-                                            <constraint firstItem="Dww-DF-MH9" firstAttribute="top" secondItem="Qvs-lX-Xuz" secondAttribute="top" constant="81" id="28a-ZD-xLu"/>
+                                            <constraint firstItem="Dww-DF-MH9" firstAttribute="top" secondItem="Qvs-lX-Xuz" secondAttribute="top" constant="61" id="28a-ZD-xLu"/>
                                             <constraint firstItem="Dww-DF-MH9" firstAttribute="leading" secondItem="Qvs-lX-Xuz" secondAttribute="leading" constant="16" id="2TL-SN-ecr"/>
                                             <constraint firstAttribute="trailing" secondItem="7Q7-u2-4ZW" secondAttribute="trailing" constant="16" id="3uj-Dx-n9D"/>
                                             <constraint firstItem="7Q7-u2-4ZW" firstAttribute="leading" secondItem="Qvs-lX-Xuz" secondAttribute="leading" constant="16" id="4oS-pG-93R"/>

@@ -28,16 +28,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aiv-3o-J3S" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="786.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="766.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng nhập" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzE-mC-9EZ">
-                                                <rect key="frame" x="16" y="81" width="126" height="25.5"/>
+                                                <rect key="frame" x="16" y="61" width="126" height="25.5"/>
                                                 <fontDescription key="fontDescription" name="SVN-GilroyBold" family="SVN-Gilroy" pointSize="24"/>
                                                 <color key="textColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ppn-UA-AHo">
-                                                <rect key="frame" x="16" y="194.5" width="382" height="77"/>
+                                                <rect key="frame" x="16" y="174.5" width="382" height="77"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email hoặc số điện thoại" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5I-M8-dJa">
                                                         <rect key="frame" x="0.0" y="0.0" width="135" height="13"/>
@@ -67,7 +67,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNe-68-jOO">
-                                                <rect key="frame" x="16" y="291.5" width="382" height="102"/>
+                                                <rect key="frame" x="16" y="271.5" width="382" height="102"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mật khẩu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGy-ty-niG">
                                                         <rect key="frame" x="0.0" y="0.0" width="52" height="13"/>
@@ -97,6 +97,15 @@
                                                         <color key="textColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXn-h3-n3e">
+                                                        <rect key="frame" x="322" y="33.5" width="52" height="31"/>
+                                                        <color key="tintColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="hiddenPassword" destination="bod-be-luq" eventType="touchUpInside" id="JtI-Ul-yER"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -104,16 +113,18 @@
                                                     <constraint firstItem="gGP-46-Fws" firstAttribute="leading" secondItem="DNe-68-jOO" secondAttribute="leading" id="EVN-Hn-xbW"/>
                                                     <constraint firstItem="mRd-vR-n0X" firstAttribute="leading" secondItem="DNe-68-jOO" secondAttribute="leading" constant="16" id="I5k-AV-F8w"/>
                                                     <constraint firstItem="RGy-ty-niG" firstAttribute="top" secondItem="DNe-68-jOO" secondAttribute="top" id="NlA-Dq-paq"/>
+                                                    <constraint firstItem="fXn-h3-n3e" firstAttribute="centerY" secondItem="gGP-46-Fws" secondAttribute="centerY" id="P87-oF-0Zv"/>
                                                     <constraint firstAttribute="bottom" secondItem="qPn-Mw-XzF" secondAttribute="bottom" id="QIr-Qk-Ue8"/>
                                                     <constraint firstAttribute="bottom" secondItem="mRd-vR-n0X" secondAttribute="bottom" id="ZM7-yc-3Tr"/>
                                                     <constraint firstAttribute="trailing" secondItem="gGP-46-Fws" secondAttribute="trailing" id="nfA-KO-EQv"/>
                                                     <constraint firstItem="RGy-ty-niG" firstAttribute="leading" secondItem="DNe-68-jOO" secondAttribute="leading" id="sg6-Dv-ozX"/>
                                                     <constraint firstAttribute="trailing" secondItem="qPn-Mw-XzF" secondAttribute="trailing" id="stB-QI-gVt"/>
+                                                    <constraint firstAttribute="trailing" secondItem="fXn-h3-n3e" secondAttribute="trailing" constant="8" id="tJd-Y3-KOq"/>
                                                     <constraint firstItem="gGP-46-Fws" firstAttribute="top" secondItem="RGy-ty-niG" secondAttribute="bottom" constant="12" id="tky-gf-6gY"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVr-7R-BGU">
-                                                <rect key="frame" x="16" y="425.5" width="382" height="48"/>
+                                                <rect key="frame" x="16" y="405.5" width="382" height="48"/>
                                                 <color key="backgroundColor" red="0.38823529411764707" green="0.61176470588235299" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="pLN-QM-zhG"/>
@@ -125,7 +136,7 @@
                                                 </state>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2t-dP-Edk" userLabel="SignInGoogleView">
-                                                <rect key="frame" x="16" y="489.5" width="382" height="48"/>
+                                                <rect key="frame" x="16" y="469.5" width="382" height="48"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0C-fk-A4q">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
@@ -161,7 +172,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvL-o3-vhi" userLabel="SignInFacebookView">
-                                                <rect key="frame" x="16" y="553.5" width="382" height="48"/>
+                                                <rect key="frame" x="16" y="533.5" width="382" height="48"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwa-Ea-dOF">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
@@ -197,7 +208,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIF-0w-Ngu" userLabel="SignInAppleView">
-                                                <rect key="frame" x="16" y="617.5" width="382" height="48"/>
+                                                <rect key="frame" x="16" y="597.5" width="382" height="48"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gm1-1i-Ofq">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
@@ -233,7 +244,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Up0-bj-Gsk">
-                                                <rect key="frame" x="16" y="741.5" width="382" height="13"/>
+                                                <rect key="frame" x="16" y="721.5" width="382" height="13"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="l5w-I5-MNc">
                                                         <rect key="frame" x="45" y="0.0" width="292" height="13"/>
@@ -273,7 +284,7 @@
                                             <constraint firstItem="d2t-dP-Edk" firstAttribute="top" secondItem="XVr-7R-BGU" secondAttribute="bottom" constant="16" id="TCr-R4-qAd"/>
                                             <constraint firstItem="XVr-7R-BGU" firstAttribute="top" secondItem="DNe-68-jOO" secondAttribute="bottom" constant="32" id="X9X-ts-Dc6"/>
                                             <constraint firstAttribute="trailing" secondItem="DIF-0w-Ngu" secondAttribute="trailing" constant="16" id="YOj-Mz-ZBo"/>
-                                            <constraint firstItem="BzE-mC-9EZ" firstAttribute="top" secondItem="Aiv-3o-J3S" secondAttribute="top" constant="81" id="asZ-j8-N7e"/>
+                                            <constraint firstItem="BzE-mC-9EZ" firstAttribute="top" secondItem="Aiv-3o-J3S" secondAttribute="top" constant="61" id="asZ-j8-N7e"/>
                                             <constraint firstAttribute="trailing" secondItem="DNe-68-jOO" secondAttribute="trailing" constant="16" id="c4V-Vf-cUR"/>
                                             <constraint firstItem="XVr-7R-BGU" firstAttribute="leading" secondItem="Aiv-3o-J3S" secondAttribute="leading" constant="16" id="c7z-oK-kSe"/>
                                             <constraint firstItem="Ppn-UA-AHo" firstAttribute="leading" secondItem="Aiv-3o-J3S" secondAttribute="leading" constant="16" id="fZO-XN-97b"/>
@@ -312,6 +323,9 @@
                     </view>
                     <connections>
                         <outlet property="forgotPassword" destination="qPn-Mw-XzF" id="ghi-h2-aCa"/>
+                        <outlet property="hidden" destination="fXn-h3-n3e" id="neR-o3-8dn"/>
+                        <outlet property="password" destination="gGP-46-Fws" id="niw-28-om8"/>
+                        <outlet property="phoneNumber" destination="Jcf-je-AHB" id="HlD-2t-gbC"/>
                         <outlet property="signInAppleBtn" destination="Gm1-1i-Ofq" id="7vV-Zd-pTn"/>
                         <outlet property="signInBtn" destination="XVr-7R-BGU" id="rdJ-Or-IKg"/>
                         <outlet property="signInFacebookBtn" destination="uwa-Ea-dOF" id="obm-he-Nuq"/>
@@ -328,6 +342,7 @@
         <image name="Apple" width="12" height="15"/>
         <image name="Facebook" width="21" height="20"/>
         <image name="Google" width="20" height="20"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
