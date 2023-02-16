@@ -12,6 +12,10 @@
 		3F46CC61298D0ADD00BAA945 /* Introduce4ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F46CC60298D0ADD00BAA945 /* Introduce4ViewController.storyboard */; };
 		3F46CC672991475400BAA945 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46CC662991475400BAA945 /* SignInViewController.swift */; };
 		3F46CC692991477900BAA945 /* SignInViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F46CC682991477900BAA945 /* SignInViewController.storyboard */; };
+		3F5B2958299E15AD0000A996 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3F5B2957299E15AD0000A996 /* FacebookCore */; };
+		3F5B295A299E15AD0000A996 /* FacebookGamingServices in Frameworks */ = {isa = PBXBuildFile; productRef = 3F5B2959299E15AD0000A996 /* FacebookGamingServices */; };
+		3F5B295C299E15AD0000A996 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 3F5B295B299E15AD0000A996 /* FacebookLogin */; };
+		3F5B295E299E15AD0000A996 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 3F5B295D299E15AD0000A996 /* FacebookShare */; };
 		3F76B1B32987AD5B00E963F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F76B1B22987AD5B00E963F3 /* AppDelegate.swift */; };
 		3F76B1B52987AD5B00E963F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F76B1B42987AD5B00E963F3 /* SceneDelegate.swift */; };
 		3F76B1BA2987AD5B00E963F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F76B1B82987AD5B00E963F3 /* Main.storyboard */; };
@@ -76,6 +80,7 @@
 		3F46CC60298D0ADD00BAA945 /* Introduce4ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduce4ViewController.storyboard; sourceTree = "<group>"; };
 		3F46CC662991475400BAA945 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		3F46CC682991477900BAA945 /* SignInViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInViewController.storyboard; sourceTree = "<group>"; };
+		3F5B295F299E185C0000A996 /* QuizApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuizApp.entitlements; sourceTree = "<group>"; };
 		3F76B1AF2987AD5B00E963F3 /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F76B1B22987AD5B00E963F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F76B1B42987AD5B00E963F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,7 +131,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F5B295C299E15AD0000A996 /* FacebookLogin in Frameworks */,
+				3F5B295A299E15AD0000A996 /* FacebookGamingServices in Frameworks */,
 				3FC166A72993981F0083792C /* Pods_QuizApp.framework in Frameworks */,
+				3F5B295E299E15AD0000A996 /* FacebookShare in Frameworks */,
+				3F5B2958299E15AD0000A996 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +200,7 @@
 		3F76B1B12987AD5B00E963F3 /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				3F5B295F299E185C0000A996 /* QuizApp.entitlements */,
 				3F46CC622991464B00BAA945 /* 2 */,
 				3F76B1CC2987ADF000E963F3 /* 1 */,
 				3F76B1B22987AD5B00E963F3 /* AppDelegate.swift */,
@@ -347,6 +357,12 @@
 			dependencies = (
 			);
 			name = QuizApp;
+			packageProductDependencies = (
+				3F5B2957299E15AD0000A996 /* FacebookCore */,
+				3F5B2959299E15AD0000A996 /* FacebookGamingServices */,
+				3F5B295B299E15AD0000A996 /* FacebookLogin */,
+				3F5B295D299E15AD0000A996 /* FacebookShare */,
+			);
 			productName = QuizApp;
 			productReference = 3F76B1AF2987AD5B00E963F3 /* QuizApp.app */;
 			productType = "com.apple.product-type.application";
@@ -375,6 +391,9 @@
 				Base,
 			);
 			mainGroup = 3F76B1A62987AD5B00E963F3;
+			packageReferences = (
+				3F5B2956299E15AD0000A996 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 3F76B1B02987AD5B00E963F3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -630,6 +649,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = QuizApp/QuizApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T795P6HT53;
@@ -659,6 +679,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = QuizApp/QuizApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T795P6HT53;
@@ -704,6 +725,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3F5B2956299E15AD0000A996 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3F5B2957299E15AD0000A996 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F5B2956299E15AD0000A996 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		3F5B2959299E15AD0000A996 /* FacebookGamingServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F5B2956299E15AD0000A996 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookGamingServices;
+		};
+		3F5B295B299E15AD0000A996 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F5B2956299E15AD0000A996 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		3F5B295D299E15AD0000A996 /* FacebookShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F5B2956299E15AD0000A996 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookShare;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3F76B1A72987AD5B00E963F3 /* Project object */;
 }

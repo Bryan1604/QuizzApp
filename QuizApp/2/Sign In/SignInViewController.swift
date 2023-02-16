@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FacebookLogin
 
 class SignInViewController: UIViewController {
 
@@ -24,6 +25,7 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
 
         setAllButton()
+        
         clickLabel(label: signUpLabel!)
         clickLabel(label: forgotPassword!)
         
@@ -40,8 +42,11 @@ class SignInViewController: UIViewController {
         button.layer.cornerRadius = 20
         button.layer.borderColor = UIColor.systemBlue.cgColor
         button.layer.borderWidth = 1
+        
     }
-    
+}
+
+extension SignInViewController{
     func clickLabel(label : UILabel){
         label.isUserInteractionEnabled = true
         if(label.text == "Đăng kí ngay") {
@@ -52,37 +57,26 @@ class SignInViewController: UIViewController {
             let guestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(forgotPasswordLabelClicked(_:)))
             label.addGestureRecognizer(guestureRecognizer)
         }
-        
     }
+}
+
+extension SignInViewController{
     @objc func signUpLabelClicked(_ sender: Any){
         let storyboard = UIStoryboard(name: "SignUpViewController", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
         navigationController?.pushViewController(vc, animated: true)
     }
-    
     @objc func forgotPasswordLabelClicked(_ sender: Any){
         let storyboard = UIStoryboard(name: "ForgotPassword1Storyboard", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ForgotPassword1ViewController") as! ForgotPassword1ViewController
         navigationController?.pushViewController(vc, animated: true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension SignInViewController{
     @IBAction func hiddenPassword(){
         hiddenAction()
     }
-    
     func hiddenAction(){
         if password?.isSecureTextEntry == true{
             password?.isSecureTextEntry = false
@@ -95,12 +89,10 @@ extension SignInViewController{
     
 }
 
-
 extension UIColor {
     convenience init(rgb: UInt) {
         self.init(rgb: rgb, alpha: 1.0)
     }
-
     convenience init(rgb: UInt, alpha: CGFloat) {
         self.init(
             red: CGFloat((rgb & 0xFF0000) >> 16) / 255.0,
