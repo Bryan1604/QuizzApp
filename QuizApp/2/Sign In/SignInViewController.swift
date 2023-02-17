@@ -24,12 +24,16 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        password?.isSecureTextEntry = true
+        
         setAllButton()
+        //signInFacebookBtn?.addTarget(self, action: #selector(signInFacebookBtnClicked), for: .touchUpInside)
         
         clickLabel(label: signUpLabel!)
         clickLabel(label: forgotPassword!)
         
-        password?.isSecureTextEntry = true
+       // checkLogin()
+       
     }
     
     func setAllButton(){
@@ -45,6 +49,15 @@ class SignInViewController: UIViewController {
         
     }
 }
+
+//extension SignInViewController{
+//    func checkLogin(){
+//        if let token = AccessToken.current,
+//           !token.isExpired{
+//
+//        }
+//    }
+//}
 
 extension SignInViewController{
     func clickLabel(label : UILabel){
@@ -74,6 +87,24 @@ extension SignInViewController{
 }
 
 extension SignInViewController{
+    @IBAction func signInFacebookBtnClicked(){
+        let loginManager = LoginManager()
+        loginManager.logIn(permissions: ["public_profile"], from: self){result, error in
+            if let error = error{
+                print("Encountered Erorr: \(error)")
+            } else if let result = result, result.isCancelled {
+                print("Cancelled")
+            } else {
+                print("Logged In")
+                Profile.loadCurrentProfile { profile, error in
+                    if let firstName = profile?.firstName {
+                        print("Hello, \(firstName)")
+                    }
+                }
+            }
+        }
+    }
+    
     @IBAction func hiddenPassword(){
         hiddenAction()
     }
