@@ -87,6 +87,7 @@ extension SignInViewController{
 }
 
 extension SignInViewController{
+    // login facebook
     @IBAction func signInFacebookBtnClicked(){
         let loginManager = LoginManager()
         loginManager.logIn(permissions: ["public_profile"], from: self){result, error in
@@ -99,12 +100,14 @@ extension SignInViewController{
                 Profile.loadCurrentProfile { profile, error in
                     if let firstName = profile?.firstName {
                         print("Hello, \(firstName)")
+                        print("AccessToken:, \(String(describing: AccessToken.current))")
                     }
                 }
             }
         }
     }
     
+    // hide password
     @IBAction func hiddenPassword(){
         hiddenAction()
     }

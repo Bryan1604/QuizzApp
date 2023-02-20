@@ -253,6 +253,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblTermsAndCondition" destination="2Rd-dE-0wu" id="lvp-aK-dfi"/>
                         <outlet property="signInLabel" destination="4GG-U4-0ys" id="1lq-eY-eSZ"/>
                         <outlet property="signUpBtn" destination="RU7-lE-piv" id="n5b-M1-NnG"/>
                     </connections>
