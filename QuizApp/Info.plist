@@ -4,8 +4,27 @@
 <dict>
 	<key>CFBundleURLTypes</key>
 	<array>
-		<dict/>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb623089206491038</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.102020865498-12jhfvtcn3almq934a3cvpv7p20i2eu7</string>
+			</array>
+		</dict>
 	</array>
+	<key>FacebookAppID</key>
+	<string>623089206491038</string>
+	<key>FacebookClientToken</key>
+	<string>fa20f1e5f971846a1838e5984483adfd</string>
+	<key>FacebookDisplayName</key>
+	<string>QuizzApp</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -26,20 +45,16 @@
 		</dict>
 	</dict>
     
+    <key>GIDClientID</key>
+    <string>102020865498-12jhfvtcn3almq934a3cvpv7p20i2eu7.apps.googleusercontent.com</string>
     <key>CFBundleURLTypes</key>
     <array>
       <dict>
-      <key>CFBundleURLSchemes</key>
-      <array>
-        <string>fb623089206491038</string>
-      </array>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>com.googleusercontent.apps.102020865498-12jhfvtcn3almq934a3cvpv7p20i2eu7</string>
+        </array>
       </dict>
     </array>
-    <key>FacebookAppID</key>
-    <string>623089206491038</string>
-    <key>FacebookClientToken</key>
-    <string>fa20f1e5f971846a1838e5984483adfd</string>
-    <key>FacebookDisplayName</key>
-    <string>QuizzApp</string>
 </dict>
 </plist>

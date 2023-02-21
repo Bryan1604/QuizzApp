@@ -17,10 +17,8 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         setButtonProperty(button: signUpBtn!)
         clickLabel(label: signInLabel!)
-        
         setLabel()
     }
-    
 }
 
 extension SignUpViewController{
@@ -30,14 +28,14 @@ extension SignUpViewController{
     // tap to sign in label
     func clickLabel(label : UILabel){
         label.isUserInteractionEnabled = true
-        let guestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(signInLabelClicked(_:)))
+        let guestureRecognizer = UITapGestureRecognizer(target: self,
+                                                        action: #selector(signInLabelClicked(_:)))
         label.addGestureRecognizer(guestureRecognizer)
     }
     
     func setLabel(){
         var textArray = [String]()
         var fontArray = [UIFont]()
-        
         
         textArray.append("Bằng cách nhấp vào đăng kí, bạn đồng ý với ")
         textArray.append("Điều khoản ")
@@ -51,10 +49,12 @@ extension SignUpViewController{
         fontArray.append(UIFont(name: "SVN-Gilroy Bold", size: 14)!)
         fontArray.append(UIFont(name: "SVN-Gilroy", size: 14)!)
         
-        lblTermsAndCondition?.attributedText = getAttributedString(arrayText: textArray, arrayFonts: fontArray)
+        lblTermsAndCondition?.attributedText = getAttributedString(arrayText: textArray,
+                                                                   arrayFonts: fontArray)
         
         lblTermsAndCondition?.isUserInteractionEnabled = true
-        let tapgesture = UITapGestureRecognizer(target: self, action: #selector(tappedOnLabel(_ :)))
+        let tapgesture = UITapGestureRecognizer(target: self,
+                                                action: #selector(tappedOnLabel(_ :)))
         tapgesture.numberOfTapsRequired = 1
         lblTermsAndCondition?.addGestureRecognizer(tapgesture)
     }
@@ -75,7 +75,8 @@ extension SignUpViewController{
         let finalAttributedString = NSMutableAttributedString()
         for i in 0 ..< (arrayText?.count)!{
             let attributes = [NSAttributedString.Key.font: arrayFonts?[i]]
-            let attributesStr = (NSAttributedString.init(string: arrayText?[i] ?? "", attributes: attributes as [NSAttributedString.Key : Any]))
+            let attributesStr = (NSAttributedString.init(string: arrayText?[i] ?? "",
+                                                         attributes: attributes as [NSAttributedString.Key : Any]))
             finalAttributedString.append(attributesStr)
         }
         return finalAttributedString
@@ -130,7 +131,8 @@ extension UITapGestureRecognizer {
                                           y: (labelSize.height - textBoundingBox.size.height) * 0.5 - textBoundingBox.origin.y);
         let locationOfTouchInTextContainer = CGPoint(x: locationOfTouchInLabel.x - textContainerOffset.x,
                                                      y: locationOfTouchInLabel.y - textContainerOffset.y);
-        let indexOfCharacter = layoutManager.characterIndex(for: locationOfTouchInTextContainer, in: textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
+        let indexOfCharacter = layoutManager.characterIndex(for: locationOfTouchInTextContainer,
+                                                            in: textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
 
         return NSLocationInRange(indexOfCharacter, targetRange)
     }

@@ -5,5 +5,5 @@ target 'QuizApp' do
   pod 'Alamofire', '4.9.1'
   pod 'R.swift', '~> 6.1.0'
   pod 'IQKeyboardManagerSwift'
- 
+  pod 'GoogleSignIn'
 end

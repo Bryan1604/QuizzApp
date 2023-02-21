@@ -7,7 +7,7 @@
 
 import UIKit
 import FacebookLogin
-
+import GoogleSignIn
 class SignInViewController: UIViewController {
 
     @IBOutlet weak var signInBtn: UIButton?
@@ -87,7 +87,7 @@ extension SignInViewController{
 }
 
 extension SignInViewController{
-    // login facebook
+    // login with facebook
     @IBAction func signInFacebookBtnClicked(){
         let loginManager = LoginManager()
         loginManager.logIn(permissions: ["public_profile"], from: self){result, error in
@@ -96,16 +96,36 @@ extension SignInViewController{
             } else if let result = result, result.isCancelled {
                 print("Cancelled")
             } else {
+                // save token in userdefault
+                let token = result?.token?.tokenString
+                let userId = result?.token?.userID
+                UserDefaults.standard.set(token, forKey: "AccessToken")
+                UserDefaults.standard.set(userId, forKey: "UserId")
+
                 print("Logged In")
                 Profile.loadCurrentProfile { profile, error in
                     if let firstName = profile?.firstName {
                         print("Hello, \(firstName)")
-                        print("AccessToken:, \(String(describing: AccessToken.current))")
+                        print("AccessToken: " + (UserDefaults.standard.string(forKey: "AccessToken") ?? "") )
+                        print("User_Id: " + (UserDefaults.standard.string(forKey: "UserId") ?? "") )
+
                     }
                 }
             }
         }
     }
+    
+    // login with google
+    
+    @IBAction func signInGoogleBtnClicked(sender: Any){
+        GIDSignIn.sharedInstance().signIn{ signInResult, error in
+            guard error == nil else{return}
+            
+            print("success")
+        }
+        
+    }
+    
     
     // hide password
     @IBAction func hiddenPassword(){

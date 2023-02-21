@@ -212,8 +212,9 @@
 			isa = PBXGroup;
 			children = (
 				3F5B295F299E185C0000A996 /* QuizApp.entitlements */,
-				3F46CC622991464B00BAA945 /* 2 */,
 				3F76B1CC2987ADF000E963F3 /* 1 */,
+				3F46CC622991464B00BAA945 /* 2 */,
+				3FFFAEDB29A36F2A007E4443 /* 3 */,
 				3F76B1B22987AD5B00E963F3 /* AppDelegate.swift */,
 				3F76B1B42987AD5B00E963F3 /* SceneDelegate.swift */,
 				3F76B1B82987AD5B00E963F3 /* Main.storyboard */,
@@ -235,7 +236,7 @@
 			path = start;
 			sourceTree = "<group>";
 		};
-		3F76B1C72987AD8A00E963F3 /* Giới thiệu 1 */ = {
+		3F76B1C72987AD8A00E963F3 /* Giới thiệu 1 */ = {
 			isa = PBXGroup;
 			children = (
 				3F76B1D12987BCC700E963F3 /* Introduce1ViewController.swift */,
@@ -245,7 +246,7 @@
 			path = "Giới thiệu 1";
 			sourceTree = "<group>";
 		};
-		3F76B1C92987ADA900E963F3 /* Giới thiệu 2 */ = {
+		3F76B1C92987ADA900E963F3 /* Giới thiệu 2 */ = {
 			isa = PBXGroup;
 			children = (
 				3FBE1315298CE0FC00DA0374 /* Introduce2ViewController.swift */,
@@ -255,7 +256,7 @@
 			path = "Giới thiệu 2";
 			sourceTree = "<group>";
 		};
-		3F76B1CA2987ADCD00E963F3 /* GIới thiệu 3 */ = {
+		3F76B1CA2987ADCD00E963F3 /* GIới thiệu 3 */ = {
 			isa = PBXGroup;
 			children = (
 				3FBE1317298CE32800DA0374 /* Introduce3ViewController.storyboard */,
@@ -265,7 +266,7 @@
 			path = "GIới thiệu 3";
 			sourceTree = "<group>";
 		};
-		3F76B1CB2987ADE400E963F3 /* Giới thiệu 4 */ = {
+		3F76B1CB2987ADE400E963F3 /* Giới thiệu 4 */ = {
 			isa = PBXGroup;
 			children = (
 				3F46CC5E298D0ABE00BAA945 /* Introduce4ViewController.swift */,
@@ -279,10 +280,10 @@
 			isa = PBXGroup;
 			children = (
 				3F76B1C62987AD7500E963F3 /* start */,
-				3F76B1C72987AD8A00E963F3 /* Giới thiệu 1 */,
-				3F76B1C92987ADA900E963F3 /* Giới thiệu 2 */,
-				3F76B1CA2987ADCD00E963F3 /* GIới thiệu 3 */,
-				3F76B1CB2987ADE400E963F3 /* Giới thiệu 4 */,
+				3F76B1C72987AD8A00E963F3 /* Giới thiệu 1 */,
+				3F76B1C92987ADA900E963F3 /* Giới thiệu 2 */,
+				3F76B1CA2987ADCD00E963F3 /* GIới thiệu 3 */,
+				3F76B1CB2987ADE400E963F3 /* Giới thiệu 4 */,
 			);
 			path = 1;
 			sourceTree = "<group>";
@@ -341,6 +342,13 @@
 			path = Rules;
 			sourceTree = "<group>";
 		};
+		3FFFAEDB29A36F2A007E4443 /* 3 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 3;
+			sourceTree = "<group>";
+		};
 		AEB7A34DC781CCCD7E434DAE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +371,7 @@
 				3F76B1AD2987AD5B00E963F3 /* Resources */,
 				3FC166A9299398200083792C /* Embed Frameworks */,
 				942983F41485974CD3348ACD /* [CP] Embed Pods Frameworks */,
+				322D939344C2018568949712 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -459,6 +468,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		322D939344C2018568949712 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuizApp/Pods-QuizApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuizApp/Pods-QuizApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuizApp/Pods-QuizApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		942983F41485974CD3348ACD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
