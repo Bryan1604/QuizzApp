@@ -27,13 +27,12 @@ class SignInViewController: UIViewController {
         password?.isSecureTextEntry = true
         
         setAllButton()
-        //signInFacebookBtn?.addTarget(self, action: #selector(signInFacebookBtnClicked), for: .touchUpInside)
         
         clickLabel(label: signUpLabel!)
         clickLabel(label: forgotPassword!)
         
-       // checkLogin()
-       
+        //set the presentingViewController property of the GIDSignIn.shareInstance onject
+        GIDSignIn.sharedInstance()?.presentingViewController = self
     }
     
     func setAllButton(){
@@ -50,14 +49,6 @@ class SignInViewController: UIViewController {
     }
 }
 
-//extension SignInViewController{
-//    func checkLogin(){
-//        if let token = AccessToken.current,
-//           !token.isExpired{
-//
-//        }
-//    }
-//}
 
 extension SignInViewController{
     func clickLabel(label : UILabel){
@@ -116,21 +107,22 @@ extension SignInViewController{
     }
     
     // login with google
-    
     @IBAction func signInGoogleBtnClicked(sender: Any){
-        GIDSignIn.sharedInstance().signIn{ signInResult, error in
-            guard error == nil else{return}
-            
-            print("success")
-        }
-        
+        GIDSignIn.sharedInstance().signIn()
+        guard let user = GIDSignIn.sharedInstance().currentUser  else {return}
+            // get infor's user
+            let emailAddress = user.profile.email
+    //        let givenName = user.profile.givenName
+    //        let familyName = user.profile.familyName
+    //        let profilePictureUrl = user.profile.imageURL(withDimension: 320)
+            print(emailAddress ?? "")
     }
-    
     
     // hide password
     @IBAction func hiddenPassword(){
         hiddenAction()
     }
+    
     func hiddenAction(){
         if password?.isSecureTextEntry == true{
             password?.isSecureTextEntry = false

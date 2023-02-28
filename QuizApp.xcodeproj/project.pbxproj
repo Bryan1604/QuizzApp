@@ -57,6 +57,8 @@
 		3FBE1318298CE32800DA0374 /* Introduce3ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE1317298CE32800DA0374 /* Introduce3ViewController.storyboard */; };
 		3FFFAED8299F75BA007E4443 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFAED7299F75BA007E4443 /* RulesViewController.swift */; };
 		3FFFAEDA299F75CA007E4443 /* RulesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFFAED9299F75CA007E4443 /* RulesViewController.storyboard */; };
+		3FFFAEDE29ADE78E007E4443 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFAEDD29ADE78E007E4443 /* HomeViewController.swift */; };
+		3FFFAEE029ADE7A3007E4443 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFFAEDF29ADE7A3007E4443 /* HomeViewController.storyboard */; };
 		BFE44971D2310D4973C4E814 /* Pods_QuizApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992C74ED962C05BAD7B6927E /* Pods_QuizApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +127,8 @@
 		3FBE1317298CE32800DA0374 /* Introduce3ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduce3ViewController.storyboard; sourceTree = "<group>"; };
 		3FFFAED7299F75BA007E4443 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		3FFFAED9299F75CA007E4443 /* RulesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RulesViewController.storyboard; sourceTree = "<group>"; };
+		3FFFAEDD29ADE78E007E4443 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3FFFAEDF29ADE7A3007E4443 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		992C74ED962C05BAD7B6927E /* Pods_QuizApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -236,7 +240,7 @@
 			path = start;
 			sourceTree = "<group>";
 		};
-		3F76B1C72987AD8A00E963F3 /* Giới thiệu 1 */ = {
+		3F76B1C72987AD8A00E963F3 /* Giới thiệu 1 */ = {
 			isa = PBXGroup;
 			children = (
 				3F76B1D12987BCC700E963F3 /* Introduce1ViewController.swift */,
@@ -246,7 +250,7 @@
 			path = "Giới thiệu 1";
 			sourceTree = "<group>";
 		};
-		3F76B1C92987ADA900E963F3 /* Giới thiệu 2 */ = {
+		3F76B1C92987ADA900E963F3 /* Giới thiệu 2 */ = {
 			isa = PBXGroup;
 			children = (
 				3FBE1315298CE0FC00DA0374 /* Introduce2ViewController.swift */,
@@ -256,7 +260,7 @@
 			path = "Giới thiệu 2";
 			sourceTree = "<group>";
 		};
-		3F76B1CA2987ADCD00E963F3 /* GIới thiệu 3 */ = {
+		3F76B1CA2987ADCD00E963F3 /* GIới thiệu 3 */ = {
 			isa = PBXGroup;
 			children = (
 				3FBE1317298CE32800DA0374 /* Introduce3ViewController.storyboard */,
@@ -266,7 +270,7 @@
 			path = "GIới thiệu 3";
 			sourceTree = "<group>";
 		};
-		3F76B1CB2987ADE400E963F3 /* Giới thiệu 4 */ = {
+		3F76B1CB2987ADE400E963F3 /* Giới thiệu 4 */ = {
 			isa = PBXGroup;
 			children = (
 				3F46CC5E298D0ABE00BAA945 /* Introduce4ViewController.swift */,
@@ -280,10 +284,10 @@
 			isa = PBXGroup;
 			children = (
 				3F76B1C62987AD7500E963F3 /* start */,
-				3F76B1C72987AD8A00E963F3 /* Giới thiệu 1 */,
-				3F76B1C92987ADA900E963F3 /* Giới thiệu 2 */,
-				3F76B1CA2987ADCD00E963F3 /* GIới thiệu 3 */,
-				3F76B1CB2987ADE400E963F3 /* Giới thiệu 4 */,
+				3F76B1C72987AD8A00E963F3 /* Giới thiệu 1 */,
+				3F76B1C92987ADA900E963F3 /* Giới thiệu 2 */,
+				3F76B1CA2987ADCD00E963F3 /* GIới thiệu 3 */,
+				3F76B1CB2987ADE400E963F3 /* Giới thiệu 4 */,
 			);
 			path = 1;
 			sourceTree = "<group>";
@@ -345,8 +349,18 @@
 		3FFFAEDB29A36F2A007E4443 /* 3 */ = {
 			isa = PBXGroup;
 			children = (
+				3FFFAEDC29ADE776007E4443 /* Home */,
 			);
 			path = 3;
+			sourceTree = "<group>";
+		};
+		3FFFAEDC29ADE776007E4443 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3FFFAEDD29ADE78E007E4443 /* HomeViewController.swift */,
+				3FFFAEDF29ADE7A3007E4443 /* HomeViewController.storyboard */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		AEB7A34DC781CCCD7E434DAE /* Pods */ = {
@@ -447,6 +461,7 @@
 				3F7744CF2993803800DC3181 /* SVN-Gilroy Black Italic.otf in Resources */,
 				3F7744C82993803800DC3181 /* SVN-Gilroy Xlight.otf in Resources */,
 				3F7744C52993803800DC3181 /* SVN-Gilroy Heavy Italic.otf in Resources */,
+				3FFFAEE029ADE7A3007E4443 /* HomeViewController.storyboard in Resources */,
 				3F7744C62993803800DC3181 /* SVN-Gilroy Black.otf in Resources */,
 				3F46CC692991477900BAA945 /* SignInViewController.storyboard in Resources */,
 				3F76B1BA2987AD5B00E963F3 /* Main.storyboard in Resources */,
@@ -536,6 +551,7 @@
 				3F7744A629935B0100DC3181 /* ForgotPassword1ViewController.swift in Sources */,
 				3F46CC5F298D0ABE00BAA945 /* Introduce4ViewController.swift in Sources */,
 				3F46CC5D298D069500BAA945 /* Introduce3ViewController.swift in Sources */,
+				3FFFAEDE29ADE78E007E4443 /* HomeViewController.swift in Sources */,
 				3F46CC672991475400BAA945 /* SignInViewController.swift in Sources */,
 				3F7744A82993754400DC3181 /* ForgotPassword2ViewController.swift in Sources */,
 				3FFFAED8299F75BA007E4443 /* RulesViewController.swift in Sources */,

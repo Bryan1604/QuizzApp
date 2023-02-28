@@ -27,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        
         ApplicationDelegate.shared.application(
             app,
             open: url,
@@ -43,15 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
     }
     
-//    func application(_ app: UIApplication,
-//                              open url: URL,
-//                              options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
-//
-//        return GIDSignIn.sharedInstance().handle(url)
-//    }
-    
     // MARK: UISceneSession Lifecycle
-
     func application(_ application: UIApplication,
                      configurationForConnecting connectingSceneSession: UISceneSession,
                      options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -70,7 +61,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: GIDSignInDelegate{
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        // check for sign in error
+        if let error = error {
+            print("\(error.localizedDescription)")
+        }else{
+            // change rootView
+            let storyboard = UIStoryboard(name: "HomeViewController", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            let rootView = UINavigationController(rootViewController: vc)
+            SceneDelegate.shared?.changeRootController(rootView)
+        }
     }
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         //
