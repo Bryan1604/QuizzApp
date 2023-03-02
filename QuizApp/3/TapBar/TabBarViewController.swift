@@ -7,8 +7,13 @@
 
 import UIKit
 
-class TapBarViewController: UITabBarController {
+class TabBarViewController: UITabBarController {
 
+    var homeBtn: UIButton?
+    var uploadBtn: UIButton?
+    var historyBtn: UIButton?
+    var profileBtn: UIButton?
+    
     var arrayView: [UIViewController] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +41,20 @@ class TapBarViewController: UITabBarController {
         arrayView.append(vc4)
         
         self.setViewControllers(arrayView, animated: false)
+        self.tabBar.backgroundColor = .white
+        self.tabBar.barTintColor = .gray
+        
+        guard let items = self.tabBar.items else{
+            return
+        }
+        
+        let images = ["Home","Discover","Leaderboard","Profile"]
+        for i in 0..<items.count{
+            items[i].image = UIImage(named: images[i])
+        }
+        
+        self.modalPresentationStyle = .fullScreen
+        
     }
 
     /*

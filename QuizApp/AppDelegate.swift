@@ -34,11 +34,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             annotation: options[UIApplication.OpenURLOptionsKey.annotation]
         )
         
-        var handled: Bool
-        handled = GIDSignIn.sharedInstance().handle(url)
-        if handled {
-            return true
-        }
+//        var handled: Bool
+//        handled = GIDSignIn.sharedInstance().handle(url)
+//        if handled {
+//            return true
+//        }
             return false
     }
     
@@ -65,8 +65,8 @@ extension AppDelegate: GIDSignInDelegate{
             print("\(error.localizedDescription)")
         }else{
             // change rootView
-            let storyboard = UIStoryboard(name: "HomeViewController", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            let storyboard = UIStoryboard(name: "TabBarViewController", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
             let rootView = UINavigationController(rootViewController: vc)
             SceneDelegate.shared?.changeRootController(rootView)
         }

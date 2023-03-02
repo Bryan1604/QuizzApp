@@ -116,6 +116,11 @@ extension SignInViewController{
     //        let familyName = user.profile.familyName
     //        let profilePictureUrl = user.profile.imageURL(withDimension: 320)
             print(emailAddress ?? "")
+        
+//        let storyboard = UIStoryboard(name: "TapBarViewControler", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "TapBarViewController") as! TapBarViewController
+//        navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     // hide password

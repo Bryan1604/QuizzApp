@@ -55,10 +55,18 @@
 		3FBE1314298CE09800DA0374 /* Introduce2ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE1313298CE09800DA0374 /* Introduce2ViewController.storyboard */; };
 		3FBE1316298CE0FC00DA0374 /* Introduce2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE1315298CE0FC00DA0374 /* Introduce2ViewController.swift */; };
 		3FBE1318298CE32800DA0374 /* Introduce3ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE1317298CE32800DA0374 /* Introduce3ViewController.storyboard */; };
+		3FC5EC7029B07DD300B62B57 /* TabBarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC5EC6F29B07DD300B62B57 /* TabBarViewController.storyboard */; };
+		3FC5EC7529B0827600B62B57 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC5EC7429B0827600B62B57 /* ProfileViewController.swift */; };
+		3FC5EC7729B0828900B62B57 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC5EC7629B0828900B62B57 /* ProfileViewController.storyboard */; };
+		3FC5EC7929B082A100B62B57 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC5EC7829B082A100B62B57 /* HistoryViewController.swift */; };
+		3FC5EC7B29B082B400B62B57 /* HistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC5EC7A29B082B400B62B57 /* HistoryViewController.storyboard */; };
+		3FC5EC7D29B082C300B62B57 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC5EC7C29B082C300B62B57 /* UploadViewController.swift */; };
+		3FC5EC7F29B082DA00B62B57 /* UploadViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC5EC7E29B082DA00B62B57 /* UploadViewController.storyboard */; };
 		3FFFAED8299F75BA007E4443 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFAED7299F75BA007E4443 /* RulesViewController.swift */; };
 		3FFFAEDA299F75CA007E4443 /* RulesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFFAED9299F75CA007E4443 /* RulesViewController.storyboard */; };
 		3FFFAEDE29ADE78E007E4443 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFAEDD29ADE78E007E4443 /* HomeViewController.swift */; };
 		3FFFAEE029ADE7A3007E4443 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFFAEDF29ADE7A3007E4443 /* HomeViewController.storyboard */; };
+		3FFFAEE529ADFA0C007E4443 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFAEE429ADFA0C007E4443 /* TabBarViewController.swift */; };
 		BFE44971D2310D4973C4E814 /* Pods_QuizApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992C74ED962C05BAD7B6927E /* Pods_QuizApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -125,10 +133,18 @@
 		3FBE1313298CE09800DA0374 /* Introduce2ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduce2ViewController.storyboard; sourceTree = "<group>"; };
 		3FBE1315298CE0FC00DA0374 /* Introduce2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduce2ViewController.swift; sourceTree = "<group>"; };
 		3FBE1317298CE32800DA0374 /* Introduce3ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduce3ViewController.storyboard; sourceTree = "<group>"; };
+		3FC5EC6F29B07DD300B62B57 /* TabBarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarViewController.storyboard; sourceTree = "<group>"; };
+		3FC5EC7429B0827600B62B57 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3FC5EC7629B0828900B62B57 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
+		3FC5EC7829B082A100B62B57 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		3FC5EC7A29B082B400B62B57 /* HistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryViewController.storyboard; sourceTree = "<group>"; };
+		3FC5EC7C29B082C300B62B57 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		3FC5EC7E29B082DA00B62B57 /* UploadViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadViewController.storyboard; sourceTree = "<group>"; };
 		3FFFAED7299F75BA007E4443 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		3FFFAED9299F75CA007E4443 /* RulesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RulesViewController.storyboard; sourceTree = "<group>"; };
 		3FFFAEDD29ADE78E007E4443 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3FFFAEDF29ADE7A3007E4443 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		3FFFAEE429ADFA0C007E4443 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		992C74ED962C05BAD7B6927E /* Pods_QuizApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -337,6 +353,34 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		3FC5EC7129B07ECC00B62B57 /* UpLoad */ = {
+			isa = PBXGroup;
+			children = (
+				3FC5EC7C29B082C300B62B57 /* UploadViewController.swift */,
+				3FC5EC7E29B082DA00B62B57 /* UploadViewController.storyboard */,
+			);
+			path = UpLoad;
+			sourceTree = "<group>";
+		};
+		3FC5EC7229B07EE300B62B57 /* Hístory */ = {
+			isa = PBXGroup;
+			children = (
+				3FC5EC7829B082A100B62B57 /* HistoryViewController.swift */,
+				3FC5EC7A29B082B400B62B57 /* HistoryViewController.storyboard */,
+			);
+			name = "Hístory";
+			path = "Hístory";
+			sourceTree = "<group>";
+		};
+		3FC5EC7329B07EF400B62B57 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3FC5EC7429B0827600B62B57 /* ProfileViewController.swift */,
+				3FC5EC7629B0828900B62B57 /* ProfileViewController.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		3FFFAED6299F7599007E4443 /* Rules */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,7 +393,11 @@
 		3FFFAEDB29A36F2A007E4443 /* 3 */ = {
 			isa = PBXGroup;
 			children = (
+				3FFFAEE129ADF9A9007E4443 /* TapBar */,
 				3FFFAEDC29ADE776007E4443 /* Home */,
+				3FC5EC7129B07ECC00B62B57 /* UpLoad */,
+				3FC5EC7229B07EE300B62B57 /* Hístory */,
+				3FC5EC7329B07EF400B62B57 /* Profile */,
 			);
 			path = 3;
 			sourceTree = "<group>";
@@ -361,6 +409,15 @@
 				3FFFAEDF29ADE7A3007E4443 /* HomeViewController.storyboard */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		3FFFAEE129ADF9A9007E4443 /* TapBar */ = {
+			isa = PBXGroup;
+			children = (
+				3FFFAEE429ADFA0C007E4443 /* TabBarViewController.swift */,
+				3FC5EC6F29B07DD300B62B57 /* TabBarViewController.storyboard */,
+			);
+			path = TapBar;
 			sourceTree = "<group>";
 		};
 		AEB7A34DC781CCCD7E434DAE /* Pods */ = {
@@ -451,12 +508,14 @@
 				3F7744C72993803800DC3181 /* SVN-Gilroy Medium.otf in Resources */,
 				3F7744D32993803800DC3181 /* SVN-Gilroy Xlight Italic.otf in Resources */,
 				3FBE1314298CE09800DA0374 /* Introduce2ViewController.storyboard in Resources */,
+				3FC5EC7F29B082DA00B62B57 /* UploadViewController.storyboard in Resources */,
 				3F7744CA2993803800DC3181 /* SVN-Gilroy Italic.otf in Resources */,
 				3F77449E29933BB900DC3181 /* SignUpViewController.storyboard in Resources */,
 				3F76B1D42987BCE300E963F3 /* Introduce1ViewController.storyboard in Resources */,
 				3F7744C02993803800DC3181 /* SVN-Gilroy Thin Italic.otf in Resources */,
 				3FBE1318298CE32800DA0374 /* Introduce3ViewController.storyboard in Resources */,
 				3F76B1BC2987AD5D00E963F3 /* Assets.xcassets in Resources */,
+				3FC5EC7729B0828900B62B57 /* ProfileViewController.storyboard in Resources */,
 				3F7744CC2993803800DC3181 /* SVN-Gilroy Medium Italic.otf in Resources */,
 				3F7744CF2993803800DC3181 /* SVN-Gilroy Black Italic.otf in Resources */,
 				3F7744C82993803800DC3181 /* SVN-Gilroy Xlight.otf in Resources */,
@@ -471,12 +530,14 @@
 				3F7744D52993894C00DC3181 /* TutorialViewController.storyboard in Resources */,
 				3FFFAEDA299F75CA007E4443 /* RulesViewController.storyboard in Resources */,
 				3F7744D22993803800DC3181 /* SVN-Gilroy Regular.otf in Resources */,
+				3FC5EC7029B07DD300B62B57 /* TabBarViewController.storyboard in Resources */,
 				3F7744AA2993755500DC3181 /* ForgotPassword2Storyboard.storyboard in Resources */,
 				3F7744CB2993803800DC3181 /* SVN-Gilroy SemiBold Italic.otf in Resources */,
 				3F7744C22993803800DC3181 /* SVN-Gilroy XBold.otf in Resources */,
 				3F7744CD2993803800DC3181 /* SVN-Gilroy XBold Italic.otf in Resources */,
 				3F7744A429935AEB00DC3181 /* ForgotPassword1Storyboard.storyboard in Resources */,
 				3F7744CE2993803800DC3181 /* SVN-Gilroy Light.otf in Resources */,
+				3FC5EC7B29B082B400B62B57 /* HistoryViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,14 +613,18 @@
 				3F46CC5F298D0ABE00BAA945 /* Introduce4ViewController.swift in Sources */,
 				3F46CC5D298D069500BAA945 /* Introduce3ViewController.swift in Sources */,
 				3FFFAEDE29ADE78E007E4443 /* HomeViewController.swift in Sources */,
+				3FC5EC7529B0827600B62B57 /* ProfileViewController.swift in Sources */,
 				3F46CC672991475400BAA945 /* SignInViewController.swift in Sources */,
 				3F7744A82993754400DC3181 /* ForgotPassword2ViewController.swift in Sources */,
 				3FFFAED8299F75BA007E4443 /* RulesViewController.swift in Sources */,
 				3F76B1B32987AD5B00E963F3 /* AppDelegate.swift in Sources */,
 				3F7744A029933BCE00DC3181 /* SignUpViewController.swift in Sources */,
 				3F76B1B52987AD5B00E963F3 /* SceneDelegate.swift in Sources */,
+				3FC5EC7D29B082C300B62B57 /* UploadViewController.swift in Sources */,
 				3F7744D7299389C000DC3181 /* TutorialViewController.swift in Sources */,
 				3FBE1316298CE0FC00DA0374 /* Introduce2ViewController.swift in Sources */,
+				3FC5EC7929B082A100B62B57 /* HistoryViewController.swift in Sources */,
+				3FFFAEE529ADFA0C007E4443 /* TabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
