@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SVN-Gilroy Regular.otf">
+            <string>SVN-Gilroy</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NZA-PB-qRT">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GFy-bZ-J2o" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="8" width="393" height="445"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Làm tốt lắm!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9t3-DP-vPt">
+                                                <rect key="frame" x="127.66666666666669" y="32" width="138" height="25.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="24"/>
+                                                <color key="textColor" red="0.047058823529411764" green="0.035294117647058823" blue="0.16470588235294117" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uH-Ty-Kr1">
+                                                <rect key="frame" x="321" y="25.666666666666671" width="48" height="38"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Icon (8)"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="0uH-Ty-Kr1" secondAttribute="trailing" constant="24" id="48X-kU-DD7"/>
+                                            <constraint firstItem="9t3-DP-vPt" firstAttribute="centerX" secondItem="GFy-bZ-J2o" secondAttribute="centerX" id="Sn8-Lk-VrM"/>
+                                            <constraint firstItem="9t3-DP-vPt" firstAttribute="top" secondItem="GFy-bZ-J2o" secondAttribute="top" constant="32" id="iCU-dX-ZV7"/>
+                                            <constraint firstItem="0uH-Ty-Kr1" firstAttribute="centerY" secondItem="9t3-DP-vPt" secondAttribute="centerY" id="tqx-nx-hvG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GFy-bZ-J2o" firstAttribute="top" secondItem="jqh-wK-4md" secondAttribute="top" id="E5x-bQ-YCg"/>
+                                    <constraint firstItem="GFy-bZ-J2o" firstAttribute="trailing" secondItem="jqh-wK-4md" secondAttribute="trailing" id="MP9-3B-hGw"/>
+                                    <constraint firstItem="GFy-bZ-J2o" firstAttribute="width" secondItem="BkN-qC-4IP" secondAttribute="width" id="Owa-4y-2TX"/>
+                                    <constraint firstItem="GFy-bZ-J2o" firstAttribute="bottom" secondItem="jqh-wK-4md" secondAttribute="bottom" id="PT2-37-A6G"/>
+                                    <constraint firstItem="GFy-bZ-J2o" firstAttribute="leading" secondItem="jqh-wK-4md" secondAttribute="leading" id="iay-Hb-gQr"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="jqh-wK-4md"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="BkN-qC-4IP"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="NZA-PB-qRT" secondAttribute="bottom" id="Jfw-wR-yYH"/>
+                            <constraint firstItem="NZA-PB-qRT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Oao-kU-9x2"/>
+                            <constraint firstItem="NZA-PB-qRT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="acG-7I-PU7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NZA-PB-qRT" secondAttribute="trailing" id="dHL-Yv-VJy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon (8)" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

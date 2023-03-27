@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         UserDefaults.standard.register(defaults: ["showTutorial" : true])
+        
+        UserDefaults.standard.register(defaults: ["AccessToken" : ""])
+
         IQKeyboardManager.shared.enable = true
 
         GIDSignIn.sharedInstance().clientID = "102020865498-12jhfvtcn3almq934a3cvpv7p20i2eu7.apps.googleusercontent.com"
@@ -64,6 +67,7 @@ extension AppDelegate: GIDSignInDelegate{
         if let error = error {
             print("\(error.localizedDescription)")
         }else{
+            UserDefaults.standard.set(user.profile.givenName, forKey: "AccessToken")
             // change rootView
             let storyboard = UIStoryboard(name: "TabBarViewController", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController

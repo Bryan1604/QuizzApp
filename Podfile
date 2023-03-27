@@ -6,4 +6,5 @@ target 'QuizApp' do
   pod 'R.swift', '~> 6.1.0'
   pod 'IQKeyboardManagerSwift'
   pod 'GoogleSignIn'
+  pod 'SwiftColor'
 end

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SVN-Gilroy Regular.otf">
+            <string>SVN-Gilroy</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Test List View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TestListViewController" id="Y6W-OH-hqX" customClass="TestListViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rk9-bD-GaG">
+                                <rect key="frame" x="16" y="67" width="48" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Icon (7)"/>
+                                <connections>
+                                    <action selector="goBack" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aO6-ei-BS0"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFJ-fH-D8t">
+                                <rect key="frame" x="24" y="114.66666666666669" width="289" height="56"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyL-7k-i2z">
+                                        <rect key="frame" x="8" y="8" width="48" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Icon (6)"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tìm đề" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xuS-6c-K84">
+                                        <rect key="frame" x="72" y="0.0" width="201" height="56"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.047058823530000002" green="0.035294117649999998" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="xuS-6c-K84" firstAttribute="top" secondItem="yFJ-fH-D8t" secondAttribute="top" id="5qv-Dt-5C6"/>
+                                    <constraint firstItem="uyL-7k-i2z" firstAttribute="leading" secondItem="yFJ-fH-D8t" secondAttribute="leading" constant="8" id="9ey-bL-iLv"/>
+                                    <constraint firstItem="uyL-7k-i2z" firstAttribute="top" secondItem="yFJ-fH-D8t" secondAttribute="top" constant="8" id="JIr-hb-d4b"/>
+                                    <constraint firstItem="xuS-6c-K84" firstAttribute="leading" secondItem="uyL-7k-i2z" secondAttribute="trailing" constant="16" id="TAC-Au-Z8X"/>
+                                    <constraint firstAttribute="height" constant="56" id="i4t-AJ-boR"/>
+                                    <constraint firstAttribute="trailing" secondItem="xuS-6c-K84" secondAttribute="trailing" constant="16" id="n5Q-A7-38E"/>
+                                    <constraint firstAttribute="bottom" secondItem="xuS-6c-K84" secondAttribute="bottom" id="pLE-ON-AeR"/>
+                                    <constraint firstAttribute="bottom" secondItem="uyL-7k-i2z" secondAttribute="bottom" constant="8" id="uev-VS-dne"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmS-ah-dsE">
+                                <rect key="frame" x="329" y="123.66666666666669" width="48" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Sliders"/>
+                                <connections>
+                                    <action selector="setPopupButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8XJ-Vv-28Q"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1Gg-uK-ABQ">
+                                <rect key="frame" x="0.0" y="194.66666666666669" width="393" height="623.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danh sách đề" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBc-BG-S0d">
+                                <rect key="frame" x="119.66666666666667" y="73.333333333333329" width="153.66666666666663" height="25.333333333333329"/>
+                                <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.38823529410000002" green="0.61176470589999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NmS-ah-dsE" secondAttribute="trailing" constant="16" id="619-vn-v7N"/>
+                            <constraint firstItem="NmS-ah-dsE" firstAttribute="centerY" secondItem="xuS-6c-K84" secondAttribute="centerY" id="8xJ-nb-63l"/>
+                            <constraint firstItem="yFJ-fH-D8t" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="BB7-bw-jcN"/>
+                            <constraint firstItem="Rk9-bD-GaG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Fxt-xV-SgX"/>
+                            <constraint firstItem="yFJ-fH-D8t" firstAttribute="top" secondItem="BBc-BG-S0d" secondAttribute="bottom" constant="16" id="MsR-Al-OiB"/>
+                            <constraint firstItem="1Gg-uK-ABQ" firstAttribute="top" secondItem="yFJ-fH-D8t" secondAttribute="bottom" constant="24" id="SEY-wX-1AS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="1Gg-uK-ABQ" secondAttribute="bottom" id="U8V-v8-GMK"/>
+                            <constraint firstItem="Rk9-bD-GaG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="Wnf-lW-lZP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1Gg-uK-ABQ" secondAttribute="trailing" id="hYx-90-afd"/>
+                            <constraint firstItem="BBc-BG-S0d" firstAttribute="centerY" secondItem="Rk9-bD-GaG" secondAttribute="centerY" id="n74-xD-9xe"/>
+                            <constraint firstItem="BBc-BG-S0d" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="nBL-TI-Twe"/>
+                            <constraint firstItem="1Gg-uK-ABQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="oHv-mv-w0v"/>
+                            <constraint firstItem="NmS-ah-dsE" firstAttribute="leading" secondItem="yFJ-fH-D8t" secondAttribute="trailing" constant="16" id="vOs-zY-qdU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backBtn" destination="Rk9-bD-GaG" id="edb-ZI-h5b"/>
+                        <outlet property="filterBtn" destination="NmS-ah-dsE" id="r6c-be-kBs"/>
+                        <outlet property="searchBtn" destination="uyL-7k-i2z" id="khS-Cv-DiL"/>
+                        <outlet property="searchView" destination="yFJ-fH-D8t" id="ZY2-wh-Tii"/>
+                        <outlet property="tableView" destination="1Gg-uK-ABQ" id="UBe-pT-IgF"/>
+                        <outlet property="textInput" destination="8xJ-nb-63l" id="qRA-Cb-4qc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon (6)" width="24" height="24"/>
+        <image name="Icon (7)" width="24" height="24"/>
+        <image name="Sliders" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

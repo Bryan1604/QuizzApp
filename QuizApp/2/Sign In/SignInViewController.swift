@@ -111,8 +111,9 @@ extension SignInViewController{
         GIDSignIn.sharedInstance().signIn()
         guard let user = GIDSignIn.sharedInstance().currentUser  else {return}
             // get infor's user
-            let emailAddress = user.profile.email
-    //        let givenName = user.profile.givenName
+        let emailAddress = user.profile.email
+        let givenName = user.profile.givenName
+        UserDefaults.standard.set(givenName, forKey: "AccessToken")
     //        let familyName = user.profile.familyName
     //        let profilePictureUrl = user.profile.imageURL(withDimension: 320)
             print(emailAddress ?? "")
