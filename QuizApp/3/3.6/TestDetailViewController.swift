@@ -90,7 +90,7 @@ class TestDetailViewController: UIViewController, UIPopoverPresentationControlle
         // present popover
         if let popoverPresentationController = popoverController.popoverPresentationController {
             popoverPresentationController.permittedArrowDirections = .up
-            popoverPresentationController.sourceView = self.view
+            popoverPresentationController.sourceView = questionMenu
             popoverPresentationController.sourceRect = questionMenu?.frame ?? CGRect.zero
             popoverPresentationController.delegate = self
             present(popoverController,animated: true, completion: nil)
@@ -138,9 +138,16 @@ class TestDetailViewController: UIViewController, UIPopoverPresentationControlle
         })
     }
     
-    @IBAction func submitAction(_ sender : Any){
-        let storyboard = UI
+    @IBAction func submit(_ sender: Any){
+        let storyboard = UIStoryboard(name: "CheckViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CheckViewController") as! CheckViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
+    
+    
+//    @IBAction func submitAction(_ sender : Any){
+//        let storyboard = UI
+//    }
 }
 
 //extension TestDetailViewController: UIPopoverPresentationControllerDelegate {

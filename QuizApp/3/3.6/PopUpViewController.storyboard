@@ -15,7 +15,7 @@
             <objects>
                 <viewController storyboardIdentifier="PopUpViewController" id="yDH-YG-nVS" customClass="PopUpViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jwz-hO-5D9">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fcb-Q2-WnW">
@@ -50,7 +50,10 @@
                             <constraint firstItem="Fcb-Q2-WnW" firstAttribute="top" secondItem="jhf-Kb-kTq" secondAttribute="top" id="JUe-Nq-XUK"/>
                             <constraint firstItem="jhf-Kb-kTq" firstAttribute="trailing" secondItem="Fcb-Q2-WnW" secondAttribute="trailing" id="WWW-mw-tDN"/>
                         </constraints>
+                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
                     </view>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="393" height="393"/>
                     <connections>
                         <outlet property="questionCollection" destination="Fcb-Q2-WnW" id="HNl-Oh-8N2"/>
                     </connections>

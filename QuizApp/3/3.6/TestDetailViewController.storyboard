@@ -62,7 +62,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17o-NE-3t7">
-                                                <rect key="frame" x="8" y="84.333333333333371" width="377" height="632"/>
+                                                <rect key="frame" x="8" y="84.333333333333371" width="377" height="631.99999999999989"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roZ-tj-2ZX">
                                                         <rect key="frame" x="15.999999999999996" y="30" width="35.666666666666657" height="15"/>
@@ -111,8 +111,14 @@
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="56" id="bQK-X2-6pF"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="16"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="Button">
+                                                                            <color key="titleColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <state key="selected">
+                                                                            <color key="titleColor" red="0.047058823530000002" green="0.035294117649999998" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
                                                                         <connections>
                                                                             <action selector="answerPressedDown:" destination="Y6W-OH-hqX" eventType="touchDown" id="zWG-2J-weZ"/>
                                                                             <action selector="answerPressedUp:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ecc-YA-vDb"/>
@@ -120,18 +126,27 @@
                                                                     </button>
                                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deu-6K-efs">
                                                                         <rect key="frame" x="0.0" y="72" width="345" height="56"/>
-                                                                        <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="16"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="Button">
+                                                                            <color key="titleColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
                                                                     </button>
                                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vko-bp-lLE">
                                                                         <rect key="frame" x="0.0" y="144.00000000000006" width="345" height="56"/>
-                                                                        <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="16"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="Button">
+                                                                            <color key="titleColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
                                                                     </button>
                                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vv-cB-YQC">
                                                                         <rect key="frame" x="0.0" y="216.00000000000006" width="345" height="56"/>
-                                                                        <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="16"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="Button">
+                                                                            <color key="titleColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -206,7 +221,7 @@
                     </view>
                     <connections>
                         <outlet property="backScreenBtn" destination="ez0-8d-VzS" id="ecN-m7-YZt"/>
-                        <outlet property="blurView" destination="ps2-mZ-TPB" id="Jkk-1K-wPW"/>
+                        <outlet property="blurView" destination="BL9-ei-8GE" id="bjg-vJ-zJF"/>
                         <outlet property="coverView" destination="17o-NE-3t7" id="h4v-s3-fMW"/>
                         <outlet property="exitBtn" destination="OU9-vh-faG" id="qeE-kP-jIH"/>
                         <outlet property="listOfQuestion" destination="WiG-YB-qzT" id="unI-fH-QUb"/>
@@ -266,6 +281,9 @@
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Nộp bài"/>
+                            <connections>
+                                <action selector="submit:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mdV-vE-Aj6"/>
+                            </connections>
                         </button>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="4bd-Kb-j9C"/>

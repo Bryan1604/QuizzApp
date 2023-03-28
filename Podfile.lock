@@ -6,6 +6,10 @@ PODS:
   - AppAuth/Core (1.6.0)
   - AppAuth/ExternalUserAgent (1.6.0):
     - AppAuth/Core
+  - Charts (4.1.0):
+    - Charts/Core (= 4.1.0)
+  - Charts/Core (4.1.0):
+    - SwiftAlgorithms (~> 1.0)
   - GoogleSignIn (5.0.2):
     - AppAuth (~> 1.2)
     - GTMAppAuth (~> 1.0)
@@ -18,34 +22,44 @@ PODS:
   - R.swift (6.1.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
+  - SwiftAlgorithms (1.0.0)
+  - SwiftColor (1.4.0)
 
 DEPENDENCIES:
   - Alamofire (= 4.9.1)
+  - Charts (~> 4.1.0)
   - GoogleSignIn
   - IQKeyboardManagerSwift
   - R.swift (~> 6.1.0)
+  - SwiftColor
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AppAuth
+    - Charts
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
     - IQKeyboardManagerSwift
     - R.swift
     - R.swift.Library
+    - SwiftAlgorithms
+    - SwiftColor
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AppAuth: 8fca6b5563a5baef2c04bee27538025e4ceb2add
+  Charts: 354f86803d11d9c35de280587fef50d1af063978
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GTMAppAuth: 0ff230db599948a9ad7470ca667337803b3fc4dd
   GTMSessionFetcher: 5595ec75acf5be50814f81e9189490412bad82ba
   IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
   R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
+  SwiftColor: 2b0fd15257981f23265f9939f311098159fe6d1c
 
-PODFILE CHECKSUM: de350482f4d48ce3faf7be77e905d6963e58f3ed
+PODFILE CHECKSUM: bb186b8dbbb26ea654d7bb91678e4210e4da2c88
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0
