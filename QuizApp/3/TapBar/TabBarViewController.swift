@@ -8,17 +8,18 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
-
-    var homeBtn: UIButton?
-    var uploadBtn: UIButton?
-    var historyBtn: UIButton?
-    var profileBtn: UIButton?
     
     var arrayView: [UIViewController] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tabBar.backgroundColor = .white
+        self.tabBar.tintColor = .black
+        self.tabBar.layer.cornerRadius = 20
+        self.tabBar.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         callItemViewController()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -29,26 +30,29 @@ class TabBarViewController: UITabBarController {
         let storyboard2 = UIStoryboard(name: "UploadViewController", bundle: nil)
         let vc2 = storyboard2.instantiateViewController(withIdentifier: "UploadViewController") as! UploadViewController
         
-        let storyboard3 = UIStoryboard(name: "HistoryViewController", bundle: nil)
-        let vc3 = storyboard3.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController
+        let storyboard3 = UIStoryboard(name: "SearchViewController", bundle: nil)
+        let vc3 = storyboard3.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
         
-        let storyboard4 = UIStoryboard(name: "ProfileViewController", bundle: nil)
-        let vc4 = storyboard4.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        let storyboard4 = UIStoryboard(name: "HistoryViewController", bundle: nil)
+        let vc4 = storyboard4.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController
+        
+        let storyboard5 = UIStoryboard(name: "ProfileViewController", bundle: nil)
+        let vc5 = storyboard5.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         
         arrayView.append(vc1)
         arrayView.append(vc2)
         arrayView.append(vc3)
         arrayView.append(vc4)
+        arrayView.append(vc5)
         
         self.setViewControllers(arrayView, animated: false)
-        self.tabBar.backgroundColor = .white
-        self.tabBar.barTintColor = .gray
+       
         
         guard let items = self.tabBar.items else{
             return
         }
         
-        let images = ["Home","Discover","Leaderboard","Profile"]
+        let images = ["Home","Discover","Search","Leaderboard","Profile"]
         for i in 0..<items.count{
             items[i].image = UIImage(named: images[i])
         }

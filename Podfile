@@ -1,4 +1,4 @@
-platform :ios, '9.0'
+platform :ios, '15.0'
 
 target 'QuizApp' do
   use_frameworks!
@@ -6,4 +6,6 @@ target 'QuizApp' do
   pod 'R.swift', '~> 6.1.0'
   pod 'IQKeyboardManagerSwift'
   pod 'GoogleSignIn'
+  pod 'SwiftColor'
+  pod 'Charts', '~> 4.1.0'
 end
