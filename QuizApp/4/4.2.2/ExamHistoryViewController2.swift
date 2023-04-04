@@ -8,9 +8,6 @@
 import UIKit
 
 class ExamHistoryViewController2: UIViewController {
-    @IBOutlet weak var backScreenBtn: UIButton!
-    @IBOutlet weak var time: UILabel!
-    @IBOutlet weak var timeSlider: UISlider!
     @IBOutlet weak var exitBtn: UIButton!
     @IBOutlet weak var questionName: UILabel!
     @IBOutlet weak var questionDetail: UILabel!
@@ -34,10 +31,21 @@ class ExamHistoryViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        coverView.layer.cornerRadius = 20
+        layoutBtn(button: option1)
+        layoutBtn(button: option2)
+        layoutBtn(button: option3)
+        layoutBtn(button: option4)
+        
         // Do any additional setup after loading the view.
     }
     
+    func layoutBtn(button: UIButton){
+        button.layer.cornerRadius = 20
+        button.layer.borderColor = UIColor.systemGray.cgColor
+        button.layer.borderWidth = 1.5
+    }
 
     /*
     // MARK: - Navigation
