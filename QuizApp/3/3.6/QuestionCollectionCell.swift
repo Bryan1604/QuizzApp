@@ -17,6 +17,6 @@ class QuestionCollectionCell: UICollectionViewCell {
         questionCell?.layer.cornerRadius = 15
         questionCell?.backgroundColor = .white
         questionCell?.layer.borderWidth = 1.5
-        questionCell?.layer.borderColor = .init(red: 106, green: 90, blue: 224, alpha: 0.2)
+        questionCell?.layer.borderColor = UIColor.systemGray5.cgColor
     }
 }

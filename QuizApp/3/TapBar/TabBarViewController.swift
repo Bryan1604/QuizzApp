@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import STTabbar
 class TabBarViewController: UITabBarController {
     
     var arrayView: [UIViewController] = []
@@ -19,7 +19,14 @@ class TabBarViewController: UITabBarController {
         self.tabBar.layer.cornerRadius = 20
         self.tabBar.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         callItemViewController()
-        
+        self.navigationController?.isNavigationBarHidden = true
+        if let myTabbar = tabBar as? STTabbar {
+            myTabbar.centerButtonActionHandler = {
+                let storyboard3 = UIStoryboard(name: "SearchViewController", bundle: nil)
+                let vc3 = storyboard3.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
+                SceneDelegate.shared?.changeRootController(vc3)
+            }
+        }
         // Do any additional setup after loading the view.
     }
     

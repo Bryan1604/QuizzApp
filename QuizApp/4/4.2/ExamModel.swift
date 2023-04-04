@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct exam {
+    var title: String
+    var numberOfQuestion: Int
+    var isSystem: Bool
+}

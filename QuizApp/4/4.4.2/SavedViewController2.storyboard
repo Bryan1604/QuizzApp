@@ -1,28 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SVN-Gilroy Medium.otf">
+            <string>SVN-GilroyMedium</string>
+        </array>
+        <array key="SVN-Gilroy Regular.otf">
+            <string>SVN-Gilroy</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="s0d-6b-0kx">
+        <!--Saved View Controller2-->
+        <scene sceneID="jg3-48-FtX">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController restorationIdentifier="SavedViewController2" storyboardIdentifier="SavedViewController2" id="piK-d8-4MI" customClass="SavedViewController2" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rfn-hF-PIa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1J-fK-xbY">
+                                <rect key="frame" x="16" y="84.666666666666671" width="48" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Icon-1"/>
+                                <connections>
+                                    <action selector="goBack" destination="piK-d8-4MI" eventType="touchUpInside" id="KNc-Ac-79y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAx-CE-Qbj">
+                                <rect key="frame" x="329" y="84.666666666666671" width="48" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Sliders"/>
+                                <connections>
+                                    <action selector="setPopupButton" destination="piK-d8-4MI" eventType="touchUpInside" id="24A-Zs-AbN"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="j6a-7Y-Zk1">
+                                <rect key="frame" x="0.0" y="175.66666666666669" width="393" height="642.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đã lưu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmp-1O-vC9">
+                                <rect key="frame" x="161" y="91" width="71" height="25.333333333333329"/>
+                                <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="24"/>
+                                <color key="textColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0h-Ir-Ewt">
+                                <rect key="frame" x="24" y="146.66666666666666" width="51" height="21"/>
+                                <fontDescription key="fontDescription" name="SVN-GilroyMedium" family="SVN-Gilroy" pointSize="20"/>
+                                <color key="textColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2DT-Zz-sPh"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nmp-1O-vC9" firstAttribute="centerY" secondItem="a1J-fK-xbY" secondAttribute="centerY" id="D2z-p8-3FQ"/>
+                            <constraint firstItem="nmp-1O-vC9" firstAttribute="top" secondItem="2DT-Zz-sPh" secondAttribute="top" constant="32" id="Dew-KS-o2C"/>
+                            <constraint firstItem="K0h-Ir-Ewt" firstAttribute="top" secondItem="a1J-fK-xbY" secondAttribute="bottom" constant="24" id="EQI-Fn-UD0"/>
+                            <constraint firstItem="2DT-Zz-sPh" firstAttribute="trailing" secondItem="rAx-CE-Qbj" secondAttribute="trailing" constant="16" id="GfR-iQ-RMi"/>
+                            <constraint firstItem="rAx-CE-Qbj" firstAttribute="centerY" secondItem="nmp-1O-vC9" secondAttribute="centerY" id="MKK-0g-hFd"/>
+                            <constraint firstItem="a1J-fK-xbY" firstAttribute="leading" secondItem="2DT-Zz-sPh" secondAttribute="leading" constant="16" id="aIe-f7-QQm"/>
+                            <constraint firstItem="nmp-1O-vC9" firstAttribute="centerX" secondItem="2DT-Zz-sPh" secondAttribute="centerX" id="atD-AD-ShZ"/>
+                            <constraint firstItem="2DT-Zz-sPh" firstAttribute="trailing" secondItem="j6a-7Y-Zk1" secondAttribute="trailing" id="cSZ-qa-qg2"/>
+                            <constraint firstItem="j6a-7Y-Zk1" firstAttribute="top" secondItem="K0h-Ir-Ewt" secondAttribute="bottom" constant="8" id="i7J-lb-4ZT"/>
+                            <constraint firstItem="K0h-Ir-Ewt" firstAttribute="leading" secondItem="2DT-Zz-sPh" secondAttribute="leading" constant="24" id="mld-h0-bxX"/>
+                            <constraint firstItem="2DT-Zz-sPh" firstAttribute="bottom" secondItem="j6a-7Y-Zk1" secondAttribute="bottom" id="oe7-y3-784"/>
+                            <constraint firstItem="j6a-7Y-Zk1" firstAttribute="leading" secondItem="2DT-Zz-sPh" secondAttribute="leading" id="rkb-SA-pD1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backBtn" destination="a1J-fK-xbY" id="cjY-8g-zIi"/>
+                        <outlet property="filterBtn" destination="rAx-CE-Qbj" id="lZ1-6J-NVU"/>
+                        <outlet property="tableView" destination="j6a-7Y-Zk1" id="oY6-9a-WgZ"/>
+                        <outlet property="titleLabel" destination="K0h-Ir-Ewt" id="bXz-gb-Ck6"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="43f-ce-DvD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="4.9295774647887329"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Icon-1" width="24" height="24"/>
+        <image name="Sliders" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

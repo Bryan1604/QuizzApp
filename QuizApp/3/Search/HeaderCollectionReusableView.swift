@@ -24,4 +24,9 @@ class HeaderCollectionReusableView: UICollectionReusableView {
         view2?.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
     }
     
+    @IBAction func backAction(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "TabBarViewController", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "TabBarViewController")
+        SceneDelegate.shared?.changeRootController(vc)
+    }
 }

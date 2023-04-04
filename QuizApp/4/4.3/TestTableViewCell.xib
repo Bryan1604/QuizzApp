@@ -1,21 +1,110 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SVN-Gilroy Medium.otf">
+            <string>SVN-GilroyMedium</string>
+        </array>
+        <array key="SVN-Gilroy Regular.otf">
+            <string>SVN-Gilroy</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TestTableViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="TestTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TestTableViewCell" rowHeight="123" id="KGk-i7-Jjw" customClass="TestTableViewCell" customModule="QuizApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="364" height="123"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="364" height="123"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMt-Rl-nEn">
+                        <rect key="frame" x="24" y="8" width="316" height="106"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="npL-j7-FgB">
+                                <rect key="frame" x="8" y="16" width="74" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="npL-j7-FgB" secondAttribute="height" multiplier="1:1" id="Mjt-Ch-Yfj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFW-Sb-HYy">
+                                <rect key="frame" x="98" y="16" width="51" height="21"/>
+                                <fontDescription key="fontDescription" name="SVN-GilroyMedium" family="SVN-Gilroy" pointSize="20"/>
+                                <color key="textColor" red="0.047058823529411764" green="0.035294117647058823" blue="0.16470588235294117" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7B-Vf-Fl5">
+                                <rect key="frame" x="98" y="43" width="40.666666666666657" height="17"/>
+                                <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="16"/>
+                                <color key="textColor" red="0.52156862745098043" green="0.51764705882352935" blue="0.58039215686274503" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xóa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egP-0c-WAW">
+                                <rect key="frame" x="98" y="66" width="22" height="12.666666666666671"/>
+                                <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.5607843137254902" blue="0.63529411764705879" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chỉnh sửa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g32-PA-dvQ">
+                                <rect key="frame" x="125.99999999999999" y="66" width="54.333333333333329" height="12.666666666666671"/>
+                                <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="12"/>
+                                <color key="textColor" red="0.38823529411764707" green="0.61176470588235299" blue="0.99215686274509807" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPh-ar-nGX">
+                                <rect key="frame" x="276" y="39" width="32" height="28"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Vector"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nFW-Sb-HYy" firstAttribute="leading" secondItem="npL-j7-FgB" secondAttribute="trailing" constant="16" id="493-lN-erG"/>
+                            <constraint firstItem="IPh-ar-nGX" firstAttribute="centerY" secondItem="lMt-Rl-nEn" secondAttribute="centerY" id="9uc-1q-IYk"/>
+                            <constraint firstItem="egP-0c-WAW" firstAttribute="top" secondItem="u7B-Vf-Fl5" secondAttribute="bottom" constant="6" id="A4s-dW-gAR"/>
+                            <constraint firstItem="g32-PA-dvQ" firstAttribute="centerY" secondItem="egP-0c-WAW" secondAttribute="centerY" id="CZg-Gb-TvA"/>
+                            <constraint firstAttribute="bottom" secondItem="npL-j7-FgB" secondAttribute="bottom" constant="16" id="DzL-cg-s6w"/>
+                            <constraint firstItem="npL-j7-FgB" firstAttribute="top" secondItem="lMt-Rl-nEn" secondAttribute="top" constant="16" id="SGc-u8-Zhc"/>
+                            <constraint firstItem="egP-0c-WAW" firstAttribute="leading" secondItem="npL-j7-FgB" secondAttribute="trailing" constant="16" id="Vms-2O-bTK"/>
+                            <constraint firstAttribute="trailing" secondItem="IPh-ar-nGX" secondAttribute="trailing" constant="8" id="WXe-l0-sWm"/>
+                            <constraint firstItem="nFW-Sb-HYy" firstAttribute="top" secondItem="lMt-Rl-nEn" secondAttribute="top" constant="16" id="egK-Pk-K4g"/>
+                            <constraint firstItem="u7B-Vf-Fl5" firstAttribute="leading" secondItem="npL-j7-FgB" secondAttribute="trailing" constant="16" id="fMO-97-7je"/>
+                            <constraint firstItem="u7B-Vf-Fl5" firstAttribute="top" secondItem="nFW-Sb-HYy" secondAttribute="bottom" constant="6" id="j1e-Sy-vUB"/>
+                            <constraint firstAttribute="height" constant="106" id="kiJ-f0-4Yx"/>
+                            <constraint firstItem="npL-j7-FgB" firstAttribute="leading" secondItem="lMt-Rl-nEn" secondAttribute="leading" constant="8" id="pG1-Gm-dE3"/>
+                            <constraint firstItem="g32-PA-dvQ" firstAttribute="leading" secondItem="egP-0c-WAW" secondAttribute="trailing" constant="6" id="thO-5x-m4z"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="lMt-Rl-nEn" secondAttribute="trailing" constant="24" id="3If-2Q-kds"/>
+                    <constraint firstItem="lMt-Rl-nEn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Dgg-yj-Q55"/>
+                    <constraint firstItem="lMt-Rl-nEn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="NaP-de-jYp"/>
+                    <constraint firstAttribute="bottom" secondItem="lMt-Rl-nEn" secondAttribute="bottom" constant="8" id="obd-6t-Keu"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellView" destination="lMt-Rl-nEn" id="FOc-KH-5u8"/>
+                <outlet property="subTitle" destination="u7B-Vf-Fl5" id="e0K-b3-QLy"/>
+                <outlet property="thumnail" destination="npL-j7-FgB" id="1sH-ai-k5r"/>
+                <outlet property="title" destination="nFW-Sb-HYy" id="xqJ-gf-8Wb"/>
+            </connections>
+            <point key="canvasLocation" x="105.34351145038167" y="46.83098591549296"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Vector" width="8" height="14"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

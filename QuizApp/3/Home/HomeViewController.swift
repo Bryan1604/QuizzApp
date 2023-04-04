@@ -51,7 +51,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         cell.thumnail.image = UIImage(named: data[indexPath.row].thumnail)
         cell.title.text = data[indexPath.row].title
         cell.detail.text = data[indexPath.row].detail
-        cell.delegate = self
+        //cell.delegate = self
         return cell
     }
     
@@ -67,15 +67,26 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return section == 0 ? 430 : 0
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = UIStoryboard(name: "SubjectListViewController", bundle: nil).instantiateViewController(withIdentifier: "SubjectListViewController") as! SubjectListViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
-extension HomeViewController : ScienceFieldCellDelegate{
-    func didTapButton() {
-        let vc = UIStoryboard(name: "SubjectListViewController", bundle: nil).instantiateViewController(withIdentifier: "SubjectListViewController") as! SubjectListViewController
-        self.navigationController?.pushViewController(vc, animated: false)
-    }
-    
-}
+//extension HomeViewController : ScienceFieldCellDelegate{
+//    func didTapButton() {
+//        let vc = UIStoryboard(name: "SubjectListViewController", bundle: nil).instantiateViewController(withIdentifier: "SubjectListViewController") as! SubjectListViewController
+//        self.navigationController?.pushViewController(vc, animated: true)
+//    }
+//
+//}
+
+//extension HomeViewController: HomeHeaderTableViewCellDelegate{
+//    func didTapLabel() {
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(<#T##@objc method#>))
+//    }
+//}
 
 
 

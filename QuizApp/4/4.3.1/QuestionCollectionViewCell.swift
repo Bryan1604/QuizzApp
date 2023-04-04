@@ -9,9 +9,13 @@ import UIKit
 
 class QuestionCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var viewCell: UIView!
+    @IBOutlet weak var question: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        viewCell.layer.cornerRadius = 15
     }
 
 }

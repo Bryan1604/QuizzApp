@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol ScienceFieldCellDelegate: AnyObject{
-    func didTapButton()
-}
+//protocol ScienceFieldCellDelegate: AnyObject{
+//    func didTapButton()
+//}
 
 class ScienceFieldCell: UITableViewCell {
 
-    weak var delegate: ScienceFieldCellDelegate?
+   // weak var delegate: ScienceFieldCellDelegate?
     @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var thumnail: UIImageView!
     @IBOutlet weak var title: UILabel!
@@ -29,15 +29,15 @@ class ScienceFieldCell: UITableViewCell {
         // Initialization code
     }
     
-    @IBAction func didTapButton(_ sender: UIButton){
-        // unwrapped
-        guard let delegate = delegate else{
-            return
-        }
-        
-        delegate.didTapButton()
-        //delegate?.didTapButton()
-    }
+//    @IBAction func didTapButton(_ sender: UIButton){
+//        // unwrapped
+//        guard let delegate = delegate else{
+//            return
+//        }
+//
+//        delegate.didTapButton()
+//        //delegate?.didTapButton()
+//    }
 
 //    override func setSelected(_ selected: Bool, animated: Bool) {
 //        super.setSelected(selected, animated: false)

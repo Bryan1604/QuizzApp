@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct Test2{
+    var thumnail: String
+    var title: String
+    var numberOfCreate: Int
+    var maker: String
+    
+}

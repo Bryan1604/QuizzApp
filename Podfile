@@ -8,4 +8,11 @@ target 'QuizApp' do
   pod 'GoogleSignIn'
   pod 'SwiftColor'
   pod 'Charts', '~> 4.1.0'
+  pod "MBCircularProgressBar"
+  pod 'SFProgressCircle'
+  pod 'KUIPopOver'
+  pod 'Popover'
+  pod 'DropDown'
+  pod 'VerticalSlidingPresentationController', '~> 0.2.0'
+  pod 'STTabbar'
 end
