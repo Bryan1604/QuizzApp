@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import Popover
+import KUIPopOver
 class TestDetailViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
     @IBOutlet weak var backScreenBtn: UIButton!
@@ -76,36 +77,11 @@ class TestDetailViewController: UIViewController, UIPopoverPresentationControlle
         print("1")
     }
     
-    @IBAction func presentPopUpOfQuestion(_ sender: Any){
-        //        let popupVC = PopUpViewController()
-        //        print("hi1")
-        //        popupVC.modalPresentationStyle = .pageSheet
-        //        self.present(popupVC, animated: true, completion: nil)
-        //        print("hi 2")
+    @IBAction func presentPopUpOfQuestion(_ sender: UIButton){
         let storyBoard = UIStoryboard(name: "PopUpViewController", bundle: nil)
         let popoverController = storyBoard.instantiateViewController(withIdentifier: "PopUpViewController")
-        //    presentPopover(self, popoverController, sender: popoverButton, size: CGSize(width: 327, height: 125))
-        popoverController.preferredContentSize = CGSize(width: 123, height: 125)
-        popoverController.modalPresentationStyle = .popover
-        // present popover
-        if let popoverPresentationController = popoverController.popoverPresentationController {
-            popoverPresentationController.permittedArrowDirections = .up
-            popoverPresentationController.sourceView = questionMenu
-            popoverPresentationController.sourceRect = questionMenu?.frame ?? CGRect.zero
-            popoverPresentationController.delegate = self
-            present(popoverController,animated: true, completion: nil)
-        }
+       
     }
-//    func presentPopover(_ parentViewController: UIViewController, _ viewController: UIViewController, sender: UIView, size: CGSize, arrowDirection: UIPopoverArrowDirection = .down) {
-//            viewController.preferredContentSize = size
-//            viewController.modalPresentationStyle = .popover
-//            self.present(viewController, animated: true)
-//            if let pop = viewController.popoverPresentationController {
-//                pop.sourceView = sender
-//                pop.sourceRect = sender.bounds
-//                pop.permittedArrowDirections = arrowDirection
-//            }
-//        }
 
     @IBAction func submitAction(_ sender: Any) {
         animateIn(designedView: blurView)

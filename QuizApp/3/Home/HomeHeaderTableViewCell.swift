@@ -6,6 +6,9 @@
 //
 
 import UIKit
+protocol HomeHeaderTableViewCellDelegate: AnyObject{
+    func didTapLabel()
+}
 
 class HomeHeaderTableViewCell: UITableViewHeaderFooterView {
 

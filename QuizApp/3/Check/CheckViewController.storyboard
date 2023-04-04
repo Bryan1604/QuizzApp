@@ -42,6 +42,9 @@
                                                 <rect key="frame" x="321" y="25.666666666666671" width="48" height="38"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Icon (8)"/>
+                                                <connections>
+                                                    <action selector="popToRootView:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FUA-L3-cDj"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ge-KN-Va4">
                                                 <rect key="frame" x="24" y="73.333333333333343" width="345" height="318"/>
@@ -58,13 +61,40 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                     </button>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olT-43-bvc">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olT-43-bvc" customClass="MBCircularProgressBarView">
                                                         <rect key="frame" x="98.666666666666686" y="31" width="148" height="148"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" red="1" green="0.56078431370000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="148" id="MJf-Nm-Lhs"/>
                                                             <constraint firstAttribute="height" constant="148" id="v9Y-VX-0eo"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                                <real key="value" value="35"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                                                <real key="value" value="100"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="progressStrokeColor">
+                                                                <color key="value" red="1" green="0.83921568627450982" blue="0.8666666666666667" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
+                                                                <real key="value" value="100"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="emptyLineWidth">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="emptyLineColor">
+                                                                <color key="value" red="1" green="0.83921568627450982" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bạn nhận được +80 điểm kiểm tra" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCe-6Z-an2">
                                                         <rect key="frame" x="40" y="194.99999999999997" width="265" height="19"/>
@@ -73,7 +103,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="0.5607843137254902" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="1" green="0.56078431370000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="Dlc-bU-XRA" secondAttribute="bottom" constant="24" id="6mv-j6-VjU"/>
                                                     <constraint firstAttribute="trailing" secondItem="Dlc-bU-XRA" secondAttribute="trailing" constant="45" id="Fao-5B-oqA"/>
@@ -90,7 +120,6 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qll-Pd-xwY">
                                                 <rect key="frame" x="24" y="415.33333333333331" width="345" height="127.99999999999994"/>
-                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="DWR-FT-SUT"/>
                                                 </constraints>
@@ -300,8 +329,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="charView" destination="olT-43-bvc" id="rHe-xt-QhO"/>
+                        <outlet property="doneBtn" destination="uTR-sU-gRQ" id="vIT-nr-kcX"/>
+                        <outlet property="lineChartView" destination="qll-Pd-xwY" id="Dhh-1E-svw"/>
                         <outlet property="parentViewChart" destination="9ge-KN-Va4" id="KVY-bZ-c3Z"/>
+                        <outlet property="progressView" destination="olT-43-bvc" id="Hov-tc-Afh"/>
+                        <outlet property="reTestBtn" destination="v88-1N-QVC" id="E9E-fa-cRT"/>
+                        <outlet property="resultLabel" destination="rCe-6Z-an2" id="shw-lz-bju"/>
                         <outlet property="viewResultBtn" destination="Dlc-bU-XRA" id="3a7-gF-ovB"/>
                     </connections>
                 </viewController>
@@ -317,9 +350,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

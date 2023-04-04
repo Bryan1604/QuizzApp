@@ -20,16 +20,17 @@ class testCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
+        self.selectionStyle = .none
         parentView.layer.cornerRadius = 20
         parentView.layer.borderWidth = 2
         parentView.layer.borderColor = UIColor.systemGray5.cgColor
         
     }
 
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
     
 }

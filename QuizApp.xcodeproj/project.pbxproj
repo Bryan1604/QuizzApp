@@ -100,6 +100,47 @@
 		8C80BF6D29C411E000C59FC4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C80BF6C29C411E000C59FC4 /* Item.swift */; };
 		8C80BF7A29C4511A00C59FC4 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C80BF7829C4511A00C59FC4 /* HeaderCollectionReusableView.swift */; };
 		8C80BF7B29C4511A00C59FC4 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C80BF7929C4511A00C59FC4 /* HeaderCollectionReusableView.xib */; };
+		8CAA885029D3E73900B8F4D2 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAA884F29D3E73900B8F4D2 /* ResultViewController.swift */; };
+		8CAA885229D3E75300B8F4D2 /* ResultViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA885129D3E75300B8F4D2 /* ResultViewController.storyboard */; };
+		8CAA885429D3EB5600B8F4D2 /* StartTestViewController2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA885329D3EB5600B8F4D2 /* StartTestViewController2.storyboard */; };
+		8CAA885629D3EB7A00B8F4D2 /* StartTestViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAA885529D3EB7A00B8F4D2 /* StartTestViewController2.swift */; };
+		8CB5F41429D52E4500D60F15 /* ExamHistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB5F41329D52E4500D60F15 /* ExamHistoryViewController.storyboard */; };
+		8CB5F41629D52E4A00D60F15 /* ExamHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5F41529D52E4A00D60F15 /* ExamHistoryViewController.swift */; };
+		8CB5F41929D52F2900D60F15 /* ExamViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5F41729D52F2900D60F15 /* ExamViewCell.swift */; };
+		8CB5F41A29D52F2900D60F15 /* ExamViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB5F41829D52F2900D60F15 /* ExamViewCell.xib */; };
+		8CB5F41C29D59CB400D60F15 /* ExamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5F41B29D59CB400D60F15 /* ExamModel.swift */; };
+		8CB5F41F29D67D2D00D60F15 /* ExamHistoryViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5F41E29D67D2D00D60F15 /* ExamHistoryViewController1.swift */; };
+		8CB5F42129D67D4C00D60F15 /* ExamHistoryViewController1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB5F42029D67D4C00D60F15 /* ExamHistoryViewController1.storyboard */; };
+		8CB5F42429D6BC1300D60F15 /* ExamHistoryViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5F42329D6BC1300D60F15 /* ExamHistoryViewController2.swift */; };
+		8CB5F42629D6BC3200D60F15 /* ExamHistoryViewController2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB5F42529D6BC3200D60F15 /* ExamHistoryViewController2.storyboard */; };
+		8CB5F42929D6DCDC00D60F15 /* QuestionHistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB5F42829D6DCDC00D60F15 /* QuestionHistoryViewController.storyboard */; };
+		8CB5F42B29D6DCEF00D60F15 /* QuestionHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5F42A29D6DCEF00D60F15 /* QuestionHistoryViewController.swift */; };
+		8CB5F42E29D6DEB000D60F15 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5F42C29D6DEB000D60F15 /* TestTableViewCell.swift */; };
+		8CB5F42F29D6DEB000D60F15 /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB5F42D29D6DEB000D60F15 /* TestTableViewCell.xib */; };
+		8CB5F43229D726AC00D60F15 /* QuestionHistoryViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5F43129D726AC00D60F15 /* QuestionHistoryViewController1.swift */; };
+		8CB5F43429D726CA00D60F15 /* QuestionHistoryViewController1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB5F43329D726CA00D60F15 /* QuestionHistoryViewController1.storyboard */; };
+		8CB5F43729D7D93300D60F15 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5F43629D7D93300D60F15 /* SavedViewController.swift */; };
+		8CB5F43929D7D94700D60F15 /* SavedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB5F43829D7D94700D60F15 /* SavedViewController.storyboard */; };
+		8CB5F43C29D8221A00D60F15 /* SavedViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5F43B29D8221A00D60F15 /* SavedViewController1.swift */; };
+		8CB5F43E29D8222B00D60F15 /* SavedViewController1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB5F43D29D8222B00D60F15 /* SavedViewController1.storyboard */; };
+		8CB5F44229D97D6C00D60F15 /* SavedViewController2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB5F44129D97D6C00D60F15 /* SavedViewController2.storyboard */; };
+		8CB5F44429D97D8900D60F15 /* SavedViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5F44329D97D8900D60F15 /* SavedViewController2.swift */; };
+		8CB5F44629D983F200D60F15 /* TestModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5F44529D983F200D60F15 /* TestModel2.swift */; };
+		8CB5F44A29D9FACF00D60F15 /* UploadSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5F44929D9FACF00D60F15 /* UploadSheetViewController.swift */; };
+		8CB5F44C29D9FAE000D60F15 /* UploadSheetViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB5F44B29D9FAE000D60F15 /* UploadSheetViewController.storyboard */; };
+		8CB5F44E29DA084B00D60F15 /* SharePopUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB5F44D29DA084B00D60F15 /* SharePopUpViewController.storyboard */; };
+		8CB5F45029DA085B00D60F15 /* SharePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5F44F29DA085B00D60F15 /* SharePopUpViewController.swift */; };
+		8CB5F45429DA685100D60F15 /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5F45329DA685100D60F15 /* SetUpViewController.swift */; };
+		8CB5F45629DA686700D60F15 /* SetUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB5F45529DA686700D60F15 /* SetUpViewController.storyboard */; };
+		8CE87CB229DA7BBD00B561C5 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 8CE87CB129DA7BBD00B561C5 /* SwiftUICharts */; };
+		8CE87CB529DA859800B561C5 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE87CB429DA859800B561C5 /* ChangePasswordViewController.swift */; };
+		8CE87CB729DA85AC00B561C5 /* ChangePasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CE87CB629DA85AC00B561C5 /* ChangePasswordViewController.storyboard */; };
+		8CE87CBA29DA8A3300B561C5 /* UpdateInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CE87CB929DA8A3300B561C5 /* UpdateInfoViewController.storyboard */; };
+		8CE87CBC29DA8BD800B561C5 /* UpdateInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE87CBB29DA8BD800B561C5 /* UpdateInfoViewController.swift */; };
+		8CE87CBF29DA8C2800B561C5 /* UpdateEmailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CE87CBE29DA8C2800B561C5 /* UpdateEmailViewController.storyboard */; };
+		8CE87CC129DA8ED400B561C5 /* UpdateEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE87CC029DA8ED400B561C5 /* UpdateEmailViewController.swift */; };
+		8CE87CC429DBF86F00B561C5 /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE87CC229DBF86E00B561C5 /* QuestionCollectionViewCell.swift */; };
+		8CE87CC529DBF86F00B561C5 /* QuestionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CE87CC329DBF86E00B561C5 /* QuestionCollectionViewCell.xib */; };
 		BFE44971D2310D4973C4E814 /* Pods_QuizApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992C74ED962C05BAD7B6927E /* Pods_QuizApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -211,6 +252,46 @@
 		8C80BF6C29C411E000C59FC4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		8C80BF7829C4511A00C59FC4 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		8C80BF7929C4511A00C59FC4 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		8CAA884F29D3E73900B8F4D2 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		8CAA885129D3E75300B8F4D2 /* ResultViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultViewController.storyboard; sourceTree = "<group>"; };
+		8CAA885329D3EB5600B8F4D2 /* StartTestViewController2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartTestViewController2.storyboard; sourceTree = "<group>"; };
+		8CAA885529D3EB7A00B8F4D2 /* StartTestViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTestViewController2.swift; sourceTree = "<group>"; };
+		8CB5F41329D52E4500D60F15 /* ExamHistoryViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ExamHistoryViewController.storyboard; path = ../../../../.Trash/4.2/ExamHistoryViewController.storyboard; sourceTree = "<group>"; };
+		8CB5F41529D52E4A00D60F15 /* ExamHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExamHistoryViewController.swift; path = ../../../../.Trash/4.2/ExamHistoryViewController.swift; sourceTree = "<group>"; };
+		8CB5F41729D52F2900D60F15 /* ExamViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamViewCell.swift; sourceTree = "<group>"; };
+		8CB5F41829D52F2900D60F15 /* ExamViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExamViewCell.xib; sourceTree = "<group>"; };
+		8CB5F41B29D59CB400D60F15 /* ExamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamModel.swift; sourceTree = "<group>"; };
+		8CB5F41E29D67D2D00D60F15 /* ExamHistoryViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamHistoryViewController1.swift; sourceTree = "<group>"; };
+		8CB5F42029D67D4C00D60F15 /* ExamHistoryViewController1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExamHistoryViewController1.storyboard; sourceTree = "<group>"; };
+		8CB5F42329D6BC1300D60F15 /* ExamHistoryViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamHistoryViewController2.swift; sourceTree = "<group>"; };
+		8CB5F42529D6BC3200D60F15 /* ExamHistoryViewController2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExamHistoryViewController2.storyboard; sourceTree = "<group>"; };
+		8CB5F42829D6DCDC00D60F15 /* QuestionHistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuestionHistoryViewController.storyboard; sourceTree = "<group>"; };
+		8CB5F42A29D6DCEF00D60F15 /* QuestionHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionHistoryViewController.swift; sourceTree = "<group>"; };
+		8CB5F42C29D6DEB000D60F15 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
+		8CB5F42D29D6DEB000D60F15 /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
+		8CB5F43129D726AC00D60F15 /* QuestionHistoryViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionHistoryViewController1.swift; sourceTree = "<group>"; };
+		8CB5F43329D726CA00D60F15 /* QuestionHistoryViewController1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuestionHistoryViewController1.storyboard; sourceTree = "<group>"; };
+		8CB5F43629D7D93300D60F15 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
+		8CB5F43829D7D94700D60F15 /* SavedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SavedViewController.storyboard; sourceTree = "<group>"; };
+		8CB5F43B29D8221A00D60F15 /* SavedViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController1.swift; sourceTree = "<group>"; };
+		8CB5F43D29D8222B00D60F15 /* SavedViewController1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SavedViewController1.storyboard; sourceTree = "<group>"; };
+		8CB5F44129D97D6C00D60F15 /* SavedViewController2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SavedViewController2.storyboard; sourceTree = "<group>"; };
+		8CB5F44329D97D8900D60F15 /* SavedViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController2.swift; sourceTree = "<group>"; };
+		8CB5F44529D983F200D60F15 /* TestModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel2.swift; sourceTree = "<group>"; };
+		8CB5F44929D9FACF00D60F15 /* UploadSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadSheetViewController.swift; sourceTree = "<group>"; };
+		8CB5F44B29D9FAE000D60F15 /* UploadSheetViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadSheetViewController.storyboard; sourceTree = "<group>"; };
+		8CB5F44D29DA084B00D60F15 /* SharePopUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SharePopUpViewController.storyboard; sourceTree = "<group>"; };
+		8CB5F44F29DA085B00D60F15 /* SharePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePopUpViewController.swift; sourceTree = "<group>"; };
+		8CB5F45329DA685100D60F15 /* SetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
+		8CB5F45529DA686700D60F15 /* SetUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetUpViewController.storyboard; sourceTree = "<group>"; };
+		8CE87CB429DA859800B561C5 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		8CE87CB629DA85AC00B561C5 /* ChangePasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePasswordViewController.storyboard; sourceTree = "<group>"; };
+		8CE87CB929DA8A3300B561C5 /* UpdateInfoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdateInfoViewController.storyboard; sourceTree = "<group>"; };
+		8CE87CBB29DA8BD800B561C5 /* UpdateInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateInfoViewController.swift; sourceTree = "<group>"; };
+		8CE87CBE29DA8C2800B561C5 /* UpdateEmailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdateEmailViewController.storyboard; sourceTree = "<group>"; };
+		8CE87CC029DA8ED400B561C5 /* UpdateEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEmailViewController.swift; sourceTree = "<group>"; };
+		8CE87CC229DBF86E00B561C5 /* QuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewCell.swift; sourceTree = "<group>"; };
+		8CE87CC329DBF86E00B561C5 /* QuestionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCollectionViewCell.xib; sourceTree = "<group>"; };
 		992C74ED962C05BAD7B6927E /* Pods_QuizApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -222,6 +303,7 @@
 				3F5B295C299E15AD0000A996 /* FacebookLogin in Frameworks */,
 				3F5B295A299E15AD0000A996 /* FacebookGamingServices in Frameworks */,
 				3F5B295E299E15AD0000A996 /* FacebookShare in Frameworks */,
+				8CE87CB229DA7BBD00B561C5 /* SwiftUICharts in Frameworks */,
 				3F5B2958299E15AD0000A996 /* FacebookCore in Frameworks */,
 				BFE44971D2310D4973C4E814 /* Pods_QuizApp.framework in Frameworks */,
 			);
@@ -301,6 +383,9 @@
 				3F76B1CC2987ADF000E963F3 /* 1 */,
 				3F46CC622991464B00BAA945 /* 2 */,
 				3FFFAEDB29A36F2A007E4443 /* 3 */,
+				8CB5F40829D4881600D60F15 /* 4 */,
+				8CB5F44729D9C9AA00D60F15 /* 5 */,
+				8CB5F45129DA19C200D60F15 /* 6 */,
 				3F76B1B22987AD5B00E963F3 /* AppDelegate.swift */,
 				3F76B1B42987AD5B00E963F3 /* SceneDelegate.swift */,
 				3F76B1B82987AD5B00E963F3 /* Main.storyboard */,
@@ -428,13 +513,13 @@
 			path = UpLoad;
 			sourceTree = "<group>";
 		};
-		3FC5EC7229B07EE300B62B57 /* Hístory */ = {
+		3FC5EC7229B07EE300B62B57 /* 4.1 */ = {
 			isa = PBXGroup;
 			children = (
 				3FC5EC7829B082A100B62B57 /* HistoryViewController.swift */,
 				3FC5EC7A29B082B400B62B57 /* HistoryViewController.storyboard */,
 			);
-			name = "Hístory";
+			name = 4.1;
 			path = "Hístory";
 			sourceTree = "<group>";
 		};
@@ -473,15 +558,13 @@
 		3FFFAEDB29A36F2A007E4443 /* 3 */ = {
 			isa = PBXGroup;
 			children = (
+				8CAA884E29D3E72100B8F4D2 /* 3.10 */,
 				8C20F7D229D150AA00C62D89 /* Check */,
 				8C20F7C029CAAF7E00C62D89 /* 3.6 */,
 				8C20F7B929CA986E00C62D89 /* 3.5 */,
 				8C20F79329C4729B00C62D89 /* 3.4 */,
 				3FFFAEE129ADF9A9007E4443 /* TapBar */,
 				3FFFAEDC29ADE776007E4443 /* Home */,
-				3FC5EC7129B07ECC00B62B57 /* UpLoad */,
-				3FC5EC7229B07EE300B62B57 /* Hístory */,
-				3FC5EC7329B07EF400B62B57 /* Profile */,
 				3FC5EC8229B0986200B62B57 /* Search */,
 			);
 			path = 3;
@@ -565,6 +648,8 @@
 		8C20F7BB29CA989600C62D89 /* tracnghiem(nguoitao) */ = {
 			isa = PBXGroup;
 			children = (
+				8CAA885329D3EB5600B8F4D2 /* StartTestViewController2.storyboard */,
+				8CAA885529D3EB7A00B8F4D2 /* StartTestViewController2.swift */,
 			);
 			path = "tracnghiem(nguoitao)";
 			sourceTree = "<group>";
@@ -589,6 +674,179 @@
 				8C20F7D529D150E300C62D89 /* CheckViewController.storyboard */,
 			);
 			path = Check;
+			sourceTree = "<group>";
+		};
+		8CAA884E29D3E72100B8F4D2 /* 3.10 */ = {
+			isa = PBXGroup;
+			children = (
+				8CAA884F29D3E73900B8F4D2 /* ResultViewController.swift */,
+				8CAA885129D3E75300B8F4D2 /* ResultViewController.storyboard */,
+			);
+			path = 3.10;
+			sourceTree = "<group>";
+		};
+		8CB5F40829D4881600D60F15 /* 4 */ = {
+			isa = PBXGroup;
+			children = (
+				8CB5F44029D97D4E00D60F15 /* 4.4.2 */,
+				8CB5F43A29D821FE00D60F15 /* 4.4.1 */,
+				8CB5F43529D7D91D00D60F15 /* 4.4 */,
+				3FC5EC7229B07EE300B62B57 /* 4.1 */,
+				8CB5F41229D52E3500D60F15 /* 4.2 */,
+				8CB5F41D29D67CEE00D60F15 /* 4.2.1 */,
+				8CB5F42229D6BBF300D60F15 /* 4.2.2 */,
+				8CB5F42729D6DCB400D60F15 /* 4.3 */,
+				8CB5F43029D7268500D60F15 /* 4.3.1 */,
+			);
+			path = 4;
+			sourceTree = "<group>";
+		};
+		8CB5F41229D52E3500D60F15 /* 4.2 */ = {
+			isa = PBXGroup;
+			children = (
+				8CB5F41329D52E4500D60F15 /* ExamHistoryViewController.storyboard */,
+				8CB5F41529D52E4A00D60F15 /* ExamHistoryViewController.swift */,
+				8CB5F41729D52F2900D60F15 /* ExamViewCell.swift */,
+				8CB5F41829D52F2900D60F15 /* ExamViewCell.xib */,
+				8CB5F41B29D59CB400D60F15 /* ExamModel.swift */,
+			);
+			path = 4.2;
+			sourceTree = "<group>";
+		};
+		8CB5F41D29D67CEE00D60F15 /* 4.2.1 */ = {
+			isa = PBXGroup;
+			children = (
+				8CB5F41E29D67D2D00D60F15 /* ExamHistoryViewController1.swift */,
+				8CB5F42029D67D4C00D60F15 /* ExamHistoryViewController1.storyboard */,
+			);
+			path = 4.2.1;
+			sourceTree = "<group>";
+		};
+		8CB5F42229D6BBF300D60F15 /* 4.2.2 */ = {
+			isa = PBXGroup;
+			children = (
+				8CB5F42329D6BC1300D60F15 /* ExamHistoryViewController2.swift */,
+				8CB5F42529D6BC3200D60F15 /* ExamHistoryViewController2.storyboard */,
+			);
+			path = 4.2.2;
+			sourceTree = "<group>";
+		};
+		8CB5F42729D6DCB400D60F15 /* 4.3 */ = {
+			isa = PBXGroup;
+			children = (
+				8CB5F42829D6DCDC00D60F15 /* QuestionHistoryViewController.storyboard */,
+				8CB5F42A29D6DCEF00D60F15 /* QuestionHistoryViewController.swift */,
+				8CB5F42C29D6DEB000D60F15 /* TestTableViewCell.swift */,
+				8CB5F42D29D6DEB000D60F15 /* TestTableViewCell.xib */,
+			);
+			path = 4.3;
+			sourceTree = "<group>";
+		};
+		8CB5F43029D7268500D60F15 /* 4.3.1 */ = {
+			isa = PBXGroup;
+			children = (
+				8CB5F43129D726AC00D60F15 /* QuestionHistoryViewController1.swift */,
+				8CB5F43329D726CA00D60F15 /* QuestionHistoryViewController1.storyboard */,
+				8CE87CC229DBF86E00B561C5 /* QuestionCollectionViewCell.swift */,
+				8CE87CC329DBF86E00B561C5 /* QuestionCollectionViewCell.xib */,
+			);
+			path = 4.3.1;
+			sourceTree = "<group>";
+		};
+		8CB5F43529D7D91D00D60F15 /* 4.4 */ = {
+			isa = PBXGroup;
+			children = (
+				8CB5F43629D7D93300D60F15 /* SavedViewController.swift */,
+				8CB5F43829D7D94700D60F15 /* SavedViewController.storyboard */,
+			);
+			path = 4.4;
+			sourceTree = "<group>";
+		};
+		8CB5F43A29D821FE00D60F15 /* 4.4.1 */ = {
+			isa = PBXGroup;
+			children = (
+				8CB5F43B29D8221A00D60F15 /* SavedViewController1.swift */,
+				8CB5F43D29D8222B00D60F15 /* SavedViewController1.storyboard */,
+			);
+			path = 4.4.1;
+			sourceTree = "<group>";
+		};
+		8CB5F44029D97D4E00D60F15 /* 4.4.2 */ = {
+			isa = PBXGroup;
+			children = (
+				8CB5F44129D97D6C00D60F15 /* SavedViewController2.storyboard */,
+				8CB5F44329D97D8900D60F15 /* SavedViewController2.swift */,
+				8CB5F44529D983F200D60F15 /* TestModel2.swift */,
+			);
+			path = 4.4.2;
+			sourceTree = "<group>";
+		};
+		8CB5F44729D9C9AA00D60F15 /* 5 */ = {
+			isa = PBXGroup;
+			children = (
+				8CB5F44829D9FAA500D60F15 /* 5.6 */,
+				3FC5EC7129B07ECC00B62B57 /* UpLoad */,
+			);
+			path = 5;
+			sourceTree = "<group>";
+		};
+		8CB5F44829D9FAA500D60F15 /* 5.6 */ = {
+			isa = PBXGroup;
+			children = (
+				8CB5F44929D9FACF00D60F15 /* UploadSheetViewController.swift */,
+				8CB5F44B29D9FAE000D60F15 /* UploadSheetViewController.storyboard */,
+				8CB5F44D29DA084B00D60F15 /* SharePopUpViewController.storyboard */,
+				8CB5F44F29DA085B00D60F15 /* SharePopUpViewController.swift */,
+			);
+			path = 5.6;
+			sourceTree = "<group>";
+		};
+		8CB5F45129DA19C200D60F15 /* 6 */ = {
+			isa = PBXGroup;
+			children = (
+				8CE87CBD29DA8C1000B561C5 /* 6.5 */,
+				8CE87CB829DA89E700B561C5 /* 6.4 */,
+				8CE87CB329DA857C00B561C5 /* 6.3 */,
+				8CB5F45229DA683600D60F15 /* Set up */,
+				3FC5EC7329B07EF400B62B57 /* Profile */,
+			);
+			path = 6;
+			sourceTree = "<group>";
+		};
+		8CB5F45229DA683600D60F15 /* Set up */ = {
+			isa = PBXGroup;
+			children = (
+				8CB5F45329DA685100D60F15 /* SetUpViewController.swift */,
+				8CB5F45529DA686700D60F15 /* SetUpViewController.storyboard */,
+			);
+			path = "Set up";
+			sourceTree = "<group>";
+		};
+		8CE87CB329DA857C00B561C5 /* 6.3 */ = {
+			isa = PBXGroup;
+			children = (
+				8CE87CB429DA859800B561C5 /* ChangePasswordViewController.swift */,
+				8CE87CB629DA85AC00B561C5 /* ChangePasswordViewController.storyboard */,
+			);
+			path = 6.3;
+			sourceTree = "<group>";
+		};
+		8CE87CB829DA89E700B561C5 /* 6.4 */ = {
+			isa = PBXGroup;
+			children = (
+				8CE87CB929DA8A3300B561C5 /* UpdateInfoViewController.storyboard */,
+				8CE87CBB29DA8BD800B561C5 /* UpdateInfoViewController.swift */,
+			);
+			path = 6.4;
+			sourceTree = "<group>";
+		};
+		8CE87CBD29DA8C1000B561C5 /* 6.5 */ = {
+			isa = PBXGroup;
+			children = (
+				8CE87CBE29DA8C2800B561C5 /* UpdateEmailViewController.storyboard */,
+				8CE87CC029DA8ED400B561C5 /* UpdateEmailViewController.swift */,
+			);
+			path = 6.5;
 			sourceTree = "<group>";
 		};
 		AEB7A34DC781CCCD7E434DAE /* Pods */ = {
@@ -625,6 +883,7 @@
 				3F5B2959299E15AD0000A996 /* FacebookGamingServices */,
 				3F5B295B299E15AD0000A996 /* FacebookLogin */,
 				3F5B295D299E15AD0000A996 /* FacebookShare */,
+				8CE87CB129DA7BBD00B561C5 /* SwiftUICharts */,
 			);
 			productName = QuizApp;
 			productReference = 3F76B1AF2987AD5B00E963F3 /* QuizApp.app */;
@@ -656,6 +915,7 @@
 			mainGroup = 3F76B1A62987AD5B00E963F3;
 			packageReferences = (
 				3F5B2956299E15AD0000A996 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				8CE87CB029DA7BBD00B561C5 /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = 3F76B1B02987AD5B00E963F3 /* Products */;
 			projectDirPath = "";
@@ -674,6 +934,8 @@
 				3F7744C32993803800DC3181 /* SVN-Gilroy Bold.otf in Resources */,
 				3F76B1BF2987AD5D00E963F3 /* LaunchScreen.storyboard in Resources */,
 				3F7744C92993803800DC3181 /* SVN-Gilroy Thin.otf in Resources */,
+				8CAA885429D3EB5600B8F4D2 /* StartTestViewController2.storyboard in Resources */,
+				8CB5F42129D67D4C00D60F15 /* ExamHistoryViewController1.storyboard in Resources */,
 				3F7744D02993803800DC3181 /* SVN-Gilroy SemiBold.otf in Resources */,
 				3F7744C42993803800DC3181 /* SVN-Gilroy Bold Italic.otf in Resources */,
 				8C20F7C429CAAFC200C62D89 /* TestDetailViewController.storyboard in Resources */,
@@ -683,13 +945,20 @@
 				3FBE1314298CE09800DA0374 /* Introduce2ViewController.storyboard in Resources */,
 				3FC5EC7F29B082DA00B62B57 /* UploadViewController.storyboard in Resources */,
 				3F7744CA2993803800DC3181 /* SVN-Gilroy Italic.otf in Resources */,
+				8CB5F42929D6DCDC00D60F15 /* QuestionHistoryViewController.storyboard in Resources */,
+				8CB5F42629D6BC3200D60F15 /* ExamHistoryViewController2.storyboard in Resources */,
+				8CB5F44E29DA084B00D60F15 /* SharePopUpViewController.storyboard in Resources */,
 				3F77449E29933BB900DC3181 /* SignUpViewController.storyboard in Resources */,
+				8CB5F44C29D9FAE000D60F15 /* UploadSheetViewController.storyboard in Resources */,
 				8C80BF5729C2F7CC00C59FC4 /* ScienceFieldCell.xib in Resources */,
+				8CAA885229D3E75300B8F4D2 /* ResultViewController.storyboard in Resources */,
 				8C20F7D629D150E300C62D89 /* CheckViewController.storyboard in Resources */,
 				8C20F7C829D0949500C62D89 /* QuestionCollectionCell.xib in Resources */,
 				3F76B1D42987BCE300E963F3 /* Introduce1ViewController.storyboard in Resources */,
 				8C20F7BF29CA993D00C62D89 /* StartTestViewController.storyboard in Resources */,
 				3F7744C02993803800DC3181 /* SVN-Gilroy Thin Italic.otf in Resources */,
+				8CB5F45629DA686700D60F15 /* SetUpViewController.storyboard in Resources */,
+				8CB5F43E29D8222B00D60F15 /* SavedViewController1.storyboard in Resources */,
 				3FBE1318298CE32800DA0374 /* Introduce3ViewController.storyboard in Resources */,
 				3FC5EC8129B0985B00B62B57 /* SearchViewController.storyboard in Resources */,
 				8C20F7B129C9ABA500C62D89 /* TestListViewController.storyboard in Resources */,
@@ -699,6 +968,7 @@
 				3F7744CC2993803800DC3181 /* SVN-Gilroy Medium Italic.otf in Resources */,
 				3F7744CF2993803800DC3181 /* SVN-Gilroy Black Italic.otf in Resources */,
 				3F7744C82993803800DC3181 /* SVN-Gilroy Xlight.otf in Resources */,
+				8CB5F42F29D6DEB000D60F15 /* TestTableViewCell.xib in Resources */,
 				3F7744C52993803800DC3181 /* SVN-Gilroy Heavy Italic.otf in Resources */,
 				3FFFAEE029ADE7A3007E4443 /* HomeViewController.storyboard in Resources */,
 				3F7744C62993803800DC3181 /* SVN-Gilroy Black.otf in Resources */,
@@ -714,15 +984,24 @@
 				8C80BF7B29C4511A00C59FC4 /* HeaderCollectionReusableView.xib in Resources */,
 				3F7744D22993803800DC3181 /* SVN-Gilroy Regular.otf in Resources */,
 				3FC5EC7029B07DD300B62B57 /* TabBarViewController.storyboard in Resources */,
+				8CE87CC529DBF86F00B561C5 /* QuestionCollectionViewCell.xib in Resources */,
 				3F7744AA2993755500DC3181 /* ForgotPassword2Storyboard.storyboard in Resources */,
+				8CB5F41429D52E4500D60F15 /* ExamHistoryViewController.storyboard in Resources */,
+				8CB5F41A29D52F2900D60F15 /* ExamViewCell.xib in Resources */,
 				3F7744CB2993803800DC3181 /* SVN-Gilroy SemiBold Italic.otf in Resources */,
 				3F7744C22993803800DC3181 /* SVN-Gilroy XBold.otf in Resources */,
+				8CE87CB729DA85AC00B561C5 /* ChangePasswordViewController.storyboard in Resources */,
+				8CE87CBA29DA8A3300B561C5 /* UpdateInfoViewController.storyboard in Resources */,
 				3F7744CD2993803800DC3181 /* SVN-Gilroy XBold Italic.otf in Resources */,
+				8CE87CBF29DA8C2800B561C5 /* UpdateEmailViewController.storyboard in Resources */,
 				3F7744A429935AEB00DC3181 /* ForgotPassword1Storyboard.storyboard in Resources */,
 				8C20F7D129D146F300C62D89 /* PopUpViewController.storyboard in Resources */,
+				8CB5F44229D97D6C00D60F15 /* SavedViewController2.storyboard in Resources */,
 				3F7744CE2993803800DC3181 /* SVN-Gilroy Light.otf in Resources */,
 				8C20F79C29C8B67B00C62D89 /* SubjectCell.xib in Resources */,
+				8CB5F43929D7D94700D60F15 /* SavedViewController.storyboard in Resources */,
 				3FC5EC7B29B082B400B62B57 /* HistoryViewController.storyboard in Resources */,
+				8CB5F43429D726CA00D60F15 /* QuestionHistoryViewController1.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -792,41 +1071,62 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB5F45429DA685100D60F15 /* SetUpViewController.swift in Sources */,
+				8CB5F41C29D59CB400D60F15 /* ExamModel.swift in Sources */,
 				3F76B1D02987AF0700E963F3 /* StartViewController.swift in Sources */,
+				8CAA885029D3E73900B8F4D2 /* ResultViewController.swift in Sources */,
 				8C20F7C229CAAFAC00C62D89 /* TestDetailViewController.swift in Sources */,
 				8C75012129BF192A00AB20BF /* HomeHeaderTableViewCell.swift in Sources */,
 				3F76B1D22987BCC700E963F3 /* Introduce1ViewController.swift in Sources */,
+				8CB5F43729D7D93300D60F15 /* SavedViewController.swift in Sources */,
+				8CB5F44A29D9FACF00D60F15 /* UploadSheetViewController.swift in Sources */,
 				8C80BF5929C2FC5600C59FC4 /* ScienceFieldModel.swift in Sources */,
 				3F7744A629935B0100DC3181 /* ForgotPassword1ViewController.swift in Sources */,
 				8C80BF6D29C411E000C59FC4 /* Item.swift in Sources */,
+				8CB5F41F29D67D2D00D60F15 /* ExamHistoryViewController1.swift in Sources */,
 				8C20F7CA29D0C1AC00C62D89 /* PopUpViewController.swift in Sources */,
 				3F46CC5F298D0ABE00BAA945 /* Introduce4ViewController.swift in Sources */,
+				8CAA885629D3EB7A00B8F4D2 /* StartTestViewController2.swift in Sources */,
 				3F46CC5D298D069500BAA945 /* Introduce3ViewController.swift in Sources */,
 				8C80BF7A29C4511A00C59FC4 /* HeaderCollectionReusableView.swift in Sources */,
 				8C20F7C729D0949500C62D89 /* QuestionCollectionCell.swift in Sources */,
 				8C20F79629C4757500C62D89 /* SubjectListViewController.swift in Sources */,
 				3FFFAEDE29ADE78E007E4443 /* HomeViewController.swift in Sources */,
+				8CB5F42429D6BC1300D60F15 /* ExamHistoryViewController2.swift in Sources */,
 				3FC5EC7529B0827600B62B57 /* ProfileViewController.swift in Sources */,
+				8CE87CBC29DA8BD800B561C5 /* UpdateInfoViewController.swift in Sources */,
+				8CB5F45029DA085B00D60F15 /* SharePopUpViewController.swift in Sources */,
 				8C20F79B29C8B67B00C62D89 /* SubjectCell.swift in Sources */,
 				3F46CC672991475400BAA945 /* SignInViewController.swift in Sources */,
 				8C20F79E29C8D1F400C62D89 /* SubjectModel.swift in Sources */,
 				8C20F7BD29CA992600C62D89 /* StartTestViewController.swift in Sources */,
 				3F7744A82993754400DC3181 /* ForgotPassword2ViewController.swift in Sources */,
+				8CE87CC429DBF86F00B561C5 /* QuestionCollectionViewCell.swift in Sources */,
+				8CB5F42B29D6DCEF00D60F15 /* QuestionHistoryViewController.swift in Sources */,
+				8CB5F43C29D8221A00D60F15 /* SavedViewController1.swift in Sources */,
 				3FFFAED8299F75BA007E4443 /* RulesViewController.swift in Sources */,
 				8C80BF6329C37FEB00C59FC4 /* SearchViewController.swift in Sources */,
+				8CE87CB529DA859800B561C5 /* ChangePasswordViewController.swift in Sources */,
 				8C80BF5629C2F7CC00C59FC4 /* ScienceFieldCell.swift in Sources */,
 				3F76B1B32987AD5B00E963F3 /* AppDelegate.swift in Sources */,
 				8C20F7A529C988DE00C62D89 /* headerView.swift in Sources */,
 				3F7744A029933BCE00DC3181 /* SignUpViewController.swift in Sources */,
 				3F76B1B52987AD5B00E963F3 /* SceneDelegate.swift in Sources */,
 				8C20F7D429D150CA00C62D89 /* CheckViewController.swift in Sources */,
+				8CE87CC129DA8ED400B561C5 /* UpdateEmailViewController.swift in Sources */,
+				8CB5F44629D983F200D60F15 /* TestModel2.swift in Sources */,
+				8CB5F41629D52E4A00D60F15 /* ExamHistoryViewController.swift in Sources */,
 				3FC5EC7D29B082C300B62B57 /* UploadViewController.swift in Sources */,
+				8CB5F43229D726AC00D60F15 /* QuestionHistoryViewController1.swift in Sources */,
 				3F7744D7299389C000DC3181 /* TutorialViewController.swift in Sources */,
 				8C20F7B429C9B07F00C62D89 /* testCell.swift in Sources */,
 				3FBE1316298CE0FC00DA0374 /* Introduce2ViewController.swift in Sources */,
 				8C20F7B729C9BBF700C62D89 /* TestModel.swift in Sources */,
 				8C20F7AC29C9AB5900C62D89 /* TestListViewController.swift in Sources */,
 				8C80BF6A29C40E4B00C59FC4 /* ItemCollectionViewCell.swift in Sources */,
+				8CB5F44429D97D8900D60F15 /* SavedViewController2.swift in Sources */,
+				8CB5F41929D52F2900D60F15 /* ExamViewCell.swift in Sources */,
+				8CB5F42E29D6DEB000D60F15 /* TestTableViewCell.swift in Sources */,
 				3FC5EC7929B082A100B62B57 /* HistoryViewController.swift in Sources */,
 				3FFFAEE529ADFA0C007E4443 /* TabBarViewController.swift in Sources */,
 			);
@@ -1060,6 +1360,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		8CE87CB029DA7BBD00B561C5 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1082,6 +1390,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3F5B2956299E15AD0000A996 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookShare;
+		};
+		8CE87CB129DA7BBD00B561C5 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CE87CB029DA7BBD00B561C5 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

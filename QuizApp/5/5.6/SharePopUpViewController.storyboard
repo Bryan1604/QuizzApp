@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SVN-Gilroy Regular.otf">
+            <string>SVN-Gilroy</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Share Pop Up View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController restorationIdentifier="SharePopUpViewController" storyboardIdentifier="SharePopUpViewController" id="Y6W-OH-hqX" customClass="SharePopUpViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="4sc-mh-ePL">
+                                <rect key="frame" x="24" y="91" width="345" height="200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAp-Ky-fP4">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="56"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID: 13579" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HU-Zs-xGf">
+                                                <rect key="frame" x="32" y="19.666666666666671" width="61.333333333333343" height="17"/>
+                                                <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="16"/>
+                                                <color key="textColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIS-8g-ixn">
+                                                <rect key="frame" x="269" y="11" width="44" height="34"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Copy"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="8HU-Zs-xGf" firstAttribute="leading" secondItem="RAp-Ky-fP4" secondAttribute="leading" constant="32" id="KIe-lc-RFm"/>
+                                            <constraint firstAttribute="height" constant="56" id="Lao-Ze-nrv"/>
+                                            <constraint firstItem="8HU-Zs-xGf" firstAttribute="centerY" secondItem="RAp-Ky-fP4" secondAttribute="centerY" id="b0o-ha-IoJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="aIS-8g-ixn" secondAttribute="trailing" constant="32" id="y3l-ie-HzP"/>
+                                            <constraint firstItem="aIS-8g-ixn" firstAttribute="centerY" secondItem="RAp-Ky-fP4" secondAttribute="centerY" id="y6g-ce-Wqe"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjO-nd-QQt">
+                                        <rect key="frame" x="0.0" y="72" width="345" height="56"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="EbZ-BG-evl">
+                                                <rect key="frame" x="32" y="0.0" width="281" height="56"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKO-Q3-aC4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="56"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="Facebook"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chia sẻ qua Facebook" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMC-Fa-hLq">
+                                                        <rect key="frame" x="60" y="0.0" width="221" height="56"/>
+                                                        <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="16"/>
+                                                        <color key="textColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="EbZ-BG-evl" secondAttribute="trailing" constant="32" id="7bK-IK-S2a"/>
+                                            <constraint firstItem="EbZ-BG-evl" firstAttribute="leading" secondItem="fjO-nd-QQt" secondAttribute="leading" constant="32" id="LCN-Vf-mR9"/>
+                                            <constraint firstItem="EbZ-BG-evl" firstAttribute="top" secondItem="fjO-nd-QQt" secondAttribute="top" id="g51-Ao-ZRS"/>
+                                            <constraint firstAttribute="bottom" secondItem="EbZ-BG-evl" secondAttribute="bottom" id="wgE-Po-1oM"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WEZ-KL-Vxb">
+                                        <rect key="frame" x="0.0" y="144" width="345" height="56"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cBR-u5-Vw1">
+                                                <rect key="frame" x="32" y="0.0" width="281" height="56"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMJ-FN-0gY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="74.333333333333329" height="56"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="Google"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chia sẻ qua Mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cv1-jz-mRo">
+                                                        <rect key="frame" x="74.333333333333357" y="0.0" width="206.66666666666663" height="56"/>
+                                                        <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="16"/>
+                                                        <color key="textColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="cBR-u5-Vw1" firstAttribute="top" secondItem="WEZ-KL-Vxb" secondAttribute="top" id="8Sz-Ue-0tm"/>
+                                            <constraint firstAttribute="trailing" secondItem="cBR-u5-Vw1" secondAttribute="trailing" constant="32" id="UeD-n6-fP6"/>
+                                            <constraint firstItem="cBR-u5-Vw1" firstAttribute="leading" secondItem="WEZ-KL-Vxb" secondAttribute="leading" constant="32" id="XNQ-oB-qPC"/>
+                                            <constraint firstAttribute="bottom" secondItem="cBR-u5-Vw1" secondAttribute="bottom" id="zQg-tl-yPT"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4sc-mh-ePL" secondAttribute="trailing" constant="24" id="Q1t-7j-W8N"/>
+                            <constraint firstItem="4sc-mh-ePL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="TsY-jI-rWa"/>
+                            <constraint firstItem="4sc-mh-ePL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="rqc-qO-FtG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="view1" destination="RAp-Ky-fP4" id="jAS-Q9-GXa"/>
+                        <outlet property="view2" destination="fjO-nd-QQt" id="pdK-sc-vC4"/>
+                        <outlet property="view3" destination="WEZ-KL-Vxb" id="QPo-Tn-DmV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.885496183206101" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Copy" width="20" height="20"/>
+        <image name="Facebook" width="21" height="20"/>
+        <image name="Google" width="20" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SVN-Gilroy Medium.otf">
+            <string>SVN-GilroyMedium</string>
+        </array>
+        <array key="SVN-Gilroy Regular.otf">
+            <string>SVN-Gilroy</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Upload Sheet View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController restorationIdentifier="UploadSheetViewController" storyboardIdentifier="UploadSheetViewController" id="Y6W-OH-hqX" customClass="UploadSheetViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bso-vh-FpH">
+                                <rect key="frame" x="16" y="84.666666666666671" width="48" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Icon-1"/>
+                                <connections>
+                                    <action selector="backAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PGX-Hz-PKA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Google Sheet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXo-22-v0t">
+                                <rect key="frame" x="120.33333333333333" y="91" width="152.33333333333337" height="25.333333333333329"/>
+                                <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="24"/>
+                                <color key="textColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập link Google Sheet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KJ-OP-dGU">
+                                <rect key="frame" x="24" y="162.66666666666666" width="345" height="15"/>
+                                <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="14"/>
+                                <color key="textColor" red="0.047058823529411764" green="0.035294117647058823" blue="0.16470588235294117" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K0H-Qw-bOc">
+                                <rect key="frame" x="24" y="185.66666666666666" width="345" height="56"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="https://192.168.1.10" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nhR-Ys-mzb">
+                                        <rect key="frame" x="56" y="16" width="273" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="XLS" translatesAutoresizingMaskIntoConstraints="NO" id="wv4-Rs-ShS">
+                                        <rect key="frame" x="16" y="16" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="wv4-Rs-ShS" secondAttribute="height" multiplier="1:1" id="oyQ-R3-VU1"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="nhR-Ys-mzb" firstAttribute="top" secondItem="K0H-Qw-bOc" secondAttribute="top" constant="16" id="1ET-c4-fzA"/>
+                                    <constraint firstItem="nhR-Ys-mzb" firstAttribute="leading" secondItem="wv4-Rs-ShS" secondAttribute="trailing" constant="16" id="1gx-Cb-rps"/>
+                                    <constraint firstAttribute="height" constant="56" id="5l2-Jg-w4F"/>
+                                    <constraint firstItem="wv4-Rs-ShS" firstAttribute="leading" secondItem="K0H-Qw-bOc" secondAttribute="leading" constant="16" id="ACt-Pr-r2P"/>
+                                    <constraint firstAttribute="bottom" secondItem="nhR-Ys-mzb" secondAttribute="bottom" constant="16" id="KSj-0Y-rrk"/>
+                                    <constraint firstAttribute="bottom" secondItem="wv4-Rs-ShS" secondAttribute="bottom" constant="16" id="M21-Ma-0ik"/>
+                                    <constraint firstItem="wv4-Rs-ShS" firstAttribute="top" secondItem="K0H-Qw-bOc" secondAttribute="top" constant="16" id="W2A-Y4-Tx6"/>
+                                    <constraint firstAttribute="trailing" secondItem="nhR-Ys-mzb" secondAttribute="trailing" constant="16" id="h9r-Sf-c1B"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVF-rb-giB">
+                                <rect key="frame" x="24" y="738" width="345" height="56"/>
+                                <color key="backgroundColor" red="0.38823529411764707" green="0.61176470588235299" blue="0.99215686274509807" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Req-uT-pgp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Kiểm tra">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ntj-CT-mow"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FVF-rb-giB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="7bg-dU-cEV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="K0H-Qw-bOc" secondAttribute="trailing" constant="24" id="FXQ-rV-xqn"/>
+                            <constraint firstItem="sXo-22-v0t" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Hoq-0o-pGh"/>
+                            <constraint firstItem="sXo-22-v0t" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="IDt-Xd-aig"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FVF-rb-giB" secondAttribute="trailing" constant="24" id="Pja-2i-0Lq"/>
+                            <constraint firstItem="4KJ-OP-dGU" firstAttribute="top" secondItem="Bso-vh-FpH" secondAttribute="bottom" constant="40" id="ct0-kJ-S9i"/>
+                            <constraint firstItem="4KJ-OP-dGU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="dzE-nq-9n6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="FVF-rb-giB" secondAttribute="bottom" constant="24" id="hem-Mh-eGX"/>
+                            <constraint firstItem="K0H-Qw-bOc" firstAttribute="top" secondItem="4KJ-OP-dGU" secondAttribute="bottom" constant="8" id="hh8-Ny-uRL"/>
+                            <constraint firstItem="Bso-vh-FpH" firstAttribute="centerY" secondItem="sXo-22-v0t" secondAttribute="centerY" id="kzQ-v8-p6F"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4KJ-OP-dGU" secondAttribute="trailing" constant="24" id="mY4-as-TiW"/>
+                            <constraint firstItem="K0H-Qw-bOc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="tcX-md-qc5"/>
+                            <constraint firstItem="Bso-vh-FpH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="trE-ox-gqY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backBtn" destination="Bso-vh-FpH" id="Sj4-PL-PKd"/>
+                        <outlet property="backBtn2" destination="kSo-4y-r9I" id="7HY-fZ-eZr"/>
+                        <outlet property="blurView" destination="CA5-V0-46O" id="xiy-wc-hQa"/>
+                        <outlet property="checkBtn" destination="FVF-rb-giB" id="qtU-8S-KkD"/>
+                        <outlet property="popupView" destination="Zqu-Lb-1o5" id="rQR-oa-TQI"/>
+                        <outlet property="view1" destination="K0H-Qw-bOc" id="GdP-mw-rux"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Zqu-Lb-1o5">
+                    <rect key="frame" x="0.0" y="0.0" width="325" height="218"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Google Sheet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uV-kA-zGc">
+                            <rect key="frame" x="24" y="24" width="277" height="25.333333333333329"/>
+                            <fontDescription key="fontDescription" name="SVN-GilroyMedium" family="SVN-Gilroy" pointSize="24"/>
+                            <color key="textColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Aq-H0-crC">
+                            <rect key="frame" x="24" y="57.333333333333343" width="277" height="33.666666666666657"/>
+                            <string key="text">Tải link từ Sheet đã 
+thành công!</string>
+                            <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="16"/>
+                            <color key="textColor" red="0.52156862745098043" green="0.51764705882352935" blue="0.58039215686274503" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSo-4y-r9I">
+                            <rect key="frame" x="83" y="115" width="159" height="56"/>
+                            <color key="backgroundColor" red="0.38823529410000002" green="0.61176470589999998" blue="0.99215686270000003" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="159" id="aEN-WP-mJE"/>
+                                <constraint firstAttribute="height" constant="56" id="hgg-9p-ZnA"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SVN-GilroyMedium" family="SVN-Gilroy" pointSize="16"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Trở lại"/>
+                            <connections>
+                                <action selector="backAction2:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="as0-3O-0pz"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="sD8-c0-BEf"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="0uV-kA-zGc" firstAttribute="top" secondItem="Zqu-Lb-1o5" secondAttribute="top" constant="24" id="4vD-8E-YuO"/>
+                        <constraint firstAttribute="trailing" secondItem="0uV-kA-zGc" secondAttribute="trailing" constant="24" id="MOl-X9-ZhY"/>
+                        <constraint firstItem="1Aq-H0-crC" firstAttribute="leading" secondItem="sD8-c0-BEf" secondAttribute="leading" constant="24" id="Otn-ZG-CkX"/>
+                        <constraint firstItem="1Aq-H0-crC" firstAttribute="top" secondItem="0uV-kA-zGc" secondAttribute="bottom" constant="8" id="Roi-Ml-lPq"/>
+                        <constraint firstItem="sD8-c0-BEf" firstAttribute="trailing" secondItem="1Aq-H0-crC" secondAttribute="trailing" constant="24" id="awl-Q8-rgZ"/>
+                        <constraint firstItem="0uV-kA-zGc" firstAttribute="leading" secondItem="Zqu-Lb-1o5" secondAttribute="leading" constant="24" id="pgl-df-neB"/>
+                        <constraint firstItem="kSo-4y-r9I" firstAttribute="centerX" secondItem="sD8-c0-BEf" secondAttribute="centerX" id="wN4-hK-c24"/>
+                        <constraint firstItem="kSo-4y-r9I" firstAttribute="top" secondItem="1Aq-H0-crC" secondAttribute="bottom" constant="24" id="y9O-yE-Tax"/>
+                    </constraints>
+                </view>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="CA5-V0-46O">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="IPS-jn-IHs">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bMf-4A-rc4">
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Cdc-87-IhB">
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="regular"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
+                        </subviews>
+                    </view>
+                    <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="0.20194753191305273" colorSpace="calibratedRGB"/>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
+            </objects>
+            <point key="canvasLocation" x="43.511450381679388" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon-1" width="24" height="24"/>
+        <image name="XLS" width="18" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
