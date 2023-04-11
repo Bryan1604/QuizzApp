@@ -13,6 +13,13 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signInLabel: UILabel?
     @IBOutlet weak var lblTermsAndCondition: UILabel?
     
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var phoneNumber: UITextField!
+    @IBOutlet weak var birthday: UITextField!
+    @IBOutlet weak var password1: UITextField!
+    @IBOutlet weak var password2: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setButtonProperty(button: signUpBtn!)
@@ -99,7 +106,22 @@ extension SignUpViewController{
             }
         }
     }
+    
+    @IBAction func registerAction(_ sender: Any){
+        APIHandle().registerAPI(email: email.text ?? "", password: password1.text ?? "", phone_number: phoneNumber.text ?? "", birthday: birthday.text ?? "", name: name.text ?? ""){
+            (success, errorMessage) in
+                if success{
+                    // Đăng nhập thành công, sử dụng accessToken để thực hiện các thao tác khác
+                    print("Login success")
+                }
+                else {
+    //                // Hiển thị thông báo lỗi nếu có lỗi xảy ra khi đăng nhập
+                    print("Login failed.")
+                }
+        }
+    }
 }
+
 
 extension UITapGestureRecognizer {
     // Stored variables

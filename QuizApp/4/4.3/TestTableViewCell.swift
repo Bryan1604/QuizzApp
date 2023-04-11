@@ -19,7 +19,7 @@ class TestTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-//        self.selectionStyle = .none
+        self.selectionStyle = .none
         cellView.layer.cornerRadius = 20
         cellView.layer.borderWidth = 2
         cellView.layer.borderColor = UIColor.systemGray5.cgColor

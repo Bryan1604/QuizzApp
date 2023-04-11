@@ -14,10 +14,11 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tabBar.backgroundColor = .white
-        self.tabBar.tintColor = .black
-        self.tabBar.layer.cornerRadius = 20
-        self.tabBar.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+//        self.tabBar.backgroundColor = .white
+//        self.tabBar.tintColor = .black
+//        self.tabBar.layer.cornerRadius = 20
+//        self.tabBar.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        self.tabBarController?.tabBarItem.standardAppearance?.selectionIndicatorTintColor = .systemGray
         callItemViewController()
         self.navigationController?.isNavigationBarHidden = true
         if let myTabbar = tabBar as? STTabbar {

@@ -4,9 +4,27 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Item-->
+        <scene sceneID="MJB-A8-oWA">
+            <objects>
+                <viewController id="ALx-Us-6ka" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="42s-8z-ZhG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="K0j-nW-rEF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="M4s-Fx-vSf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zVn-Ay-h9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1046" y="-87"/>
+        </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="4ek-kc-ll2">
             <objects>
@@ -23,18 +41,41 @@
                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="centerButtonHeight">
-                                <real key="value" value="58"/>
+                                <real key="value" value="59"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="padding">
                                 <real key="value" value="9"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="Icon (6)"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
+                    <connections>
+                        <segue destination="c2u-9U-jhR" kind="relationship" relationship="viewControllers" id="dfb-TY-lgZ"/>
+                        <segue destination="ALx-Us-6ka" kind="relationship" relationship="viewControllers" id="QDP-E0-Lm6"/>
+                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t62-dL-eho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-259" y="-158"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="x8r-qT-eNJ">
+            <objects>
+                <viewController id="c2u-9U-jhR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LM0-ej-xhO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="W4I-w8-qHe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="8T3-QT-jHs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lWQ-r6-cxG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="-172"/>
         </scene>
     </scenes>
     <designables>
@@ -44,5 +85,8 @@
     </designables>
     <resources>
         <image name="Icon (6)" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
