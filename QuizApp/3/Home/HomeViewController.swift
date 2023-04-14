@@ -10,13 +10,7 @@ import UIKit
 class HomeViewController: UIViewController{
     
     @IBOutlet weak var homeTableView: UITableView!
-    
-    var data = [
-        ScienceField(thumnail: "Frame", title: "Khoa Tự Nhiên", detail: "Toán, Sinh, Lý, Hóa,..."),
-        ScienceField(thumnail: "Frame_1", title: "Khoa Khoa Học", detail: "Nghiên cứu, Sáng tạo,..."),
-        ScienceField(thumnail: "Frame_2", title: "Khoa Nhạc", detail: "Thanh nhạc, Dụng cụ,...")
-    ]
-    
+    var data = GetDepartmentListResponse( result: [GetDepartmentListResponse.Result]())
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +19,8 @@ class HomeViewController: UIViewController{
         
         registerNibHeader()
         registerNib()
+
+        getDepartmentList()
     }
     
     func registerNibHeader() {
@@ -43,14 +39,23 @@ class HomeViewController: UIViewController{
  
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return data.result.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ScienceFieldCell") as! ScienceFieldCell
-        cell.thumnail.image = UIImage(named: data[indexPath.row].thumnail)
-        cell.title.text = data[indexPath.row].title
-        cell.detail.text = data[indexPath.row].detail
+        if let url = URL(string: data.result[indexPath.row].image!) {
+            URLSession.shared.dataTask(with: url) { data, response, error in
+                guard let data = data, error == nil else { return }
+                DispatchQueue.main.async() {
+                    cell.thumnail.image = UIImage(data: data)
+                    // Use the downloaded image
+                }
+            }.resume()
+        }
+        cell.title.text = data.result[indexPath.row].title
+        cell.detail.text = data.result[indexPath.row].description
+        cell.id = data.result[indexPath.row].id
         //cell.delegate = self
         return cell
     }
@@ -74,19 +79,24 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
 }
 
-//extension HomeViewController : ScienceFieldCellDelegate{
-//    func didTapButton() {
-//        let vc = UIStoryboard(name: "SubjectListViewController", bundle: nil).instantiateViewController(withIdentifier: "SubjectListViewController") as! SubjectListViewController
-//        self.navigationController?.pushViewController(vc, animated: true)
-//    }
-//
-//}
-
-//extension HomeViewController: HomeHeaderTableViewCellDelegate{
-//    func didTapLabel() {
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(<#T##@objc method#>))
-//    }
-//}
-
+extension HomeViewController{
+    func getDepartmentList(){
+        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+        let request = GetDepartmentListRequest.Post(user_id: user_id, keyword: "").route
+        APIManager.session.request(request).responseJSON{ json in
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let getDepartmentListResponse = try? decoder.decode(GetDepartmentListResponse.self, from: data) {
+                self.data.result = getDepartmentListResponse.result
+                DispatchQueue.main.async {
+                    self.homeTableView.reloadData()
+                }
+                }
+            }
+        
+        
+        }
+    
+}
 
 

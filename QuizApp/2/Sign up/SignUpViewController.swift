@@ -108,16 +108,26 @@ extension SignUpViewController{
     }
     
     @IBAction func registerAction(_ sender: Any){
-        APIHandle().registerAPI(email: email.text ?? "", password: password1.text ?? "", phone_number: phoneNumber.text ?? "", birthday: birthday.text ?? "", name: name.text ?? ""){
-            (success, errorMessage) in
-                if success{
-                    // Đăng nhập thành công, sử dụng accessToken để thực hiện các thao tác khác
-                    print("Login success")
-                }
-                else {
-    //                // Hiển thị thông báo lỗi nếu có lỗi xảy ra khi đăng nhập
-                    print("Login failed.")
-                }
+        let request = RegisterRequest.Post(email: email.text ?? "", password: password1.text ?? "", phone_number: phoneNumber.text ?? "", birthday: birthday.text ?? "", name: name.text ?? "").route
+        APIManager.session.request(request).responseJSON{ json in
+            print("\(json)")
+            
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let registerResponse = try? decoder.decode(RegisterResponse.self, from: data) {
+                let token = registerResponse.result.access_token
+                let user_id = registerResponse.result.user_id
+                UserDefaults.standard.set(token, forKey: "AccessToken")
+                UserDefaults.standard.set(user_id, forKey: "UserId")
+                
+                UserDefaults.standard.synchronize()
+                
+                let storyboard = UIStoryboard(name: "TabBarViewController", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+                let rootView = UINavigationController(rootViewController: vc)
+                SceneDelegate.shared?.changeRootController(rootView)
+            }
+           
         }
     }
 }

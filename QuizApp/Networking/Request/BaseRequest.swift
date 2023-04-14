@@ -13,4 +13,7 @@ protocol BaseRequest: Codable{
 
 enum APIPath: String{
     case login = "/login"
+    case register = "/register"
+    case forgotPassword = "/forgotPassword"
+    case getDepartmentList = "/getDepartmentList"
 }

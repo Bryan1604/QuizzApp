@@ -43,7 +43,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFN-LR-chY">
-                                <rect key="frame" x="73.666666666666671" y="113" width="31" height="13"/>
+                                <rect key="frame" x="74.333333333333329" y="113" width="29.666666666666671" height="12.666666666666671"/>
                                 <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="12"/>
                                 <color key="textColor" name="Color"/>
                                 <nil key="highlightedColor"/>

@@ -98,6 +98,12 @@
 		8C3684F729E55CD0006E7F98 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3684F629E55CD0006E7F98 /* BaseResponse.swift */; };
 		8C3684F929E55DBA006E7F98 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3684F829E55DBA006E7F98 /* LoginResponse.swift */; };
 		8C3684FB29E55E62006E7F98 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3684FA29E55E62006E7F98 /* Extension.swift */; };
+		8C3684FD29E647A4006E7F98 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3684FC29E647A4006E7F98 /* RegisterRequest.swift */; };
+		8C3684FF29E649E9006E7F98 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3684FE29E649E9006E7F98 /* RegisterResponse.swift */; };
+		8C36850129E65470006E7F98 /* FogotPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36850029E65470006E7F98 /* FogotPasswordRequest.swift */; };
+		8C36850329E65890006E7F98 /* ForgotPasswordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36850229E65890006E7F98 /* ForgotPasswordResponse.swift */; };
+		8C36850529E66745006E7F98 /* GetDepartmentListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36850429E66745006E7F98 /* GetDepartmentListRequest.swift */; };
+		8C36850729E66829006E7F98 /* GetDepartmentListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36850629E66829006E7F98 /* GetDepartmentListResponse.swift */; };
 		8C69F22729DD052700BEDDB9 /* APIHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C69F22629DD052700BEDDB9 /* APIHandle.swift */; };
 		8C69F22A29DD089000BEDDB9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C69F22929DD089000BEDDB9 /* UserModel.swift */; };
 		8C75012129BF192A00AB20BF /* HomeHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C75011F29BF192A00AB20BF /* HomeHeaderTableViewCell.swift */; };
@@ -259,6 +265,12 @@
 		8C3684F629E55CD0006E7F98 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		8C3684F829E55DBA006E7F98 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		8C3684FA29E55E62006E7F98 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		8C3684FC29E647A4006E7F98 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		8C3684FE29E649E9006E7F98 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		8C36850029E65470006E7F98 /* FogotPasswordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogotPasswordRequest.swift; sourceTree = "<group>"; };
+		8C36850229E65890006E7F98 /* ForgotPasswordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordResponse.swift; sourceTree = "<group>"; };
+		8C36850429E66745006E7F98 /* GetDepartmentListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDepartmentListRequest.swift; sourceTree = "<group>"; };
+		8C36850629E66829006E7F98 /* GetDepartmentListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDepartmentListResponse.swift; sourceTree = "<group>"; };
 		8C69F22629DD052700BEDDB9 /* APIHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandle.swift; sourceTree = "<group>"; };
 		8C69F22929DD089000BEDDB9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8C75011F29BF192A00AB20BF /* HomeHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -696,6 +708,9 @@
 			children = (
 				8C3684F129E55B0F006E7F98 /* BaseRequest.swift */,
 				8C3684F329E55C36006E7F98 /* LoginRequest.swift */,
+				8C3684FC29E647A4006E7F98 /* RegisterRequest.swift */,
+				8C36850029E65470006E7F98 /* FogotPasswordRequest.swift */,
+				8C36850429E66745006E7F98 /* GetDepartmentListRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -705,6 +720,9 @@
 			children = (
 				8C3684F629E55CD0006E7F98 /* BaseResponse.swift */,
 				8C3684F829E55DBA006E7F98 /* LoginResponse.swift */,
+				8C3684FE29E649E9006E7F98 /* RegisterResponse.swift */,
+				8C36850229E65890006E7F98 /* ForgotPasswordResponse.swift */,
+				8C36850629E66829006E7F98 /* GetDepartmentListResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -714,9 +732,9 @@
 			children = (
 				8C3684F529E55CBC006E7F98 /* Response */,
 				8C3684F029E55AF4006E7F98 /* Request */,
-				8C69F22629DD052700BEDDB9 /* APIHandle.swift */,
 				8C3684EC29E54918006E7F98 /* APIRoute.swift */,
 				8C3684EE29E55827006E7F98 /* APIManager.swift */,
+				8C69F22629DD052700BEDDB9 /* APIHandle.swift */,
 				8C3684FA29E55E62006E7F98 /* Extension.swift */,
 			);
 			path = Networking;
@@ -1144,6 +1162,7 @@
 				8CB5F44A29D9FACF00D60F15 /* UploadSheetViewController.swift in Sources */,
 				8C3684F729E55CD0006E7F98 /* BaseResponse.swift in Sources */,
 				8C80BF5929C2FC5600C59FC4 /* ScienceFieldModel.swift in Sources */,
+				8C3684FD29E647A4006E7F98 /* RegisterRequest.swift in Sources */,
 				3F7744A629935B0100DC3181 /* ForgotPassword1ViewController.swift in Sources */,
 				8C80BF6D29C411E000C59FC4 /* Item.swift in Sources */,
 				8CB5F41F29D67D2D00D60F15 /* ExamHistoryViewController1.swift in Sources */,
@@ -1158,10 +1177,12 @@
 				8C20F7C729D0949500C62D89 /* QuestionCollectionCell.swift in Sources */,
 				8C20F79629C4757500C62D89 /* SubjectListViewController.swift in Sources */,
 				3FFFAEDE29ADE78E007E4443 /* HomeViewController.swift in Sources */,
+				8C36850329E65890006E7F98 /* ForgotPasswordResponse.swift in Sources */,
 				8CB5F42429D6BC1300D60F15 /* ExamHistoryViewController2.swift in Sources */,
 				3FC5EC7529B0827600B62B57 /* ProfileViewController.swift in Sources */,
 				8C3684FB29E55E62006E7F98 /* Extension.swift in Sources */,
 				8CE87CBC29DA8BD800B561C5 /* UpdateInfoViewController.swift in Sources */,
+				8C36850729E66829006E7F98 /* GetDepartmentListResponse.swift in Sources */,
 				8CB5F45029DA085B00D60F15 /* SharePopUpViewController.swift in Sources */,
 				8C20F79B29C8B67B00C62D89 /* SubjectCell.swift in Sources */,
 				3F46CC672991475400BAA945 /* SignInViewController.swift in Sources */,
@@ -1173,6 +1194,7 @@
 				8CB5F43C29D8221A00D60F15 /* SavedViewController1.swift in Sources */,
 				3FFFAED8299F75BA007E4443 /* RulesViewController.swift in Sources */,
 				8C80BF6329C37FEB00C59FC4 /* SearchViewController.swift in Sources */,
+				8C36850529E66745006E7F98 /* GetDepartmentListRequest.swift in Sources */,
 				8CE87CB529DA859800B561C5 /* ChangePasswordViewController.swift in Sources */,
 				8C80BF5629C2F7CC00C59FC4 /* ScienceFieldCell.swift in Sources */,
 				3F76B1B32987AD5B00E963F3 /* AppDelegate.swift in Sources */,
@@ -1185,6 +1207,7 @@
 				8CB5F44629D983F200D60F15 /* TestModel2.swift in Sources */,
 				8CB5F41629D52E4A00D60F15 /* ExamHistoryViewController.swift in Sources */,
 				3FC5EC7D29B082C300B62B57 /* UploadViewController.swift in Sources */,
+				8C3684FF29E649E9006E7F98 /* RegisterResponse.swift in Sources */,
 				8C3684EF29E55827006E7F98 /* APIManager.swift in Sources */,
 				8CB5F43229D726AC00D60F15 /* QuestionHistoryViewController1.swift in Sources */,
 				3F7744D7299389C000DC3181 /* TutorialViewController.swift in Sources */,
@@ -1199,6 +1222,7 @@
 				8CB5F42E29D6DEB000D60F15 /* TestTableViewCell.swift in Sources */,
 				8C3684ED29E54918006E7F98 /* APIRoute.swift in Sources */,
 				3FC5EC7929B082A100B62B57 /* HistoryViewController.swift in Sources */,
+				8C36850129E65470006E7F98 /* FogotPasswordRequest.swift in Sources */,
 				8C69F22A29DD089000BEDDB9 /* UserModel.swift in Sources */,
 				3FFFAEE529ADFA0C007E4443 /* TabBarViewController.swift in Sources */,
 			);

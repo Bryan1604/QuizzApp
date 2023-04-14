@@ -128,9 +128,15 @@ extension SignInViewController{
             if let data = json.data, let loginResponse = try?
                 decode.decode(LoginResponse.self, from: data){
                 let token = loginResponse.result.access_token
+                let user_id = loginResponse.result.user_id
                 UserDefaults.standard.set(token, forKey: "AccessToken")
-                UserDefaults.standard.string(forKey: "AccessToken")
-
+                UserDefaults.standard.set(user_id, forKey: "UserId")
+                
+                let storyboard = UIStoryboard(name: "TabBarViewController", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+                let rootView = UINavigationController(rootViewController: vc)
+                SceneDelegate.shared?.changeRootController(rootView)
+                
                 UserDefaults.standard.synchronize()
             }
             

@@ -19,6 +19,7 @@ class ScienceFieldCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var detail: UILabel!
     @IBOutlet weak var detailBtn: UIButton!
+    var id: Int?
     override func awakeFromNib() {
         super.awakeFromNib()
         
