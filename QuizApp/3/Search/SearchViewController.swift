@@ -8,26 +8,19 @@
 import UIKit
 
 class SearchViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-
-    var data = [
-        item(thumnail: "Icon0", title: "Toán", count: "21 Câu đố",coler: "red"),
-        item(thumnail: "Icon1", title: "Khoa học", count: "21 Câu đố",coler: "blue"),
-        item(thumnail: "Icon2", title: "Nhạc", count: "21 Câu đố",coler: "yellow"),
-        item(thumnail: "Icon3", title: "Thể thao", count: "21 Câu đố",coler: "Black"),
-        item(thumnail: "Icon4", title: "Công nghệ", count: "21 Câu đố",coler: "red"),
-        item(thumnail: "Icon5", title: "Du lịch", count: "21 Câu đố",coler: "pink")
-    ]
     
     @IBOutlet weak var searchCollectionView: UICollectionView!
-    
+    var data = GetDepartmentListResponse( result: [GetDepartmentListResponse.Result]())
+
+    var keyword : String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
         searchCollectionView?.delegate = self
         searchCollectionView?.dataSource = self
-        
         registerHeader()
         registerNib()
+        searchAction()
     }
     
     func registerNib(){
@@ -46,14 +39,14 @@ class SearchViewController: UIViewController,UICollectionViewDataSource,UICollec
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        data.count
+        data.result.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell",for: indexPath) as! ItemCollectionViewCell
-        cell.thumnail.image = UIImage(named: data[indexPath.row].thumnail)
-        cell.title.text = data[indexPath.row].title
-        cell.count.text = data[indexPath.row].count
+        cell.thumnail.image = UIImage(named: data.result[indexPath.row].image!)
+        cell.title.text = data.result[indexPath.row].title
+        cell.count.text = String(indexPath.row)
         let row = indexPath.row
         if ((row % 6) == 0){
             cell.itemView.backgroundColor = .systemGray5
@@ -77,6 +70,8 @@ class SearchViewController: UIViewController,UICollectionViewDataSource,UICollec
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
                                                                      withReuseIdentifier: "HeaderCollectionReusableView",
                                                                      for: indexPath) as! HeaderCollectionReusableView
+        header.delegate = self
+        keyword = header.textInput.text
         return header
     }
     
@@ -96,6 +91,36 @@ class SearchViewController: UIViewController,UICollectionViewDataSource,UICollec
 //                                                  withHorizontalFittingPriority: .required, // Width is fixed
 //                                                  verticalFittingPriority: .fittingSizeLevel) // Height can be as large as needed
     }
-  
+    func getDepartmentList(){
+        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+        let request = GetDepartmentListRequest.Post(user_id: user_id, keyword: self.keyword).route
+        APIManager.session.request(request).responseJSON{ json in
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let getDepartmentListResponse = try? decoder.decode(GetDepartmentListResponse.self, from: data) {
+                self.data.result = getDepartmentListResponse.result
+                DispatchQueue.main.async {
+                    self.searchCollectionView.reloadData()
+                }
+                }
+            }
+        }
+}
 
+extension SearchViewController: SearchDelegate{
+    func searchAction() {
+        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+        let request = GetDepartmentListRequest.Post(user_id: user_id, keyword: self.keyword).route
+        APIManager.session.request(request).responseJSON{ json in
+            let decoder = JSONDecoder()
+            print(json)
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let getDepartmentListResponse = try? decoder.decode(GetDepartmentListResponse.self, from: data) {
+                self.data.result = getDepartmentListResponse.result
+                DispatchQueue.main.async {
+                    self.searchCollectionView.reloadData()
+                }
+            }
+        }
+    }
 }

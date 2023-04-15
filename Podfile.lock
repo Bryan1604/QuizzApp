@@ -1,5 +1,6 @@
 PODS:
-  - Alamofire (4.9.1)
+  - Alamofire (5.6.4)
+  - ANDLineChartView (0.2.2)
   - AppAuth (1.6.0):
     - AppAuth/Core (= 1.6.0)
     - AppAuth/ExternalUserAgent (= 1.6.0)
@@ -33,7 +34,8 @@ PODS:
   - VerticalSlidingPresentationController (0.2.0)
 
 DEPENDENCIES:
-  - Alamofire (= 4.9.1)
+  - Alamofire
+  - ANDLineChartView
   - Charts (~> 4.1.0)
   - DropDown
   - GoogleSignIn
@@ -50,6 +52,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - ANDLineChartView
     - AppAuth
     - Charts
     - DropDown
@@ -69,7 +72,8 @@ SPEC REPOS:
     - VerticalSlidingPresentationController
 
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  ANDLineChartView: fc9b4685a444eeb16ea373691962dc71e60dccd1
   AppAuth: 8fca6b5563a5baef2c04bee27538025e4ceb2add
   Charts: 354f86803d11d9c35de280587fef50d1af063978
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
@@ -88,6 +92,6 @@ SPEC CHECKSUMS:
   SwiftColor: 2b0fd15257981f23265f9939f311098159fe6d1c
   VerticalSlidingPresentationController: 51beed52d55183c863a1fae9bfc0254de3d56fb2
 
-PODFILE CHECKSUM: 6039f702f98911c1c0a34c2c355934f73d0d879a
+PODFILE CHECKSUM: b9c0d85e9f56aa448e8b561f87acd56b458a109e
 
 COCOAPODS: 1.12.0

@@ -23,11 +23,9 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         password?.isSecureTextEntry = true
-        
         setAllButton()
-        
         clickLabel(label: signUpLabel!)
         clickLabel(label: forgotPassword!)
         
@@ -117,11 +115,45 @@ extension SignInViewController{
     //        let familyName = user.profile.familyName
     //        let profilePictureUrl = user.profile.imageURL(withDimension: 320)
             print(emailAddress ?? "")
+    }
+    
+    @IBAction func logInBtnClicked(_ sender: Any){
+        let request = LoginRequest.Post(login_id: phoneNumber?.text ?? "", password: password?.text ?? "").route
         
-//        let storyboard = UIStoryboard(name: "TapBarViewControler", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "TapBarViewController") as! TapBarViewController
-//        navigationController?.pushViewController(vc, animated: true)
-        
+        APIManager.session.request(request).responseJSON{ json in
+            print("\(json)")
+            
+            let decode = JSONDecoder()
+            decode.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let loginResponse = try?
+                decode.decode(LoginResponse.self, from: data){
+                let token = loginResponse.result.access_token
+                let user_id = loginResponse.result.user_id
+                UserDefaults.standard.set(token, forKey: "AccessToken")
+                UserDefaults.standard.set(user_id, forKey: "UserId")
+                
+                let storyboard = UIStoryboard(name: "TabBarViewController", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+                let rootView = UINavigationController(rootViewController: vc)
+                SceneDelegate.shared?.changeRootController(rootView)
+                
+                UserDefaults.standard.synchronize()
+            }
+            
+        }
+          
+        /*
+        APIHandle().loginAPI(login_id: phoneNumber?.text ?? "", password: password?.text ?? "") { (success, errorMessage) in
+            if success{
+                // Đăng nhập thành công, sử dụng accessToken để thực hiện các thao tác khác
+                print("Login success")
+            }
+            else {
+//                // Hiển thị thông báo lỗi nếu có lỗi xảy ra khi đăng nhập
+                print("Login failed.")
+            }
+        }
+        */
     }
     
     // hide password

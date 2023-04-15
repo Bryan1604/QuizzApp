@@ -80,7 +80,7 @@ class UploadViewController: UIViewController, UIPopoverPresentationControllerDel
 //        }
         
         if let presentationController = myViewController.presentationController as? UISheetPresentationController {
-                    presentationController.detents = [.medium()] /// change to [.medium(), .large()] for a half *and* full screen sheet
+            presentationController.detents = [.medium()] /// change to [.medium(), .large()] for a half *and* full screen sheet
 //            presentationController.sourceView?.layer.cornerRadius = 50
 //            presentationController.sourceView?.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
                 }

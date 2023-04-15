@@ -13,6 +13,13 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signInLabel: UILabel?
     @IBOutlet weak var lblTermsAndCondition: UILabel?
     
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var phoneNumber: UITextField!
+    @IBOutlet weak var birthday: UITextField!
+    @IBOutlet weak var password1: UITextField!
+    @IBOutlet weak var password2: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setButtonProperty(button: signUpBtn!)
@@ -99,7 +106,32 @@ extension SignUpViewController{
             }
         }
     }
+    
+    @IBAction func registerAction(_ sender: Any){
+        let request = RegisterRequest.Post(email: email.text ?? "", password: password1.text ?? "", phone_number: phoneNumber.text ?? "", birthday: birthday.text ?? "", name: name.text ?? "").route
+        APIManager.session.request(request).responseJSON{ json in
+            print("\(json)")
+            
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let registerResponse = try? decoder.decode(RegisterResponse.self, from: data) {
+                let token = registerResponse.result.access_token
+                let user_id = registerResponse.result.user_id
+                UserDefaults.standard.set(token, forKey: "AccessToken")
+                UserDefaults.standard.set(user_id, forKey: "UserId")
+                
+                UserDefaults.standard.synchronize()
+                
+                let storyboard = UIStoryboard(name: "TabBarViewController", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+                let rootView = UINavigationController(rootViewController: vc)
+                SceneDelegate.shared?.changeRootController(rootView)
+            }
+           
+        }
+    }
 }
+
 
 extension UITapGestureRecognizer {
     // Stored variables

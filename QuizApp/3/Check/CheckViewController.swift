@@ -8,6 +8,8 @@
 import UIKit
 import Charts
 import MBCircularProgressBar
+import ANDLineChartView
+
 class CheckViewController: UIViewController, ChartViewDelegate {
     
     @IBOutlet weak var viewResultBtn: UIButton!
@@ -90,12 +92,12 @@ class CheckViewController: UIViewController, ChartViewDelegate {
                                 height: self.lineChartView?.frame.size.height ?? 0)
         pieChart.center = lineChartView.center
         lineChartView.addSubview(LineChart)
-        
+
         //addContraint(newView: LineChart, view: lineChartView)
-      
+
         let test = ["1","2","3", "4", "5", "6", "7", "8", "9", "10"]
         let numberOfCorrectAns = [30,4,6,7,8,9,4,23,14, 24]
-        
+
         var entries  = [ChartDataEntry]()
         for i in 0..<test.count{
             entries.append(ChartDataEntry(x: Double(i), y: Double(numberOfCorrectAns[i])))
@@ -106,6 +108,46 @@ class CheckViewController: UIViewController, ChartViewDelegate {
         LineChart.data = data
         LineChart.animate(xAxisDuration: 2, easingOption: .easeInBounce)
         LineChart.animate(yAxisDuration: 2, easingOption: .easeInBounce)
+//        let lineChart = ANDLineChartView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 200))
+//        lineChartView.addSubview(lineChart)
+/*
+        let data = [
+            
+            ANDLineChartViewPoint(x: 1, y: 20),
+            ANDLineChartViewPoint(x: 2, y: 10),
+            ANDLineChartViewPoint(x: 3, y: 30),
+            ANDLineChartViewPoint(x: 4, y: 15),
+            ANDLineChartViewPoint(x: 5, y: 25)
+        ]
+        lineChart.addLine(data)
+        lineCh
+        // Tùy chỉnh màu của đường biểu đồ
+        lineChart.lineColor = UIColor.red
+
+        // Tùy chỉnh độ rộng của đường biểu đồ
+        lineChart.lineWidth = 2
+
+        // Tùy chỉnh màu của điểm trên đường biểu đồ
+        lineChart.dotColor = UIColor.red
+
+        // Tùy chỉnh độ lớn của điểm trên đường biểu đồ
+        lineChart.dotSize = 10
+
+        // Tùy chỉnh màu của vùng bao quanh đường biểu đồ
+        lineChart.fillColor = UIColor.red.withAlphaComponent(0.5)
+
+        // Tùy chỉnh màu của nền của biểu đồ
+        lineChart.backgroundColor = UIColor.white
+
+        // Tùy chỉnh các thông số khác của biểu đồ
+        lineChart.xAxisLabelFont = UIFont.systemFont(ofSize: 12)
+        lineChart.yAxisLabelFont = UIFont.systemFont(ofSize: 12)
+        lineChart.yAxisLabelFormat = "%.1f"
+        lineChart.xAxisLabelColor = UIColor.black
+        lineChart.yAxisLabelColor = UIColor.black
+        lineChart.showCoordinateAxis = true
+        lineChart.animate(duration: 1.0)
+*/
 
     }
 //    func addContraint(newView: LineChartView, view: UIView){

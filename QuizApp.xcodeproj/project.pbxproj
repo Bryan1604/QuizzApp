@@ -68,6 +68,7 @@
 		3FFFAEDE29ADE78E007E4443 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFAEDD29ADE78E007E4443 /* HomeViewController.swift */; };
 		3FFFAEE029ADE7A3007E4443 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFFAEDF29ADE7A3007E4443 /* HomeViewController.storyboard */; };
 		3FFFAEE529ADFA0C007E4443 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFAEE429ADFA0C007E4443 /* TabBarViewController.swift */; };
+		460316443A3408EEB7B7AC3B /* Pods_QuizApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F60DCE2AAE8CA5D307DD06D /* Pods_QuizApp.framework */; };
 		8C20F79629C4757500C62D89 /* SubjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20F79529C4757500C62D89 /* SubjectListViewController.swift */; };
 		8C20F79829C475BD00C62D89 /* SubjectListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C20F79729C475BD00C62D89 /* SubjectListViewController.storyboard */; };
 		8C20F79B29C8B67B00C62D89 /* SubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20F79929C8B67B00C62D89 /* SubjectCell.swift */; };
@@ -89,6 +90,22 @@
 		8C20F7D129D146F300C62D89 /* PopUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C20F7D029D146F300C62D89 /* PopUpViewController.storyboard */; };
 		8C20F7D429D150CA00C62D89 /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20F7D329D150CA00C62D89 /* CheckViewController.swift */; };
 		8C20F7D629D150E300C62D89 /* CheckViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C20F7D529D150E300C62D89 /* CheckViewController.storyboard */; };
+		8C3684EB29E53B40006E7F98 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3684EA29E53B3F006E7F98 /* Extention.swift */; };
+		8C3684ED29E54918006E7F98 /* APIRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3684EC29E54918006E7F98 /* APIRoute.swift */; };
+		8C3684EF29E55827006E7F98 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3684EE29E55827006E7F98 /* APIManager.swift */; };
+		8C3684F229E55B0F006E7F98 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3684F129E55B0F006E7F98 /* BaseRequest.swift */; };
+		8C3684F429E55C36006E7F98 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3684F329E55C36006E7F98 /* LoginRequest.swift */; };
+		8C3684F729E55CD0006E7F98 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3684F629E55CD0006E7F98 /* BaseResponse.swift */; };
+		8C3684F929E55DBA006E7F98 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3684F829E55DBA006E7F98 /* LoginResponse.swift */; };
+		8C3684FB29E55E62006E7F98 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3684FA29E55E62006E7F98 /* Extension.swift */; };
+		8C3684FD29E647A4006E7F98 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3684FC29E647A4006E7F98 /* RegisterRequest.swift */; };
+		8C3684FF29E649E9006E7F98 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3684FE29E649E9006E7F98 /* RegisterResponse.swift */; };
+		8C36850129E65470006E7F98 /* FogotPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36850029E65470006E7F98 /* FogotPasswordRequest.swift */; };
+		8C36850329E65890006E7F98 /* ForgotPasswordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36850229E65890006E7F98 /* ForgotPasswordResponse.swift */; };
+		8C36850529E66745006E7F98 /* GetDepartmentListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36850429E66745006E7F98 /* GetDepartmentListRequest.swift */; };
+		8C36850729E66829006E7F98 /* GetDepartmentListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36850629E66829006E7F98 /* GetDepartmentListResponse.swift */; };
+		8C69F22729DD052700BEDDB9 /* APIHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C69F22629DD052700BEDDB9 /* APIHandle.swift */; };
+		8C69F22A29DD089000BEDDB9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C69F22929DD089000BEDDB9 /* UserModel.swift */; };
 		8C75012129BF192A00AB20BF /* HomeHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C75011F29BF192A00AB20BF /* HomeHeaderTableViewCell.swift */; };
 		8C75012229BF192A00AB20BF /* HomeHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C75012029BF192A00AB20BF /* HomeHeaderTableViewCell.xib */; };
 		8C80BF5629C2F7CC00C59FC4 /* ScienceFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C80BF5429C2F7CC00C59FC4 /* ScienceFieldCell.swift */; };
@@ -141,7 +158,6 @@
 		8CE87CC129DA8ED400B561C5 /* UpdateEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE87CC029DA8ED400B561C5 /* UpdateEmailViewController.swift */; };
 		8CE87CC429DBF86F00B561C5 /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE87CC229DBF86E00B561C5 /* QuestionCollectionViewCell.swift */; };
 		8CE87CC529DBF86F00B561C5 /* QuestionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CE87CC329DBF86E00B561C5 /* QuestionCollectionViewCell.xib */; };
-		BFE44971D2310D4973C4E814 /* Pods_QuizApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992C74ED962C05BAD7B6927E /* Pods_QuizApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -158,14 +174,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1545E88396C63B9D12B13CE8 /* Pods-QuizApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizApp.release.xcconfig"; path = "Target Support Files/Pods-QuizApp/Pods-QuizApp.release.xcconfig"; sourceTree = "<group>"; };
-		39DBFA672E7A037A02564605 /* Pods-QuizApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizApp.debug.xcconfig"; path = "Target Support Files/Pods-QuizApp/Pods-QuizApp.debug.xcconfig"; sourceTree = "<group>"; };
+		14735638624A1923B6F25A71 /* Pods-QuizApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizApp.release.xcconfig"; path = "Target Support Files/Pods-QuizApp/Pods-QuizApp.release.xcconfig"; sourceTree = "<group>"; };
 		3F46CC5C298D069500BAA945 /* Introduce3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduce3ViewController.swift; sourceTree = "<group>"; };
 		3F46CC5E298D0ABE00BAA945 /* Introduce4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduce4ViewController.swift; sourceTree = "<group>"; };
 		3F46CC60298D0ADD00BAA945 /* Introduce4ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduce4ViewController.storyboard; sourceTree = "<group>"; };
 		3F46CC662991475400BAA945 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		3F46CC682991477900BAA945 /* SignInViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInViewController.storyboard; sourceTree = "<group>"; };
 		3F5B295F299E185C0000A996 /* QuizApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuizApp.entitlements; sourceTree = "<group>"; };
+		3F60DCE2AAE8CA5D307DD06D /* Pods_QuizApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F76B1AF2987AD5B00E963F3 /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F76B1B22987AD5B00E963F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F76B1B42987AD5B00E963F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -241,6 +257,22 @@
 		8C20F7D029D146F300C62D89 /* PopUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUpViewController.storyboard; sourceTree = "<group>"; };
 		8C20F7D329D150CA00C62D89 /* CheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
 		8C20F7D529D150E300C62D89 /* CheckViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CheckViewController.storyboard; sourceTree = "<group>"; };
+		8C3684EA29E53B3F006E7F98 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
+		8C3684EC29E54918006E7F98 /* APIRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoute.swift; sourceTree = "<group>"; };
+		8C3684EE29E55827006E7F98 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		8C3684F129E55B0F006E7F98 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		8C3684F329E55C36006E7F98 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		8C3684F629E55CD0006E7F98 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		8C3684F829E55DBA006E7F98 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		8C3684FA29E55E62006E7F98 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		8C3684FC29E647A4006E7F98 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		8C3684FE29E649E9006E7F98 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		8C36850029E65470006E7F98 /* FogotPasswordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogotPasswordRequest.swift; sourceTree = "<group>"; };
+		8C36850229E65890006E7F98 /* ForgotPasswordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordResponse.swift; sourceTree = "<group>"; };
+		8C36850429E66745006E7F98 /* GetDepartmentListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDepartmentListRequest.swift; sourceTree = "<group>"; };
+		8C36850629E66829006E7F98 /* GetDepartmentListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDepartmentListResponse.swift; sourceTree = "<group>"; };
+		8C69F22629DD052700BEDDB9 /* APIHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandle.swift; sourceTree = "<group>"; };
+		8C69F22929DD089000BEDDB9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8C75011F29BF192A00AB20BF /* HomeHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		8C75012029BF192A00AB20BF /* HomeHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		8C80BF5429C2F7CC00C59FC4 /* ScienceFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScienceFieldCell.swift; sourceTree = "<group>"; };
@@ -292,7 +324,7 @@
 		8CE87CC029DA8ED400B561C5 /* UpdateEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEmailViewController.swift; sourceTree = "<group>"; };
 		8CE87CC229DBF86E00B561C5 /* QuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		8CE87CC329DBF86E00B561C5 /* QuestionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCollectionViewCell.xib; sourceTree = "<group>"; };
-		992C74ED962C05BAD7B6927E /* Pods_QuizApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C82255C8695F5BA842C21EDA /* Pods-QuizApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizApp.debug.xcconfig"; path = "Target Support Files/Pods-QuizApp/Pods-QuizApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,21 +337,13 @@
 				3F5B295E299E15AD0000A996 /* FacebookShare in Frameworks */,
 				8CE87CB229DA7BBD00B561C5 /* SwiftUICharts in Frameworks */,
 				3F5B2958299E15AD0000A996 /* FacebookCore in Frameworks */,
-				BFE44971D2310D4973C4E814 /* Pods_QuizApp.framework in Frameworks */,
+				460316443A3408EEB7B7AC3B /* Pods_QuizApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		121975C0348EDC871A8F0808 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				992C74ED962C05BAD7B6927E /* Pods_QuizApp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		3F46CC622991464B00BAA945 /* 2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,7 +388,7 @@
 				3F76B1B12987AD5B00E963F3 /* QuizApp */,
 				3F76B1B02987AD5B00E963F3 /* Products */,
 				AEB7A34DC781CCCD7E434DAE /* Pods */,
-				121975C0348EDC871A8F0808 /* Frameworks */,
+				EDC2AE659FAE15367E7ECC15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -386,6 +410,9 @@
 				8CB5F40829D4881600D60F15 /* 4 */,
 				8CB5F44729D9C9AA00D60F15 /* 5 */,
 				8CB5F45129DA19C200D60F15 /* 6 */,
+				8C69F22829DD087200BEDDB9 /* Model */,
+				8C69F22529DD04FF00BEDDB9 /* Networking */,
+				8C3684EA29E53B3F006E7F98 /* Extention.swift */,
 				3F76B1B22987AD5B00E963F3 /* AppDelegate.swift */,
 				3F76B1B42987AD5B00E963F3 /* SceneDelegate.swift */,
 				3F76B1B82987AD5B00E963F3 /* Main.storyboard */,
@@ -676,6 +703,51 @@
 			path = Check;
 			sourceTree = "<group>";
 		};
+		8C3684F029E55AF4006E7F98 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				8C3684F129E55B0F006E7F98 /* BaseRequest.swift */,
+				8C3684F329E55C36006E7F98 /* LoginRequest.swift */,
+				8C3684FC29E647A4006E7F98 /* RegisterRequest.swift */,
+				8C36850029E65470006E7F98 /* FogotPasswordRequest.swift */,
+				8C36850429E66745006E7F98 /* GetDepartmentListRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		8C3684F529E55CBC006E7F98 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				8C3684F629E55CD0006E7F98 /* BaseResponse.swift */,
+				8C3684F829E55DBA006E7F98 /* LoginResponse.swift */,
+				8C3684FE29E649E9006E7F98 /* RegisterResponse.swift */,
+				8C36850229E65890006E7F98 /* ForgotPasswordResponse.swift */,
+				8C36850629E66829006E7F98 /* GetDepartmentListResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		8C69F22529DD04FF00BEDDB9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8C3684F529E55CBC006E7F98 /* Response */,
+				8C3684F029E55AF4006E7F98 /* Request */,
+				8C3684EC29E54918006E7F98 /* APIRoute.swift */,
+				8C3684EE29E55827006E7F98 /* APIManager.swift */,
+				8C69F22629DD052700BEDDB9 /* APIHandle.swift */,
+				8C3684FA29E55E62006E7F98 /* Extension.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8C69F22829DD087200BEDDB9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C69F22929DD089000BEDDB9 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8CAA884E29D3E72100B8F4D2 /* 3.10 */ = {
 			isa = PBXGroup;
 			children = (
@@ -852,10 +924,18 @@
 		AEB7A34DC781CCCD7E434DAE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				39DBFA672E7A037A02564605 /* Pods-QuizApp.debug.xcconfig */,
-				1545E88396C63B9D12B13CE8 /* Pods-QuizApp.release.xcconfig */,
+				C82255C8695F5BA842C21EDA /* Pods-QuizApp.debug.xcconfig */,
+				14735638624A1923B6F25A71 /* Pods-QuizApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EDC2AE659FAE15367E7ECC15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F60DCE2AAE8CA5D307DD06D /* Pods_QuizApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -865,13 +945,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F76B1C32987AD5D00E963F3 /* Build configuration list for PBXNativeTarget "QuizApp" */;
 			buildPhases = (
-				E202FFCC3F72C832456624D9 /* [CP] Check Pods Manifest.lock */,
+				A48567490F53D446F053F835 /* [CP] Check Pods Manifest.lock */,
 				3F76B1AB2987AD5B00E963F3 /* Sources */,
 				3F76B1AC2987AD5B00E963F3 /* Frameworks */,
 				3F76B1AD2987AD5B00E963F3 /* Resources */,
 				3FC166A9299398200083792C /* Embed Frameworks */,
-				942983F41485974CD3348ACD /* [CP] Embed Pods Frameworks */,
-				322D939344C2018568949712 /* [CP] Copy Pods Resources */,
+				31B70DBFCF1DABFA382609FC /* [CP] Embed Pods Frameworks */,
+				76168E03B51B35D58A95CC28 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1008,24 +1088,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		322D939344C2018568949712 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QuizApp/Pods-QuizApp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QuizApp/Pods-QuizApp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuizApp/Pods-QuizApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		942983F41485974CD3348ACD /* [CP] Embed Pods Frameworks */ = {
+		31B70DBFCF1DABFA382609FC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1042,7 +1105,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuizApp/Pods-QuizApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E202FFCC3F72C832456624D9 /* [CP] Check Pods Manifest.lock */ = {
+		76168E03B51B35D58A95CC28 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuizApp/Pods-QuizApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuizApp/Pods-QuizApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuizApp/Pods-QuizApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A48567490F53D446F053F835 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1080,21 +1160,29 @@
 				3F76B1D22987BCC700E963F3 /* Introduce1ViewController.swift in Sources */,
 				8CB5F43729D7D93300D60F15 /* SavedViewController.swift in Sources */,
 				8CB5F44A29D9FACF00D60F15 /* UploadSheetViewController.swift in Sources */,
+				8C3684F729E55CD0006E7F98 /* BaseResponse.swift in Sources */,
 				8C80BF5929C2FC5600C59FC4 /* ScienceFieldModel.swift in Sources */,
+				8C3684FD29E647A4006E7F98 /* RegisterRequest.swift in Sources */,
 				3F7744A629935B0100DC3181 /* ForgotPassword1ViewController.swift in Sources */,
 				8C80BF6D29C411E000C59FC4 /* Item.swift in Sources */,
 				8CB5F41F29D67D2D00D60F15 /* ExamHistoryViewController1.swift in Sources */,
 				8C20F7CA29D0C1AC00C62D89 /* PopUpViewController.swift in Sources */,
 				3F46CC5F298D0ABE00BAA945 /* Introduce4ViewController.swift in Sources */,
+				8C3684F929E55DBA006E7F98 /* LoginResponse.swift in Sources */,
 				8CAA885629D3EB7A00B8F4D2 /* StartTestViewController2.swift in Sources */,
+				8C3684F229E55B0F006E7F98 /* BaseRequest.swift in Sources */,
+				8C69F22729DD052700BEDDB9 /* APIHandle.swift in Sources */,
 				3F46CC5D298D069500BAA945 /* Introduce3ViewController.swift in Sources */,
 				8C80BF7A29C4511A00C59FC4 /* HeaderCollectionReusableView.swift in Sources */,
 				8C20F7C729D0949500C62D89 /* QuestionCollectionCell.swift in Sources */,
 				8C20F79629C4757500C62D89 /* SubjectListViewController.swift in Sources */,
 				3FFFAEDE29ADE78E007E4443 /* HomeViewController.swift in Sources */,
+				8C36850329E65890006E7F98 /* ForgotPasswordResponse.swift in Sources */,
 				8CB5F42429D6BC1300D60F15 /* ExamHistoryViewController2.swift in Sources */,
 				3FC5EC7529B0827600B62B57 /* ProfileViewController.swift in Sources */,
+				8C3684FB29E55E62006E7F98 /* Extension.swift in Sources */,
 				8CE87CBC29DA8BD800B561C5 /* UpdateInfoViewController.swift in Sources */,
+				8C36850729E66829006E7F98 /* GetDepartmentListResponse.swift in Sources */,
 				8CB5F45029DA085B00D60F15 /* SharePopUpViewController.swift in Sources */,
 				8C20F79B29C8B67B00C62D89 /* SubjectCell.swift in Sources */,
 				3F46CC672991475400BAA945 /* SignInViewController.swift in Sources */,
@@ -1106,10 +1194,12 @@
 				8CB5F43C29D8221A00D60F15 /* SavedViewController1.swift in Sources */,
 				3FFFAED8299F75BA007E4443 /* RulesViewController.swift in Sources */,
 				8C80BF6329C37FEB00C59FC4 /* SearchViewController.swift in Sources */,
+				8C36850529E66745006E7F98 /* GetDepartmentListRequest.swift in Sources */,
 				8CE87CB529DA859800B561C5 /* ChangePasswordViewController.swift in Sources */,
 				8C80BF5629C2F7CC00C59FC4 /* ScienceFieldCell.swift in Sources */,
 				3F76B1B32987AD5B00E963F3 /* AppDelegate.swift in Sources */,
 				8C20F7A529C988DE00C62D89 /* headerView.swift in Sources */,
+				8C3684EB29E53B40006E7F98 /* Extention.swift in Sources */,
 				3F7744A029933BCE00DC3181 /* SignUpViewController.swift in Sources */,
 				3F76B1B52987AD5B00E963F3 /* SceneDelegate.swift in Sources */,
 				8C20F7D429D150CA00C62D89 /* CheckViewController.swift in Sources */,
@@ -1117,9 +1207,12 @@
 				8CB5F44629D983F200D60F15 /* TestModel2.swift in Sources */,
 				8CB5F41629D52E4A00D60F15 /* ExamHistoryViewController.swift in Sources */,
 				3FC5EC7D29B082C300B62B57 /* UploadViewController.swift in Sources */,
+				8C3684FF29E649E9006E7F98 /* RegisterResponse.swift in Sources */,
+				8C3684EF29E55827006E7F98 /* APIManager.swift in Sources */,
 				8CB5F43229D726AC00D60F15 /* QuestionHistoryViewController1.swift in Sources */,
 				3F7744D7299389C000DC3181 /* TutorialViewController.swift in Sources */,
 				8C20F7B429C9B07F00C62D89 /* testCell.swift in Sources */,
+				8C3684F429E55C36006E7F98 /* LoginRequest.swift in Sources */,
 				3FBE1316298CE0FC00DA0374 /* Introduce2ViewController.swift in Sources */,
 				8C20F7B729C9BBF700C62D89 /* TestModel.swift in Sources */,
 				8C20F7AC29C9AB5900C62D89 /* TestListViewController.swift in Sources */,
@@ -1127,7 +1220,10 @@
 				8CB5F44429D97D8900D60F15 /* SavedViewController2.swift in Sources */,
 				8CB5F41929D52F2900D60F15 /* ExamViewCell.swift in Sources */,
 				8CB5F42E29D6DEB000D60F15 /* TestTableViewCell.swift in Sources */,
+				8C3684ED29E54918006E7F98 /* APIRoute.swift in Sources */,
 				3FC5EC7929B082A100B62B57 /* HistoryViewController.swift in Sources */,
+				8C36850129E65470006E7F98 /* FogotPasswordRequest.swift in Sources */,
+				8C69F22A29DD089000BEDDB9 /* UserModel.swift in Sources */,
 				3FFFAEE529ADFA0C007E4443 /* TabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1270,7 +1366,7 @@
 		};
 		3F76B1C42987AD5D00E963F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39DBFA672E7A037A02564605 /* Pods-QuizApp.debug.xcconfig */;
+			baseConfigurationReference = C82255C8695F5BA842C21EDA /* Pods-QuizApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1285,6 +1381,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1300,7 +1397,7 @@
 		};
 		3F76B1C52987AD5D00E963F3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1545E88396C63B9D12B13CE8 /* Pods-QuizApp.release.xcconfig */;
+			baseConfigurationReference = 14735638624A1923B6F25A71 /* Pods-QuizApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1315,6 +1412,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

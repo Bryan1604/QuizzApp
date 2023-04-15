@@ -210,7 +210,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vCO-sh-3cx"/>
-                        <color key="backgroundColor" red="0.38823529411764707" green="0.61176470588235299" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="f8e-hf-xvS" firstAttribute="leading" secondItem="vCO-sh-3cx" secondAttribute="leading" id="86g-Cv-VNl"/>
                             <constraint firstItem="vCO-sh-3cx" firstAttribute="trailing" secondItem="f8e-hf-xvS" secondAttribute="trailing" id="EL1-4o-g17"/>
