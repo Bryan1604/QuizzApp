@@ -73,7 +73,6 @@
 		8C20F79829C475BD00C62D89 /* SubjectListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C20F79729C475BD00C62D89 /* SubjectListViewController.storyboard */; };
 		8C20F79B29C8B67B00C62D89 /* SubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20F79929C8B67B00C62D89 /* SubjectCell.swift */; };
 		8C20F79C29C8B67B00C62D89 /* SubjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C20F79A29C8B67B00C62D89 /* SubjectCell.xib */; };
-		8C20F79E29C8D1F400C62D89 /* SubjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20F79D29C8D1F400C62D89 /* SubjectModel.swift */; };
 		8C20F7A529C988DE00C62D89 /* headerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20F7A329C988DE00C62D89 /* headerView.swift */; };
 		8C20F7AC29C9AB5900C62D89 /* TestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20F7AA29C9AB5900C62D89 /* TestListViewController.swift */; };
 		8C20F7B129C9ABA500C62D89 /* TestListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C20F7B029C9ABA500C62D89 /* TestListViewController.storyboard */; };
@@ -104,6 +103,16 @@
 		8C36850329E65890006E7F98 /* ForgotPasswordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36850229E65890006E7F98 /* ForgotPasswordResponse.swift */; };
 		8C36850529E66745006E7F98 /* GetDepartmentListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36850429E66745006E7F98 /* GetDepartmentListRequest.swift */; };
 		8C36850729E66829006E7F98 /* GetDepartmentListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36850629E66829006E7F98 /* GetDepartmentListResponse.swift */; };
+		8C36850929ECE039006E7F98 /* ListDepartmentInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36850829ECE039006E7F98 /* ListDepartmentInfoRequest.swift */; };
+		8C36850B29ECE241006E7F98 /* ListDepartmentInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36850A29ECE241006E7F98 /* ListDepartmentInfoResponse.swift */; };
+		8C36850D29ECF6CF006E7F98 /* Subject1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36850C29ECF6CF006E7F98 /* Subject1.swift */; };
+		8C36850F29EE7BC2006E7F98 /* SearchSubjectRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36850E29EE7BC2006E7F98 /* SearchSubjectRequest.swift */; };
+		8C36851129EE7E0F006E7F98 /* SearchSubjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36851029EE7E0F006E7F98 /* SearchSubjectResponse.swift */; };
+		8C36851329EE824E006E7F98 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36851229EE824E006E7F98 /* Subject.swift */; };
+		8C36851529EE9F22006E7F98 /* ListExamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36851429EE9F22006E7F98 /* ListExamRequest.swift */; };
+		8C36851729EEA121006E7F98 /* ListExamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36851629EEA121006E7F98 /* ListExamResponse.swift */; };
+		8C36851929EF8808006E7F98 /* Exam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36851829EF8808006E7F98 /* Exam.swift */; };
+		8C36851B29EFA680006E7F98 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36851A29EFA680006E7F98 /* Department.swift */; };
 		8C69F22729DD052700BEDDB9 /* APIHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C69F22629DD052700BEDDB9 /* APIHandle.swift */; };
 		8C69F22A29DD089000BEDDB9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C69F22929DD089000BEDDB9 /* UserModel.swift */; };
 		8C75012129BF192A00AB20BF /* HomeHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C75011F29BF192A00AB20BF /* HomeHeaderTableViewCell.swift */; };
@@ -240,7 +249,6 @@
 		8C20F79729C475BD00C62D89 /* SubjectListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SubjectListViewController.storyboard; sourceTree = "<group>"; };
 		8C20F79929C8B67B00C62D89 /* SubjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectCell.swift; sourceTree = "<group>"; };
 		8C20F79A29C8B67B00C62D89 /* SubjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectCell.xib; sourceTree = "<group>"; };
-		8C20F79D29C8D1F400C62D89 /* SubjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectModel.swift; sourceTree = "<group>"; };
 		8C20F7A329C988DE00C62D89 /* headerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerView.swift; sourceTree = "<group>"; };
 		8C20F7AA29C9AB5900C62D89 /* TestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListViewController.swift; sourceTree = "<group>"; };
 		8C20F7B029C9ABA500C62D89 /* TestListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestListViewController.storyboard; sourceTree = "<group>"; };
@@ -271,6 +279,16 @@
 		8C36850229E65890006E7F98 /* ForgotPasswordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordResponse.swift; sourceTree = "<group>"; };
 		8C36850429E66745006E7F98 /* GetDepartmentListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDepartmentListRequest.swift; sourceTree = "<group>"; };
 		8C36850629E66829006E7F98 /* GetDepartmentListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDepartmentListResponse.swift; sourceTree = "<group>"; };
+		8C36850829ECE039006E7F98 /* ListDepartmentInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDepartmentInfoRequest.swift; sourceTree = "<group>"; };
+		8C36850A29ECE241006E7F98 /* ListDepartmentInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDepartmentInfoResponse.swift; sourceTree = "<group>"; };
+		8C36850C29ECF6CF006E7F98 /* Subject1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject1.swift; sourceTree = "<group>"; };
+		8C36850E29EE7BC2006E7F98 /* SearchSubjectRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSubjectRequest.swift; sourceTree = "<group>"; };
+		8C36851029EE7E0F006E7F98 /* SearchSubjectResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSubjectResponse.swift; sourceTree = "<group>"; };
+		8C36851229EE824E006E7F98 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		8C36851429EE9F22006E7F98 /* ListExamRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListExamRequest.swift; sourceTree = "<group>"; };
+		8C36851629EEA121006E7F98 /* ListExamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListExamResponse.swift; sourceTree = "<group>"; };
+		8C36851829EF8808006E7F98 /* Exam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exam.swift; sourceTree = "<group>"; };
+		8C36851A29EFA680006E7F98 /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
 		8C69F22629DD052700BEDDB9 /* APIHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandle.swift; sourceTree = "<group>"; };
 		8C69F22929DD089000BEDDB9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8C75011F29BF192A00AB20BF /* HomeHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -637,7 +655,7 @@
 				8C20F79729C475BD00C62D89 /* SubjectListViewController.storyboard */,
 				8C20F79929C8B67B00C62D89 /* SubjectCell.swift */,
 				8C20F79A29C8B67B00C62D89 /* SubjectCell.xib */,
-				8C20F79D29C8D1F400C62D89 /* SubjectModel.swift */,
+				8C36850C29ECF6CF006E7F98 /* Subject1.swift */,
 			);
 			path = danhsachmon;
 			sourceTree = "<group>";
@@ -711,6 +729,9 @@
 				8C3684FC29E647A4006E7F98 /* RegisterRequest.swift */,
 				8C36850029E65470006E7F98 /* FogotPasswordRequest.swift */,
 				8C36850429E66745006E7F98 /* GetDepartmentListRequest.swift */,
+				8C36850829ECE039006E7F98 /* ListDepartmentInfoRequest.swift */,
+				8C36850E29EE7BC2006E7F98 /* SearchSubjectRequest.swift */,
+				8C36851429EE9F22006E7F98 /* ListExamRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -723,6 +744,9 @@
 				8C3684FE29E649E9006E7F98 /* RegisterResponse.swift */,
 				8C36850229E65890006E7F98 /* ForgotPasswordResponse.swift */,
 				8C36850629E66829006E7F98 /* GetDepartmentListResponse.swift */,
+				8C36850A29ECE241006E7F98 /* ListDepartmentInfoResponse.swift */,
+				8C36851029EE7E0F006E7F98 /* SearchSubjectResponse.swift */,
+				8C36851629EEA121006E7F98 /* ListExamResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -744,6 +768,9 @@
 			isa = PBXGroup;
 			children = (
 				8C69F22929DD089000BEDDB9 /* UserModel.swift */,
+				8C36851229EE824E006E7F98 /* Subject.swift */,
+				8C36851829EF8808006E7F98 /* Exam.swift */,
+				8C36851A29EFA680006E7F98 /* Department.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1151,6 +1178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C36851929EF8808006E7F98 /* Exam.swift in Sources */,
 				8CB5F45429DA685100D60F15 /* SetUpViewController.swift in Sources */,
 				8CB5F41C29D59CB400D60F15 /* ExamModel.swift in Sources */,
 				3F76B1D02987AF0700E963F3 /* StartViewController.swift in Sources */,
@@ -1159,12 +1187,14 @@
 				8C75012129BF192A00AB20BF /* HomeHeaderTableViewCell.swift in Sources */,
 				3F76B1D22987BCC700E963F3 /* Introduce1ViewController.swift in Sources */,
 				8CB5F43729D7D93300D60F15 /* SavedViewController.swift in Sources */,
+				8C36850D29ECF6CF006E7F98 /* Subject1.swift in Sources */,
 				8CB5F44A29D9FACF00D60F15 /* UploadSheetViewController.swift in Sources */,
 				8C3684F729E55CD0006E7F98 /* BaseResponse.swift in Sources */,
 				8C80BF5929C2FC5600C59FC4 /* ScienceFieldModel.swift in Sources */,
 				8C3684FD29E647A4006E7F98 /* RegisterRequest.swift in Sources */,
 				3F7744A629935B0100DC3181 /* ForgotPassword1ViewController.swift in Sources */,
 				8C80BF6D29C411E000C59FC4 /* Item.swift in Sources */,
+				8C36851729EEA121006E7F98 /* ListExamResponse.swift in Sources */,
 				8CB5F41F29D67D2D00D60F15 /* ExamHistoryViewController1.swift in Sources */,
 				8C20F7CA29D0C1AC00C62D89 /* PopUpViewController.swift in Sources */,
 				3F46CC5F298D0ABE00BAA945 /* Introduce4ViewController.swift in Sources */,
@@ -1182,11 +1212,11 @@
 				3FC5EC7529B0827600B62B57 /* ProfileViewController.swift in Sources */,
 				8C3684FB29E55E62006E7F98 /* Extension.swift in Sources */,
 				8CE87CBC29DA8BD800B561C5 /* UpdateInfoViewController.swift in Sources */,
+				8C36851529EE9F22006E7F98 /* ListExamRequest.swift in Sources */,
 				8C36850729E66829006E7F98 /* GetDepartmentListResponse.swift in Sources */,
 				8CB5F45029DA085B00D60F15 /* SharePopUpViewController.swift in Sources */,
 				8C20F79B29C8B67B00C62D89 /* SubjectCell.swift in Sources */,
 				3F46CC672991475400BAA945 /* SignInViewController.swift in Sources */,
-				8C20F79E29C8D1F400C62D89 /* SubjectModel.swift in Sources */,
 				8C20F7BD29CA992600C62D89 /* StartTestViewController.swift in Sources */,
 				3F7744A82993754400DC3181 /* ForgotPassword2ViewController.swift in Sources */,
 				8CE87CC429DBF86F00B561C5 /* QuestionCollectionViewCell.swift in Sources */,
@@ -1195,6 +1225,7 @@
 				3FFFAED8299F75BA007E4443 /* RulesViewController.swift in Sources */,
 				8C80BF6329C37FEB00C59FC4 /* SearchViewController.swift in Sources */,
 				8C36850529E66745006E7F98 /* GetDepartmentListRequest.swift in Sources */,
+				8C36851329EE824E006E7F98 /* Subject.swift in Sources */,
 				8CE87CB529DA859800B561C5 /* ChangePasswordViewController.swift in Sources */,
 				8C80BF5629C2F7CC00C59FC4 /* ScienceFieldCell.swift in Sources */,
 				3F76B1B32987AD5B00E963F3 /* AppDelegate.swift in Sources */,
@@ -1211,7 +1242,10 @@
 				8C3684EF29E55827006E7F98 /* APIManager.swift in Sources */,
 				8CB5F43229D726AC00D60F15 /* QuestionHistoryViewController1.swift in Sources */,
 				3F7744D7299389C000DC3181 /* TutorialViewController.swift in Sources */,
+				8C36850F29EE7BC2006E7F98 /* SearchSubjectRequest.swift in Sources */,
+				8C36850929ECE039006E7F98 /* ListDepartmentInfoRequest.swift in Sources */,
 				8C20F7B429C9B07F00C62D89 /* testCell.swift in Sources */,
+				8C36851129EE7E0F006E7F98 /* SearchSubjectResponse.swift in Sources */,
 				8C3684F429E55C36006E7F98 /* LoginRequest.swift in Sources */,
 				3FBE1316298CE0FC00DA0374 /* Introduce2ViewController.swift in Sources */,
 				8C20F7B729C9BBF700C62D89 /* TestModel.swift in Sources */,
@@ -1222,6 +1256,8 @@
 				8CB5F42E29D6DEB000D60F15 /* TestTableViewCell.swift in Sources */,
 				8C3684ED29E54918006E7F98 /* APIRoute.swift in Sources */,
 				3FC5EC7929B082A100B62B57 /* HistoryViewController.swift in Sources */,
+				8C36851B29EFA680006E7F98 /* Department.swift in Sources */,
+				8C36850B29ECE241006E7F98 /* ListDepartmentInfoResponse.swift in Sources */,
 				8C36850129E65470006E7F98 /* FogotPasswordRequest.swift in Sources */,
 				8C69F22A29DD089000BEDDB9 /* UserModel.swift in Sources */,
 				3FFFAEE529ADFA0C007E4443 /* TabBarViewController.swift in Sources */,
@@ -1381,7 +1417,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1412,7 +1448,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

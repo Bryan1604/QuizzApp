@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class SubjectListViewController: UIViewController{
     
@@ -14,15 +15,10 @@ class SubjectListViewController: UIViewController{
     @IBOutlet weak var textInput : UITextField!
     @IBOutlet weak var searchBtn: UIButton!
     
-    var headerTitle = [
-        "Khoa Tự nhiên", "Khoa khoa học"
-    ]
+    var headerTitle = [String]()
+    var khoa = ListDepartmentInfoResponse(result: [ListDepartmentInfoResponse.Result]())
     
-    var data = [
-        Subject(thumnail: "Frame", title:"Môn toán" , field: "Khoa Tự Nhiên", count: 140),
-        Subject(thumnail: "Frame", title:"Môn Hóa" , field: "Khoa Tự Nhiên", count: 130),
-        Subject(thumnail: "Frame", title:"Môn Lý" , field: "Khoa Tự Nhiên", count: 144),
-    ]
+    var subjectList : [Subject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +28,11 @@ class SubjectListViewController: UIViewController{
         
         searchView.layer.cornerRadius = 20
         searchView.layer.backgroundColor = .init(red: 12, green: 9, blue: 42, alpha: 0.2)
-
         tableView.layer.cornerRadius = 20
         tableView?.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
 
-        
         registerNib()
+        listDepartmentInfo()
     }
     
     func registerNib(){
@@ -46,55 +41,96 @@ class SubjectListViewController: UIViewController{
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return khoa.result.count
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 }
 
 extension SubjectListViewController:UITableViewDataSource, UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return khoa.result[section].subjects?.count ?? 0
+//        return subjectList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubjectCell") as! SubjectCell
-        cell.title.text = data[indexPath.row].title
-        cell.thumnail.image = UIImage(named: data[indexPath.row].thumnail)
-        cell.field.text = data[indexPath.row].field
-        cell.count.text = String(data[indexPath.row].count) + " đề"
+       
+//        cell.title.text = subjectList[indexPath.row].title
+//        cell.thumnail.sd_setImage(with: URL(string: subjectList[indexPath.row].image ?? ""))
+//        cell.field.text = subjectList[indexPath.row].description
+//               cell.count.text = String(indexPath.row) + " đề"
+//        cell.id = subjectList[indexPath.row].id
+        
+        let data = khoa.result[indexPath.section].subjects![indexPath.row]
+        cell.title.text = data.title
+        cell.thumnail.sd_setImage(with: URL(string: data.image ?? ""))
+        cell.field.text = khoa.result[indexPath.section].title
+        cell.count.text = String(indexPath.row) + " đề"
+        cell.id = data.id
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return headerTitle[section]
+        return khoa.result[section].title
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! SubjectCell
+        let subject_id = cell.id
+        UserDefaults.standard.set(subject_id, forKey: "SubjectId")
         let vc = UIStoryboard(name: "TestListViewController", bundle: nil).instantiateViewController(withIdentifier: "TestListViewController") as! TestListViewController
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let headerView = UIView.init(frame: CGRect(x: 0, y: 0, width: Int(tableView.frame.width),
-//                                                       height: Int(50)))
-//
-//        let title: UILabel = UILabel()
-//        title.text = "222222"
-//        title.textAlignment = .left
-//        title.backgroundColor = UIColor.black
-//        title.font = UIFont(name: "SVN-Gilroy Medium", size: 20)
-//        headerView.addSubview(title)
-//        headerView.backgroundColor = .gray
-//        return headerView
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//            return 50
-//    }
 }
 
 extension SubjectListViewController{
     @IBAction func back(){
         self.navigationController?.popViewController(animated: true)
     }
+    
+    func listDepartmentInfo(){
+        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+        let request = ListDepartmentInfoRequest.Post(user_id: user_id).route
+        APIManager.session.request(request).responseJSON{ json in
+            print(json)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let listDepartmentInfoResponse = try? decoder.decode(ListDepartmentInfoResponse.self, from: data) {
+                self.khoa.result = listDepartmentInfoResponse.result
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
+    @IBAction func searchBtnTapped(_ sender: UIButton){
+        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+        let department_id = UserDefaults.standard.integer(forKey: "DepartmentId")
+        let keyword = textInput.text
+        let request = SearchSubjectRequest.Post(user_id: user_id, department_id: department_id, keyword: keyword ).route
+        APIManager.session.request(request).responseJSON{ json in
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let searchSubjectResponse = try? decoder.decode(SearchSubjectResponse.self, from: data) {
+                let subjects = searchSubjectResponse.result
+                for i in stride(from: 0, to: subjects.count, by: 1){
+                    let subject = Subject(id: subjects[i].id,title: subjects[i].title,image: subjects[i].image, description: subjects[i].description, count_exam:subjects[i].count_exam )
+                    self.subjectList.append(subject)
+//                    self.subjectList[i].id = searchSubjectResponse.result[i].id
+//                    self.subjectList[i].title = searchSubjectResponse.result[i].title
+//                    self.subjectList[i].description = searchSubjectResponse.result[i].description
+//                    self.subjectList[i].image = searchSubjectResponse.result[i].image
+//                    self.subjectList[i].count_exam = searchSubjectResponse.result[i].count_exam
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
 }
+

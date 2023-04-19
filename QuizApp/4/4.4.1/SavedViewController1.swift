@@ -15,9 +15,9 @@ class SavedViewController1: UIViewController {
     @IBOutlet weak var viewAll: UILabel!
     
     var data = [
-        Subject(thumnail: "Frame", title:"Môn toán" , field: "Khoa Tự Nhiên", count: 140),
-        Subject(thumnail: "Frame", title:"Môn Hóa" , field: "Khoa Tự Nhiên", count: 130),
-        Subject(thumnail: "Frame", title:"Môn Lý" , field: "Khoa Tự Nhiên", count: 144),
+        Subject1(thumnail: "Frame", title:"Môn toán" , field: "Khoa Tự Nhiên", count: 140),
+        Subject1(thumnail: "Frame", title:"Môn Hóa" , field: "Khoa Tự Nhiên", count: 130),
+        Subject1(thumnail: "Frame", title:"Môn Lý" , field: "Khoa Tự Nhiên", count: 144),
     ]
     
     override func viewDidLoad() {

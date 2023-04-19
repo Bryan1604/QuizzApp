@@ -27,6 +27,9 @@ PODS:
   - R.swift (6.1.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
+  - SDWebImage (5.15.5):
+    - SDWebImage/Core (= 5.15.5)
+  - SDWebImage/Core (5.15.5)
   - SFProgressCircle (1.0.6)
   - STTabbar (0.1.0)
   - SwiftAlgorithms (1.0.0)
@@ -44,6 +47,7 @@ DEPENDENCIES:
   - MBCircularProgressBar
   - Popover
   - R.swift (~> 6.1.0)
+  - SDWebImage
   - SFProgressCircle
   - STTabbar
   - SwiftColor
@@ -65,6 +69,7 @@ SPEC REPOS:
     - Popover
     - R.swift
     - R.swift.Library
+    - SDWebImage
     - SFProgressCircle
     - STTabbar
     - SwiftAlgorithms
@@ -86,12 +91,13 @@ SPEC CHECKSUMS:
   Popover: 10e1d9528f81d9504df984b7b3f491292bc1822d
   R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  SDWebImage: fd7e1a22f00303e058058278639bf6196ee431fe
   SFProgressCircle: 645d71eb3ffc56939029afa074b5a38ed3cdfa21
   STTabbar: fe93da755010233b348b2d0147c43bb1bef290fa
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
   SwiftColor: 2b0fd15257981f23265f9939f311098159fe6d1c
   VerticalSlidingPresentationController: 51beed52d55183c863a1fae9bfc0254de3d56fb2
 
-PODFILE CHECKSUM: b9c0d85e9f56aa448e8b561f87acd56b458a109e
+PODFILE CHECKSUM: 84e84285723de679fd9b6070e121b962bd9f381b
 
 COCOAPODS: 1.12.0

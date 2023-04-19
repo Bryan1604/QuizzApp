@@ -7,24 +7,40 @@
 
 import UIKit
 
-class SearchViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class SearchViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
+    
+    @IBOutlet weak var searchView: UIView!
+    @IBOutlet weak var textInput: UITextField!
+    @IBOutlet weak var searchBtn: UIButton!
     
     @IBOutlet weak var searchCollectionView: UICollectionView!
     var data = GetDepartmentListResponse( result: [GetDepartmentListResponse.Result]())
-
-    var keyword : String?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        searchView.layer.backgroundColor = .init(red: 12, green: 9, blue: 42, alpha: 0.2)
+        searchView.layer.cornerRadius = 20
+        
         searchCollectionView?.delegate = self
         searchCollectionView?.dataSource = self
+        searchCollectionView?.layer.cornerRadius = 20
+        searchCollectionView?.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        
+        layoutCollectionView()
         registerHeader()
         registerNib()
-        searchAction()
+        
+        searchAction2()
+       // searchAction()
+    }
+    func layoutCollectionView(){
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 156, height: 132)
+        layout.minimumLineSpacing = 16
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
+        searchCollectionView.collectionViewLayout = layout
     }
     
     func registerNib(){
-        print("register here")
         searchCollectionView?.register(UINib(nibName: "ItemCollectionViewCell", bundle: nil),
                                        forCellWithReuseIdentifier: "ItemCollectionViewCell")
     }
@@ -44,7 +60,15 @@ class SearchViewController: UIViewController,UICollectionViewDataSource,UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell",for: indexPath) as! ItemCollectionViewCell
-        cell.thumnail.image = UIImage(named: data.result[indexPath.row].image!)
+        if let url = URL(string: data.result[indexPath.row].image!) {
+            URLSession.shared.dataTask(with: url) { data, response, error in
+                guard let data = data, error == nil else { return }
+                DispatchQueue.main.async() {
+                    cell.thumnail.image = UIImage(data: data)
+                    // Use the downloaded image
+                }
+            }.resume()
+        }
         cell.title.text = data.result[indexPath.row].title
         cell.count.text = String(indexPath.row)
         let row = indexPath.row
@@ -71,7 +95,6 @@ class SearchViewController: UIViewController,UICollectionViewDataSource,UICollec
                                                                      withReuseIdentifier: "HeaderCollectionReusableView",
                                                                      for: indexPath) as! HeaderCollectionReusableView
         header.delegate = self
-        keyword = header.textInput.text
         return header
     }
     
@@ -86,31 +109,33 @@ class SearchViewController: UIViewController,UICollectionViewDataSource,UICollec
 
         // Use this view to calculate the optimal size based on the collection view's width
         return headerView.systemLayoutSizeFitting(CGSize(width: collectionView.frame.width, height: 190 ))
-                                                            //collectionView.frame.width, height: UIView.layoutFittingExpandedSize.height))
-//                                                  ,
-//                                                  withHorizontalFittingPriority: .required, // Width is fixed
-//                                                  verticalFittingPriority: .fittingSizeLevel) // Height can be as large as needed
+                                                        
     }
-    func getDepartmentList(){
-        let user_id = UserDefaults.standard.integer(forKey: "UserId")
-        let request = GetDepartmentListRequest.Post(user_id: user_id, keyword: self.keyword).route
-        APIManager.session.request(request).responseJSON{ json in
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .useDefaultKeys
-            if let data = json.data, let getDepartmentListResponse = try? decoder.decode(GetDepartmentListResponse.self, from: data) {
-                self.data.result = getDepartmentListResponse.result
-                DispatchQueue.main.async {
-                    self.searchCollectionView.reloadData()
-                }
-                }
-            }
-        }
+
 }
 
 extension SearchViewController: SearchDelegate{
     func searchAction() {
+//        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+//        let keyword = UserDefaults.standard.string(forKey: "keyword")
+//        let request = GetDepartmentListRequest.Post(user_id: user_id, keyword: keyword).route
+//        APIManager.session.request(request).responseJSON{ json in
+//            let decoder = JSONDecoder()
+//            print(json)
+//            decoder.keyDecodingStrategy = .useDefaultKeys
+//            if let data = json.data, let getDepartmentListResponse = try? decoder.decode(GetDepartmentListResponse.self, from: data) {
+//                self.data.result = getDepartmentListResponse.result
+//                DispatchQueue.main.async {
+//                    self.searchCollectionView.reloadData()
+//                }
+//            }
+//        }
+    }
+    
+    func searchAction2(){
         let user_id = UserDefaults.standard.integer(forKey: "UserId")
-        let request = GetDepartmentListRequest.Post(user_id: user_id, keyword: self.keyword).route
+        let keyword = textInput.text
+        let request = GetDepartmentListRequest.Post(user_id: user_id, keyword: keyword).route
         APIManager.session.request(request).responseJSON{ json in
             let decoder = JSONDecoder()
             print(json)
@@ -122,5 +147,15 @@ extension SearchViewController: SearchDelegate{
                 }
             }
         }
+    }
+    
+    @IBAction func searchBtnTapped(_ sender: UIButton){
+        searchAction2()
+    }
+    
+    @IBAction func backAction(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "TabBarViewController", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "TabBarViewController")
+        SceneDelegate.shared?.changeRootController(vc)
     }
 }
