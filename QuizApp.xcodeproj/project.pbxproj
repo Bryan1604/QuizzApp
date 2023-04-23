@@ -117,6 +117,8 @@
 		8C36851F29F531DC006E7F98 /* ExamHistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C36851E29F531DC006E7F98 /* ExamHistoryViewController.storyboard */; };
 		8C36852129F54A55006E7F98 /* ExamDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36852029F54A55006E7F98 /* ExamDetailRequest.swift */; };
 		8C36852329F54B0C006E7F98 /* ExamDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36852229F54B0C006E7F98 /* ExamDetailResponse.swift */; };
+		8C36852629F5A7F2006E7F98 /* UpdateAvatarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C36852529F5A7F2006E7F98 /* UpdateAvatarViewController.storyboard */; };
+		8C36852829F5A805006E7F98 /* UpdateAvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C36852729F5A805006E7F98 /* UpdateAvatarViewController.swift */; };
 		8C69F22729DD052700BEDDB9 /* APIHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C69F22629DD052700BEDDB9 /* APIHandle.swift */; };
 		8C69F22A29DD089000BEDDB9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C69F22929DD089000BEDDB9 /* UserModel.swift */; };
 		8C75012129BF192A00AB20BF /* HomeHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C75011F29BF192A00AB20BF /* HomeHeaderTableViewCell.swift */; };
@@ -295,6 +297,8 @@
 		8C36851E29F531DC006E7F98 /* ExamHistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExamHistoryViewController.storyboard; sourceTree = "<group>"; };
 		8C36852029F54A55006E7F98 /* ExamDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamDetailRequest.swift; sourceTree = "<group>"; };
 		8C36852229F54B0C006E7F98 /* ExamDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamDetailResponse.swift; sourceTree = "<group>"; };
+		8C36852529F5A7F2006E7F98 /* UpdateAvatarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdateAvatarViewController.storyboard; sourceTree = "<group>"; };
+		8C36852729F5A805006E7F98 /* UpdateAvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAvatarViewController.swift; sourceTree = "<group>"; };
 		8C69F22629DD052700BEDDB9 /* APIHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandle.swift; sourceTree = "<group>"; };
 		8C69F22929DD089000BEDDB9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8C75011F29BF192A00AB20BF /* HomeHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -757,6 +761,15 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		8C36852429F5A7CB006E7F98 /* 6.4.1 */ = {
+			isa = PBXGroup;
+			children = (
+				8C36852529F5A7F2006E7F98 /* UpdateAvatarViewController.storyboard */,
+				8C36852729F5A805006E7F98 /* UpdateAvatarViewController.swift */,
+			);
+			path = 6.4.1;
+			sourceTree = "<group>";
+		};
 		8C69F22529DD04FF00BEDDB9 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -910,6 +923,7 @@
 			isa = PBXGroup;
 			children = (
 				8CE87CBD29DA8C1000B561C5 /* 6.5 */,
+				8C36852429F5A7CB006E7F98 /* 6.4.1 */,
 				8CE87CB829DA89E700B561C5 /* 6.4 */,
 				8CE87CB329DA857C00B561C5 /* 6.3 */,
 				8CB5F45229DA683600D60F15 /* Set up */,
@@ -1049,6 +1063,7 @@
 				3F7744C92993803800DC3181 /* SVN-Gilroy Thin.otf in Resources */,
 				8CAA885429D3EB5600B8F4D2 /* StartTestViewController2.storyboard in Resources */,
 				8CB5F42129D67D4C00D60F15 /* ExamHistoryViewController1.storyboard in Resources */,
+				8C36852629F5A7F2006E7F98 /* UpdateAvatarViewController.storyboard in Resources */,
 				3F7744D02993803800DC3181 /* SVN-Gilroy SemiBold.otf in Resources */,
 				3F7744C42993803800DC3181 /* SVN-Gilroy Bold Italic.otf in Resources */,
 				8C20F7C429CAAFC200C62D89 /* TestDetailViewController.storyboard in Resources */,
@@ -1208,6 +1223,7 @@
 				3F46CC5F298D0ABE00BAA945 /* Introduce4ViewController.swift in Sources */,
 				8C3684F929E55DBA006E7F98 /* LoginResponse.swift in Sources */,
 				8CAA885629D3EB7A00B8F4D2 /* StartTestViewController2.swift in Sources */,
+				8C36852829F5A805006E7F98 /* UpdateAvatarViewController.swift in Sources */,
 				8C3684F229E55B0F006E7F98 /* BaseRequest.swift in Sources */,
 				8C69F22729DD052700BEDDB9 /* APIHandle.swift in Sources */,
 				3F46CC5D298D069500BAA945 /* Introduce3ViewController.swift in Sources */,
