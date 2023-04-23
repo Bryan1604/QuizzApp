@@ -16,6 +16,7 @@ enum APIRoute: URLRequestConvertible{
     case listDepartmentInfo__post( param: ListDepartmentInfoRequest.Post)
     case searchSubject__post(param: SearchSubjectRequest.Post)
     case listExam__post(param: ListExamRequest.Post)
+    case examDetail__post(param: ExamDetailRequest.Post)
     var baseURLString: String{
         return "https://asia-northeast1-quiz-app-traning.cloudfunctions.net"
     }
@@ -37,6 +38,8 @@ enum APIRoute: URLRequestConvertible{
             return .post
         case .listExam__post:
             return .post
+        case .examDetail__post:
+            return .post
         }
     }
     
@@ -56,6 +59,8 @@ enum APIRoute: URLRequestConvertible{
             return APIPath.searchSubject.rawValue
         case .listExam__post:
             return APIPath.listExam.rawValue
+        case .examDetail__post:
+            return APIPath.examDetail.rawValue
         }
         
     }
@@ -75,6 +80,8 @@ enum APIRoute: URLRequestConvertible{
         case .searchSubject__post(let param):
             return param.dictionary
         case .listExam__post(let param):
+            return param.dictionary
+        case .examDetail__post(let param):
             return param.dictionary
         }
     }
@@ -107,7 +114,8 @@ enum APIRoute: URLRequestConvertible{
             return try JSONEncoding.default.encode(request, with: parameters)
         case .listExam__post:
             return try JSONEncoding.default.encode(request, with: parameters)
-
+        case .examDetail__post:
+            return try JSONEncoding.default.encode(request, with: parameters)
 //        default:
 //            return try JSONEncoding.default.encode(request, with: parameters)
         }

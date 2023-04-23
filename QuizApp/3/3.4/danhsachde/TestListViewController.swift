@@ -52,6 +52,7 @@ class TestListViewController: UIViewController{
     
     @IBAction func setPopupButton(){
         let optionClosure : (UIAction) -> Void = { action in
+            self.reloadData()
             if action.title == "Theo thời gian"{
                 self.sort_field = 1
             }
@@ -61,6 +62,7 @@ class TestListViewController: UIViewController{
             else {
                 self.sort_field = 3
             }
+            self.getListExam()
         }
         let menu = UIMenu(children : [
             UIAction(title: "Theo thời gian", state: .off, handler: optionClosure),
@@ -74,8 +76,6 @@ class TestListViewController: UIViewController{
 }
 
 extension TestListViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -90,6 +90,7 @@ extension TestListViewController: UITableViewDataSource, UITableViewDelegate {
         cell.thumnail.sd_setImage(with: URL(string: listExam[indexPath.row].image ?? ""))
         cell.parentTitle.text = subject
         cell.quantity.text = "・" + " \(listExam[indexPath.row].number ?? 0) Trăc nghiệm"
+        cell.id = listExam[indexPath.row].id
         return cell
     }
     
@@ -98,6 +99,11 @@ extension TestListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! testCell
+        let exam_id = cell.id
+        let subject_title = self.subject
+        UserDefaults.standard.set(exam_id, forKey: "ExamId")
+        UserDefaults.standard.set(subject_title, forKey: "SubjectTitle")
         let vc = UIStoryboard(name: "StartTestViewController", bundle: nil).instantiateViewController(withIdentifier: "StartTestViewController") as! StartTestViewController
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -125,5 +131,9 @@ extension TestListViewController{
                 }
             }
         }
+    }
+    
+    func reloadData(){
+        self.listExam.removeAll()
     }
 }

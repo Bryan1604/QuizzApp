@@ -23,6 +23,8 @@ class HomeViewController: UIViewController{
 
         getDepartmentList()
         
+        print(UserDefaults.standard.string(forKey: "AccessToken") ?? "")
+        
     }
     
     func registerNibHeader() {

@@ -19,6 +19,8 @@ class StartTestViewController: UIViewController {
     @IBOutlet weak var viewChild1: UIView!
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var viewChild2: UIView!
+    
+//    var exam = Exam()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +28,8 @@ class StartTestViewController: UIViewController {
         viewChild1.layer.cornerRadius = 20
         startBtn.layer.cornerRadius = 20
         viewChild2.layer.cornerRadius = 20
+        
+        getDetailExam()
     }
     
     @IBAction func goBack(){
@@ -36,14 +40,32 @@ class StartTestViewController: UIViewController {
         let vc = UIStoryboard(name: "TestDetailViewController", bundle: nil).instantiateViewController(withIdentifier: "TestDetailViewController") as! TestDetailViewController
         navigationController?.pushViewController(vc, animated: true)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+  
+    func presentView(_ exam: Exam){
+        parentTitle.text = UserDefaults.standard.string(forKey: "SubjectTitle")
+        mainTitle.text = exam.title
+        numberOfQuestion.text =  "\( exam.number ?? 0 ) Câu hỏi"
+        time.text = "\(exam.time ?? 0) Phút"
+        detail.text = exam.description
     }
-    */
-
+    
+    func getDetailExam(){
+        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+        let exam_id = UserDefaults.standard.integer(forKey: "ExamId")
+        let request = ExamDetailRequest.Post(user_id: user_id, exam_id: exam_id ).route
+        APIManager.session.request(request).responseJSON{ json in
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let examDetailResponse = try? decoder.decode(ExamDetailResponse.self, from: data) {
+                let examJson = examDetailResponse.result
+                if (examJson?.id)! > 0{
+                    let exam = Exam(author_email: examJson?.author_email, author_id: examJson?.id,author_name: examJson?.author_name, id: examJson?.id, image: examJson?.image, number: examJson?.number, status: examJson?.status, time: examJson?.time, title: examJson?.title)
+                    self.presentView(exam)
+                    }
+                }
+                DispatchQueue.main.async {
+                    self.reloadInputViews()
+                }
+            }
+        }
 }
