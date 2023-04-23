@@ -16,4 +16,8 @@ enum APIPath: String{
     case register = "/register"
     case forgotPassword = "/forgotPassword"
     case getDepartmentList = "/getDepartmentList"
+    case listDepartmentInfo = "/listDepartmentInfo"
+    case searchSubject = "/searchSubject"
+    case listExam = "/listExam"
+    case examDetail = "/examDetail"
 }

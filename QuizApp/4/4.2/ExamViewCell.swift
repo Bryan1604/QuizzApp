@@ -14,6 +14,8 @@ class ExamViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var numberOfQuestion: UILabel!
     @IBOutlet weak var grade: UILabel!
+    
+    var id: Int?
     //var status : Bool
 
     override func awakeFromNib() {

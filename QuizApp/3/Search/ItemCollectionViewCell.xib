@@ -30,7 +30,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s8M-cV-S0K">
                         <rect key="frame" x="0.0" y="0.0" width="178" height="177"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FWQ-cv-BBm">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FWQ-cv-BBm">
                                 <rect key="frame" x="54" y="16" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="FWQ-cv-BBm" secondAttribute="height" multiplier="1:1" id="W56-Mp-grz"/>
@@ -56,8 +56,8 @@
                             <constraint firstAttribute="trailing" secondItem="FWQ-cv-BBm" secondAttribute="trailing" constant="54" id="AOw-Vf-fv7"/>
                             <constraint firstItem="lFN-LR-chY" firstAttribute="top" secondItem="Jkg-6t-xe6" secondAttribute="bottom" constant="2" id="NcD-2h-ezC"/>
                             <constraint firstItem="Jkg-6t-xe6" firstAttribute="centerX" secondItem="s8M-cV-S0K" secondAttribute="centerX" id="Ooo-DD-waW"/>
-                            <constraint firstAttribute="width" secondItem="s8M-cV-S0K" secondAttribute="height" multiplier="1:1" constant="1" id="Qa5-ww-dhV"/>
                             <constraint firstItem="lFN-LR-chY" firstAttribute="centerX" secondItem="s8M-cV-S0K" secondAttribute="centerX" id="Vm8-G9-MXY"/>
+                            <constraint firstItem="FWQ-cv-BBm" firstAttribute="leading" secondItem="s8M-cV-S0K" secondAttribute="leading" constant="54" id="j3H-eI-YGi"/>
                             <constraint firstItem="Jkg-6t-xe6" firstAttribute="top" secondItem="FWQ-cv-BBm" secondAttribute="bottom" constant="8" id="v2g-qF-1XC"/>
                         </constraints>
                     </view>

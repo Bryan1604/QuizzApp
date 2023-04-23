@@ -16,6 +16,7 @@ class SubjectCell: UITableViewCell {
     @IBOutlet weak var count: UILabel!
     @IBOutlet weak var detailBtn: UIButton!
     
+    var id: Int?
     override func awakeFromNib() {
         super.awakeFromNib()
         

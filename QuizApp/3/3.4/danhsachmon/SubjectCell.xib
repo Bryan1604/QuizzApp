@@ -49,7 +49,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukV-W0-oZ7">
-                                <rect key="frame" x="294" y="25" width="33" height="30"/>
+                                <rect key="frame" x="302" y="25" width="33" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Vector"/>
                             </button>
@@ -71,7 +71,7 @@
                             <constraint firstItem="ukV-W0-oZ7" firstAttribute="centerY" secondItem="dG4-Fl-eia" secondAttribute="centerY" id="fn8-y4-sPz"/>
                             <constraint firstAttribute="bottom" secondItem="jRJ-kz-ZVt" secondAttribute="bottom" constant="8" id="gt9-zt-8FY"/>
                             <constraint firstItem="LQL-9A-UV1" firstAttribute="leading" secondItem="aBx-9e-PMf" secondAttribute="trailing" constant="4" id="iWc-dP-ICv"/>
-                            <constraint firstAttribute="trailing" secondItem="ukV-W0-oZ7" secondAttribute="trailing" constant="24" id="mfA-eA-Zhr"/>
+                            <constraint firstAttribute="trailing" secondItem="ukV-W0-oZ7" secondAttribute="trailing" constant="16" id="mfA-eA-Zhr"/>
                             <constraint firstItem="LQL-9A-UV1" firstAttribute="centerY" secondItem="aBx-9e-PMf" secondAttribute="centerY" id="pic-CO-Cp8"/>
                             <constraint firstItem="ctV-fg-KGz" firstAttribute="top" secondItem="dG4-Fl-eia" secondAttribute="top" constant="16" id="swU-ap-8fz"/>
                         </constraints>

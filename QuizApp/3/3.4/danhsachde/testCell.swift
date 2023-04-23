@@ -16,6 +16,7 @@ class testCell: UITableViewCell {
     @IBOutlet weak var quantity: UILabel!
     @IBOutlet weak var detailBtn: UIButton!
     
+    var id: Int?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

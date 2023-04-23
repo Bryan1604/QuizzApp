@@ -200,7 +200,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ity-Yr-AiR" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="676.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5d1-v4-Gli">
                                                 <rect key="frame" x="16" y="8" width="48" height="38"/>
@@ -211,7 +211,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0k-xI-qva">
-                                                <rect key="frame" x="8" y="268" width="377" height="400.33333333333326"/>
+                                                <rect key="frame" x="8" y="268" width="377" height="483"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xza-vZ-GdK">
                                                         <rect key="frame" x="15.999999999999996" y="24" width="35.666666666666657" height="15"/>
@@ -306,14 +306,19 @@
                                                         <color key="textColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this is the description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bi-bB-vhl">
-                                                        <rect key="frame" x="16" y="234.33333333333337" width="345" height="18"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bi-bB-vhl">
+                                                        <rect key="frame" x="16" y="234.33333333333337" width="345" height="178.66666666666663"/>
+                                                        <mutableString key="text">this is the description ooMở file readme.html trong trình soạn thảo văn bản, ví dụ như Notepad++ hoặc Sublime Text.
+Sao chép toàn bộ nội dung trong file readme.html.
+Mở trang web https://html2markdown.com/.
+Dán nội dung đã sao chép vào ô trống trên trang web.
+Nhấn vào nút "Convert to Markdown".</mutableString>
                                                         <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eh-uL-Fs5">
-                                                        <rect key="frame" x="192" y="328.33333333333337" width="169" height="56"/>
+                                                        <rect key="frame" x="192" y="411" width="169" height="56"/>
                                                         <color key="backgroundColor" red="0.38823529410000002" green="0.61176470589999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="169" id="QGg-1i-8eM"/>
@@ -333,7 +338,6 @@
                                                     <constraint firstItem="5bi-bB-vhl" firstAttribute="top" secondItem="n3w-s9-MX0" secondAttribute="bottom" constant="12" id="1Nv-7h-FO1"/>
                                                     <constraint firstItem="Xza-vZ-GdK" firstAttribute="leading" secondItem="F0k-xI-qva" secondAttribute="leading" constant="16" id="32i-2b-CNm"/>
                                                     <constraint firstItem="1os-2O-YD9" firstAttribute="leading" secondItem="F0k-xI-qva" secondAttribute="leading" constant="16" id="5uk-Vr-x0C"/>
-                                                    <constraint firstItem="1eh-uL-Fs5" firstAttribute="top" secondItem="5bi-bB-vhl" secondAttribute="bottom" constant="76" id="9zQ-bv-5S9"/>
                                                     <constraint firstItem="n3w-s9-MX0" firstAttribute="leading" secondItem="F0k-xI-qva" secondAttribute="leading" constant="16" id="Fkh-pF-Drm"/>
                                                     <constraint firstItem="5bi-bB-vhl" firstAttribute="leading" secondItem="F0k-xI-qva" secondAttribute="leading" constant="16" id="Qvs-Be-06E"/>
                                                     <constraint firstAttribute="bottom" secondItem="1eh-uL-Fs5" secondAttribute="bottom" constant="16" id="S2Z-8j-gRf"/>
@@ -367,6 +371,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.38823529410000002" green="0.61176470589999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Ity-Yr-AiR" firstAttribute="leading" secondItem="x0a-Ay-cxS" secondAttribute="leading" id="Flu-M4-WC3"/>
                                     <constraint firstItem="Ity-Yr-AiR" firstAttribute="top" secondItem="x0a-Ay-cxS" secondAttribute="top" id="MFf-rr-GLc"/>
@@ -383,6 +388,7 @@
                         <constraints>
                             <constraint firstItem="NDe-mP-sRf" firstAttribute="top" secondItem="pbg-pa-oL2" secondAttribute="top" id="X0Y-tr-hzC"/>
                             <constraint firstItem="NDe-mP-sRf" firstAttribute="leading" secondItem="pbg-pa-oL2" secondAttribute="leading" id="bTo-X3-k2M"/>
+                            <constraint firstItem="pbg-pa-oL2" firstAttribute="bottom" secondItem="F0k-xI-qva" secondAttribute="bottom" constant="8" id="bo8-z3-hR6"/>
                             <constraint firstItem="pbg-pa-oL2" firstAttribute="bottom" secondItem="NDe-mP-sRf" secondAttribute="bottom" id="g9A-Ls-GQU"/>
                             <constraint firstItem="pbg-pa-oL2" firstAttribute="trailing" secondItem="NDe-mP-sRf" secondAttribute="trailing" id="gE7-LR-rjZ"/>
                         </constraints>

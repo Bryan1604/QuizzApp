@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class TestListViewController: UIViewController{
     
     @IBOutlet weak var backBtn : UIButton!
@@ -15,16 +15,16 @@ class TestListViewController: UIViewController{
     @IBOutlet weak var textInput: UITextField!
     @IBOutlet weak var filterBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
+        
+    let user_id = UserDefaults.standard.integer(forKey: "UserId")
+    let subject_id = UserDefaults.standard.integer(forKey: "SubjectId")
+    var type: Int?
+    var sort_field: Int?
+    var sort_by: String?
     
-    //    let vc = UIStoryboard(name: "HomeViewController", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
     
-    var data2 = [
-        Test(thumnail: "Frame", title: "Đề 1", parentTitle: "Toán học", quantity: 12),
-        Test(thumnail:"Frame_1" , title: "Đề 2", parentTitle: "Toán học", quantity: 13),
-        Test(thumnail: "Frame_2", title: "Đề 3", parentTitle: "Toán học", quantity: 14),
-        Test(thumnail:"Frame" , title: "Đề 4", parentTitle: "Toán học", quantity: 16),
-        Test(thumnail: "Frame_2", title: "Đề 5", parentTitle: "Toán học", quantity: 20),
-    ]
+    var listExam = [Exam]()
+    var subject : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +38,8 @@ class TestListViewController: UIViewController{
         tableView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         
         registerNib()
+        getListExam()
         
-        //setPopupButton()
     }
     
     func registerNib(){
@@ -52,7 +52,17 @@ class TestListViewController: UIViewController{
     
     @IBAction func setPopupButton(){
         let optionClosure : (UIAction) -> Void = { action in
-            
+            self.reloadData()
+            if action.title == "Theo thời gian"{
+                self.sort_field = 1
+            }
+            else if action.title == "Theo thời gian"{
+                self.sort_field = 2
+            }
+            else {
+                self.sort_field = 3
+            }
+            self.getListExam()
         }
         let menu = UIMenu(children : [
             UIAction(title: "Theo thời gian", state: .off, handler: optionClosure),
@@ -62,37 +72,68 @@ class TestListViewController: UIViewController{
         filterBtn.menu = menu
         filterBtn.showsMenuAsPrimaryAction = true
         filterBtn.changesSelectionAsPrimaryAction = false
-        
     }
-
 }
 
 extension TestListViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data2.count
+        return listExam.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "testCell") as! testCell
         
-        cell.title.text = data2[indexPath.row].title
-        cell.thumnail.image = UIImage(named: data2[indexPath.row].thumnail)
-        cell.parentTitle.text = data2[indexPath.row].parentTitle
-        cell.quantity.text = "・" + "\(data2[indexPath.row].quantity)" + " Trăc nghiệm"
+        cell.title.text = listExam[indexPath.row].title
+        cell.thumnail.sd_setImage(with: URL(string: listExam[indexPath.row].image ?? ""))
+        cell.parentTitle.text = subject
+        cell.quantity.text = "・" + " \(listExam[indexPath.row].number ?? 0) Trăc nghiệm"
+        cell.id = listExam[indexPath.row].id
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return data2[section].parentTitle + " | Khoa học"
+        return (self.subject ?? "") + " | Khoa học"
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! testCell
+        let exam_id = cell.id
+        let subject_title = self.subject
+        UserDefaults.standard.set(exam_id, forKey: "ExamId")
+        UserDefaults.standard.set(subject_title, forKey: "SubjectTitle")
         let vc = UIStoryboard(name: "StartTestViewController", bundle: nil).instantiateViewController(withIdentifier: "StartTestViewController") as! StartTestViewController
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension TestListViewController{
+    func getListExam(){
+        let request = ListExamRequest.Post(user_id: self.user_id, subject_id: self.subject_id, type: 0, sort_field: self.sort_field,sort_by: "asc").route
+        APIManager.session.request(request).responseJSON{ json in
+            print(json)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let listExamResponse = try? decoder.decode(ListExamResponse.self, from: data) {
+                var exams = listExamResponse.result.list_exam
+                self.subject = listExamResponse.result.title
+                if exams!.count > 0{
+                    for i in stride(from: 0, to: exams!.count, by: 1){
+                        let exam = Exam(author_email: exams?[i].author_email, author_id: exams?[i].id,author_name: exams?[i].author_name, id: exams?[i].id, image: exams?[i].image, number: exams?[i].number, save_num: exams?[i].saved_num, status: exams?[i].status, time: exams?[i].time, title: exams?[i].title)
+                        self.listExam.append(exam)
+                    }
+                }
+                print(self.listExam)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
+    func reloadData(){
+        self.listExam.removeAll()
     }
 }
