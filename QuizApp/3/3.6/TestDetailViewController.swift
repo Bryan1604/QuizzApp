@@ -80,7 +80,6 @@ class TestDetailViewController: UIViewController, UIPopoverPresentationControlle
     @IBAction func presentPopUpOfQuestion(_ sender: UIButton){
         let storyBoard = UIStoryboard(name: "PopUpViewController", bundle: nil)
         let popoverController = storyBoard.instantiateViewController(withIdentifier: "PopUpViewController")
-       
     }
 
     @IBAction func submitAction(_ sender: Any) {

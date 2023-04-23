@@ -37,7 +37,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H7b-Nc-8S7">
-                                <rect key="frame" x="24" y="241.66666666666663" width="345" height="56"/>
+                                <rect key="frame" x="24" y="295.33333333333331" width="345" height="56"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon (13)" translatesAutoresizingMaskIntoConstraints="NO" id="3Zb-51-hou">
                                         <rect key="frame" x="8" y="8" width="40" height="40"/>
@@ -64,13 +64,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Họ tên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b23-U4-Aex">
-                                <rect key="frame" x="24" y="218.66666666666666" width="43" height="15"/>
+                                <rect key="frame" x="24" y="272.33333333333331" width="43" height="15"/>
                                 <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="14"/>
                                 <color key="textColor" red="0.047058823530000002" green="0.035294117649999998" blue="0.1647058824" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YY7-Pk-zjP">
-                                <rect key="frame" x="24" y="344.66666666666669" width="345" height="56"/>
+                                <rect key="frame" x="24" y="398.33333333333331" width="345" height="56"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Calendar" translatesAutoresizingMaskIntoConstraints="NO" id="yVJ-ii-5I6">
                                         <rect key="frame" x="16" y="16" width="24" height="24"/>
@@ -97,22 +97,29 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinh nhật" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88r-Os-fpB">
-                                <rect key="frame" x="24" y="321.66666666666669" width="60" height="15"/>
+                                <rect key="frame" x="24" y="375.33333333333331" width="60" height="15"/>
                                 <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="14"/>
                                 <color key="textColor" red="0.047058823530000002" green="0.035294117649999998" blue="0.1647058824" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZv-wp-kap">
-                                <rect key="frame" x="24" y="746" width="345" height="48"/>
+                                <rect key="frame" x="24" y="738" width="345" height="56"/>
                                 <color key="backgroundColor" red="0.38823529410000002" green="0.61176470589999998" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="thI-Qd-loV"/>
+                                    <constraint firstAttribute="height" constant="56" id="thI-Qd-loV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="16"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Đặt lại thông tin"/>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="cwe-uy-wN8">
+                                <rect key="frame" x="146.66666666666666" y="140.33333333333334" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Inh-MQ-Be4"/>
+                                    <constraint firstAttribute="height" constant="100" id="LgW-dW-m9v"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -125,15 +132,17 @@
                             <constraint firstItem="iMz-fa-QsD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="H6D-MS-gek"/>
                             <constraint firstAttribute="trailing" secondItem="jZv-wp-kap" secondAttribute="trailing" constant="24" id="HIc-8C-LDu"/>
                             <constraint firstItem="88r-Os-fpB" firstAttribute="top" secondItem="H7b-Nc-8S7" secondAttribute="bottom" constant="24" id="Q63-0o-AQp"/>
-                            <constraint firstItem="b23-U4-Aex" firstAttribute="top" secondItem="eMp-iN-cd7" secondAttribute="bottom" constant="96" id="UJK-Hp-L9c"/>
                             <constraint firstItem="eMp-iN-cd7" firstAttribute="centerY" secondItem="iMz-fa-QsD" secondAttribute="centerY" id="ZTQ-Re-GHS"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YY7-Pk-zjP" secondAttribute="trailing" constant="24" id="dE3-tq-ehh"/>
                             <constraint firstItem="jZv-wp-kap" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="dpw-1J-zY7"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="H7b-Nc-8S7" secondAttribute="trailing" constant="24" id="eKE-3B-K1j"/>
                             <constraint firstItem="H7b-Nc-8S7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="gak-Yu-XyE"/>
+                            <constraint firstItem="cwe-uy-wN8" firstAttribute="top" secondItem="iMz-fa-QsD" secondAttribute="bottom" constant="24" id="iZz-Ok-qCy"/>
                             <constraint firstItem="iMz-fa-QsD" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="sBt-Uk-Ypd"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="jZv-wp-kap" secondAttribute="bottom" constant="24" id="tKb-c7-BMl"/>
                             <constraint firstItem="H7b-Nc-8S7" firstAttribute="top" secondItem="b23-U4-Aex" secondAttribute="bottom" constant="8" id="uHv-Uf-7q3"/>
+                            <constraint firstItem="cwe-uy-wN8" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="uqc-p8-W2N"/>
+                            <constraint firstItem="b23-U4-Aex" firstAttribute="top" secondItem="cwe-uy-wN8" secondAttribute="bottom" constant="32" id="xw8-TE-uER"/>
                         </constraints>
                     </view>
                     <connections>
@@ -144,13 +153,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="5"/>
+            <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
         </scene>
     </scenes>
     <resources>
         <image name="Calendar" width="24" height="24"/>
         <image name="Icon (13)" width="44" height="44"/>
         <image name="Icon-1" width="24" height="24"/>
+        <image name="avatar" width="56" height="56"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
