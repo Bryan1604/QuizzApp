@@ -34,10 +34,12 @@ class CheckViewController: UIViewController, ChartViewDelegate {
         //addPieChart()
         addLineChart()
         // Do any additional setup after loading the view.
-        progressView!.value = 0
     }
     override func viewWillAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 10.0){
+        super.viewWillAppear(animated)
+        progressView!.value = 0
+
+        UIView.animate(withDuration: 1.0){
             self.progressView.value = 80
         }
         

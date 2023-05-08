@@ -306,13 +306,8 @@
                                                         <color key="textColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bi-bB-vhl">
-                                                        <rect key="frame" x="16" y="234.33333333333337" width="345" height="178.66666666666663"/>
-                                                        <mutableString key="text">this is the description ooMở file readme.html trong trình soạn thảo văn bản, ví dụ như Notepad++ hoặc Sublime Text.
-Sao chép toàn bộ nội dung trong file readme.html.
-Mở trang web https://html2markdown.com/.
-Dán nội dung đã sao chép vào ô trống trên trang web.
-Nhấn vào nút "Convert to Markdown".</mutableString>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bi-bB-vhl">
+                                                        <rect key="frame" x="16" y="234.33333333333337" width="345" height="0.0"/>
                                                         <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>

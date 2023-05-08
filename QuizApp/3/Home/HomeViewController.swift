@@ -84,17 +84,20 @@ extension HomeViewController{
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .useDefaultKeys
             if let data = json.data, let getDepartmentListResponse = try? decoder.decode(GetDepartmentListResponse.self, from: data) {
-                //self.data.result = getDepartmentListResponse.result
-                let departments = getDepartmentListResponse.result
-                if departments.count > 0{
-                    for i in stride(from: 0, to: departments.count, by: 1){
-                        let department = Department(id: departments[i].id, title: departments[i].title, description: departments[i].description, image: departments[i].image, studentList: departments[i].student_list)
-                        self.departmentList.append(department)
+                    if getDepartmentListResponse.statusCode == 401{
+                        self.navigationController?.popToRootViewController(animated: true)
+                    }else{
+                        let departments = getDepartmentListResponse.result
+                        if departments.count > 0{
+                            for i in stride(from: 0, to: departments.count, by: 1){
+                                let department = Department(id: departments[i].id, title: departments[i].title, description: departments[i].description, image: departments[i].image, studentList: departments[i].student_list)
+                                self.departmentList.append(department)
+                            }
+                        }
+                        DispatchQueue.main.async {
+                            self.homeTableView.reloadData()
+                        }
                     }
-                }
-                DispatchQueue.main.async {
-                    self.homeTableView.reloadData()
-                }
                 }
             print(json)
             }

@@ -17,6 +17,8 @@ enum APIRoute: URLRequestConvertible{
     case searchSubject__post(param: SearchSubjectRequest.Post)
     case listExam__post(param: ListExamRequest.Post)
     case examDetail__post(param: ExamDetailRequest.Post)
+    case examListQuestion__post(param: ExamListQuestionRequest.Post)
+    case submitExam__post(param: SubmitExamRequest.Post)
     var baseURLString: String{
         return "https://asia-northeast1-quiz-app-traning.cloudfunctions.net"
     }
@@ -40,6 +42,10 @@ enum APIRoute: URLRequestConvertible{
             return .post
         case .examDetail__post:
             return .post
+        case .examListQuestion__post:
+            return .post
+        case .submitExam__post:
+            return .post
         }
     }
     
@@ -61,6 +67,10 @@ enum APIRoute: URLRequestConvertible{
             return APIPath.listExam.rawValue
         case .examDetail__post:
             return APIPath.examDetail.rawValue
+        case .examListQuestion__post:
+            return APIPath.examListQuestion.rawValue
+        case .submitExam__post:
+            return APIPath.submitExam.rawValue
         }
         
     }
@@ -82,6 +92,10 @@ enum APIRoute: URLRequestConvertible{
         case .listExam__post(let param):
             return param.dictionary
         case .examDetail__post(let param):
+            return param.dictionary
+        case .examListQuestion__post(let param):
+            return param.dictionary
+        case .submitExam__post(let param):
             return param.dictionary
         }
     }
@@ -116,6 +130,11 @@ enum APIRoute: URLRequestConvertible{
             return try JSONEncoding.default.encode(request, with: parameters)
         case .examDetail__post:
             return try JSONEncoding.default.encode(request, with: parameters)
+        case .examListQuestion__post:
+            return try JSONEncoding.default.encode(request, with: parameters)
+        case .submitExam__post:
+            return try JSONEncoding.default.encode(request, with: parameters)
+
 //        default:
 //            return try JSONEncoding.default.encode(request, with: parameters)
         }

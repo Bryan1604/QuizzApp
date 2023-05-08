@@ -38,6 +38,7 @@ class StartTestViewController: UIViewController {
 
     @IBAction func start(){
         let vc = UIStoryboard(name: "TestDetailViewController", bundle: nil).instantiateViewController(withIdentifier: "TestDetailViewController") as! TestDetailViewController
+        vc.question_id = 1
         navigationController?.pushViewController(vc, animated: true)
     }
   
