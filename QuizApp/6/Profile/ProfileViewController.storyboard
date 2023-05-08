@@ -82,7 +82,7 @@
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                                <real key="value" value="70"/>
+                                                                <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
                                                                 <real key="value" value="100"/>
@@ -105,6 +105,7 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
                                                                 <real key="value" value="100"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                 </subviews>
@@ -167,6 +168,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="filterbtn" destination="r2I-nf-pew" id="cv3-57-CwB"/>
+                        <outlet property="roundChart" destination="Oet-os-Ifd" id="kwc-2N-fX4"/>
                         <outlet property="view1" destination="Jsx-hK-FRl" id="BQc-en-cmE"/>
                         <outlet property="view2" destination="mPZ-V2-CdS" id="CnL-2i-YJL"/>
                     </connections>

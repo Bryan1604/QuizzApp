@@ -44,25 +44,23 @@ class SetUpViewController: UIViewController {
     }
     
     func didTapView(){
+        
         tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(handleTap1(_:)))
-        tapGesture1.numberOfTapsRequired = 1
-        tapGesture1.numberOfTouchesRequired = 1
-        view1.addGestureRecognizer(tapGesture1)
-        view1.isUserInteractionEnabled = true
-        
-        
+            tapGesture1.numberOfTapsRequired = 1
+            tapGesture1.numberOfTouchesRequired = 1
+            view1.addGestureRecognizer(tapGesture1)
+            view1.isUserInteractionEnabled = true
         tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(handleTap2(_:)))
-        tapGesture2.numberOfTapsRequired = 1
-        tapGesture2.numberOfTouchesRequired = 1
-        view2.addGestureRecognizer(tapGesture2)
-        view2.isUserInteractionEnabled = true
-
-        tapGesture3 = UITapGestureRecognizer(target: self, action: #selector(handleTap3(_:)))
-        tapGesture3.numberOfTapsRequired = 1
-        tapGesture3.numberOfTouchesRequired = 1
-        view3.addGestureRecognizer(tapGesture3)
-        view3.isUserInteractionEnabled = true
-
+            tapGesture2.numberOfTapsRequired = 1
+            tapGesture2.numberOfTouchesRequired = 1
+            view2.addGestureRecognizer(tapGesture2)
+            view2.isUserInteractionEnabled = true
+        
+            tapGesture3 = UITapGestureRecognizer(target: self, action: #selector(handleTap3(_:)))
+            tapGesture3.numberOfTapsRequired = 1
+            tapGesture3.numberOfTouchesRequired = 1
+            view3.addGestureRecognizer(tapGesture3)
+            view3.isUserInteractionEnabled = true
     }
     
     @objc func handleTap1(_ sender: UITapGestureRecognizer){

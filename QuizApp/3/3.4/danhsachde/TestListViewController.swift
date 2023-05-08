@@ -85,7 +85,6 @@ extension TestListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "testCell") as! testCell
-        
         cell.title.text = listExam[indexPath.row].title
         cell.thumnail.sd_setImage(with: URL(string: listExam[indexPath.row].image ?? ""))
         cell.parentTitle.text = subject

@@ -11,61 +11,73 @@
     </dependencies>
     <scenes>
         <!--Pop Up View Controller-->
-        <scene sceneID="wsc-FW-5eG">
+        <scene sceneID="iDs-d0-LUu">
             <objects>
-                <viewController storyboardIdentifier="PopUpViewController" id="yDH-YG-nVS" customClass="PopUpViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleAspectFit" id="Jwz-hO-5D9">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                <viewController storyboardIdentifier="PopUpViewController" modalPresentationStyle="overCurrentContext" id="SEW-kk-6DT" customClass="PopUpViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SBj-E1-PWw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fcb-Q2-WnW">
-                                <rect key="frame" x="0.0" y="59" width="393" height="128"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SZo-Cn-eyP">
+                                <rect key="frame" x="0.0" y="59" width="393" height="120"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="JjT-Zw-ZrQ"/>
+                                    <constraint firstAttribute="height" constant="120" id="XYt-tz-cGI"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="8" minimumInteritemSpacing="8" id="uML-jE-HCe">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cMw-1E-IHf">
+                                    <size key="itemSize" width="120" height="120"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GTW-iy-fh2">
-                                        <rect key="frame" x="8" y="0.0" width="127.99999999999997" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="QuestionCollectionCell" reuseIdentifier="QuestionCollectionCell" id="DhW-k1-oFK" customClass="QuestionCollectionCell" customModule="QuizApp" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="0.0" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uRp-bI-Wcz">
-                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hGB-Dz-LbC">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" red="0.38823529410000002" green="0.61176470589999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEs-ET-koc">
+                                <rect key="frame" x="159" y="195" width="75" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Ndf-w9-Atd"/>
+                                    <constraint firstAttribute="width" constant="75" id="wPp-m3-HyT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="jhf-Kb-kTq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="arE-sy-LK4"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="Fcb-Q2-WnW" firstAttribute="leading" secondItem="jhf-Kb-kTq" secondAttribute="leading" id="BmQ-f4-xxq"/>
-                            <constraint firstItem="Fcb-Q2-WnW" firstAttribute="top" secondItem="jhf-Kb-kTq" secondAttribute="top" id="JUe-Nq-XUK"/>
-                            <constraint firstItem="jhf-Kb-kTq" firstAttribute="trailing" secondItem="Fcb-Q2-WnW" secondAttribute="trailing" id="WWW-mw-tDN"/>
+                            <constraint firstItem="SZo-Cn-eyP" firstAttribute="trailing" secondItem="arE-sy-LK4" secondAttribute="trailing" id="6VA-t8-cv7"/>
+                            <constraint firstItem="pEs-ET-koc" firstAttribute="centerX" secondItem="SBj-E1-PWw" secondAttribute="centerX" id="8H9-Z9-5OA"/>
+                            <constraint firstItem="SZo-Cn-eyP" firstAttribute="leading" secondItem="arE-sy-LK4" secondAttribute="leading" id="Yr6-BG-N5j"/>
+                            <constraint firstItem="SZo-Cn-eyP" firstAttribute="top" secondItem="arE-sy-LK4" secondAttribute="top" id="kG2-ac-dNY"/>
+                            <constraint firstItem="pEs-ET-koc" firstAttribute="top" secondItem="SZo-Cn-eyP" secondAttribute="bottom" constant="16" id="tdT-Un-bHG"/>
                         </constraints>
-                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="393" height="200"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="questionCollection" destination="Fcb-Q2-WnW" id="HNl-Oh-8N2"/>
+                        <outlet property="questionCollection" destination="SZo-Cn-eyP" id="O7w-KX-6hP"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dET-ru-i3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Bj-DM-2YQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1161" y="15"/>
+            <point key="canvasLocation" x="-1869" y="-383"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
