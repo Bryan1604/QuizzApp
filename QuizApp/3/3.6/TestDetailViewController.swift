@@ -31,9 +31,7 @@ class TestDetailViewController: UIViewController, UIPopoverPresentationControlle
         question_id = indexPath.row + 1
         tableView.reloadData()
         collectionView.reloadData()
-      
     }
-    
     
     @IBOutlet weak var backScreenBtn: UIButton!
     @IBOutlet weak var time: UILabel!
@@ -57,13 +55,13 @@ class TestDetailViewController: UIViewController, UIPopoverPresentationControlle
     var selectedIndexPath: IndexPath?
     var listQuestion: [ExamListQuestionResponse.Result.ExamQuestion]?
     var question_id: Int!
-    
-    var answerList = [Answer]()
-    
+    var answer_list: [String: Int?] = [:]
+
+    let startTime = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         coverView.layer.cornerRadius = 20
         tableView.delegate = self
         tableView.dataSource = self
@@ -77,42 +75,12 @@ class TestDetailViewController: UIViewController, UIPopoverPresentationControlle
         registerNib()
         getListExam()
     }
+    
     @IBAction func back(){
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func presentPopUpOfQuestion(_ sender: UIButton){
-        /*
-        let storyBoard = UIStoryboard(name: "PopUpViewController", bundle: nil)
-        let popoverViewController = storyBoard.instantiateViewController(withIdentifier: "PopUpViewController") as! PopUpViewController
-         popoverViewController.modalPresentationStyle = .popover
-
-            let popoverPresentationController = popoverViewController.popoverPresentationController
-            popoverPresentationController?.permittedArrowDirections = .up
-            popoverPresentationController?.sourceView = sender
-            popoverPresentationController?.sourceRect = sender.bounds
-
-        var frame = popoverViewController.view.frame
-
-        let newWidth: CGFloat = 380
-        let newHeight: CGFloat = 300
-        // Update the frame to the new size
-        frame.size.width = newWidth
-        frame.size.height = newHeight
-
-        // Set the view controller's view frame to the updated frame
-        popoverViewController.view.frame = frame
-        
-            // Get the position of the button
-            let buttonPosition = sender.convert(CGPoint.zero, to: self.view)
-
-            let options = [
-                .type(.up),
-                .cornerRadius(20)
-            ] as [PopoverOption]
-            let popover = Popover(options: options, showHandler: nil, dismissHandler: nil)
-        popover.show(popoverViewController.view, fromView: sender)
-        */
         let collectionViewFlowLayout = UICollectionViewFlowLayout()
         collectionViewFlowLayout.minimumLineSpacing = 8
         collectionViewFlowLayout.minimumInteritemSpacing = 8
@@ -133,23 +101,8 @@ class TestDetailViewController: UIViewController, UIPopoverPresentationControlle
         popover.layer.cornerRadius = 20
         popover.blackOverlayColor = UIColor.clear
         popover.show(collectionView, fromView: sender)
-       
-
     }
-    // SU dung segue de hien thi Popover
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let popoverController = segue.destination.popoverPresentationController {
-//                // Set the size of the popover
-//                popoverController.popoverLayoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
-//
-//                // Set the delegate for the popover presentation controller
-//                popoverController.delegate = self
-//            }
-//    }
-//
-//    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-//        return .none
-//    }
+    
     @IBAction func submitAction(_ sender: Any) {
         animateIn(designedView: blurView)
         animateIn(designedView: popupView)
@@ -182,6 +135,30 @@ class TestDetailViewController: UIViewController, UIPopoverPresentationControlle
     }
     
     @IBAction func submit(_ sender: Any){
+        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+        let exam_id = UserDefaults.standard.integer(forKey: "ExamId")
+            
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let finish_time = dateFormatter.string(from: Date())
+        print(finish_time)
+        let start_time = dateFormatter.string(from: startTime)
+        print(start_time)
+            
+        for i in 1...listQuestion!.count{
+            answer_list["\(i)"] = listQuestion?[i-1].answer_id
+        }
+        
+        let request = SubmitExamRequest.Post(user_id: user_id, exam_id: exam_id, answer_list: answer_list, start_time: start_time, finish_time: finish_time).route
+        APIManager.session.request(request).responseJSON { json in
+            print(json)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let submitExamResponse = try? decoder.decode(SubmitExamResponse.self, from: data) {
+                let result = submitExamResponse.result
+            }
+        }
+        
         let storyboard = UIStoryboard(name: "CheckViewController", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "CheckViewController") as! CheckViewController
         navigationController?.pushViewController(vc, animated: true)
@@ -228,6 +205,7 @@ class TestDetailViewController: UIViewController, UIPopoverPresentationControlle
             tableView.reloadData()
         }
     }
+    
 }
 
 extension TestDetailViewController: UITableViewDelegate, UITableViewDataSource {
@@ -269,9 +247,11 @@ extension TestDetailViewController: UITableViewDelegate, UITableViewDataSource {
             }else{
                 cell.select = false
             }
+
             cell.content.text = listQuestion?[question_id-1].answer_list?[indexPath.row].content
             return cell
         }
+
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -284,6 +264,8 @@ extension TestDetailViewController: UITableViewDelegate, UITableViewDataSource {
         selectCell.select = true
         listQuestion?[question_id-1].is_selected = true
         listQuestion?[question_id-1].answer_id = selectCell.id
+        answer_list["\(question_id!)"] = listQuestion?[question_id-1].answer_id
+
     }
 
 }

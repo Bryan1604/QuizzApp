@@ -14,5 +14,8 @@ enum SubmitExamRequest{
         }
         let user_id: Int
         let exam_id: Int
+        let answer_list: [String: Int?]
+        let start_time: String
+        let finish_time: String
     }
 }
