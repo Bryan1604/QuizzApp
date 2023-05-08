@@ -143,6 +143,7 @@
 		8C80BF7B29C4511A00C59FC4 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C80BF7929C4511A00C59FC4 /* HeaderCollectionReusableView.xib */; };
 		8C8284F42A001B690076842D /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8284F32A001B690076842D /* Answer.swift */; };
 		8C8284F62A08DC400076842D /* SubmitExamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8284F52A08DC400076842D /* SubmitExamRequest.swift */; };
+		8C8284F82A08E6950076842D /* SubmitExamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8284F72A08E6950076842D /* SubmitExamResponse.swift */; };
 		8CAA885029D3E73900B8F4D2 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAA884F29D3E73900B8F4D2 /* ResultViewController.swift */; };
 		8CAA885229D3E75300B8F4D2 /* ResultViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA885129D3E75300B8F4D2 /* ResultViewController.storyboard */; };
 		8CAA885429D3EB5600B8F4D2 /* StartTestViewController2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA885329D3EB5600B8F4D2 /* StartTestViewController2.storyboard */; };
@@ -334,6 +335,7 @@
 		8C80BF7929C4511A00C59FC4 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		8C8284F32A001B690076842D /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		8C8284F52A08DC400076842D /* SubmitExamRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitExamRequest.swift; sourceTree = "<group>"; };
+		8C8284F72A08E6950076842D /* SubmitExamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitExamResponse.swift; sourceTree = "<group>"; };
 		8CAA884F29D3E73900B8F4D2 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		8CAA885129D3E75300B8F4D2 /* ResultViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultViewController.storyboard; sourceTree = "<group>"; };
 		8CAA885329D3EB5600B8F4D2 /* StartTestViewController2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartTestViewController2.storyboard; sourceTree = "<group>"; };
@@ -789,6 +791,7 @@
 				8C36851629EEA121006E7F98 /* ListExamResponse.swift */,
 				8C36852229F54B0C006E7F98 /* ExamDetailResponse.swift */,
 				8C36852F29F633B3006E7F98 /* ExamListQuestionResponse.swift */,
+				8C8284F72A08E6950076842D /* SubmitExamResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -1289,6 +1292,7 @@
 				8CB5F43C29D8221A00D60F15 /* SavedViewController1.swift in Sources */,
 				3FFFAED8299F75BA007E4443 /* RulesViewController.swift in Sources */,
 				8C80BF6329C37FEB00C59FC4 /* SearchViewController.swift in Sources */,
+				8C8284F82A08E6950076842D /* SubmitExamResponse.swift in Sources */,
 				8C36850529E66745006E7F98 /* GetDepartmentListRequest.swift in Sources */,
 				8C36851329EE824E006E7F98 /* Subject.swift in Sources */,
 				8CE87CB529DA859800B561C5 /* ChangePasswordViewController.swift in Sources */,
