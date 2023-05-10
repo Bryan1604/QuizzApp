@@ -11,10 +11,8 @@ class HistoryViewController: UIViewController {
 
     @IBOutlet weak var firstSubView: UIView!
     @IBOutlet weak var secondSubView: UIView!
-    @IBOutlet weak var thirdSubView: UIView!
-
+    
     var tapGesture1 = UITapGestureRecognizer()
-    var tapGesture3 = UITapGestureRecognizer()
     var tapGesture2 = UITapGestureRecognizer()
 
     override func viewDidLoad() {
@@ -22,7 +20,6 @@ class HistoryViewController: UIViewController {
 
         layoutSubView(firstSubView )
         layoutSubView(secondSubView)
-        layoutSubView(thirdSubView)
         
         didTapFirstView()
         // Do any additional setup after loading the view.
@@ -48,26 +45,19 @@ class HistoryViewController: UIViewController {
         secondSubView.addGestureRecognizer(tapGesture2)
         secondSubView.isUserInteractionEnabled = true
 
-        tapGesture3 = UITapGestureRecognizer(target: self, action: #selector(handleTap3(_:)))
-        tapGesture3.numberOfTapsRequired = 1
-        tapGesture3.numberOfTouchesRequired = 1
-        thirdSubView.addGestureRecognizer(tapGesture3)
-        thirdSubView.isUserInteractionEnabled = true
-
     }
     
     @objc func handleTap1(_ sender: UITapGestureRecognizer){
         let vc = UIStoryboard(name: "ExamHistoryViewController", bundle: nil).instantiateViewController(withIdentifier: "ExamHistoryViewController") as! ExamHistoryViewController
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    @objc func handleTap3(_ sender: UITapGestureRecognizer){
-        let vc = UIStoryboard(name: "QuestionHistoryViewController", bundle: nil).instantiateViewController(withIdentifier: "QuestionHistoryViewController") as! QuestionHistoryViewController
+        vc.sort_field = 1
+        vc.sort_by = "asc"
         navigationController?.pushViewController(vc, animated: true)
     }
     @objc func handleTap2(_ sender: UITapGestureRecognizer){
         let vc = UIStoryboard(name: "SavedViewController", bundle: nil).instantiateViewController(withIdentifier: "SavedViewController") as! SavedViewController
         navigationController?.pushViewController(vc, animated: true)
     }
+
 
     /*
     // MARK: - Navigation

@@ -271,6 +271,9 @@
                                                 <color key="tintColor" name="Color"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Làm lại"/>
+                                                <connections>
+                                                    <action selector="reTest:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PGA-Rt-om8"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTR-sU-gRQ">
                                                 <rect key="frame" x="222.66666666666663" y="711.33333333333337" width="146.33333333333337" height="56"/>
@@ -282,6 +285,9 @@
                                                 <color key="tintColor" name="Color"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Xong"/>
+                                                <connections>
+                                                    <action selector="doneAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="B4x-hT-Z4i"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -335,13 +341,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="correctAnswer" destination="uJq-Qh-hKZ" id="G7s-DV-aiI"/>
                         <outlet property="doneBtn" destination="uTR-sU-gRQ" id="vIT-nr-kcX"/>
                         <outlet property="lineChartView" destination="qll-Pd-xwY" id="Dhh-1E-svw"/>
                         <outlet property="parentViewChart" destination="9ge-KN-Va4" id="KVY-bZ-c3Z"/>
                         <outlet property="progressView" destination="olT-43-bvc" id="Hov-tc-Afh"/>
                         <outlet property="reTestBtn" destination="v88-1N-QVC" id="E9E-fa-cRT"/>
                         <outlet property="resultLabel" destination="rCe-6Z-an2" id="shw-lz-bju"/>
+                        <outlet property="scoreTotal" destination="9eK-W3-vaV" id="q2Q-6L-eTU"/>
+                        <outlet property="skipAnswer" destination="JAL-Kk-hTs" id="I3I-47-irl"/>
                         <outlet property="viewResultBtn" destination="Dlc-bU-XRA" id="3a7-gF-ovB"/>
+                        <outlet property="wrongAnswer" destination="4na-oT-JbQ" id="3wq-gh-H3i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

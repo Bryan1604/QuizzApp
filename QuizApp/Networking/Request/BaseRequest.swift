@@ -22,4 +22,7 @@ enum APIPath: String{
     case examDetail = "/examDetail"
     case examListQuestion = "/examListQuestion"
     case submitExam = "/submitExam"
+    case getExamResult = "/getExamResult"
+    case getExamHistoryList = "/getExamHistoryList"
+
 }
