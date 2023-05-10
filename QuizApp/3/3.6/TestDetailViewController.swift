@@ -149,6 +149,9 @@ class TestDetailViewController: UIViewController, UIPopoverPresentationControlle
             answer_list["\(i)"] = listQuestion?[i-1].answer_id
         }
         
+        let storyboard = UIStoryboard(name: "CheckViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CheckViewController") as! CheckViewController
+        
         let request = SubmitExamRequest.Post(user_id: user_id, exam_id: exam_id, answer_list: answer_list, start_time: start_time, finish_time: finish_time).route
         APIManager.session.request(request).responseJSON { json in
             print(json)
@@ -156,12 +159,16 @@ class TestDetailViewController: UIViewController, UIPopoverPresentationControlle
             decoder.keyDecodingStrategy = .useDefaultKeys
             if let data = json.data, let submitExamResponse = try? decoder.decode(SubmitExamResponse.self, from: data) {
                 let result = submitExamResponse.result
+                vc.correct_number = result?.correct_number
+                vc.score = result?.score
+                vc.skip_number = result?.skip_number
+                vc.wrong_number = result?.wrong_number
+                vc.user_id = user_id
+                vc.exam_history_id = result?.exam_id
+
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
-        
-        let storyboard = UIStoryboard(name: "CheckViewController", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "CheckViewController") as! CheckViewController
-        navigationController?.pushViewController(vc, animated: true)
     }
 
     func registerNib(){
@@ -205,7 +212,6 @@ class TestDetailViewController: UIViewController, UIPopoverPresentationControlle
             tableView.reloadData()
         }
     }
-    
 }
 
 extension TestDetailViewController: UITableViewDelegate, UITableViewDataSource {

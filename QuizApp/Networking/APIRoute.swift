@@ -19,6 +19,8 @@ enum APIRoute: URLRequestConvertible{
     case examDetail__post(param: ExamDetailRequest.Post)
     case examListQuestion__post(param: ExamListQuestionRequest.Post)
     case submitExam__post(param: SubmitExamRequest.Post)
+    case getExamResult__post(param: GetExamResultRequest.Post)
+    case getExamHistoryList__post(param: GetExamHistoryListRequest.Post)
     var baseURLString: String{
         return "https://asia-northeast1-quiz-app-traning.cloudfunctions.net"
     }
@@ -46,6 +48,10 @@ enum APIRoute: URLRequestConvertible{
             return .post
         case .submitExam__post:
             return .post
+        case .getExamResult__post:
+            return .post
+        case .getExamHistoryList__post:
+            return .post
         }
     }
     
@@ -71,6 +77,10 @@ enum APIRoute: URLRequestConvertible{
             return APIPath.examListQuestion.rawValue
         case .submitExam__post:
             return APIPath.submitExam.rawValue
+        case .getExamResult__post:
+            return APIPath.getExamResult.rawValue
+        case .getExamHistoryList__post:
+            return APIPath.getExamHistoryList.rawValue
         }
         
     }
@@ -96,6 +106,10 @@ enum APIRoute: URLRequestConvertible{
         case .examListQuestion__post(let param):
             return param.dictionary
         case .submitExam__post(let param):
+            return param.dictionary
+        case .getExamResult__post(let param):
+            return param.dictionary
+        case .getExamHistoryList__post(let param):
             return param.dictionary
         }
     }
@@ -133,6 +147,10 @@ enum APIRoute: URLRequestConvertible{
         case .examListQuestion__post:
             return try JSONEncoding.default.encode(request, with: parameters)
         case .submitExam__post:
+            return try JSONEncoding.default.encode(request, with: parameters)
+        case .getExamResult__post:
+            return try JSONEncoding.default.encode(request, with: parameters)
+        case .getExamHistoryList__post:
             return try JSONEncoding.default.encode(request, with: parameters)
 
 //        default:

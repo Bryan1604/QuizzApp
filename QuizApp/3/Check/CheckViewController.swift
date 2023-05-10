@@ -19,31 +19,46 @@ class CheckViewController: UIViewController, ChartViewDelegate {
     @IBOutlet weak var reTestBtn : UIButton!
     @IBOutlet weak var doneBtn : UIButton!
     @IBOutlet weak var lineChartView: UIView!
+    
+    @IBOutlet weak var correctAnswer: UILabel!
+    @IBOutlet weak var scoreTotal: UILabel!
+    @IBOutlet weak var wrongAnswer: UILabel!
+    @IBOutlet weak var skipAnswer: UILabel!
+    
     var pieChart = PieChartView()
     var LineChart = LineChartView()
+    
+    var exam_history_id: Int?
+    var user_id: Int?
+    var correct_number: Int?
+    var score: Double?
+    var wrong_number: Int?
+    var skip_number: Int?
+    var hello : String?
     @IBOutlet weak var progressView: MBCircularProgressBarView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //
+        
         parentViewChart.layer.cornerRadius = 20
         viewResultBtn.layer.cornerRadius = 20
         viewResultBtn.backgroundColor = .white.withAlphaComponent(0.3)
         doneBtn.layer.cornerRadius = 20
-        reTestBtn.layer.cornerRadius = 20      //
+        reTestBtn.layer.cornerRadius = 20
         pieChart.delegate = self
         //addPieChart()
         addLineChart()
-        // Do any additional setup after loading the view.
+        displayResult()
+
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         progressView!.value = 0
-
         UIView.animate(withDuration: 1.0){
-            self.progressView.value = 80
+            self.progressView.value = CGFloat(self.score!)
+
         }
-        
     }
+    
     /*
      func addPieChart(){
      pieChart.frame = CGRect(x: 0, y: 0,
@@ -150,18 +165,37 @@ class CheckViewController: UIViewController, ChartViewDelegate {
         lineChart.showCoordinateAxis = true
         lineChart.animate(duration: 1.0)
 */
-
     }
-//    func addContraint(newView: LineChartView, view: UIView){
-//        newView.translatesAutoresizingMaskIntoConstraints = false
-//        let horizontalConstraint = NSLayoutConstraint(item: newView, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
-//        let verticalConstraint = NSLayoutConstraint(item: newView, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0)
-//        //let widthConstraint = NSLayoutConstraint(item: newView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 0)
-//        //let heightConstraint = NSLayoutConstraint(item: newView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 100)
-//        view.addConstraints([horizontalConstraint, verticalConstraint])
+
+    
+//    func getExamResult(){
+//        let request = ExamListQuestionRequest.Post(user_id: user_id!, exam_id: exam_history_id!).route
+//        APIManager.session.request(request).responseJSON { json in
+//            let decoder = JSONDecoder()
+//            decoder.keyDecodingStrategy = .useDefaultKeys
+//            if let data = json.data, let getExamResultResponse = try? decoder.decode(GetExamResultResponse.self, from: data) {
+//            }
+//        }
 //    }
+    
+    func displayResult(){
+        correctAnswer.text = "\(correct_number ?? 0) câu hỏi"
+        scoreTotal.text = "\(score ?? 0)%"
+        skipAnswer.text = "\(skip_number ?? 0)"
+        wrongAnswer.text = "\(wrong_number ?? 0)"
+    }
+    
     @IBAction func popToRootView(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
+    @IBAction func reTest(_ sender: UIButton){
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func doneAction(_ sender: UIButton){
+        let vc = UIStoryboard(name: "ResultViewController", bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+        vc.question_id = 1
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
