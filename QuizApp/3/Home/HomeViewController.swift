@@ -8,23 +8,24 @@
 import UIKit
 import SDWebImage
 class HomeViewController: UIViewController{
-    
     @IBOutlet weak var homeTableView: UITableView!
+    
     var data = GetDepartmentListResponse( result: [GetDepartmentListResponse.Result]())
     var departmentList = [Department]()
+    var user_name: String!
+    var user_avatar: String!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UserDefaults.standard.set(0, forKey: "Type")
         self.homeTableView?.delegate = self
         self.homeTableView?.dataSource = self
         
         registerNibHeader()
         registerNib()
-
         getDepartmentList()
+        getUserInfo()
         
-        print(UserDefaults.standard.string(forKey: "AccessToken") ?? "")
-        
+      //  print(UserDefaults.standard.string(forKey: "AccessToken") ?? "")
     }
     
     func registerNibHeader() {
@@ -61,7 +62,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             return nil
         }
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HomeHeaderTableViewCell") as! HomeHeaderTableViewCell
-        headerView.name?.text = "Vu duc luong"
+        //headerView.delegate = self
         return headerView
     }
     
@@ -102,6 +103,19 @@ extension HomeViewController{
             print(json)
             }
         }
+    
+    func getUserInfo(){
+        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+        let request = GetUserInfoRequest.Post(user_id: user_id).route
+        APIManager.session.request(request).responseJSON { json in
+            print(json)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let getUserInfoResponse = try? decoder.decode(GetUserInfoResponse.self, from: data) {
+                self.user_name = getUserInfoResponse.result?.name
+                self.user_avatar = getUserInfoResponse.result?.avatar
+                self.homeTableView.reloadData()
+            }
+        }
+    }
 }
-
-

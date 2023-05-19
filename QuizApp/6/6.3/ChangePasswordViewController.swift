@@ -11,8 +11,9 @@ class ChangePasswordViewController: UIViewController {
 
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var view2: UIView!
-    
     @IBOutlet weak var resetBtn: UIButton!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var cf_password: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,4 +42,18 @@ class ChangePasswordViewController: UIViewController {
     }
     */
 
+    @IBAction func changePassword(_ sender: Any ){
+        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+        
+        let request = ChangePasswordRequest.Post(user_id: user_id, password: password.text ?? "", cf_password: cf_password.text ?? "" ).route
+        APIManager.session.request(request).responseJSON { json in
+            print(json)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let changePasswordResponse = try? decoder.decode(ChangePasswordResponse.self, from: data) {
+                print(changePasswordResponse.result)
+            }
+        }
+        self.navigationController?.popViewController(animated: true)
+    }
 }

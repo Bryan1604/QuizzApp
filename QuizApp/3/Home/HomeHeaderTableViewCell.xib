@@ -38,6 +38,10 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="p2a-Qd-Q4z">
                                 <rect key="frame" x="455" y="8" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="p2a-Qd-Q4z" secondAttribute="height" multiplier="1:1" id="RVe-ah-Kio"/>
+                                    <constraint firstAttribute="width" constant="56" id="hRc-t7-Lrr"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vũ Đức Lương" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCe-AE-ZJv">
                                 <rect key="frame" x="24" y="25.666666666666671" width="154" height="25.333333333333329"/>
@@ -105,6 +109,9 @@
                                                 <state key="normal" title="Hệ thống">
                                                     <color key="titleColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapButton:" destination="H2p-sc-9uM" eventType="touchUpInside" id="m1j-HU-RGG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="Color"/>
@@ -121,13 +128,16 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1SU-On-czC">
                                         <rect key="frame" x="267.66666666666669" y="0.0" width="243.33333333333331" height="48"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVV-Ji-fq4">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVV-Ji-fq4">
                                                 <rect key="frame" x="0.0" y="0.0" width="243.33333333333334" height="48"/>
                                                 <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="14"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Người dùng">
                                                     <color key="titleColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapButton:" destination="H2p-sc-9uM" eventType="touchUpInside" id="I7W-EZ-IFC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="Color"/>
@@ -165,7 +175,7 @@
                                     <constraint firstItem="Rl9-tV-j1x" firstAttribute="leading" secondItem="8WB-fK-sEM" secondAttribute="leading" constant="24" id="dSW-Jr-m3W"/>
                                     <constraint firstItem="cby-Qb-DB3" firstAttribute="centerY" secondItem="Rl9-tV-j1x" secondAttribute="centerY" id="hYK-od-ROM"/>
                                     <constraint firstItem="Rl9-tV-j1x" firstAttribute="top" secondItem="8WB-fK-sEM" secondAttribute="top" constant="57.666666666666686" id="lHO-Sg-uN6"/>
-                                    <constraint firstAttribute="trailing" secondItem="1SU-On-czC" secondAttribute="trailing" constant="24" id="nno-nd-QUd"/>
+                                    <constraint firstAttribute="trailing" secondItem="1SU-On-czC" secondAttribute="trailing" constant="24" id="pp0-6b-etV"/>
                                     <constraint firstItem="1SU-On-czC" firstAttribute="height" secondItem="ZnQ-j1-py0" secondAttribute="height" id="sZg-tj-Era"/>
                                 </constraints>
                             </view>

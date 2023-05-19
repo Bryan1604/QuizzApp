@@ -17,7 +17,7 @@
         <!--Update Email View Controller-->
         <scene sceneID="3oM-Wj-68E">
             <objects>
-                <viewController restorationIdentifier="UpdateEmailViewController" storyboardIdentifier="UpdateEmailViewController" id="8gV-Du-Ge3" customClass="UpdateEmailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UpdateEmailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8gV-Du-Ge3" customClass="UpdateEmailViewController" customModule="QuizApp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lT0-If-SrQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,6 +79,9 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Đặt lại Email"/>
+                                <connections>
+                                    <action selector="changeEmail:" destination="8gV-Du-Ge3" eventType="touchUpInside" id="nPP-IX-Qdj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hrt-jY-6Qy"/>
@@ -99,7 +102,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="resetBtn" destination="K7t-Ga-a4b" id="DBp-i1-tjd"/>
+                        <outlet property="email" destination="a2G-Yg-NPB" id="4lk-Ct-njL"/>
+                        <outlet property="resetBtn" destination="K7t-Ga-a4b" id="z9Y-HT-ChL"/>
                         <outlet property="view1" destination="NWj-S5-rkf" id="0j3-kZ-U9Y"/>
                     </connections>
                 </viewController>

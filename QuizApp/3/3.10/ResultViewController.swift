@@ -9,6 +9,7 @@ import UIKit
 import Popover
 import KUIPopOver
 import SDWebImage
+import Alamofire
 class ResultViewController: UIViewController, UIPopoverPresentationControllerDelegate{
     
     @IBOutlet weak var contentView: UIView!
@@ -17,13 +18,14 @@ class ResultViewController: UIViewController, UIPopoverPresentationControllerDel
     @IBOutlet weak var previousQuestion: UIButton!
     @IBOutlet weak var exitBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
-            
-    var listQuestion: [ExamListQuestionResponse.Result.ExamQuestion]?
     
     var question_id: Int!
+    var exam_history_id: Int?   // id ket qua bai kiem tra user da lam
+    var user_id: Int?
     
-    var listQuestionResult: [String: Int?] = [:]  // ket qua dung
-    var answer_list: [String: Int?] = [:]  // key qua cua nguoi dung
+    var listQuestion: [ExamListQuestionResponse.Result.ExamQuestion]? // danh sach cau hoi
+    var listQuestionResult: [String: Int?] = [:]  // danh sach ket qua dung
+    var answer_list: [String: Any] = [:]  // key qua cua nguoi dung
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,11 @@ class ResultViewController: UIViewController, UIPopoverPresentationControllerDel
         tableView.dataSource = self
                 
         registerNib()
+        getListExam()
+        getExamResult()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         getExamResult()
     }
     
@@ -41,26 +48,34 @@ class ResultViewController: UIViewController, UIPopoverPresentationControllerDel
         tableView.register(UINib(nibName: "ImageViewCell", bundle: nil), forCellReuseIdentifier: "ImageViewCell")
     }
     
+    // lay ra danh sach dap an cua user
+    
     func getExamResult() {
-        let user_id = UserDefaults.standard.integer(forKey: "UserId")
-        let exam_history_id = UserDefaults.standard.integer(forKey: "ExamId")
-        
-        let request = GetExamResultRequest.Post(user_id: user_id, exam_history_id: exam_history_id).route
+        let request = GetExamResultRequest.Post(user_id: user_id!, exam_history_id: exam_history_id!).route
         APIManager.session.request(request).responseJSON { json in
             print(json)
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .useDefaultKeys
             if let data = json.data, let getExamResultResponse = try? decoder.decode(GetExamResultResponse.self, from: data) {
-                self.listQuestionResult = getExamResultResponse.result!.exam_result
-            }
+                let jsonString = getExamResultResponse.result?.exam_result
+                if let jsonData = jsonString?.data(using: .utf8),
+                   let json = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
+                    print(json)
+                    for i in 1...json.count{
+                        self.answer_list["\(i)"] = json["\(i)"]
+                    }
+                }
+               DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    }
+                }
         }
     }
-    
+     
+    // lay ra danh sach cau hoi
     func getListExam(){
-        let user_id = UserDefaults.standard.integer(forKey: "UserId")
         let exam_id = UserDefaults.standard.integer(forKey: "ExamId")
-        
-        let request = ExamListQuestionRequest.Post(user_id: user_id, exam_id: exam_id).route
+        let request = ExamListQuestionRequest.Post(user_id: self.user_id!, exam_id: exam_id).route
         APIManager.session.request(request).responseJSON { json in
             print(json)
             let decoder = JSONDecoder()
@@ -109,6 +124,10 @@ class ResultViewController: UIViewController, UIPopoverPresentationControllerDel
         popover.blackOverlayColor = UIColor.clear
         popover.show(collectionView, fromView: sender)
     }
+    
+    @IBAction func backToRootView(){
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 
 }
 
@@ -120,6 +139,7 @@ extension ResultViewController:UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuestionCollectionCell", for: indexPath) as! QuestionCollectionCell
         cell.numberOfQuestion?.text = "\(indexPath.row + 1)"
+        
         if question_id == indexPath.row + 1{
             cell.questionCell?.layer.backgroundColor = UIColor.init(red: 99/255, green: 156/255, blue: 253/255, alpha: 1).cgColor // mau cua cell da duoc chon va dang hien thi cau hoi cua cell nay
             cell.numberOfQuestion?.textColor = UIColor.init(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
@@ -130,6 +150,7 @@ extension ResultViewController:UICollectionViewDelegate, UICollectionViewDataSou
         }
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         question_id = indexPath.row + 1
         tableView.reloadData()
@@ -155,6 +176,7 @@ extension ResultViewController: UITableViewDelegate, UITableViewDataSource {
                 return listQuestion?[question_id-1].answer_list!.count ?? 0
         }
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         switch indexPath.section{
@@ -170,27 +192,22 @@ extension ResultViewController: UITableViewDelegate, UITableViewDataSource {
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "AnswerViewCell") as! AnswerViewCell
             cell.id = listQuestion?[question_id-1].answer_list![indexPath.row].answer_id
-            if listQuestion?[question_id-1].answer_id == cell.id && listQuestion?[question_id-1].is_selected == true{
-                cell.select = true
-            }else{
-                cell.select = false
-            }
 
             cell.content.text = listQuestion?[question_id-1].answer_list?[indexPath.row].content
+            if listQuestion?[question_id-1].answer_list?[indexPath.row].type == 1{
+                cell.isAnswer = true
+            }else{
+                cell.isAnswer = false
+            }
+            
+            if answer_list["\(question_id ?? 1)"] as? Int == cell.id {
+                cell.isChoosen = true
+            }else{
+                cell.isChoosen = false
+            }
             return cell
         }
-
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        listQuestion?[question_id-1].answer_id = .none
-        tableView.reloadData()
-        
-        let selectCell = tableView.cellForRow(at: indexPath) as! AnswerViewCell
-        selectCell.select = true
-        listQuestion?[question_id-1].is_selected = true
-        listQuestion?[question_id-1].answer_id = selectCell.id
-        answer_list["\(question_id!)"] = listQuestion?[question_id-1].answer_id
-    }
-
+   
 }

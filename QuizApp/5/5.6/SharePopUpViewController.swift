@@ -23,7 +23,7 @@ class SharePopUpViewController: UIViewController {
     
     func layoutView(_ view: UIView){
         view.layer.cornerRadius = 20
-        view.layer.borderColor = UIColor.systemGray5.cgColor
+        view.layer.borderColor = UIColor.init(red: 106/255, green: 90/255, blue: 224/255, alpha: 0.25).cgColor
         view.layer.borderWidth = 1.5
     }
     /*

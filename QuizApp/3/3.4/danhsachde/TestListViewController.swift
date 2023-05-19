@@ -103,14 +103,21 @@ extension TestListViewController: UITableViewDataSource, UITableViewDelegate {
         let subject_title = self.subject
         UserDefaults.standard.set(exam_id, forKey: "ExamId")
         UserDefaults.standard.set(subject_title, forKey: "SubjectTitle")
-        let vc = UIStoryboard(name: "StartTestViewController", bundle: nil).instantiateViewController(withIdentifier: "StartTestViewController") as! StartTestViewController
-        navigationController?.pushViewController(vc, animated: true)
+        if UserDefaults.standard.integer(forKey: "Type") == 0{
+            let vc = UIStoryboard(name: "StartTestViewController", bundle: nil).instantiateViewController(withIdentifier: "StartTestViewController") as! StartTestViewController
+            navigationController?.pushViewController(vc, animated: true)
+        }else{
+            let vc = UIStoryboard(name: "StartTestViewController2", bundle: nil).instantiateViewController(withIdentifier: "StartTestViewController2") as! StartTestViewController2
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        
     }
 }
 
 extension TestListViewController{
     func getListExam(){
-        let request = ListExamRequest.Post(user_id: self.user_id, subject_id: self.subject_id, type: 0, sort_field: self.sort_field,sort_by: "asc").route
+        let type = UserDefaults.standard.integer(forKey: "Type")
+        let request = ListExamRequest.Post(user_id: self.user_id, subject_id: self.subject_id, type: type, sort_field: self.sort_field,sort_by: "asc").route
         APIManager.session.request(request).responseJSON{ json in
             print(json)
             let decoder = JSONDecoder()

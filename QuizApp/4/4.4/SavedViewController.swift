@@ -6,16 +6,10 @@
 //
 
 import UIKit
-
+import Alamofire
+import SDWebImage
 class SavedViewController: UIViewController {
-
-    var data = [
-        ScienceField(thumnail: "Frame", title: "Khoa Tự Nhiên", detail: "Toán, Sinh, Lý, Hóa,..."),
-        ScienceField(thumnail: "Frame_1", title: "Khoa Khoa Học", detail: "Nghiên cứu, Sáng tạo,..."),
-        ScienceField(thumnail: "Frame_2", title: "Khoa Nhạc", detail: "Thanh nhạc, Dụng cụ,..."),
-        ScienceField(thumnail: "Frame", title: "Khoa thể chất", detail: "Võ, Điền kinh, bóng đá,.."),
-        ScienceField(thumnail: "Frame_1", title: "Khoa truyền thông", detail: "Báo chí, đa phương tiện,..")
-    ]
+    var deparmentList = [SavedDepartmentResponse.Result]()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backBtn: UIButton!
@@ -28,6 +22,8 @@ class SavedViewController: UIViewController {
         // Do any additional setup after loading the view.
         registerNib()
         self.navigationController?.isNavigationBarHidden = true
+        getSavedDepartment()
+        
     }
     
     func registerNib(){
@@ -41,16 +37,19 @@ class SavedViewController: UIViewController {
 }
 
 extension SavedViewController: UITableViewDelegate, UITableViewDataSource{
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return deparmentList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ScienceFieldCell") as! ScienceFieldCell
-        cell.thumnail.image = UIImage(named: data[indexPath.row].thumnail)
-        cell.title.text = data[indexPath.row].title
-        cell.detail.text = data[indexPath.row].detail
-        //cell.delegate = self
+        cell.title.text = deparmentList[indexPath.row].title
+        cell.detail.text = deparmentList[indexPath.row].description
+        cell.thumnail.sd_setImage(with: URL(string: deparmentList[indexPath.row].image ?? ""))
+        cell.id = deparmentList[indexPath.row].id
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -59,4 +58,20 @@ extension SavedViewController: UITableViewDelegate, UITableViewDataSource{
     }
 }
 
-
+extension SavedViewController{
+    func getSavedDepartment(){
+        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+        
+        let request = SavedDepartmentRequest.Post(user_id: user_id).route
+        APIManager.session.request(request).responseJSON { json in
+            print(json)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let savedDepartment = try? decoder.decode(SavedDepartmentResponse.self, from: data) {
+                self.deparmentList = savedDepartment.result!
+                self.tableView.reloadData()
+                
+            }
+        }
+    }
+}

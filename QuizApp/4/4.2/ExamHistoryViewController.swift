@@ -38,11 +38,6 @@ class ExamHistoryViewController: UIViewController{
 
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        //getExamHistoryList()
-        //sortListExam()
-    }
-    
     func registerCell(){
         tableView.register(UINib(nibName: "ExamViewCell", bundle: nil), forCellReuseIdentifier: "ExamViewCell")
     }
@@ -58,7 +53,6 @@ class ExamHistoryViewController: UIViewController{
             if let data = json.data, let getExamHistoryListResponse = try? decoder.decode(GetExamHistoryListResponse.self, from: data) {
                 self.listExam = getExamHistoryListResponse.result!
                 self.sortListExam()
-
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -123,10 +117,13 @@ extension ExamHistoryViewController:UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let vc = UIStoryboard(name: "ExamHistoryViewController1", bundle: nil).instantiateViewController(withIdentifier: "ExamHistoryViewController1") as! ExamHistoryViewController1
-//        self.navigationController?.pushViewController(vc, animated: true)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! ExamViewCell
+        let vc = UIStoryboard(name: "ExamHistoryViewController1", bundle: nil).instantiateViewController(withIdentifier: "ExamHistoryViewController1") as! ExamHistoryViewController1
+        vc.user_id = UserDefaults.standard.integer(forKey: "UserId")
+        vc.exam_history_id = cell.id
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension ExamHistoryViewController{
@@ -157,5 +154,4 @@ extension ExamHistoryViewController{
         filterBtn.changesSelectionAsPrimaryAction = false
     }
     
-   
 }

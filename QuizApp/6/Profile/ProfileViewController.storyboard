@@ -168,7 +168,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="avatar" destination="O5U-4J-ZNY" id="6sp-IU-6kR"/>
                         <outlet property="filterbtn" destination="r2I-nf-pew" id="cv3-57-CwB"/>
+                        <outlet property="name" destination="fBr-TU-S8K" id="Nvh-jg-AES"/>
                         <outlet property="roundChart" destination="Oet-os-Ifd" id="kwc-2N-fX4"/>
                         <outlet property="view1" destination="Jsx-hK-FRl" id="BQc-en-cmE"/>
                         <outlet property="view2" destination="mPZ-V2-CdS" id="CnL-2i-YJL"/>

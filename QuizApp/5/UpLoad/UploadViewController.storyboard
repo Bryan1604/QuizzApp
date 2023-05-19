@@ -35,14 +35,17 @@
                                 <rect key="frame" x="350" y="74" width="48" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Icon (11)"/>
+                                <connections>
+                                    <action selector="setPopupButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RmQ-DK-Qr4"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tly-8H-3E9">
                                 <rect key="frame" x="0.0" y="129.5" width="414" height="732.5"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAu-X9-7Zx" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1143"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iAu-X9-7Zx" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="206" width="414" height="1143"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="1bj-uh-cJj">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Add Cover (1)" translatesAutoresizingMaskIntoConstraints="NO" id="1bj-uh-cJj">
                                                 <rect key="frame" x="24" y="8" width="366" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="VkN-CE-wJa"/>
@@ -171,6 +174,9 @@
                                                         <rect key="frame" x="332" y="18" width="34" height="20"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="Vector (1)"/>
+                                                        <connections>
+                                                            <action selector="setMode" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ya3-K9-8Vc"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -196,6 +202,9 @@
                                                         <rect key="frame" x="332" y="18" width="34" height="20"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="Vector (1)"/>
+                                                        <connections>
+                                                            <action selector="setDepartment" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fdH-qS-kkx"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -250,6 +259,9 @@
                                                 <state key="normal" title="Tạo đề thi">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="createExam" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Fir-O7-fhj"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số lượng câu hỏi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmb-if-5Em">
                                                 <rect key="frame" x="24" y="821" width="366" height="17"/>
@@ -363,12 +375,21 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="actionMenuBtn" destination="UD6-jc-cFz" id="cYN-Ft-vnT"/>
                         <outlet property="createbtn" destination="I26-ER-etX" id="pT9-h6-QWB"/>
+                        <outlet property="department" destination="SfD-YR-Lcb" id="LNX-7J-6uI"/>
+                        <outlet property="descriptionExam" destination="3TA-9a-i3Z" id="CuJ-hK-i0w"/>
                         <outlet property="excelUploadBtn" destination="8si-fq-VAw" id="PEp-Ih-dd1"/>
                         <outlet property="handMadeUploadBtn" destination="p8M-2E-hdt" id="SXy-Bo-OB6"/>
-                        <outlet property="image" destination="1bj-uh-cJj" id="fWk-lm-vVo"/>
+                        <outlet property="imageView" destination="1bj-uh-cJj" id="LDM-Kg-b48"/>
+                        <outlet property="mode" destination="ib7-bs-d0d" id="kCY-oi-rks"/>
+                        <outlet property="numberOfQuestion" destination="zJr-6K-3KA" id="QSA-FI-ikV"/>
+                        <outlet property="setDepartmentBtn" destination="EDi-LZ-BEG" id="JtA-CY-WZX"/>
+                        <outlet property="setModeBtn" destination="Gnn-yj-2E5" id="kei-1X-9TS"/>
                         <outlet property="shareBtn" destination="zff-aE-ck9" id="8WJ-88-WDb"/>
                         <outlet property="sheetUploadBtn" destination="0vL-Bw-Aq6" id="n8Q-Ed-VTL"/>
+                        <outlet property="time" destination="KXO-3k-NcH" id="noZ-9B-kAn"/>
+                        <outlet property="titleExam" destination="eNH-QE-ze0" id="Bw9-Vr-K42"/>
                         <outlet property="view1" destination="Aeg-uH-uD9" id="TT9-xu-kNc"/>
                         <outlet property="view2" destination="f1x-5m-Oqi" id="ciz-Ri-Jan"/>
                         <outlet property="view3" destination="8eT-U2-9jn" id="rXd-4v-qTI"/>
@@ -383,10 +404,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Add Cover (1)" width="327" height="200"/>
         <image name="Excel" width="23" height="22"/>
         <image name="Icon (11)" width="24" height="24"/>
         <image name="Icon (12)" width="24" height="24"/>
-        <image name="Rounded Rectangle" width="327" height="200"/>
         <image name="Vector (1)" width="10" height="6"/>
         <image name="XLS" width="18" height="20"/>
         <image name="timer" catalog="system" width="128" height="123"/>

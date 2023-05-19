@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct ForgotPassword{
-    var message: String
+struct ForgotPasswordResponse: BaseResponse{
+    var message: String?
     var statusCode: Int?
-    var result: Bool
+    var result: Bool?
 }

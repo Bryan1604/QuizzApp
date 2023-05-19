@@ -112,12 +112,22 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Đặt lại thông tin"/>
+                                <connections>
+                                    <action selector="updateInfo:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bSH-h3-Y9g"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="cwe-uy-wN8">
                                 <rect key="frame" x="146.66666666666666" y="140.33333333333334" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Inh-MQ-Be4"/>
                                     <constraint firstAttribute="height" constant="100" id="LgW-dW-m9v"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Edit" translatesAutoresizingMaskIntoConstraints="NO" id="Cm9-yR-ejs">
+                                <rect key="frame" x="218.66666666666666" y="212.33333333333334" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="phm-pr-xm0"/>
+                                    <constraint firstAttribute="height" constant="24" id="zvF-R2-4Vu"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -132,6 +142,8 @@
                             <constraint firstItem="iMz-fa-QsD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="H6D-MS-gek"/>
                             <constraint firstAttribute="trailing" secondItem="jZv-wp-kap" secondAttribute="trailing" constant="24" id="HIc-8C-LDu"/>
                             <constraint firstItem="88r-Os-fpB" firstAttribute="top" secondItem="H7b-Nc-8S7" secondAttribute="bottom" constant="24" id="Q63-0o-AQp"/>
+                            <constraint firstItem="Cm9-yR-ejs" firstAttribute="bottom" secondItem="cwe-uy-wN8" secondAttribute="bottom" constant="-4" id="QSz-Sf-C3O"/>
+                            <constraint firstItem="Cm9-yR-ejs" firstAttribute="trailing" secondItem="cwe-uy-wN8" secondAttribute="trailing" constant="-4" id="Wjy-sf-1BO"/>
                             <constraint firstItem="eMp-iN-cd7" firstAttribute="centerY" secondItem="iMz-fa-QsD" secondAttribute="centerY" id="ZTQ-Re-GHS"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YY7-Pk-zjP" secondAttribute="trailing" constant="24" id="dE3-tq-ehh"/>
                             <constraint firstItem="jZv-wp-kap" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="dpw-1J-zY7"/>
@@ -146,6 +158,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="avatar" destination="cwe-uy-wN8" id="LWk-LT-UJH"/>
+                        <outlet property="birthday" destination="Jyu-iC-CHr" id="geb-Ae-CN5"/>
+                        <outlet property="name" destination="Fe3-Oc-DZh" id="Ks5-qf-XMj"/>
                         <outlet property="resetBtn" destination="jZv-wp-kap" id="rbc-cr-kvd"/>
                         <outlet property="view1" destination="H7b-Nc-8S7" id="bXj-zH-3aW"/>
                         <outlet property="view2" destination="YY7-Pk-zjP" id="s3r-Vn-U0W"/>
@@ -158,6 +173,7 @@
     </scenes>
     <resources>
         <image name="Calendar" width="24" height="24"/>
+        <image name="Edit" width="24" height="24"/>
         <image name="Icon (13)" width="44" height="44"/>
         <image name="Icon-1" width="24" height="24"/>
         <image name="avatar" width="56" height="56"/>
