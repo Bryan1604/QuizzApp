@@ -19,13 +19,19 @@ class HomeViewController: UIViewController{
         UserDefaults.standard.set(0, forKey: "Type")
         self.homeTableView?.delegate = self
         self.homeTableView?.dataSource = self
+        homeTableView.reloadData()
         
         registerNibHeader()
         registerNib()
         getDepartmentList()
-        getUserInfo()
+
         
       //  print(UserDefaults.standard.string(forKey: "AccessToken") ?? "")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getUserInfo()
     }
     
     func registerNibHeader() {
@@ -58,11 +64,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard section == 0 else{
+        guard section == 0 else {
             return nil
         }
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HomeHeaderTableViewCell") as! HomeHeaderTableViewCell
         //headerView.delegate = self
+        headerView.name?.text = self.user_name
+        headerView.avatar?.sd_setImage(with: URL(string: user_avatar ?? ""))
         return headerView
     }
     
@@ -103,7 +111,6 @@ extension HomeViewController{
             print(json)
             }
         }
-    
     func getUserInfo(){
         let user_id = UserDefaults.standard.integer(forKey: "UserId")
         let request = GetUserInfoRequest.Post(user_id: user_id).route
@@ -115,6 +122,7 @@ extension HomeViewController{
                 self.user_name = getUserInfoResponse.result?.name
                 self.user_avatar = getUserInfoResponse.result?.avatar
                 self.homeTableView.reloadData()
+                
             }
         }
     }

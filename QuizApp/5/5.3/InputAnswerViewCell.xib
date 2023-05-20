@@ -21,16 +21,22 @@
                         <rect key="frame" x="24" y="8" width="242" height="56"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập câu trả lời" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V5L-jz-bJT">
-                                <rect key="frame" x="24" y="0.0" width="194" height="56"/>
+                                <rect key="frame" x="24" y="0.0" width="178" height="56"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIa-fk-CMb">
+                                <rect key="frame" x="202" y="13" width="40" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="IsAnswer"/>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="height" constant="56" id="77D-UD-WGq"/>
-                            <constraint firstAttribute="trailing" secondItem="V5L-jz-bJT" secondAttribute="trailing" constant="24" id="Ou5-ib-ETf"/>
+                            <constraint firstAttribute="trailing" secondItem="rIa-fk-CMb" secondAttribute="trailing" id="M1e-9S-nVa"/>
                             <constraint firstItem="V5L-jz-bJT" firstAttribute="leading" secondItem="D2F-Sb-ZEV" secondAttribute="leading" constant="24" id="VTj-o9-5Qy"/>
                             <constraint firstAttribute="bottom" secondItem="V5L-jz-bJT" secondAttribute="bottom" id="kAH-hz-i29"/>
+                            <constraint firstItem="rIa-fk-CMb" firstAttribute="leading" secondItem="V5L-jz-bJT" secondAttribute="trailing" id="nOc-WD-mqC"/>
                             <constraint firstItem="V5L-jz-bJT" firstAttribute="top" secondItem="D2F-Sb-ZEV" secondAttribute="top" id="tts-Wb-vTi"/>
                         </constraints>
                     </view>
@@ -41,6 +47,7 @@
                     </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="rIa-fk-CMb" firstAttribute="centerY" secondItem="8hz-Mc-2M2" secondAttribute="centerY" id="8vU-KQ-h1h"/>
                     <constraint firstItem="D2F-Sb-ZEV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="9q9-6t-H1m"/>
                     <constraint firstAttribute="bottom" secondItem="D2F-Sb-ZEV" secondAttribute="bottom" constant="8" id="H5r-Mc-9s1"/>
                     <constraint firstItem="8hz-Mc-2M2" firstAttribute="leading" secondItem="D2F-Sb-ZEV" secondAttribute="trailing" id="Sbz-Rr-EkP"/>
@@ -59,5 +66,6 @@
     </objects>
     <resources>
         <image name="Icon (18)" width="24" height="24"/>
+        <image name="IsAnswer" width="16" height="16"/>
     </resources>
 </document>

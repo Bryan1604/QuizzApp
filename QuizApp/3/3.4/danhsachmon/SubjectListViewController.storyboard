@@ -25,16 +25,16 @@
                                 <rect key="frame" x="0.0" y="196.33333333333331" width="393" height="621.66666666666674"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAN-Zw-l6r">
-                                <rect key="frame" x="0.0" y="59" width="393" height="137.33333333333334"/>
+                                <rect key="frame" x="0.0" y="75" width="393" height="121.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danh sách môn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PS-Ri-lZY">
-                                        <rect key="frame" x="110.33333333333333" y="15.999999999999998" width="172.66666666666669" height="25.333333333333329"/>
+                                        <rect key="frame" x="110.33333333333333" y="0.0" width="172.66666666666669" height="25.333333333333332"/>
                                         <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shA-ff-PfJ">
-                                        <rect key="frame" x="24" y="57.333333333333329" width="345" height="56"/>
+                                        <rect key="frame" x="24" y="41.333333333333329" width="345" height="56"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJx-8i-LiC">
                                                 <rect key="frame" x="8" y="8" width="48" height="40"/>
@@ -64,7 +64,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4m-6g-WvS">
-                                        <rect key="frame" x="24" y="8" width="44" height="44"/>
+                                        <rect key="frame" x="14" y="-11" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="k4m-6g-WvS" secondAttribute="height" multiplier="1:1" id="8hO-mN-SnT"/>
                                         </constraints>
@@ -86,7 +86,7 @@
                                     <constraint firstItem="4PS-Ri-lZY" firstAttribute="centerX" secondItem="UAN-Zw-l6r" secondAttribute="centerX" id="Uga-zL-34h"/>
                                     <constraint firstItem="shA-ff-PfJ" firstAttribute="top" secondItem="4PS-Ri-lZY" secondAttribute="bottom" constant="16" id="acJ-S3-BH9"/>
                                     <constraint firstAttribute="bottom" secondItem="shA-ff-PfJ" secondAttribute="bottom" constant="24" id="czm-GO-v6V"/>
-                                    <constraint firstItem="4PS-Ri-lZY" firstAttribute="top" secondItem="UAN-Zw-l6r" secondAttribute="top" constant="16" id="sSZ-v7-KOC"/>
+                                    <constraint firstItem="4PS-Ri-lZY" firstAttribute="top" secondItem="UAN-Zw-l6r" secondAttribute="top" id="sSZ-v7-KOC"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -96,7 +96,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FoM-dl-vQu" secondAttribute="trailing" id="6bS-Ag-b5H"/>
                             <constraint firstItem="FoM-dl-vQu" firstAttribute="top" secondItem="UAN-Zw-l6r" secondAttribute="bottom" id="6t9-ic-RN6"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UAN-Zw-l6r" secondAttribute="trailing" id="KMa-cx-o3V"/>
-                            <constraint firstItem="UAN-Zw-l6r" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="59" id="XQ1-GS-MXH"/>
+                            <constraint firstItem="UAN-Zw-l6r" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="XQ1-GS-MXH"/>
                             <constraint firstItem="UAN-Zw-l6r" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="bg0-ym-fv5"/>
                             <constraint firstItem="FoM-dl-vQu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="lna-gd-CUf"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="FoM-dl-vQu" secondAttribute="bottom" id="nGw-Ur-U9g"/>

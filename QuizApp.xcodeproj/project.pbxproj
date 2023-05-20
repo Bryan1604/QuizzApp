@@ -73,7 +73,6 @@
 		8C20F79829C475BD00C62D89 /* SubjectListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C20F79729C475BD00C62D89 /* SubjectListViewController.storyboard */; };
 		8C20F79B29C8B67B00C62D89 /* SubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20F79929C8B67B00C62D89 /* SubjectCell.swift */; };
 		8C20F79C29C8B67B00C62D89 /* SubjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C20F79A29C8B67B00C62D89 /* SubjectCell.xib */; };
-		8C20F7A529C988DE00C62D89 /* headerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20F7A329C988DE00C62D89 /* headerView.swift */; };
 		8C20F7AC29C9AB5900C62D89 /* TestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20F7AA29C9AB5900C62D89 /* TestListViewController.swift */; };
 		8C20F7B129C9ABA500C62D89 /* TestListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C20F7B029C9ABA500C62D89 /* TestListViewController.storyboard */; };
 		8C20F7B429C9B07F00C62D89 /* testCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20F7B229C9B07F00C62D89 /* testCell.swift */; };
@@ -296,7 +295,6 @@
 		8C20F79729C475BD00C62D89 /* SubjectListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SubjectListViewController.storyboard; sourceTree = "<group>"; };
 		8C20F79929C8B67B00C62D89 /* SubjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectCell.swift; sourceTree = "<group>"; };
 		8C20F79A29C8B67B00C62D89 /* SubjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectCell.xib; sourceTree = "<group>"; };
-		8C20F7A329C988DE00C62D89 /* headerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerView.swift; sourceTree = "<group>"; };
 		8C20F7AA29C9AB5900C62D89 /* TestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListViewController.swift; sourceTree = "<group>"; };
 		8C20F7B029C9ABA500C62D89 /* TestListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestListViewController.storyboard; sourceTree = "<group>"; };
 		8C20F7B229C9B07F00C62D89 /* testCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testCell.swift; sourceTree = "<group>"; };
@@ -716,7 +714,6 @@
 				3FFFAEDF29ADE7A3007E4443 /* HomeViewController.storyboard */,
 				8C75011F29BF192A00AB20BF /* HomeHeaderTableViewCell.swift */,
 				8C75012029BF192A00AB20BF /* HomeHeaderTableViewCell.xib */,
-				8C20F7A329C988DE00C62D89 /* headerView.swift */,
 				8C80BF5429C2F7CC00C59FC4 /* ScienceFieldCell.swift */,
 				8C80BF5529C2F7CC00C59FC4 /* ScienceFieldCell.xib */,
 				8C80BF5829C2FC5600C59FC4 /* ScienceFieldModel.swift */,
@@ -1430,7 +1427,6 @@
 				8C80BF5629C2F7CC00C59FC4 /* ScienceFieldCell.swift in Sources */,
 				8C36853629F7DD4B006E7F98 /* ImageViewCell.swift in Sources */,
 				3F76B1B32987AD5B00E963F3 /* AppDelegate.swift in Sources */,
-				8C20F7A529C988DE00C62D89 /* headerView.swift in Sources */,
 				8C8285242A1485A50076842D /* CollectionViewCell.swift in Sources */,
 				8C8285062A0BA2AF0076842D /* SavedDepartmentRequest.swift in Sources */,
 				8C3684EB29E53B40006E7F98 /* Extention.swift in Sources */,
