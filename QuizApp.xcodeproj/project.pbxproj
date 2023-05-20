@@ -73,7 +73,6 @@
 		8C20F79829C475BD00C62D89 /* SubjectListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C20F79729C475BD00C62D89 /* SubjectListViewController.storyboard */; };
 		8C20F79B29C8B67B00C62D89 /* SubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20F79929C8B67B00C62D89 /* SubjectCell.swift */; };
 		8C20F79C29C8B67B00C62D89 /* SubjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C20F79A29C8B67B00C62D89 /* SubjectCell.xib */; };
-		8C20F7A529C988DE00C62D89 /* headerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20F7A329C988DE00C62D89 /* headerView.swift */; };
 		8C20F7AC29C9AB5900C62D89 /* TestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20F7AA29C9AB5900C62D89 /* TestListViewController.swift */; };
 		8C20F7B129C9ABA500C62D89 /* TestListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C20F7B029C9ABA500C62D89 /* TestListViewController.storyboard */; };
 		8C20F7B429C9B07F00C62D89 /* testCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20F7B229C9B07F00C62D89 /* testCell.swift */; };
@@ -148,6 +147,33 @@
 		8C8284FC2A08FF4C0076842D /* GetExamResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8284FB2A08FF4C0076842D /* GetExamResultResponse.swift */; };
 		8C8284FE2A0A41420076842D /* GetExamHistoryListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8284FD2A0A41420076842D /* GetExamHistoryListRequest.swift */; };
 		8C8285002A0A44910076842D /* GetExamHistoryListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8284FF2A0A44910076842D /* GetExamHistoryListResponse.swift */; };
+		8C8285022A0B51AF0076842D /* GetExamHistoryDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285012A0B51AF0076842D /* GetExamHistoryDetailRequest.swift */; };
+		8C8285042A0B53450076842D /* GetExamHistoryDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285032A0B53450076842D /* GetExamHistoryDetailResponse.swift */; };
+		8C8285062A0BA2AF0076842D /* SavedDepartmentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285052A0BA2AF0076842D /* SavedDepartmentRequest.swift */; };
+		8C8285082A0BA40F0076842D /* SavedDepartmentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285072A0BA40F0076842D /* SavedDepartmentResponse.swift */; };
+		8C82850A2A0E40C60076842D /* SavedSubjectRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285092A0E40C60076842D /* SavedSubjectRequest.swift */; };
+		8C82850C2A0E42A60076842D /* SavedSubjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C82850B2A0E42A60076842D /* SavedSubjectResponse.swift */; };
+		8C82850E2A11EDE20076842D /* GetUserInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C82850D2A11EDE20076842D /* GetUserInfoRequest.swift */; };
+		8C8285102A11EEA50076842D /* GetUserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C82850F2A11EEA50076842D /* GetUserInfoResponse.swift */; };
+		8C8285122A11F3000076842D /* ChangePasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285112A11F3000076842D /* ChangePasswordRequest.swift */; };
+		8C8285142A12054E0076842D /* ChangePasswordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285132A12054E0076842D /* ChangePasswordResponse.swift */; };
+		8C8285162A12079F0076842D /* UpdateUserInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285152A12079F0076842D /* UpdateUserInfoRequest.swift */; };
+		8C8285182A1227240076842D /* UpdateUserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285172A1227240076842D /* UpdateUserInfoResponse.swift */; };
+		8C82851A2A122AB40076842D /* EditAvatarRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285192A122AB40076842D /* EditAvatarRequest.swift */; };
+		8C82851C2A123B700076842D /* ChangeEmailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C82851B2A123B700076842D /* ChangeEmailRequest.swift */; };
+		8C82851F2A147E3F0076842D /* CreateExamViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C82851E2A147E3F0076842D /* CreateExamViewController.storyboard */; };
+		8C8285212A147E5B0076842D /* CreateExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285202A147E5B0076842D /* CreateExamViewController.swift */; };
+		8C8285242A1485A50076842D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285222A1485A50076842D /* CollectionViewCell.swift */; };
+		8C8285252A1485A50076842D /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C8285232A1485A50076842D /* CollectionViewCell.xib */; };
+		8C8285282A14AA2D0076842D /* InputAnswerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285262A14AA2D0076842D /* InputAnswerViewCell.swift */; };
+		8C8285292A14AA2D0076842D /* InputAnswerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C8285272A14AA2D0076842D /* InputAnswerViewCell.xib */; };
+		8C82852B2A14C39B0076842D /* CreateExamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C82852A2A14C39B0076842D /* CreateExamRequest.swift */; };
+		8C82852D2A14C6B90076842D /* PostUploadFileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C82852C2A14C6B90076842D /* PostUploadFileRequest.swift */; };
+		8C8285312A170E7A0076842D /* CheckResetKeyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285302A170E7A0076842D /* CheckResetKeyRequest.swift */; };
+		8C8285332A1717740076842D /* GetUploadExamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285322A1717740076842D /* GetUploadExamRequest.swift */; };
+		8C8285352A17182E0076842D /* GetUploadExamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285342A17182E0076842D /* GetUploadExamResponse.swift */; };
+		8C8285372A17194B0076842D /* ManageExamViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C8285362A17194B0076842D /* ManageExamViewController.storyboard */; };
+		8C82853A2A1719B60076842D /* ManageExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285392A1719B60076842D /* ManageExamViewController.swift */; };
 		8CAA885029D3E73900B8F4D2 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAA884F29D3E73900B8F4D2 /* ResultViewController.swift */; };
 		8CAA885229D3E75300B8F4D2 /* ResultViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA885129D3E75300B8F4D2 /* ResultViewController.storyboard */; };
 		8CAA885429D3EB5600B8F4D2 /* StartTestViewController2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA885329D3EB5600B8F4D2 /* StartTestViewController2.storyboard */; };
@@ -269,7 +295,6 @@
 		8C20F79729C475BD00C62D89 /* SubjectListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SubjectListViewController.storyboard; sourceTree = "<group>"; };
 		8C20F79929C8B67B00C62D89 /* SubjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectCell.swift; sourceTree = "<group>"; };
 		8C20F79A29C8B67B00C62D89 /* SubjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectCell.xib; sourceTree = "<group>"; };
-		8C20F7A329C988DE00C62D89 /* headerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerView.swift; sourceTree = "<group>"; };
 		8C20F7AA29C9AB5900C62D89 /* TestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListViewController.swift; sourceTree = "<group>"; };
 		8C20F7B029C9ABA500C62D89 /* TestListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestListViewController.storyboard; sourceTree = "<group>"; };
 		8C20F7B229C9B07F00C62D89 /* testCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testCell.swift; sourceTree = "<group>"; };
@@ -344,6 +369,33 @@
 		8C8284FB2A08FF4C0076842D /* GetExamResultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExamResultResponse.swift; sourceTree = "<group>"; };
 		8C8284FD2A0A41420076842D /* GetExamHistoryListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExamHistoryListRequest.swift; sourceTree = "<group>"; };
 		8C8284FF2A0A44910076842D /* GetExamHistoryListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExamHistoryListResponse.swift; sourceTree = "<group>"; };
+		8C8285012A0B51AF0076842D /* GetExamHistoryDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExamHistoryDetailRequest.swift; sourceTree = "<group>"; };
+		8C8285032A0B53450076842D /* GetExamHistoryDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExamHistoryDetailResponse.swift; sourceTree = "<group>"; };
+		8C8285052A0BA2AF0076842D /* SavedDepartmentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDepartmentRequest.swift; sourceTree = "<group>"; };
+		8C8285072A0BA40F0076842D /* SavedDepartmentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDepartmentResponse.swift; sourceTree = "<group>"; };
+		8C8285092A0E40C60076842D /* SavedSubjectRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSubjectRequest.swift; sourceTree = "<group>"; };
+		8C82850B2A0E42A60076842D /* SavedSubjectResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSubjectResponse.swift; sourceTree = "<group>"; };
+		8C82850D2A11EDE20076842D /* GetUserInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserInfoRequest.swift; sourceTree = "<group>"; };
+		8C82850F2A11EEA50076842D /* GetUserInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserInfoResponse.swift; sourceTree = "<group>"; };
+		8C8285112A11F3000076842D /* ChangePasswordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordRequest.swift; sourceTree = "<group>"; };
+		8C8285132A12054E0076842D /* ChangePasswordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordResponse.swift; sourceTree = "<group>"; };
+		8C8285152A12079F0076842D /* UpdateUserInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoRequest.swift; sourceTree = "<group>"; };
+		8C8285172A1227240076842D /* UpdateUserInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoResponse.swift; sourceTree = "<group>"; };
+		8C8285192A122AB40076842D /* EditAvatarRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAvatarRequest.swift; sourceTree = "<group>"; };
+		8C82851B2A123B700076842D /* ChangeEmailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailRequest.swift; sourceTree = "<group>"; };
+		8C82851E2A147E3F0076842D /* CreateExamViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateExamViewController.storyboard; sourceTree = "<group>"; };
+		8C8285202A147E5B0076842D /* CreateExamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExamViewController.swift; sourceTree = "<group>"; };
+		8C8285222A1485A50076842D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		8C8285232A1485A50076842D /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		8C8285262A14AA2D0076842D /* InputAnswerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAnswerViewCell.swift; sourceTree = "<group>"; };
+		8C8285272A14AA2D0076842D /* InputAnswerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputAnswerViewCell.xib; sourceTree = "<group>"; };
+		8C82852A2A14C39B0076842D /* CreateExamRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExamRequest.swift; sourceTree = "<group>"; };
+		8C82852C2A14C6B90076842D /* PostUploadFileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUploadFileRequest.swift; sourceTree = "<group>"; };
+		8C8285302A170E7A0076842D /* CheckResetKeyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckResetKeyRequest.swift; sourceTree = "<group>"; };
+		8C8285322A1717740076842D /* GetUploadExamRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUploadExamRequest.swift; sourceTree = "<group>"; };
+		8C8285342A17182E0076842D /* GetUploadExamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUploadExamResponse.swift; sourceTree = "<group>"; };
+		8C8285362A17194B0076842D /* ManageExamViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManageExamViewController.storyboard; sourceTree = "<group>"; };
+		8C8285392A1719B60076842D /* ManageExamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageExamViewController.swift; sourceTree = "<group>"; };
 		8CAA884F29D3E73900B8F4D2 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		8CAA885129D3E75300B8F4D2 /* ResultViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultViewController.storyboard; sourceTree = "<group>"; };
 		8CAA885329D3EB5600B8F4D2 /* StartTestViewController2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartTestViewController2.storyboard; sourceTree = "<group>"; };
@@ -662,7 +714,6 @@
 				3FFFAEDF29ADE7A3007E4443 /* HomeViewController.storyboard */,
 				8C75011F29BF192A00AB20BF /* HomeHeaderTableViewCell.swift */,
 				8C75012029BF192A00AB20BF /* HomeHeaderTableViewCell.xib */,
-				8C20F7A329C988DE00C62D89 /* headerView.swift */,
 				8C80BF5429C2F7CC00C59FC4 /* ScienceFieldCell.swift */,
 				8C80BF5529C2F7CC00C59FC4 /* ScienceFieldCell.xib */,
 				8C80BF5829C2FC5600C59FC4 /* ScienceFieldModel.swift */,
@@ -783,6 +834,18 @@
 				8C8284F52A08DC400076842D /* SubmitExamRequest.swift */,
 				8C8284F92A08FCB40076842D /* GetExamResultRequest.swift */,
 				8C8284FD2A0A41420076842D /* GetExamHistoryListRequest.swift */,
+				8C8285012A0B51AF0076842D /* GetExamHistoryDetailRequest.swift */,
+				8C8285052A0BA2AF0076842D /* SavedDepartmentRequest.swift */,
+				8C8285092A0E40C60076842D /* SavedSubjectRequest.swift */,
+				8C82850D2A11EDE20076842D /* GetUserInfoRequest.swift */,
+				8C8285112A11F3000076842D /* ChangePasswordRequest.swift */,
+				8C8285152A12079F0076842D /* UpdateUserInfoRequest.swift */,
+				8C8285192A122AB40076842D /* EditAvatarRequest.swift */,
+				8C82851B2A123B700076842D /* ChangeEmailRequest.swift */,
+				8C82852A2A14C39B0076842D /* CreateExamRequest.swift */,
+				8C82852C2A14C6B90076842D /* PostUploadFileRequest.swift */,
+				8C8285302A170E7A0076842D /* CheckResetKeyRequest.swift */,
+				8C8285322A1717740076842D /* GetUploadExamRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -803,6 +866,13 @@
 				8C8284F72A08E6950076842D /* SubmitExamResponse.swift */,
 				8C8284FB2A08FF4C0076842D /* GetExamResultResponse.swift */,
 				8C8284FF2A0A44910076842D /* GetExamHistoryListResponse.swift */,
+				8C8285032A0B53450076842D /* GetExamHistoryDetailResponse.swift */,
+				8C8285072A0BA40F0076842D /* SavedDepartmentResponse.swift */,
+				8C82850B2A0E42A60076842D /* SavedSubjectResponse.swift */,
+				8C82850F2A11EEA50076842D /* GetUserInfoResponse.swift */,
+				8C8285132A12054E0076842D /* ChangePasswordResponse.swift */,
+				8C8285172A1227240076842D /* UpdateUserInfoResponse.swift */,
+				8C8285342A17182E0076842D /* GetUploadExamResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -840,6 +910,28 @@
 				8C36853129F635C4006E7F98 /* Question.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8C82851D2A147DD50076842D /* 5.3 */ = {
+			isa = PBXGroup;
+			children = (
+				8C82851E2A147E3F0076842D /* CreateExamViewController.storyboard */,
+				8C8285202A147E5B0076842D /* CreateExamViewController.swift */,
+				8C8285222A1485A50076842D /* CollectionViewCell.swift */,
+				8C8285232A1485A50076842D /* CollectionViewCell.xib */,
+				8C8285262A14AA2D0076842D /* InputAnswerViewCell.swift */,
+				8C8285272A14AA2D0076842D /* InputAnswerViewCell.xib */,
+			);
+			path = 5.3;
+			sourceTree = "<group>";
+		};
+		8C8285382A1719540076842D /* 5.4 */ = {
+			isa = PBXGroup;
+			children = (
+				8C8285362A17194B0076842D /* ManageExamViewController.storyboard */,
+				8C8285392A1719B60076842D /* ManageExamViewController.swift */,
+			);
+			path = 5.4;
 			sourceTree = "<group>";
 		};
 		8CAA884E29D3E72100B8F4D2 /* 3.10 */ = {
@@ -950,6 +1042,8 @@
 		8CB5F44729D9C9AA00D60F15 /* 5 */ = {
 			isa = PBXGroup;
 			children = (
+				8C8285382A1719540076842D /* 5.4 */,
+				8C82851D2A147DD50076842D /* 5.3 */,
 				8CB5F44829D9FAA500D60F15 /* 5.6 */,
 				3FC5EC7129B07ECC00B62B57 /* UpLoad */,
 			);
@@ -1128,6 +1222,7 @@
 				8CB5F44C29D9FAE000D60F15 /* UploadSheetViewController.storyboard in Resources */,
 				8C80BF5729C2F7CC00C59FC4 /* ScienceFieldCell.xib in Resources */,
 				8CAA885229D3E75300B8F4D2 /* ResultViewController.storyboard in Resources */,
+				8C8285372A17194B0076842D /* ManageExamViewController.storyboard in Resources */,
 				8C20F7D629D150E300C62D89 /* CheckViewController.storyboard in Resources */,
 				8C20F7C829D0949500C62D89 /* QuestionCollectionCell.xib in Resources */,
 				3F76B1D42987BCE300E963F3 /* Introduce1ViewController.storyboard in Resources */,
@@ -1149,6 +1244,7 @@
 				8CB5F42F29D6DEB000D60F15 /* TestTableViewCell.xib in Resources */,
 				3F7744C52993803800DC3181 /* SVN-Gilroy Heavy Italic.otf in Resources */,
 				3FFFAEE029ADE7A3007E4443 /* HomeViewController.storyboard in Resources */,
+				8C8285292A14AA2D0076842D /* InputAnswerViewCell.xib in Resources */,
 				8C36853829F8BAD7006E7F98 /* HeaderQuestionViewCell.xib in Resources */,
 				3F7744C62993803800DC3181 /* SVN-Gilroy Black.otf in Resources */,
 				8C20F79829C475BD00C62D89 /* SubjectListViewController.storyboard in Resources */,
@@ -1163,6 +1259,7 @@
 				8C80BF7B29C4511A00C59FC4 /* HeaderCollectionReusableView.xib in Resources */,
 				3F7744D22993803800DC3181 /* SVN-Gilroy Regular.otf in Resources */,
 				3FC5EC7029B07DD300B62B57 /* TabBarViewController.storyboard in Resources */,
+				8C8285252A1485A50076842D /* CollectionViewCell.xib in Resources */,
 				8CE87CC529DBF86F00B561C5 /* QuestionCollectionViewCell.xib in Resources */,
 				3F7744AA2993755500DC3181 /* ForgotPassword2Storyboard.storyboard in Resources */,
 				8CB5F41A29D52F2900D60F15 /* ExamViewCell.xib in Resources */,
@@ -1174,6 +1271,7 @@
 				3F7744CD2993803800DC3181 /* SVN-Gilroy XBold Italic.otf in Resources */,
 				8CE87CBF29DA8C2800B561C5 /* UpdateEmailViewController.storyboard in Resources */,
 				3F7744A429935AEB00DC3181 /* ForgotPassword1Storyboard.storyboard in Resources */,
+				8C82851F2A147E3F0076842D /* CreateExamViewController.storyboard in Resources */,
 				8C20F7D129D146F300C62D89 /* PopUpViewController.storyboard in Resources */,
 				8CB5F44229D97D6C00D60F15 /* SavedViewController2.storyboard in Resources */,
 				3F7744CE2993803800DC3181 /* SVN-Gilroy Light.otf in Resources */,
@@ -1254,36 +1352,46 @@
 				8CB5F45429DA685100D60F15 /* SetUpViewController.swift in Sources */,
 				8C8284FE2A0A41420076842D /* GetExamHistoryListRequest.swift in Sources */,
 				8CB5F41C29D59CB400D60F15 /* ExamModel.swift in Sources */,
+				8C8285042A0B53450076842D /* GetExamHistoryDetailResponse.swift in Sources */,
 				3F76B1D02987AF0700E963F3 /* StartViewController.swift in Sources */,
 				8CAA885029D3E73900B8F4D2 /* ResultViewController.swift in Sources */,
 				8C20F7C229CAAFAC00C62D89 /* TestDetailViewController.swift in Sources */,
+				8C82850A2A0E40C60076842D /* SavedSubjectRequest.swift in Sources */,
 				8C75012129BF192A00AB20BF /* HomeHeaderTableViewCell.swift in Sources */,
 				3F76B1D22987BCC700E963F3 /* Introduce1ViewController.swift in Sources */,
 				8CB5F43729D7D93300D60F15 /* SavedViewController.swift in Sources */,
 				8C36850D29ECF6CF006E7F98 /* Subject1.swift in Sources */,
 				8C36852B29F62640006E7F98 /* AnswerViewCell.swift in Sources */,
 				8CB5F44A29D9FACF00D60F15 /* UploadSheetViewController.swift in Sources */,
+				8C8285352A17182E0076842D /* GetUploadExamResponse.swift in Sources */,
 				8C36852329F54B0C006E7F98 /* ExamDetailResponse.swift in Sources */,
 				8C8285002A0A44910076842D /* GetExamHistoryListResponse.swift in Sources */,
 				8C3684F729E55CD0006E7F98 /* BaseResponse.swift in Sources */,
 				8C80BF5929C2FC5600C59FC4 /* ScienceFieldModel.swift in Sources */,
 				8C3684FD29E647A4006E7F98 /* RegisterRequest.swift in Sources */,
 				8C8284FC2A08FF4C0076842D /* GetExamResultResponse.swift in Sources */,
+				8C82853A2A1719B60076842D /* ManageExamViewController.swift in Sources */,
+				8C82850E2A11EDE20076842D /* GetUserInfoRequest.swift in Sources */,
 				3F7744A629935B0100DC3181 /* ForgotPassword1ViewController.swift in Sources */,
 				8C80BF6D29C411E000C59FC4 /* Item.swift in Sources */,
 				8C36851729EEA121006E7F98 /* ListExamResponse.swift in Sources */,
 				8C36852129F54A55006E7F98 /* ExamDetailRequest.swift in Sources */,
+				8C8285102A11EEA50076842D /* GetUserInfoResponse.swift in Sources */,
 				8C36853029F633B3006E7F98 /* ExamListQuestionResponse.swift in Sources */,
 				8CB5F41F29D67D2D00D60F15 /* ExamHistoryViewController1.swift in Sources */,
+				8C8285162A12079F0076842D /* UpdateUserInfoRequest.swift in Sources */,
 				8C20F7CA29D0C1AC00C62D89 /* PopUpViewController.swift in Sources */,
 				3F46CC5F298D0ABE00BAA945 /* Introduce4ViewController.swift in Sources */,
 				8C3684F929E55DBA006E7F98 /* LoginResponse.swift in Sources */,
 				8CAA885629D3EB7A00B8F4D2 /* StartTestViewController2.swift in Sources */,
+				8C82852D2A14C6B90076842D /* PostUploadFileRequest.swift in Sources */,
 				8C36852829F5A805006E7F98 /* UpdateAvatarViewController.swift in Sources */,
 				8C3684F229E55B0F006E7F98 /* BaseRequest.swift in Sources */,
 				8C8284F42A001B690076842D /* Answer.swift in Sources */,
+				8C8285212A147E5B0076842D /* CreateExamViewController.swift in Sources */,
 				8C69F22729DD052700BEDDB9 /* APIHandle.swift in Sources */,
 				3F46CC5D298D069500BAA945 /* Introduce3ViewController.swift in Sources */,
+				8C8285182A1227240076842D /* UpdateUserInfoResponse.swift in Sources */,
 				8C80BF7A29C4511A00C59FC4 /* HeaderCollectionReusableView.swift in Sources */,
 				8C20F7C729D0949500C62D89 /* QuestionCollectionCell.swift in Sources */,
 				8C20F79629C4757500C62D89 /* SubjectListViewController.swift in Sources */,
@@ -1301,6 +1409,7 @@
 				8C20F79B29C8B67B00C62D89 /* SubjectCell.swift in Sources */,
 				3F46CC672991475400BAA945 /* SignInViewController.swift in Sources */,
 				8C20F7BD29CA992600C62D89 /* StartTestViewController.swift in Sources */,
+				8C82851C2A123B700076842D /* ChangeEmailRequest.swift in Sources */,
 				3F7744A82993754400DC3181 /* ForgotPassword2ViewController.swift in Sources */,
 				8CE87CC429DBF86F00B561C5 /* QuestionCollectionViewCell.swift in Sources */,
 				8CB5F42B29D6DCEF00D60F15 /* QuestionHistoryViewController.swift in Sources */,
@@ -1308,15 +1417,21 @@
 				3FFFAED8299F75BA007E4443 /* RulesViewController.swift in Sources */,
 				8C80BF6329C37FEB00C59FC4 /* SearchViewController.swift in Sources */,
 				8C8284F82A08E6950076842D /* SubmitExamResponse.swift in Sources */,
+				8C8285082A0BA40F0076842D /* SavedDepartmentResponse.swift in Sources */,
+				8C8285022A0B51AF0076842D /* GetExamHistoryDetailRequest.swift in Sources */,
 				8C36850529E66745006E7F98 /* GetDepartmentListRequest.swift in Sources */,
+				8C8285332A1717740076842D /* GetUploadExamRequest.swift in Sources */,
 				8C36851329EE824E006E7F98 /* Subject.swift in Sources */,
 				8CE87CB529DA859800B561C5 /* ChangePasswordViewController.swift in Sources */,
+				8C8285282A14AA2D0076842D /* InputAnswerViewCell.swift in Sources */,
 				8C80BF5629C2F7CC00C59FC4 /* ScienceFieldCell.swift in Sources */,
 				8C36853629F7DD4B006E7F98 /* ImageViewCell.swift in Sources */,
 				3F76B1B32987AD5B00E963F3 /* AppDelegate.swift in Sources */,
-				8C20F7A529C988DE00C62D89 /* headerView.swift in Sources */,
+				8C8285242A1485A50076842D /* CollectionViewCell.swift in Sources */,
+				8C8285062A0BA2AF0076842D /* SavedDepartmentRequest.swift in Sources */,
 				8C3684EB29E53B40006E7F98 /* Extention.swift in Sources */,
 				3F7744A029933BCE00DC3181 /* SignUpViewController.swift in Sources */,
+				8C8285312A170E7A0076842D /* CheckResetKeyRequest.swift in Sources */,
 				3F76B1B52987AD5B00E963F3 /* SceneDelegate.swift in Sources */,
 				8C20F7D429D150CA00C62D89 /* CheckViewController.swift in Sources */,
 				8CE87CC129DA8ED400B561C5 /* UpdateEmailViewController.swift in Sources */,
@@ -1325,6 +1440,7 @@
 				8C3684FF29E649E9006E7F98 /* RegisterResponse.swift in Sources */,
 				8C3684EF29E55827006E7F98 /* APIManager.swift in Sources */,
 				8CB5F43229D726AC00D60F15 /* QuestionHistoryViewController1.swift in Sources */,
+				8C82852B2A14C39B0076842D /* CreateExamRequest.swift in Sources */,
 				8C8284FA2A08FCB40076842D /* GetExamResultRequest.swift in Sources */,
 				3F7744D7299389C000DC3181 /* TutorialViewController.swift in Sources */,
 				8C36850F29EE7BC2006E7F98 /* SearchSubjectRequest.swift in Sources */,
@@ -1332,12 +1448,16 @@
 				8C20F7B429C9B07F00C62D89 /* testCell.swift in Sources */,
 				8C36851129EE7E0F006E7F98 /* SearchSubjectResponse.swift in Sources */,
 				8C3684F429E55C36006E7F98 /* LoginRequest.swift in Sources */,
+				8C8285142A12054E0076842D /* ChangePasswordResponse.swift in Sources */,
 				3FBE1316298CE0FC00DA0374 /* Introduce2ViewController.swift in Sources */,
 				8C36853229F635C4006E7F98 /* Question.swift in Sources */,
 				8C20F7B729C9BBF700C62D89 /* TestModel.swift in Sources */,
 				8C20F7AC29C9AB5900C62D89 /* TestListViewController.swift in Sources */,
+				8C82851A2A122AB40076842D /* EditAvatarRequest.swift in Sources */,
 				8C80BF6A29C40E4B00C59FC4 /* ItemCollectionViewCell.swift in Sources */,
 				8CB5F44429D97D8900D60F15 /* SavedViewController2.swift in Sources */,
+				8C82850C2A0E42A60076842D /* SavedSubjectResponse.swift in Sources */,
+				8C8285122A11F3000076842D /* ChangePasswordRequest.swift in Sources */,
 				8C36851D29F531BF006E7F98 /* ExamHistoryViewController.swift in Sources */,
 				8CB5F41929D52F2900D60F15 /* ExamViewCell.swift in Sources */,
 				8CB5F42E29D6DEB000D60F15 /* TestTableViewCell.swift in Sources */,

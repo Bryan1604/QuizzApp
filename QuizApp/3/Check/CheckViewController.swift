@@ -196,6 +196,8 @@ class CheckViewController: UIViewController, ChartViewDelegate {
     @IBAction func doneAction(_ sender: UIButton){
         let vc = UIStoryboard(name: "ResultViewController", bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
         vc.question_id = 1
+        vc.user_id = user_id
+        vc.exam_history_id = exam_history_id
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

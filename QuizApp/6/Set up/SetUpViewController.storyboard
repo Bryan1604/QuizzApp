@@ -418,6 +418,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="logOutLabel" destination="NFz-qx-ZF4" id="0ni-TX-rLC"/>
                         <outlet property="view1" destination="IbG-sD-oNm" id="FTF-Hm-aVI"/>
                         <outlet property="view2" destination="qM8-FU-yaY" id="Cgl-OG-ud0"/>
                         <outlet property="view3" destination="CGl-SM-I5l" id="qgV-AN-Kyx"/>

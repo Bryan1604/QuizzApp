@@ -16,10 +16,10 @@ struct GetExamResultResponse: BaseResponse{
         var create_at: String?
         var delete_at: String?
         var exam_id: Int?
-        var exam_result: [String: Int?]
+        var exam_result: String?
         var finish_time: String
         var id: Int?
-        var score: Double?
+        var score: String?
         var start_time: String?
         var update_at: String?
         var user_id: Int?

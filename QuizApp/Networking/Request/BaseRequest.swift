@@ -24,5 +24,16 @@ enum APIPath: String{
     case submitExam = "/submitExam"
     case getExamResult = "/getExamResult"
     case getExamHistoryList = "/getExamHistoryList"
-
+    case getExamHistoryDetail = "/getExamHistoryDetail"
+    case savedDepartment = "/savedDepartment"
+    case savedSubject = "/savedSubject"
+    case getUserInfo = "/getUserInfo"
+    case chagePassword = "/changePassword"
+    case updateUserInfo = "/updateUserInfo"
+    case editAvatar = "/editAvatar"
+    case changeEmail = "/changeEmail"
+    case createExam = "/createExam"
+    case postUploadFile = "/postUploadFile"
+    case checkResetkey = "/checkResetKey"
+    case getUploadExam = "/getUploadExam"
 }

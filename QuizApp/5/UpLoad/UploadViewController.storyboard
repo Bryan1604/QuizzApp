@@ -35,14 +35,17 @@
                                 <rect key="frame" x="350" y="74" width="48" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Icon (11)"/>
+                                <connections>
+                                    <action selector="setPopupButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RmQ-DK-Qr4"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tly-8H-3E9">
                                 <rect key="frame" x="0.0" y="129.5" width="414" height="732.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAu-X9-7Zx" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1143"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1248"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rounded Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="1bj-uh-cJj">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Add Cover (1)" translatesAutoresizingMaskIntoConstraints="NO" id="1bj-uh-cJj">
                                                 <rect key="frame" x="24" y="8" width="366" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="VkN-CE-wJa"/>
@@ -97,19 +100,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chọn chế độ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11o-Yg-auQ">
-                                                <rect key="frame" x="24" y="539" width="95" height="17"/>
+                                                <rect key="frame" x="24" y="644" width="95" height="17"/>
                                                 <fontDescription key="fontDescription" name="SVN-GilroyMedium" family="SVN-Gilroy" pointSize="16"/>
                                                 <color key="textColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thời gian làm bài" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5P7-Y1-yth">
-                                                <rect key="frame" x="24" y="716" width="366" height="17"/>
+                                                <rect key="frame" x="24" y="821" width="366" height="17"/>
                                                 <fontDescription key="fontDescription" name="SVN-GilroyMedium" family="SVN-Gilroy" pointSize="16"/>
                                                 <color key="textColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYh-Wc-ofR">
-                                                <rect key="frame" x="24" y="749" width="366" height="56"/>
+                                                <rect key="frame" x="24" y="854" width="366" height="56"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập số câu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KXO-3k-NcH">
                                                         <rect key="frame" x="16" y="0.0" width="300" height="56"/>
@@ -136,13 +139,13 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập mô tả" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGq-Kz-Ko7">
-                                                <rect key="frame" x="24" y="926" width="366" height="17"/>
+                                                <rect key="frame" x="24" y="1031" width="366" height="17"/>
                                                 <fontDescription key="fontDescription" name="SVN-GilroyMedium" family="SVN-Gilroy" pointSize="16"/>
                                                 <color key="textColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nix-je-5aF">
-                                                <rect key="frame" x="24" y="959" width="366" height="88"/>
+                                                <rect key="frame" x="24" y="1064" width="366" height="88"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="Nhập mô tả bài kiểm tra" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3TA-9a-i3Z">
                                                         <rect key="frame" x="16" y="16" width="334" height="56"/>
@@ -160,7 +163,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8eT-U2-9jn">
-                                                <rect key="frame" x="24" y="572" width="366" height="56"/>
+                                                <rect key="frame" x="24" y="677" width="366" height="56"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Công khai hoặc riêng tư" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ib7-bs-d0d">
                                                         <rect key="frame" x="16" y="16" width="316" height="24"/>
@@ -171,6 +174,9 @@
                                                         <rect key="frame" x="332" y="18" width="34" height="20"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="Vector (1)"/>
+                                                        <connections>
+                                                            <action selector="setMode" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ya3-K9-8Vc"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -187,7 +193,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1x-5m-Oqi">
                                                 <rect key="frame" x="24" y="467" width="366" height="56"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Chọn khoa, môn,..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SfD-YR-Lcb">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Chọn khoa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SfD-YR-Lcb">
                                                         <rect key="frame" x="16" y="16" width="316" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -196,6 +202,9 @@
                                                         <rect key="frame" x="332" y="18" width="34" height="20"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="Vector (1)"/>
+                                                        <connections>
+                                                            <action selector="setDepartment" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fdH-qS-kkx"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -228,7 +237,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zff-aE-ck9">
-                                                <rect key="frame" x="24" y="1063" width="56" height="56"/>
+                                                <rect key="frame" x="24" y="1168" width="56" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="56" id="mxV-Jy-YJr"/>
                                                     <constraint firstAttribute="height" constant="56" id="q1S-Dz-E53"/>
@@ -240,7 +249,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I26-ER-etX">
-                                                <rect key="frame" x="96" y="1063" width="294" height="56"/>
+                                                <rect key="frame" x="96" y="1168" width="294" height="56"/>
                                                 <color key="backgroundColor" red="0.38823529411764707" green="0.61176470588235299" blue="0.99215686274509807" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="cDa-CS-e4j"/>
@@ -250,15 +259,18 @@
                                                 <state key="normal" title="Tạo đề thi">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="createExam" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Fir-O7-fhj"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số lượng câu hỏi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmb-if-5Em">
-                                                <rect key="frame" x="24" y="821" width="366" height="17"/>
+                                                <rect key="frame" x="24" y="926" width="366" height="17"/>
                                                 <fontDescription key="fontDescription" name="SVN-GilroyMedium" family="SVN-Gilroy" pointSize="16"/>
                                                 <color key="textColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mpk-Ba-rR3">
-                                                <rect key="frame" x="24" y="854" width="366" height="56"/>
+                                                <rect key="frame" x="24" y="959" width="366" height="56"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập số câu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zJr-6K-3KA">
                                                         <rect key="frame" x="16" y="16" width="334" height="24"/>
@@ -275,16 +287,53 @@
                                                     <constraint firstItem="zJr-6K-3KA" firstAttribute="top" secondItem="Mpk-Ba-rR3" secondAttribute="top" constant="16" id="j92-n7-0MV"/>
                                                 </constraints>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chọn môn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBZ-Rz-aLA">
+                                                <rect key="frame" x="24" y="539" width="76" height="17"/>
+                                                <fontDescription key="fontDescription" name="SVN-GilroyMedium" family="SVN-Gilroy" pointSize="16"/>
+                                                <color key="textColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W5J-LX-FdL">
+                                                <rect key="frame" x="24" y="572" width="366" height="56"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Chọn môn" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MJT-6G-Fco">
+                                                        <rect key="frame" x="16" y="16" width="316" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRX-mz-46o">
+                                                        <rect key="frame" x="332" y="18" width="34" height="20"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="Vector (1)"/>
+                                                        <connections>
+                                                            <action selector="setDepartment" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rtm-DK-kEt"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="MJT-6G-Fco" firstAttribute="leading" secondItem="W5J-LX-FdL" secondAttribute="leading" constant="16" id="224-cE-rRB"/>
+                                                    <constraint firstItem="LRX-mz-46o" firstAttribute="leading" secondItem="MJT-6G-Fco" secondAttribute="trailing" id="7kH-XF-7lA"/>
+                                                    <constraint firstItem="MJT-6G-Fco" firstAttribute="top" secondItem="W5J-LX-FdL" secondAttribute="top" constant="16" id="dkk-2B-tN0"/>
+                                                    <constraint firstItem="LRX-mz-46o" firstAttribute="centerY" secondItem="W5J-LX-FdL" secondAttribute="centerY" id="gWV-GD-4t2"/>
+                                                    <constraint firstAttribute="bottom" secondItem="MJT-6G-Fco" secondAttribute="bottom" constant="16" id="kQ5-Nb-ETH"/>
+                                                    <constraint firstAttribute="height" constant="56" id="ml9-dl-Bw4"/>
+                                                    <constraint firstAttribute="trailing" secondItem="LRX-mz-46o" secondAttribute="trailing" id="n8t-g0-8uB"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="eGq-Kz-Ko7" secondAttribute="trailing" constant="24" id="19g-UA-edd"/>
+                                            <constraint firstAttribute="trailing" secondItem="W5J-LX-FdL" secondAttribute="trailing" constant="24" id="1iG-cC-sza"/>
                                             <constraint firstAttribute="trailing" secondItem="Mpk-Ba-rR3" secondAttribute="trailing" constant="24" id="39a-Ar-a8v"/>
                                             <constraint firstItem="mmb-if-5Em" firstAttribute="leading" secondItem="iAu-X9-7Zx" secondAttribute="leading" constant="24" id="3Gh-Ub-Wtf"/>
                                             <constraint firstItem="I26-ER-etX" firstAttribute="leading" secondItem="zff-aE-ck9" secondAttribute="trailing" constant="16" id="3bD-qN-56U"/>
                                             <constraint firstAttribute="trailing" secondItem="8eT-U2-9jn" secondAttribute="trailing" constant="24" id="5FX-1H-SJj"/>
                                             <constraint firstItem="8eT-U2-9jn" firstAttribute="leading" secondItem="iAu-X9-7Zx" secondAttribute="leading" constant="24" id="6rd-mr-Z5P"/>
                                             <constraint firstItem="Mpk-Ba-rR3" firstAttribute="leading" secondItem="iAu-X9-7Zx" secondAttribute="leading" constant="24" id="8TO-pq-zfZ"/>
+                                            <constraint firstItem="nBZ-Rz-aLA" firstAttribute="leading" secondItem="iAu-X9-7Zx" secondAttribute="leading" constant="24" id="9Oq-gg-6qh"/>
+                                            <constraint firstItem="nBZ-Rz-aLA" firstAttribute="top" secondItem="f1x-5m-Oqi" secondAttribute="bottom" constant="16" id="9iY-nr-u7b"/>
                                             <constraint firstItem="8eT-U2-9jn" firstAttribute="top" secondItem="11o-Yg-auQ" secondAttribute="bottom" constant="16" id="A3o-vI-Vlw"/>
                                             <constraint firstItem="6S5-3L-wYX" firstAttribute="top" secondItem="Aeg-uH-uD9" secondAttribute="bottom" constant="16" id="AiT-mq-qFD"/>
                                             <constraint firstAttribute="trailing" secondItem="TwG-Jh-qSI" secondAttribute="trailing" constant="24" id="DRz-MH-qYC"/>
@@ -298,6 +347,7 @@
                                             <constraint firstItem="Nix-je-5aF" firstAttribute="top" secondItem="eGq-Kz-Ko7" secondAttribute="bottom" constant="16" id="MJr-Tp-avN"/>
                                             <constraint firstItem="zff-aE-ck9" firstAttribute="top" secondItem="Nix-je-5aF" secondAttribute="bottom" constant="16" id="NCK-lM-I6F"/>
                                             <constraint firstItem="0vL-Bw-Aq6" firstAttribute="leading" secondItem="iAu-X9-7Zx" secondAttribute="leading" constant="24" id="OIs-HZ-IXi"/>
+                                            <constraint firstItem="W5J-LX-FdL" firstAttribute="leading" secondItem="iAu-X9-7Zx" secondAttribute="leading" constant="24" id="Pwd-lv-qz1"/>
                                             <constraint firstAttribute="trailing" secondItem="Aeg-uH-uD9" secondAttribute="trailing" constant="16" id="QPp-zB-QJn"/>
                                             <constraint firstAttribute="trailing" secondItem="Nix-je-5aF" secondAttribute="trailing" constant="24" id="QbN-Ni-ccU"/>
                                             <constraint firstItem="zYh-Wc-ofR" firstAttribute="leading" secondItem="iAu-X9-7Zx" secondAttribute="leading" constant="24" id="SBC-7I-mcb"/>
@@ -310,7 +360,6 @@
                                             <constraint firstItem="11o-Yg-auQ" firstAttribute="leading" secondItem="iAu-X9-7Zx" secondAttribute="leading" constant="24" id="Yaf-lP-Ssd"/>
                                             <constraint firstItem="1bj-uh-cJj" firstAttribute="top" secondItem="iAu-X9-7Zx" secondAttribute="top" constant="8" id="Yk7-4s-Dfn"/>
                                             <constraint firstAttribute="trailing" secondItem="mmb-if-5Em" secondAttribute="trailing" constant="24" id="a98-oX-PAT"/>
-                                            <constraint firstItem="11o-Yg-auQ" firstAttribute="top" secondItem="f1x-5m-Oqi" secondAttribute="bottom" constant="16" id="ax9-jx-yyZ"/>
                                             <constraint firstAttribute="trailing" secondItem="Cx5-gJ-aoP" secondAttribute="trailing" constant="24" id="bFs-Dh-gPQ"/>
                                             <constraint firstItem="5P7-Y1-yth" firstAttribute="leading" secondItem="iAu-X9-7Zx" secondAttribute="leading" constant="24" id="eRK-qc-3Mv"/>
                                             <constraint firstItem="p8M-2E-hdt" firstAttribute="leading" secondItem="8si-fq-VAw" secondAttribute="trailing" constant="8" id="faM-10-EaF"/>
@@ -320,6 +369,7 @@
                                             <constraint firstItem="8si-fq-VAw" firstAttribute="leading" secondItem="0vL-Bw-Aq6" secondAttribute="trailing" constant="8" id="gua-Xv-dIe"/>
                                             <constraint firstAttribute="trailing" secondItem="p8M-2E-hdt" secondAttribute="trailing" constant="24" id="hdK-It-Blc"/>
                                             <constraint firstAttribute="trailing" secondItem="I26-ER-etX" secondAttribute="trailing" constant="24" id="hit-Za-KCc"/>
+                                            <constraint firstItem="W5J-LX-FdL" firstAttribute="top" secondItem="nBZ-Rz-aLA" secondAttribute="bottom" constant="16" id="hr1-yl-XgO"/>
                                             <constraint firstAttribute="bottom" secondItem="zff-aE-ck9" secondAttribute="bottom" constant="24" id="iEO-zW-i6J"/>
                                             <constraint firstAttribute="trailing" secondItem="5P7-Y1-yth" secondAttribute="trailing" constant="24" id="iQZ-gk-tcN"/>
                                             <constraint firstItem="6S5-3L-wYX" firstAttribute="leading" secondItem="iAu-X9-7Zx" secondAttribute="leading" constant="24" id="jhe-AH-LBd"/>
@@ -329,6 +379,7 @@
                                             <constraint firstItem="TwG-Jh-qSI" firstAttribute="top" secondItem="0vL-Bw-Aq6" secondAttribute="bottom" constant="16" id="nzK-5Q-7tH"/>
                                             <constraint firstItem="1bj-uh-cJj" firstAttribute="leading" secondItem="iAu-X9-7Zx" secondAttribute="leading" constant="24" id="pj4-dW-fkJ"/>
                                             <constraint firstAttribute="trailing" secondItem="1bj-uh-cJj" secondAttribute="trailing" constant="24" id="pkc-bv-Pgz"/>
+                                            <constraint firstItem="11o-Yg-auQ" firstAttribute="top" secondItem="W5J-LX-FdL" secondAttribute="bottom" constant="16" id="qWE-hp-u6Z"/>
                                             <constraint firstItem="TwG-Jh-qSI" firstAttribute="leading" secondItem="iAu-X9-7Zx" secondAttribute="leading" constant="24" id="qWi-rn-VQ2"/>
                                             <constraint firstItem="0vL-Bw-Aq6" firstAttribute="top" secondItem="6S5-3L-wYX" secondAttribute="bottom" constant="16" id="rQB-eS-wAe"/>
                                             <constraint firstItem="5P7-Y1-yth" firstAttribute="top" secondItem="8eT-U2-9jn" secondAttribute="bottom" constant="88" id="rUb-pr-x8K"/>
@@ -363,12 +414,21 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="actionMenuBtn" destination="UD6-jc-cFz" id="cYN-Ft-vnT"/>
                         <outlet property="createbtn" destination="I26-ER-etX" id="pT9-h6-QWB"/>
+                        <outlet property="department" destination="SfD-YR-Lcb" id="LNX-7J-6uI"/>
+                        <outlet property="descriptionExam" destination="3TA-9a-i3Z" id="CuJ-hK-i0w"/>
                         <outlet property="excelUploadBtn" destination="8si-fq-VAw" id="PEp-Ih-dd1"/>
                         <outlet property="handMadeUploadBtn" destination="p8M-2E-hdt" id="SXy-Bo-OB6"/>
-                        <outlet property="image" destination="1bj-uh-cJj" id="fWk-lm-vVo"/>
+                        <outlet property="imageView" destination="1bj-uh-cJj" id="LDM-Kg-b48"/>
+                        <outlet property="mode" destination="ib7-bs-d0d" id="kCY-oi-rks"/>
+                        <outlet property="numberOfQuestion" destination="zJr-6K-3KA" id="QSA-FI-ikV"/>
+                        <outlet property="setDepartmentBtn" destination="EDi-LZ-BEG" id="JtA-CY-WZX"/>
+                        <outlet property="setModeBtn" destination="Gnn-yj-2E5" id="kei-1X-9TS"/>
                         <outlet property="shareBtn" destination="zff-aE-ck9" id="8WJ-88-WDb"/>
                         <outlet property="sheetUploadBtn" destination="0vL-Bw-Aq6" id="n8Q-Ed-VTL"/>
+                        <outlet property="time" destination="KXO-3k-NcH" id="noZ-9B-kAn"/>
+                        <outlet property="titleExam" destination="eNH-QE-ze0" id="Bw9-Vr-K42"/>
                         <outlet property="view1" destination="Aeg-uH-uD9" id="TT9-xu-kNc"/>
                         <outlet property="view2" destination="f1x-5m-Oqi" id="ciz-Ri-Jan"/>
                         <outlet property="view3" destination="8eT-U2-9jn" id="rXd-4v-qTI"/>
@@ -383,10 +443,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Add Cover (1)" width="327" height="200"/>
         <image name="Excel" width="23" height="22"/>
         <image name="Icon (11)" width="24" height="24"/>
         <image name="Icon (12)" width="24" height="24"/>
-        <image name="Rounded Rectangle" width="327" height="200"/>
         <image name="Vector (1)" width="10" height="6"/>
         <image name="XLS" width="18" height="20"/>
         <image name="timer" catalog="system" width="128" height="123"/>

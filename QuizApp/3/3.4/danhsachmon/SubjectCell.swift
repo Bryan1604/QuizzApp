@@ -23,7 +23,7 @@ class SubjectCell: UITableViewCell {
         self.selectionStyle = .none
         parentView.layer.cornerRadius = 20
         parentView.layer.borderWidth = 2
-        parentView.layer.borderColor = UIColor.systemGray5.cgColor
+        parentView.layer.borderColor = UIColor.init(red: 239/255, green: 238/255, blue: 252/255, alpha: 1).cgColor
 
         // Initialization code
     }

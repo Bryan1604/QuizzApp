@@ -17,6 +17,8 @@ class QuestionCollectionCell: UICollectionViewCell {
             setSelect()
         }
     }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -35,4 +37,5 @@ class QuestionCollectionCell: UICollectionViewCell {
             numberOfQuestion?.textColor = UIColor.init(red: 196/255, green: 208/255, blue: 251/255, alpha: 1)
         }
     }
+    
 }

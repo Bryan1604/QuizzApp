@@ -129,8 +129,10 @@ extension SignInViewController{
                 decode.decode(LoginResponse.self, from: data){
                 let token = loginResponse.result.access_token
                 let user_id = loginResponse.result.user_id
+                let status_code = loginResponse.statusCode
                 UserDefaults.standard.set(token, forKey: "AccessToken")
                 UserDefaults.standard.set(user_id, forKey: "UserId")
+                UserDefaults.standard.set(status_code, forKey: "StatusCode")
                 
                 let storyboard = UIStoryboard(name: "TabBarViewController", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController

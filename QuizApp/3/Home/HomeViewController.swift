@@ -8,23 +8,30 @@
 import UIKit
 import SDWebImage
 class HomeViewController: UIViewController{
-    
     @IBOutlet weak var homeTableView: UITableView!
+    
     var data = GetDepartmentListResponse( result: [GetDepartmentListResponse.Result]())
     var departmentList = [Department]()
+    var user_name: String!
+    var user_avatar: String!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UserDefaults.standard.set(0, forKey: "Type")
         self.homeTableView?.delegate = self
         self.homeTableView?.dataSource = self
+        homeTableView.reloadData()
         
         registerNibHeader()
         registerNib()
-
         getDepartmentList()
+
         
-        print(UserDefaults.standard.string(forKey: "AccessToken") ?? "")
-        
+      //  print(UserDefaults.standard.string(forKey: "AccessToken") ?? "")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getUserInfo()
     }
     
     func registerNibHeader() {
@@ -57,11 +64,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard section == 0 else{
+        guard section == 0 else {
             return nil
         }
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HomeHeaderTableViewCell") as! HomeHeaderTableViewCell
-        headerView.name?.text = "Vu duc luong"
+        //headerView.delegate = self
+        headerView.name?.text = self.user_name
+        headerView.avatar?.sd_setImage(with: URL(string: user_avatar ?? ""))
         return headerView
     }
     
@@ -102,6 +111,19 @@ extension HomeViewController{
             print(json)
             }
         }
+    func getUserInfo(){
+        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+        let request = GetUserInfoRequest.Post(user_id: user_id).route
+        APIManager.session.request(request).responseJSON { json in
+            print(json)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let getUserInfoResponse = try? decoder.decode(GetUserInfoResponse.self, from: data) {
+                self.user_name = getUserInfoResponse.result?.name
+                self.user_avatar = getUserInfoResponse.result?.avatar
+                self.homeTableView.reloadData()
+                
+            }
+        }
+    }
 }
-
-
