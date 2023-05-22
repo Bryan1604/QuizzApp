@@ -62,13 +62,19 @@ class StartTestViewController2: UIViewController {
     }
     
     @IBAction func saveExam(_ sender: Any) {
-        animateIn(designedView: blurView)
-        animateIn(designedView: popupView)
-    }
-    
-    @IBAction func cancelAction(_ sender: Any) {
-        animateOut(desiredView: popupView)
-        animateOut(desiredView: blurView)
+        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+        let exam_id = UserDefaults.standard.integer(forKey: "ExamId")
+        let request = PostSaveExamRequest.Post(user_id: user_id, exam_id: exam_id ).route
+        APIManager.session.request(request).responseJSON{ json in
+            print(json)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let postSaveExamResponse = try? decoder.decode(PostSaveExamResponse.self, from: data) {
+                let examJson = postSaveExamResponse.statusCode
+            }
+        }
+        self.animateIn(designedView: self.blurView)
+        self.animateIn(designedView: self.popupView)
     }
     
     @IBAction func finishSaveExam(_ sender: Any){
@@ -126,4 +132,6 @@ class StartTestViewController2: UIViewController {
         avatar.sd_setImage(with: URL(string: exam.image ?? ""))
         name.text = exam.author_name
     }
+    
+ 
 }
