@@ -53,7 +53,11 @@ extension SavedViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! ScienceFieldCell
         let vc = UIStoryboard(name: "SavedViewController1", bundle: nil).instantiateViewController(withIdentifier: "SavedViewController1") as! SavedViewController1
+        vc.user_id = UserDefaults.standard.integer(forKey: "UserId")
+        vc.department_id = cell.id
+        vc.department_title = cell.title.text
         navigationController?.pushViewController(vc, animated: true)
     }
 }

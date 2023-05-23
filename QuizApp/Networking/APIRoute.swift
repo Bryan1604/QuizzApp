@@ -33,6 +33,8 @@ enum APIRoute: URLRequestConvertible{
     case postUploadFile__post(param: PostUploadFileRequest.Post)
     case checkResetKey__post(param: CheckResetKeyRequest.Post)
     case getUploadExam__post(param: GetUploadExamRequest.Post)
+    case postSaveExam__post(param: PostSaveExamRequest.Post)
+    case savedExam__post(param: SavedExamRequest.Post)
     var baseURLString: String{
         return "https://asia-northeast1-quiz-app-traning.cloudfunctions.net"
     }
@@ -88,6 +90,10 @@ enum APIRoute: URLRequestConvertible{
             return .post
         case .getUploadExam__post:
             return .post
+        case .postSaveExam__post:
+            return .post
+        case .savedExam__post:
+            return .post
         }
     }
     
@@ -141,6 +147,10 @@ enum APIRoute: URLRequestConvertible{
             return APIPath.checkResetkey.rawValue
         case .getUploadExam__post:
             return APIPath.getUploadExam.rawValue
+        case .postSaveExam__post:
+            return APIPath.postSaveExam.rawValue
+        case .savedExam__post:
+            return APIPath.savedExam.rawValue
         }
         
     }
@@ -194,6 +204,10 @@ enum APIRoute: URLRequestConvertible{
         case .checkResetKey__post(let param):
             return param.dictionary
         case .getUploadExam__post(let param):
+            return param.dictionary
+        case .postSaveExam__post(let param):
+            return param.dictionary
+        case .savedExam__post(let param):
             return param.dictionary
         }
     }

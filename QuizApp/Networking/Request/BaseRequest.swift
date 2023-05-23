@@ -36,4 +36,6 @@ enum APIPath: String{
     case postUploadFile = "/postUploadFile"
     case checkResetkey = "/checkResetKey"
     case getUploadExam = "/getUploadExam"
+    case postSaveExam = "/postSaveExam"
+    case savedExam = "/savedExam"
 }
