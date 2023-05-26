@@ -12,14 +12,19 @@ class CreateExamViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var timeView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var questionDescription: UITextField!
     @IBOutlet weak var questionView: UIView!
     @IBOutlet weak var nextAction: UIButton!
     @IBOutlet weak var imageView: UIImageView!
+    
     var exam_id: Int?
-    var question_id: Int?
-    var numberOfQUestion: Int?
+    var question_id: Int!
+    var numberOfQUestion: Int!
+    var time: Int!
+    
+    var question_list: [Question] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +38,11 @@ class CreateExamViewController: UIViewController {
         questionView.layer.borderColor = UIColor.init(red: 239/255, green: 238/255, blue: 252/255, alpha: 1).cgColor
         questionView.layer.borderWidth = 2
         nextAction.layer.cornerRadius = 20
+
+        timeView.layer.borderColor = UIColor.init(red: 239/255, green: 238/255, blue: 252/255, alpha: 1).cgColor
+        timeView.layer.borderWidth = 2
+        timeView.layer.cornerRadius = 12
+        timeLabel.text = "\(time ?? 0) phút"
 
         registerCell()
         imageTapped()
@@ -60,6 +70,19 @@ class CreateExamViewController: UIViewController {
         vc.allowsEditing = true
         present(vc, animated: true)
     }
+    
+    @IBAction func tapToNextQuestion(_ sender: UIButton){
+        if question_id < numberOfQUestion{
+            question_id += 1
+            collectionView.reloadData()
+        }
+    }
+    @IBAction func tapToPreviousQuestion(_ sender: UIButton){
+        if question_id > 1{
+            question_id -= 1
+            collectionView.reloadData()
+        }
+    }
 }
 
 extension CreateExamViewController: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -78,6 +101,7 @@ extension CreateExamViewController: UICollectionViewDelegate, UICollectionViewDa
             cell.select = true
         }else{
             cell.select = false
+            cell.status = false // dang set tat ca cac cau hoi chua duoc tao
         }
         return cell
     }
@@ -99,6 +123,7 @@ extension CreateExamViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InputAnswerViewCell") as! InputAnswerViewCell
         cell.id = indexPath.row + 1
+        
         return cell
     }
 }
@@ -115,5 +140,18 @@ extension CreateExamViewController: UIImagePickerControllerDelegate & UINavigati
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
+    }
+}
+
+struct QuestionModel{
+    var question_id: Int?
+    var question_title: Int?
+    var answer_list: [Answer]?
+    struct Answer{
+        var answer_id: Int!
+        var content: Int?
+        var image: String?
+        var sort: Int!
+        var type: Int!
     }
 }

@@ -29,6 +29,9 @@
                                 <rect key="frame" x="202" y="13" width="40" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="IsAnswer"/>
+                                <connections>
+                                    <action selector="tapButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Akc-qv-h1X"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -58,6 +61,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="setAnswer" destination="rIa-fk-CMb" id="cJd-iF-h8R"/>
                 <outlet property="subView" destination="D2F-Sb-ZEV" id="DWe-n0-MvV"/>
                 <outlet property="textAnswer" destination="V5L-jz-bJT" id="R66-t2-mD4"/>
             </connections>
