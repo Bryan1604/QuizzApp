@@ -306,7 +306,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="Vector (1)"/>
                                                         <connections>
-                                                            <action selector="setDepartment" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rtm-DK-kEt"/>
+                                                            <action selector="setSubject" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ekd-py-SUt"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -425,8 +425,10 @@
                         <outlet property="numberOfQuestion" destination="zJr-6K-3KA" id="QSA-FI-ikV"/>
                         <outlet property="setDepartmentBtn" destination="EDi-LZ-BEG" id="JtA-CY-WZX"/>
                         <outlet property="setModeBtn" destination="Gnn-yj-2E5" id="kei-1X-9TS"/>
+                        <outlet property="setSubjectBtn" destination="LRX-mz-46o" id="Ap8-6C-udR"/>
                         <outlet property="shareBtn" destination="zff-aE-ck9" id="8WJ-88-WDb"/>
                         <outlet property="sheetUploadBtn" destination="0vL-Bw-Aq6" id="n8Q-Ed-VTL"/>
+                        <outlet property="subject" destination="MJT-6G-Fco" id="fcQ-Ou-DDM"/>
                         <outlet property="time" destination="KXO-3k-NcH" id="noZ-9B-kAn"/>
                         <outlet property="titleExam" destination="eNH-QE-ze0" id="Bw9-Vr-K42"/>
                         <outlet property="view1" destination="Aeg-uH-uD9" id="TT9-xu-kNc"/>
@@ -435,6 +437,7 @@
                         <outlet property="view4" destination="zYh-Wc-ofR" id="LYG-B1-bMQ"/>
                         <outlet property="view5" destination="Mpk-Ba-rR3" id="asF-qx-DRi"/>
                         <outlet property="view6" destination="Nix-je-5aF" id="gIj-m4-oOZ"/>
+                        <outlet property="view7" destination="W5J-LX-FdL" id="XeN-hc-bDn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -120,11 +120,6 @@ extension SubjectListViewController{
                 for i in stride(from: 0, to: subjects.count, by: 1){
                     let subject = Subject(id: subjects[i].id,title: subjects[i].title,image: subjects[i].image, description: subjects[i].description, count_exam:subjects[i].count_exam )
                     self.subjectList.append(subject)
-//                    self.subjectList[i].id = searchSubjectResponse.result[i].id
-//                    self.subjectList[i].title = searchSubjectResponse.result[i].title
-//                    self.subjectList[i].description = searchSubjectResponse.result[i].description
-//                    self.subjectList[i].image = searchSubjectResponse.result[i].image
-//                    self.subjectList[i].count_exam = searchSubjectResponse.result[i].count_exam
                 }
                 DispatchQueue.main.async {
                     self.tableView.reloadData()

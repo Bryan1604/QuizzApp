@@ -178,6 +178,9 @@
 		8C82853E2A1B010A0076842D /* PostSaveExamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C82853D2A1B010A0076842D /* PostSaveExamResponse.swift */; };
 		8C8285402A1B16760076842D /* SavedExamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C82853F2A1B16760076842D /* SavedExamRequest.swift */; };
 		8C8285422A1B18480076842D /* SavedExamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285412A1B18480076842D /* SavedExamResponse.swift */; };
+		8C8285442A1B28D90076842D /* ReviewExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8285432A1B28D90076842D /* ReviewExamViewController.swift */; };
+		8C8285472A1B29110076842D /* ReviewExamViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C8285462A1B29110076842D /* ReviewExamViewController.storyboard */; };
+		8CA45D562A1CA99E001385CD /* CreateExamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA45D552A1CA99E001385CD /* CreateExamResponse.swift */; };
 		8CAA885029D3E73900B8F4D2 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAA884F29D3E73900B8F4D2 /* ResultViewController.swift */; };
 		8CAA885229D3E75300B8F4D2 /* ResultViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA885129D3E75300B8F4D2 /* ResultViewController.storyboard */; };
 		8CAA885429D3EB5600B8F4D2 /* StartTestViewController2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA885329D3EB5600B8F4D2 /* StartTestViewController2.storyboard */; };
@@ -403,6 +406,9 @@
 		8C82853D2A1B010A0076842D /* PostSaveExamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSaveExamResponse.swift; sourceTree = "<group>"; };
 		8C82853F2A1B16760076842D /* SavedExamRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedExamRequest.swift; sourceTree = "<group>"; };
 		8C8285412A1B18480076842D /* SavedExamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedExamResponse.swift; sourceTree = "<group>"; };
+		8C8285432A1B28D90076842D /* ReviewExamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewExamViewController.swift; sourceTree = "<group>"; };
+		8C8285462A1B29110076842D /* ReviewExamViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReviewExamViewController.storyboard; sourceTree = "<group>"; };
+		8CA45D552A1CA99E001385CD /* CreateExamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExamResponse.swift; sourceTree = "<group>"; };
 		8CAA884F29D3E73900B8F4D2 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		8CAA885129D3E75300B8F4D2 /* ResultViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultViewController.storyboard; sourceTree = "<group>"; };
 		8CAA885329D3EB5600B8F4D2 /* StartTestViewController2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartTestViewController2.storyboard; sourceTree = "<group>"; };
@@ -883,6 +889,7 @@
 				8C8285342A17182E0076842D /* GetUploadExamResponse.swift */,
 				8C82853D2A1B010A0076842D /* PostSaveExamResponse.swift */,
 				8C8285412A1B18480076842D /* SavedExamResponse.swift */,
+				8CA45D552A1CA99E001385CD /* CreateExamResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -942,6 +949,15 @@
 				8C8285392A1719B60076842D /* ManageExamViewController.swift */,
 			);
 			path = 5.4;
+			sourceTree = "<group>";
+		};
+		8C8285452A1B28E20076842D /* 5.3.1 */ = {
+			isa = PBXGroup;
+			children = (
+				8C8285432A1B28D90076842D /* ReviewExamViewController.swift */,
+				8C8285462A1B29110076842D /* ReviewExamViewController.storyboard */,
+			);
+			path = 5.3.1;
 			sourceTree = "<group>";
 		};
 		8CAA884E29D3E72100B8F4D2 /* 3.10 */ = {
@@ -1051,6 +1067,7 @@
 		8CB5F44729D9C9AA00D60F15 /* 5 */ = {
 			isa = PBXGroup;
 			children = (
+				8C8285452A1B28E20076842D /* 5.3.1 */,
 				8C8285382A1719540076842D /* 5.4 */,
 				8C82851D2A147DD50076842D /* 5.3 */,
 				8CB5F44829D9FAA500D60F15 /* 5.6 */,
@@ -1215,6 +1232,7 @@
 				8CAA885429D3EB5600B8F4D2 /* StartTestViewController2.storyboard in Resources */,
 				8CB5F42129D67D4C00D60F15 /* ExamHistoryViewController1.storyboard in Resources */,
 				8C36852629F5A7F2006E7F98 /* UpdateAvatarViewController.storyboard in Resources */,
+				8C8285472A1B29110076842D /* ReviewExamViewController.storyboard in Resources */,
 				3F7744D02993803800DC3181 /* SVN-Gilroy SemiBold.otf in Resources */,
 				3F7744C42993803800DC3181 /* SVN-Gilroy Bold Italic.otf in Resources */,
 				8C20F7C429CAAFC200C62D89 /* TestDetailViewController.storyboard in Resources */,
@@ -1359,6 +1377,7 @@
 			files = (
 				8C36851929EF8808006E7F98 /* Exam.swift in Sources */,
 				8CB5F45429DA685100D60F15 /* SetUpViewController.swift in Sources */,
+				8C8285442A1B28D90076842D /* ReviewExamViewController.swift in Sources */,
 				8C8284FE2A0A41420076842D /* GetExamHistoryListRequest.swift in Sources */,
 				8CB5F41C29D59CB400D60F15 /* ExamModel.swift in Sources */,
 				8C8285042A0B53450076842D /* GetExamHistoryDetailResponse.swift in Sources */,
@@ -1383,6 +1402,7 @@
 				8C82850E2A11EDE20076842D /* GetUserInfoRequest.swift in Sources */,
 				3F7744A629935B0100DC3181 /* ForgotPassword1ViewController.swift in Sources */,
 				8C8285422A1B18480076842D /* SavedExamResponse.swift in Sources */,
+				8CA45D562A1CA99E001385CD /* CreateExamResponse.swift in Sources */,
 				8C80BF6D29C411E000C59FC4 /* Item.swift in Sources */,
 				8C36851729EEA121006E7F98 /* ListExamResponse.swift in Sources */,
 				8C36852129F54A55006E7F98 /* ExamDetailRequest.swift in Sources */,

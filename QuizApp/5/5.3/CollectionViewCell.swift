@@ -18,6 +18,12 @@ class CollectionViewCell: UICollectionViewCell {
             setSelect()
         }
     }
+    
+    var status : Bool = false{
+        didSet{
+            setStatus()
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         cellView.layer.cornerRadius = 25
@@ -26,7 +32,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     func setSelect() {
         if select {
-            cellView.backgroundColor =  UIColor(red: 18/255, green: 18/255, blue: 18/255, alpha: 1)
+            cellView.backgroundColor =  UIColor(red: 123/255, green: 109/255, blue: 228/255, alpha: 1)
             number.textColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         } else {
             cellView.backgroundColor =  .clear
@@ -34,5 +40,12 @@ class CollectionViewCell: UICollectionViewCell {
         }
     }
 
+    func setStatus(){
+        if status{
+            number.textColor = UIColor(red: 99/255, green: 156/255, blue: 253/255, alpha: 1)
+        }else{
+            number.textColor = UIColor(red: 255/255, green: 143/255, blue: 162/255, alpha: 1)
+        }
+    }
 
 }

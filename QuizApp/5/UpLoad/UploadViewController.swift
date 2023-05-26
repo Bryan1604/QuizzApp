@@ -9,6 +9,7 @@
 import UIKit
 import VerticalSlidingPresentationController
 import KUIPopOver
+import Alamofire
 class UploadViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
@@ -22,12 +23,14 @@ class UploadViewController: UIViewController, UIPopoverPresentationControllerDel
     @IBOutlet weak var view3: UIView!
     @IBOutlet weak var view5: UIView!
     @IBOutlet weak var view6: UIView!
-
+    @IBOutlet weak var view7: UIView!
+    
     @IBOutlet weak var createbtn: UIButton!
     @IBOutlet weak var shareBtn: UIButton!
     
     @IBOutlet weak var titleExam: UITextField!
     @IBOutlet weak var department: UITextField!
+    @IBOutlet weak var subject: UITextField!
     @IBOutlet weak var mode: UITextField!
     @IBOutlet weak var time: UITextField!
     @IBOutlet weak var numberOfQuestion: UITextField!
@@ -36,7 +39,16 @@ class UploadViewController: UIViewController, UIPopoverPresentationControllerDel
     @IBOutlet weak var actionMenuBtn: UIButton!
     @IBOutlet weak var setModeBtn: UIButton!
     @IBOutlet weak var setDepartmentBtn: UIButton!
+    @IBOutlet weak var setSubjectBtn: UIButton!
     
+    var departmentList : [GetDepartmentListResponse.Result]?
+    var subjectList: [ListDepartmentInfoResponse.Result.Subject]?
+    
+    var departmentId: Int?
+    var subjectId: Int?
+    
+    var departments : [String: Int?] = [:]
+    var subjects: [String: Int?] = [:]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,7 +59,7 @@ class UploadViewController: UIViewController, UIPopoverPresentationControllerDel
         layoutView(view: view4)
         layoutView(view: view5)
         layoutView(view: view6)
-        
+        layoutView(view: view7)
         layoutButton(sheetUploadBtn)
         layoutButton(excelUploadBtn)
         layoutButton(shareBtn)
@@ -56,6 +68,8 @@ class UploadViewController: UIViewController, UIPopoverPresentationControllerDel
         createbtn.layer.cornerRadius = 20
         imageView.layer.cornerRadius = 20
         imageTapped()
+        getDepartmentList()
+        getListSubject()
     }
    
     func layoutView(view: UIView){
@@ -77,21 +91,8 @@ class UploadViewController: UIViewController, UIPopoverPresentationControllerDel
     
     @IBAction func shareAction(){
         let myViewController = UIStoryboard(name: "SharePopUpViewController", bundle: nil).instantiateViewController(withIdentifier: "SharePopUpViewController")
-
-//        
-//        myViewController.modalPresentationStyle = .popover
-//        //var Popover = vc.popoverPresentationController
-//        if let Popover = myViewController.popoverPresentationController {
-//            Popover.sourceView = self.view
-//            Popover.sourceRect = CGRectMake(self.view.center.x,self.view.center.y+180,0,0)
-//            myViewController.preferredContentSize = CGSizeMake(300,360)
-//            Popover.delegate = self
-//        }
-        
         if let presentationController = myViewController.presentationController as? UISheetPresentationController {
-            presentationController.detents = [.medium()] /// change to [.medium(), .large()] for a half *and* full screen sheet
-//            presentationController.sourceView?.layer.cornerRadius = 50
-//            presentationController.sourceView?.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+            presentationController.detents = [.medium()]
                 }
         self.present(myViewController, animated: true)
     }
@@ -100,9 +101,8 @@ class UploadViewController: UIViewController, UIPopoverPresentationControllerDel
         let vc = UIStoryboard(name: "CreateExamViewController", bundle: nil).instantiateViewController(withIdentifier: "CreateExamViewController") as! CreateExamViewController
         vc.question_id = 1
         vc.numberOfQUestion = Int(numberOfQuestion.text ?? "")
-        vc.timeLabel?.text = (time.text ?? "") + "phút"
+        vc.time = Int(time.text ?? "0")
         navigationController?.pushViewController(vc, animated: true)
-        
     }
     
     func imageTapped(){
@@ -166,13 +166,98 @@ extension UploadViewController {
     @IBAction func setDepartment(){
         let optionClosure : (UIAction) -> Void = { action in
             self.department.text = action.title
+            self.departmentId = self.departments[action.title] as? Int
         }
-        let menu = UIMenu( children : [
-            UIAction(title: "Tự nhiên", state: .off, handler: optionClosure),
-            UIAction(title: "Xã hội", state: .off, handler: optionClosure)
-        ])
+        var actions: [UIAction] = []
+        for d in departmentList! {
+            actions.append(UIAction(title: d.title ?? "", state: .off, handler: optionClosure))
+            departments[d.title!] = d.id
+        }
+        let menu = UIMenu( children : actions)
+        
         setDepartmentBtn.menu = menu
         setDepartmentBtn.showsMenuAsPrimaryAction = true
         setDepartmentBtn.changesSelectionAsPrimaryAction = false
+    }
+    
+    @IBAction func setSubject(){
+        let optionClosure : (UIAction) -> Void = { action in
+            self.subject.text = action.title
+            self.subjectId = self.departments[action.title] as? Int
+        }
+        var actions: [UIAction] = []
+        for s in subjectList!{
+            actions.append(UIAction(title: s.title ?? "", state: .off, handler: optionClosure))
+            subjects[s.title!] = s.id
+        }
+        let menu = UIMenu( children : actions)
+        setSubjectBtn.menu = menu
+        setSubjectBtn.showsMenuAsPrimaryAction = true
+        setSubjectBtn.changesSelectionAsPrimaryAction = false
+    }
+    
+    @IBAction func postImageExam(_ sender: UIButton){
+        var headers: HTTPHeaders{
+            var headers = HTTPHeaders()
+            headers["Authorization"] = UserDefaults.standard.string(forKey: "AccessToken")
+            return headers
+        }
+        var user_id = UserDefaults.standard.integer(forKey: "UserId")
+        var folder_name = "exam"
+        var filename = ""
+        AF.upload(multipartFormData: { multipartFormData in
+            if let userData = String(user_id).data(using: .utf8){
+                multipartFormData.append(userData, withName: "user_id")
+            }
+            if let imageData = self.imageView.image?.jpegData(compressionQuality: 0.8){
+                multipartFormData.append(imageData, withName: "file",fileName: "exam\(self.subjectId ?? 0).jpeg",mimeType: "image/jpeg")
+            }
+            if let folderNameData = String(folder_name).data(using: .utf8){
+                multipartFormData.append(folderNameData, withName: "folder_name")
+            }
+          //  if let filename =
+            
+            
+        },to: "https://asia-northeast1-quiz-app-traning.cloudfunctions.net/editAvatar",
+                  method: .post,
+                  headers: headers
+        ).responseJSON { json in
+            print(json)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let getUserInfoResponse = try? decoder.decode(GetUserInfoResponse.self, from: data) {
+                if getUserInfoResponse.statusCode == 200{
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+        }
+    }
+}
+
+extension UploadViewController{
+
+    func getDepartmentList(){
+        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+        let request = GetDepartmentListRequest.Post(user_id: user_id, keyword: "").route
+        APIManager.session.request(request).responseJSON{ json in
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let getDepartmentListResponse = try? decoder.decode(GetDepartmentListResponse.self, from: data) {
+                self.departmentList = getDepartmentListResponse.result
+                }
+            }
+        }
+    
+    func getListSubject(){
+        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+        let request = ListDepartmentInfoRequest.Post(user_id: user_id).route
+        APIManager.session.request(request).responseJSON{ json in
+            print(json)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let listDepartmentInfoResponse = try? decoder.decode(ListDepartmentInfoResponse.self, from: data) {
+                self.subjectList = listDepartmentInfoResponse.result[self.departmentId ?? 0].subjects
+            }
+        }
     }
 }
