@@ -52,18 +52,11 @@ class SubjectListViewController: UIViewController{
 extension SubjectListViewController:UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return khoa.result[section].subjects?.count ?? 0
-//        return subjectList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubjectCell") as! SubjectCell
-       
-//        cell.title.text = subjectList[indexPath.row].title
-//        cell.thumnail.sd_setImage(with: URL(string: subjectList[indexPath.row].image ?? ""))
-//        cell.field.text = subjectList[indexPath.row].description
-//               cell.count.text = String(indexPath.row) + " đề"
-//        cell.id = subjectList[indexPath.row].id
-        
+
         let data = khoa.result[indexPath.section].subjects![indexPath.row]
         cell.title.text = data.title
         cell.thumnail.sd_setImage(with: URL(string: data.image ?? ""))

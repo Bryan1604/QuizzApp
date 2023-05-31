@@ -17,4 +17,5 @@ target 'QuizApp' do
   pod 'VerticalSlidingPresentationController', '~> 0.2.0'
   pod 'STTabbar'
   pod 'ANDLineChartView'
+  pod 'SwiftOverlays'
 end

@@ -34,6 +34,7 @@ PODS:
   - STTabbar (0.1.0)
   - SwiftAlgorithms (1.0.0)
   - SwiftColor (1.4.0)
+  - SwiftOverlays (5.0.1)
   - VerticalSlidingPresentationController (0.2.0)
 
 DEPENDENCIES:
@@ -51,6 +52,7 @@ DEPENDENCIES:
   - SFProgressCircle
   - STTabbar
   - SwiftColor
+  - SwiftOverlays
   - VerticalSlidingPresentationController (~> 0.2.0)
 
 SPEC REPOS:
@@ -74,6 +76,7 @@ SPEC REPOS:
     - STTabbar
     - SwiftAlgorithms
     - SwiftColor
+    - SwiftOverlays
     - VerticalSlidingPresentationController
 
 SPEC CHECKSUMS:
@@ -96,8 +99,9 @@ SPEC CHECKSUMS:
   STTabbar: fe93da755010233b348b2d0147c43bb1bef290fa
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
   SwiftColor: 2b0fd15257981f23265f9939f311098159fe6d1c
+  SwiftOverlays: ab459ea9194b0e96aaccaa00e9ead1bf6d46eef1
   VerticalSlidingPresentationController: 51beed52d55183c863a1fae9bfc0254de3d56fb2
 
-PODFILE CHECKSUM: 84e84285723de679fd9b6070e121b962bd9f381b
+PODFILE CHECKSUM: fc7d53dcdd76c726963367e938bbcf03fa9c8727
 
 COCOAPODS: 1.12.0

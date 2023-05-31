@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import SwiftOverlays
 class HomeViewController: UIViewController{
     @IBOutlet weak var homeTableView: UITableView!
     
@@ -25,7 +26,7 @@ class HomeViewController: UIViewController{
         registerNib()
         getDepartmentList()
 
-        
+       // UserDefaults.standard.removeObject(forKey: "AccessToken")
       //  print(UserDefaults.standard.string(forKey: "AccessToken") ?? "")
     }
     
@@ -86,30 +87,34 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
 
 extension HomeViewController{
     func getDepartmentList(){
+        self.showWaitOverlay()
         let user_id = UserDefaults.standard.integer(forKey: "UserId")
         print(UserDefaults.standard.string(forKey: "AccessToken"))
         let request = GetDepartmentListRequest.Post(user_id: user_id, keyword: "").route
         APIManager.session.request(request).responseJSON{ json in
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .useDefaultKeys
-            if let data = json.data, let getDepartmentListResponse = try? decoder.decode(GetDepartmentListResponse.self, from: data) {
-                    if getDepartmentListResponse.statusCode == 401{
-                        self.navigationController?.popToRootViewController(animated: true)
-                    }else{
+            if let data = json.data, let getDepartmentListResponse = try?
+            decoder.decode(GetDepartmentListResponse.self, from: data) {
+                if getDepartmentListResponse.statusCode == 401{
+                    self.navigationController?.popToRootViewController(animated: true)
+                }else{
+                        self.removeAllOverlays()
                         let departments = getDepartmentListResponse.result
                         if departments.count > 0{
                             for i in stride(from: 0, to: departments.count, by: 1){
                                 let department = Department(id: departments[i].id, title: departments[i].title, description: departments[i].description, image: departments[i].image, studentList: departments[i].student_list)
-                                self.departmentList.append(department)
+                                    self.departmentList.append(department)
                             }
                         }
-                        DispatchQueue.main.async {
-                            self.homeTableView.reloadData()
-                        }
+                    DispatchQueue.main.async {
+                        self.homeTableView.reloadData()
                     }
                 }
-            print(json)
             }
+                print(json)
+                }
+        
         }
     func getUserInfo(){
         let user_id = UserDefaults.standard.integer(forKey: "UserId")
@@ -126,4 +131,7 @@ extension HomeViewController{
             }
         }
     }
+    
+    
+    
 }

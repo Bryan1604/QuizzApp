@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import SDWebImage
+import SwiftOverlays
 class SearchViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
     @IBOutlet weak var searchView: UIView!
@@ -31,6 +32,8 @@ class SearchViewController: UIViewController,UICollectionViewDataSource,UICollec
         
         searchAction2()
        // searchAction()
+        
+       
     }
     func layoutCollectionView(){
         let layout = UICollectionViewFlowLayout()
@@ -60,15 +63,9 @@ class SearchViewController: UIViewController,UICollectionViewDataSource,UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell",for: indexPath) as! ItemCollectionViewCell
-        if let url = URL(string: data.result[indexPath.row].image!) {
-            URLSession.shared.dataTask(with: url) { data, response, error in
-                guard let data = data, error == nil else { return }
-                DispatchQueue.main.async() {
-                    cell.thumnail.image = UIImage(data: data)
-                    // Use the downloaded image
-                }
-            }.resume()
-        }
+        
+        cell.id = data.result[indexPath.row].id
+        cell.thumnail.sd_setImage(with: URL(string: data.result[indexPath.row].image ?? ""))
         cell.title.text = data.result[indexPath.row].title
         cell.count.text = String(indexPath.row)
         let row = indexPath.row
@@ -106,30 +103,25 @@ class SearchViewController: UIViewController,UICollectionViewDataSource,UICollec
         let headerView = self.collectionView(collectionView,
                                              viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader,
                                              at: indexPath)
-
         // Use this view to calculate the optimal size based on the collection view's width
         return headerView.systemLayoutSizeFitting(CGSize(width: collectionView.frame.width, height: 190 ))
-                                                        
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! ItemCollectionViewCell
+        let storyboard = UIStoryboard(name: "SearchSubjectViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SearchSubjectViewController") as? SearchSubjectViewController
+        
+        vc?.department_id = cell.id // Set the department ID based on the selected cell
+        vc?.keyword = "" // Set the desired keyword
+        
+        navigationController?.pushViewController(vc!, animated: true)
+    }
 }
 
 extension SearchViewController: SearchDelegate{
     func searchAction() {
-//        let user_id = UserDefaults.standard.integer(forKey: "UserId")
-//        let keyword = UserDefaults.standard.string(forKey: "keyword")
-//        let request = GetDepartmentListRequest.Post(user_id: user_id, keyword: keyword).route
-//        APIManager.session.request(request).responseJSON{ json in
-//            let decoder = JSONDecoder()
-//            print(json)
-//            decoder.keyDecodingStrategy = .useDefaultKeys
-//            if let data = json.data, let getDepartmentListResponse = try? decoder.decode(GetDepartmentListResponse.self, from: data) {
-//                self.data.result = getDepartmentListResponse.result
-//                DispatchQueue.main.async {
-//                    self.searchCollectionView.reloadData()
-//                }
-//            }
-//        }
+        //
     }
     
     func searchAction2(){

@@ -8,6 +8,7 @@
 import UIKit
 import SDWebImage
 import Alamofire
+import SwiftOverlays
 class ExamHistoryViewController: UIViewController{
 
     @IBOutlet weak var backBtn: UIButton!
@@ -43,8 +44,8 @@ class ExamHistoryViewController: UIViewController{
     }
     
     func getExamHistoryList(){
+        self.showWaitOverlay()
         let user_id = UserDefaults.standard.integer(forKey: "UserId")
-        
         let request = GetExamHistoryListRequest.Post(user_id: user_id, sort_field: sort_field, sort_by: sort_by, limit: 10, offset: 0).route
         APIManager.session.request(request).responseJSON { json in
             print(json)
@@ -53,11 +54,13 @@ class ExamHistoryViewController: UIViewController{
             if let data = json.data, let getExamHistoryListResponse = try? decoder.decode(GetExamHistoryListResponse.self, from: data) {
                 self.listExam = getExamHistoryListResponse.result!
                 self.sortListExam()
+                self.removeAllOverlays()
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
             }
         }
+        
     }
     
     func sortListExam(){
@@ -96,16 +99,17 @@ extension ExamHistoryViewController:UITableViewDataSource, UITableViewDelegate {
             cell.numberOfQuestion.text = "\(systemListExam[indexPath.row].number ?? 0) Trắc nghiệm"
             cell.thumbnail.sd_setImage(with: URL(string: systemListExam[indexPath.row].image!))
             cell.grade.text = "Điểm: \(systemListExam[indexPath.row].score!)"
-            cell.id = systemListExam[indexPath.row].id
-            return cell
+            cell.id = systemListExam[indexPath.row].exam_history_id
+            //return cell
         default:
             cell.title.text = userListExam[indexPath.row].title
             cell.numberOfQuestion.text = "\(userListExam[indexPath.row].number ?? 0) Trắc nghiệm"
             cell.thumbnail.sd_setImage(with: URL(string: userListExam[indexPath.row].image!))
             cell.grade.text = "Điểm: " + (userListExam[indexPath.row].score ?? "")
-            cell.id = userListExam[indexPath.row].id
-            return cell
+            cell.id = userListExam[indexPath.row].exam_history_id
+            //return cell
         }
+        return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -120,8 +124,10 @@ extension ExamHistoryViewController:UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! ExamViewCell
         let vc = UIStoryboard(name: "ExamHistoryViewController1", bundle: nil).instantiateViewController(withIdentifier: "ExamHistoryViewController1") as! ExamHistoryViewController1
+        print(cell.title.text! + "\(cell.id ?? 0)")
         vc.user_id = UserDefaults.standard.integer(forKey: "UserId")
         vc.exam_history_id = cell.id
+        
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

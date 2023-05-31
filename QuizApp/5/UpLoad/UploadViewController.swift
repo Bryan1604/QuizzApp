@@ -99,9 +99,18 @@ class UploadViewController: UIViewController, UIPopoverPresentationControllerDel
     
     @IBAction func createExam(){
         let vc = UIStoryboard(name: "CreateExamViewController", bundle: nil).instantiateViewController(withIdentifier: "CreateExamViewController") as! CreateExamViewController
+        let numberOfQuestion = Int(numberOfQuestion.text ?? "")
         vc.question_id = 1
-        vc.numberOfQUestion = Int(numberOfQuestion.text ?? "")
+        vc.numberOfQUestion = numberOfQuestion
         vc.time = Int(time.text ?? "0")
+        if mode.text == "Công khai"{
+            vc.status = 1
+        }else{
+            vc.status = 2
+        }
+        vc.titleExam = titleExam.text
+        vc.subject_id = subjects[subject.text ?? ""] as? Int
+        vc.listQuestion = [QuestionModel](repeating: QuestionModel(), count: numberOfQuestion ?? 0)
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -202,9 +211,9 @@ extension UploadViewController {
             headers["Authorization"] = UserDefaults.standard.string(forKey: "AccessToken")
             return headers
         }
-        var user_id = UserDefaults.standard.integer(forKey: "UserId")
-        var folder_name = "exam"
-        var filename = ""
+        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+        let folder_name = "exam"
+        let filename = ""
         AF.upload(multipartFormData: { multipartFormData in
             if let userData = String(user_id).data(using: .utf8){
                 multipartFormData.append(userData, withName: "user_id")
@@ -215,9 +224,6 @@ extension UploadViewController {
             if let folderNameData = String(folder_name).data(using: .utf8){
                 multipartFormData.append(folderNameData, withName: "folder_name")
             }
-          //  if let filename =
-            
-            
         },to: "https://asia-northeast1-quiz-app-traning.cloudfunctions.net/editAvatar",
                   method: .post,
                   headers: headers

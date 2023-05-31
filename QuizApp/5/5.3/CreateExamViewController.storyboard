@@ -112,7 +112,7 @@
                                                 <color key="textColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Add Cover" translatesAutoresizingMaskIntoConstraints="NO" id="gnb-xh-FQa">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Add Cover" translatesAutoresizingMaskIntoConstraints="NO" id="gnb-xh-FQa">
                                                 <rect key="frame" x="24" y="207.33333333333337" width="345" height="148"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="148" id="sLP-jT-PD5"/>
@@ -211,6 +211,9 @@
                                 <state key="normal" title="Hoàn thành">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="reviewAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GFb-aY-eyB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLg-g0-rRM">
                                 <rect key="frame" x="16" y="754" width="56" height="56"/>
@@ -249,9 +252,9 @@
                     <connections>
                         <outlet property="backBtn" destination="w4u-GA-JlM" id="gt9-Vp-0UT"/>
                         <outlet property="collectionView" destination="EFr-Ra-9wV" id="QBb-Qi-8Py"/>
+                        <outlet property="doneBtn" destination="MqM-Om-W5f" id="OQq-Qe-Dg0"/>
                         <outlet property="imageView" destination="gnb-xh-FQa" id="eMF-lR-JgY"/>
-                        <outlet property="nextAction" destination="MqM-Om-W5f" id="Dui-Pu-j40"/>
-                        <outlet property="questionDescription" destination="Zp7-CH-svK" id="Y1n-1i-N1I"/>
+                        <outlet property="questionTitle" destination="Zp7-CH-svK" id="uOx-mE-eWW"/>
                         <outlet property="questionView" destination="3bs-HX-Qz6" id="FD5-C8-IWe"/>
                         <outlet property="tableView" destination="zfF-nL-Mee" id="hAY-Bi-4fv"/>
                         <outlet property="timeLabel" destination="vfU-3a-QQ1" id="GJF-9z-vfD"/>
