@@ -14,6 +14,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var count: UILabel!
     
+    var id: Int?
     
     override func awakeFromNib() {
         super.awakeFromNib()

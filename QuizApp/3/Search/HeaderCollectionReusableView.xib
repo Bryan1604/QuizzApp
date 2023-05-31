@@ -21,10 +21,10 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xvi-gN-89i">
-                    <rect key="frame" x="0.0" y="0.0" width="364" height="118"/>
+                    <rect key="frame" x="0.0" y="48" width="364" height="70"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gợi ý" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fo6-5k-fHL">
-                            <rect key="frame" x="24" y="0.0" width="48" height="118"/>
+                            <rect key="frame" x="23.999999999999996" y="11" width="47.666666666666657" height="59"/>
                             <fontDescription key="fontDescription" name="SVN-GilroyMedium" family="SVN-Gilroy" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -33,21 +33,20 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="Fo6-5k-fHL" secondAttribute="bottom" id="1ul-ff-4bD"/>
-                        <constraint firstItem="Fo6-5k-fHL" firstAttribute="top" secondItem="Xvi-gN-89i" secondAttribute="top" id="Ict-YL-tvu"/>
                         <constraint firstItem="Fo6-5k-fHL" firstAttribute="leading" secondItem="Xvi-gN-89i" secondAttribute="leading" constant="24" id="TlG-s8-mCy"/>
-                        <constraint firstItem="Fo6-5k-fHL" firstAttribute="top" secondItem="Xvi-gN-89i" secondAttribute="top" id="dr2-Gh-JPE"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="g2e-31-2yC"/>
-            <color key="backgroundColor" red="0.38823529410000002" green="0.61176470589999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="Fo6-5k-fHL" firstAttribute="top" secondItem="g2e-31-2yC" secondAttribute="top" id="QQ3-0Z-Ypt"/>
                 <constraint firstAttribute="bottom" secondItem="Xvi-gN-89i" secondAttribute="bottom" id="hzz-ql-QVU"/>
-                <constraint firstItem="Xvi-gN-89i" firstAttribute="top" secondItem="Qd4-8A-ZOl" secondAttribute="top" id="krB-Xh-saw"/>
+                <constraint firstItem="Xvi-gN-89i" firstAttribute="top" secondItem="Qd4-8A-ZOl" secondAttribute="top" constant="48" id="krB-Xh-saw"/>
                 <constraint firstItem="Xvi-gN-89i" firstAttribute="leading" secondItem="g2e-31-2yC" secondAttribute="leading" id="rxk-fi-96S"/>
                 <constraint firstItem="Xvi-gN-89i" firstAttribute="trailing" secondItem="g2e-31-2yC" secondAttribute="trailing" id="ywZ-al-e5c"/>
             </constraints>
-            <point key="canvasLocation" x="167.93893129770993" y="233.80281690140845"/>
+            <point key="canvasLocation" x="167.93893129770993" y="203.52112676056339"/>
         </collectionReusableView>
     </objects>
     <resources>

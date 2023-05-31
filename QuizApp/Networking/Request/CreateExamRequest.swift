@@ -26,7 +26,7 @@ enum CreateExamRequest{
             let question_level: Int
             let question_sort: Int
             let answer_list: [AnswerList?]
-            let question_image_url: String
+            let question_image_url: String?
             
             struct AnswerList: Codable{
                 let content: String

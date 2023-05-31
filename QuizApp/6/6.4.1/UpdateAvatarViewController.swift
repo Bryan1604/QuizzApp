@@ -116,6 +116,9 @@ class UpdateAvatarViewController: UIViewController {
             print("rotation changing")
             let newRotation = sender.rotation + BeginRotation
             sender.view?.transform = CGAffineTransform(rotationAngle: newRotation) // view??
-        }else if sender
+        }else if sender.state == .ended{
+            print("rotation cancelled")
+            lastRotation = sender.rotation
+        }
     }
 }

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SVN-Gilroy Regular.otf">
+            <string>SVN-Gilroy</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Search Subject View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SearchSubjectViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SearchSubjectViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dQ-1s-uAs">
+                                <rect key="frame" x="16" y="117" width="361" height="56"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Câu đố, danh mục hoặc bạn bè" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u1X-YJ-vJC">
+                                        <rect key="frame" x="72" y="0.0" width="273" height="56"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0j-0A-fWK">
+                                        <rect key="frame" x="8" y="4" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="V0j-0A-fWK" secondAttribute="height" multiplier="1:1" id="sgN-nZ-pdA"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Icon (6)"/>
+                                        <connections>
+                                            <action selector="searchSubject" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xYf-z7-Zyy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="u1X-YJ-vJC" secondAttribute="trailing" constant="16" id="2UF-s9-QHi"/>
+                                    <constraint firstAttribute="height" constant="56" id="2bT-x1-e2B"/>
+                                    <constraint firstItem="u1X-YJ-vJC" firstAttribute="leading" secondItem="V0j-0A-fWK" secondAttribute="trailing" constant="16" id="4B5-7D-DgP"/>
+                                    <constraint firstItem="u1X-YJ-vJC" firstAttribute="centerY" secondItem="3dQ-1s-uAs" secondAttribute="centerY" id="8fq-Te-YT6"/>
+                                    <constraint firstItem="V0j-0A-fWK" firstAttribute="top" secondItem="3dQ-1s-uAs" secondAttribute="top" constant="4" id="Bug-Ro-ENb"/>
+                                    <constraint firstItem="V0j-0A-fWK" firstAttribute="leading" secondItem="3dQ-1s-uAs" secondAttribute="leading" constant="8" id="SgC-Zd-ZJN"/>
+                                    <constraint firstAttribute="bottom" secondItem="V0j-0A-fWK" secondAttribute="bottom" constant="4" id="W2X-EA-S1w"/>
+                                    <constraint firstAttribute="bottom" secondItem="u1X-YJ-vJC" secondAttribute="bottom" id="f06-On-nKw"/>
+                                    <constraint firstItem="u1X-YJ-vJC" firstAttribute="top" secondItem="3dQ-1s-uAs" secondAttribute="top" id="fSo-MS-eo9"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tìm kiếm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrP-t5-Kgs">
+                                <rect key="frame" x="148.66666666666666" y="75" width="95.666666666666657" height="26"/>
+                                <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="24"/>
+                                <color key="textColor" name="Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ju9-Ln-fta">
+                                <rect key="frame" x="8" y="71" width="44" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Icon (7)" buttonSize="mini"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jza-sG-j76">
+                                <rect key="frame" x="8" y="221" width="377" height="597"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.38823529410000002" green="0.61176470589999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jza-sG-j76" secondAttribute="trailing" constant="8" id="1Kh-Yu-7HT"/>
+                            <constraint firstItem="HrP-t5-Kgs" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="2jd-x2-2y4"/>
+                            <constraint firstItem="ju9-Ln-fta" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="6it-yN-LsA"/>
+                            <constraint firstItem="Jza-sG-j76" firstAttribute="top" secondItem="3dQ-1s-uAs" secondAttribute="bottom" constant="48" id="8kW-JP-10S"/>
+                            <constraint firstItem="3dQ-1s-uAs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Gqe-4P-gNO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Jza-sG-j76" secondAttribute="bottom" id="X7Y-To-mul"/>
+                            <constraint firstItem="ju9-Ln-fta" firstAttribute="centerY" secondItem="HrP-t5-Kgs" secondAttribute="centerY" id="dz9-mU-6oY"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3dQ-1s-uAs" secondAttribute="trailing" constant="16" id="msd-4G-96c"/>
+                            <constraint firstItem="HrP-t5-Kgs" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="pW5-05-WFb"/>
+                            <constraint firstItem="Jza-sG-j76" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="wqj-Ir-aCl"/>
+                            <constraint firstItem="3dQ-1s-uAs" firstAttribute="top" secondItem="HrP-t5-Kgs" secondAttribute="bottom" constant="16" id="z99-U5-A47"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBtn" destination="V0j-0A-fWK" id="50M-JE-q4g"/>
+                        <outlet property="searchView" destination="3dQ-1s-uAs" id="s6D-GV-dsd"/>
+                        <outlet property="tableView" destination="Jza-sG-j76" id="iWq-uN-Qmn"/>
+                        <outlet property="textInput" destination="u1X-YJ-vJC" id="rM4-Tv-MtM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon (6)" width="24" height="24"/>
+        <image name="Icon (7)" width="24" height="24"/>
+        <namedColor name="Color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

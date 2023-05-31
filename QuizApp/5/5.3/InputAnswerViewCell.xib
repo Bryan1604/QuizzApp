@@ -30,7 +30,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="IsAnswer"/>
                                 <connections>
-                                    <action selector="tapButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Akc-qv-h1X"/>
+                                    <action selector="tapButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vov-Xi-33e"/>
                                 </connections>
                             </button>
                         </subviews>

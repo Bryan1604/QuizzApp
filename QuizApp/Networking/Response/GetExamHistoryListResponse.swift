@@ -13,7 +13,7 @@ struct GetExamHistoryListResponse: BaseResponse{
     var result: [Result]?
     
     struct Result: Codable{
-        var id: Int?
+        var exam_history_id: Int?
         var title: String?
         var number: Int?
         var user_create: Int?
