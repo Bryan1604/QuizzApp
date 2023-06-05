@@ -18,19 +18,18 @@ class CreateExamViewController: UIViewController {
     @IBOutlet weak var questionView: UIView!
     @IBOutlet weak var doneBtn: UIButton!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var questionLevel: UIButton!
     
     var exam_id: Int?
-    var question_id: Int!
+    var question_sort: Int!
     var numberOfQUestion: Int!  //number
     var time: Int!
     var subject_id: Int!
     var titleExam: String!
     var status: Int!
-    
     //var listQuestion = [QuestionModel](repeating: QuestionModel(), count: 10)
     var listQuestion : [QuestionModel] = []
     var listAnswer = [QuestionModel.Answer](repeating: QuestionModel.Answer(), count: 4)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
@@ -49,6 +48,17 @@ class CreateExamViewController: UIViewController {
         timeView.layer.cornerRadius = 12
         timeLabel.text = "\(time ?? 0) phút"
 
+        questionLevel.layer.borderColor = UIColor.init(red: 239/255, green: 238/255, blue: 252/255, alpha: 1).cgColor
+        questionLevel.layer.borderWidth = 2
+        questionLevel.layer.cornerRadius = 12
+        if self.questionLevel.title(for: .normal) == "Dễ"{
+            self.listQuestion[self.question_sort - 1].question_level = 1
+        }else if self.questionLevel.title(for: .normal) == "Trung bình"{
+            self.listQuestion[self.question_sort - 1].question_level = 2
+        }else{
+            self.listQuestion[self.question_sort - 1].question_level = 3
+        }
+        
         registerCell()
         imageTapped()
         
@@ -78,31 +88,52 @@ class CreateExamViewController: UIViewController {
         present(vc, animated: true)
     }
     
+    @IBAction func setQuestionLevel(){
+        let optionClosure : (UIAction) -> Void = { action in
+            self.questionLevel.setTitle(action.title, for: .normal)
+            if self.questionLevel.title(for: .normal) == "Dễ"{
+                self.listQuestion[self.question_sort - 1].question_level = 1
+            }else if self.questionLevel.title(for: .normal) == "Trung bình"{
+                self.listQuestion[self.question_sort - 1].question_level = 2
+            }else{
+                self.listQuestion[self.question_sort - 1].question_level = 3
+            }
+        }
+        let menu = UIMenu( children : [
+            UIAction(title: "Dễ", state: .off, handler: optionClosure),
+            UIAction(title: "Trung bình", state: .off, handler: optionClosure),
+            UIAction(title: "Khó", state: .off, handler: optionClosure)
+        ])
+        questionLevel.menu = menu
+        questionLevel.showsMenuAsPrimaryAction = true
+        questionLevel.changesSelectionAsPrimaryAction = false
+    }
+    
     @IBAction func tapToNextQuestion(_ sender: UIButton){
         addQuestion()
         print(listQuestion)
-        if question_id < numberOfQUestion{
-            question_id += 1
-            if question_id == numberOfQUestion{
+        if question_sort < numberOfQUestion{
+            question_sort += 1
+            if question_sort == numberOfQUestion{
                 doneBtn.isHidden = false
             }
-            tableView.reloadData()
             collectionView.reloadData()
         }
     }
     
     @IBAction func tapToPreviousQuestion(_ sender: UIButton){
-        if question_id > 1{
-            question_id -= 1
+        if question_sort > 1{
+            question_sort -= 1
             doneBtn.isHidden = true
             collectionView.reloadData()
         }
     }
     
     func addQuestion(){
-        listQuestion[question_id-1].question_id = self.question_id
-        listQuestion[question_id-1].answer_list = self.listAnswer
-        listQuestion[question_id-1].question_title = self.titleExam
+        listQuestion[question_sort-1].question_sort = self.question_sort
+        listQuestion[question_sort-1].answer_list = self.listAnswer
+        listQuestion[question_sort-1].question_title = self.questionTitle.text
+        listQuestion[question_sort-1].question_sort = self.question_sort
     }
     
     
@@ -110,14 +141,15 @@ class CreateExamViewController: UIViewController {
         // create exam information
         let examInfo = InformationModel(user_id: UserDefaults.standard.integer(forKey: "UserId"), subject_id: self.subject_id, title: self.titleExam, time: self.time, number: self.numberOfQUestion, status: self.status)
         // create list question
-        
-        
-        
+        addQuestion()
         let vc = UIStoryboard(name: "ReviewExamViewController", bundle: nil).instantiateViewController(withIdentifier: "ReviewExamViewController") as! ReviewExamViewController
-        vc.question_id = 1
+        vc.question_sort = 1
         vc.numberOfQuestion = numberOfQUestion
+        vc.examInfo = examInfo
+        vc.listQuestion = listQuestion
         navigationController?.pushViewController(vc, animated: true)
     }
+    
 }
 
 extension CreateExamViewController: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -132,7 +164,7 @@ extension CreateExamViewController: UICollectionViewDelegate, UICollectionViewDa
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         cell.number.text = "\(indexPath.row + 1)"
         cell.id = indexPath.row + 1
-        if cell.id == self.question_id{
+        if cell.id == self.question_sort{
             cell.select = true
         }else{
             cell.select = false
@@ -142,8 +174,8 @@ extension CreateExamViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        question_id = indexPath.row + 1
-        if question_id == numberOfQUestion{
+        question_sort = indexPath.row + 1
+        if question_sort == numberOfQUestion{
             doneBtn.isHidden = false
         }else{
             doneBtn.isHidden = true
@@ -168,7 +200,6 @@ extension CreateExamViewController: UITableViewDelegate, UITableViewDataSource, 
         cell.delegate = self
         cell.configure(with: indexPath)
         
-        listAnswer[indexPath.row].answer_id = cell.id
         listAnswer[indexPath.row].image = ""  // chua can upload anh
         listAnswer[indexPath.row].sort = indexPath.row + 1
         listAnswer[indexPath.row].type = 0

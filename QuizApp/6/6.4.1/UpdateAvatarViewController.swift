@@ -94,14 +94,16 @@ class UpdateAvatarViewController: UIViewController {
     }
 
     @objc func zoomImageView(sender: UIPinchGestureRecognizer){
-        if sender.state == .changed{
+        if sender.state == .changed || sender.state == .ended{
             let scale = sender.scale
             print(scale)
-            avatar.frame = CGRect(
-                x: 0,
-                y: 0,
-                width: avatar.frame.width * scale,
-                height: avatar.frame.height * scale)
+            avatar.transform = avatar.transform.scaledBy(x: scale, y: scale)
+            sender.scale = 1.0
+//            avatar.frame = CGRect(
+//                x: 0,
+//                y: 0,
+//                width: avatar.frame.width * scale,
+//                height: avatar.frame.height * scale)
         }
     }
     

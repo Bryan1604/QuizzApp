@@ -44,7 +44,7 @@
                                 <rect key="frame" x="0.0" y="100.33333333333331" width="393" height="717.66666666666674"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m83-7n-hrh" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="704.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="752.33333333333337"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kds-BR-nDJ">
                                                 <rect key="frame" x="16" y="32.000000000000014" width="361" height="56"/>
@@ -107,19 +107,27 @@
                                                 <state key="normal" title="Trung bình"/>
                                             </button>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Sc2-dI-e9o">
-                                                <rect key="frame" x="0.0" y="204.33333333333337" width="393" height="500"/>
+                                                <rect key="frame" x="0.0" y="252.33333333333337" width="393" height="500"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="500" id="2xF-Ee-Qst"/>
                                                 </constraints>
                                             </tableView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tA-fr-bgX">
+                                                <rect key="frame" x="48" y="204.33333333333337" width="297" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="24"/>
+                                                <color key="textColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="Sc2-dI-e9o" firstAttribute="top" secondItem="3tA-fr-bgX" secondAttribute="bottom" constant="48" id="81Y-07-uiV"/>
+                                            <constraint firstItem="3tA-fr-bgX" firstAttribute="top" secondItem="dEr-hI-y3H" secondAttribute="bottom" constant="48" id="9JF-yu-aBZ"/>
                                             <constraint firstAttribute="trailing" secondItem="Sc2-dI-e9o" secondAttribute="trailing" id="AAN-iO-C4t"/>
                                             <constraint firstAttribute="bottom" secondItem="Sc2-dI-e9o" secondAttribute="bottom" id="BIa-ap-Q3v"/>
-                                            <constraint firstItem="Sc2-dI-e9o" firstAttribute="top" secondItem="dEr-hI-y3H" secondAttribute="bottom" constant="48" id="Cmp-sa-ADl"/>
                                             <constraint firstAttribute="trailing" secondItem="kds-BR-nDJ" secondAttribute="trailing" constant="16" id="Csn-tK-Tb9"/>
+                                            <constraint firstAttribute="trailing" secondItem="3tA-fr-bgX" secondAttribute="trailing" constant="48" id="DHA-G5-1cK"/>
                                             <constraint firstItem="Sc2-dI-e9o" firstAttribute="leading" secondItem="m83-7n-hrh" secondAttribute="leading" id="EWO-9U-PCL"/>
                                             <constraint firstItem="kds-BR-nDJ" firstAttribute="leading" secondItem="m83-7n-hrh" secondAttribute="leading" constant="16" id="EsI-st-KU3"/>
                                             <constraint firstItem="dEr-hI-y3H" firstAttribute="top" secondItem="kds-BR-nDJ" secondAttribute="bottom" constant="32" id="Se5-n6-BSo"/>
@@ -127,6 +135,7 @@
                                             <constraint firstAttribute="trailing" secondItem="0B5-vk-0hy" secondAttribute="trailing" constant="24" id="kVs-2d-bwI"/>
                                             <constraint firstItem="kds-BR-nDJ" firstAttribute="top" secondItem="m83-7n-hrh" secondAttribute="top" constant="32" id="pjE-82-r1L"/>
                                             <constraint firstItem="dEr-hI-y3H" firstAttribute="leading" secondItem="m83-7n-hrh" secondAttribute="leading" constant="16" id="sWw-Zi-oOD"/>
+                                            <constraint firstItem="3tA-fr-bgX" firstAttribute="leading" secondItem="m83-7n-hrh" secondAttribute="leading" constant="48" id="x9p-zh-cCe"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -181,6 +190,9 @@
                                 <rect key="frame" x="329" y="68.666666666666671" width="48" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Save"/>
+                                <connections>
+                                    <action selector="createExam" destination="pNY-vd-LG2" eventType="touchUpInside" id="NbB-QJ-nbd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vgH-gY-20y"/>
@@ -210,7 +222,7 @@
                         <outlet property="backToPreviousQuestionBtn" destination="MrT-tm-omG" id="jfT-Ws-RRx"/>
                         <outlet property="collectionView" destination="kds-BR-nDJ" id="fZ5-w2-bAD"/>
                         <outlet property="goToNextQuestionBtn" destination="AGD-tc-uTE" id="mi1-xA-B7b"/>
-                        <outlet property="saveBtn" destination="wa0-tr-fgX" id="gw3-TU-vW1"/>
+                        <outlet property="questionTitle" destination="3tA-fr-bgX" id="oxH-EU-Png"/>
                         <outlet property="tableView" destination="Sc2-dI-e9o" id="zxk-K4-Zqh"/>
                         <outlet property="timeLabel" destination="DwH-KH-267" id="t0n-bC-efX"/>
                         <outlet property="timeView" destination="dEr-hI-y3H" id="lNG-Cb-92y"/>
