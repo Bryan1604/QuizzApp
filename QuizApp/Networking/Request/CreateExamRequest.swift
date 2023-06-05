@@ -33,7 +33,7 @@ enum CreateExamRequest{
                 let type: Int
                 let sort: Int
                 let image_url: String?
-                let image: String
+                let image: String?
             }
         }
         

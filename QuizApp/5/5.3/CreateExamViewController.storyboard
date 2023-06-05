@@ -96,7 +96,7 @@
                                                     <constraint firstItem="Cyt-Ql-9xz" firstAttribute="top" secondItem="EhY-If-wzi" secondAttribute="top" constant="8" id="tKS-ZR-2oN"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlB-mY-73E">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlB-mY-73E">
                                                 <rect key="frame" x="267" y="121.33333333333331" width="102" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="YGW-Fb-K2k"/>
@@ -104,7 +104,12 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="SVN-GilroyMedium" family="SVN-Gilroy" pointSize="12"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Trung bình"/>
+                                                <state key="normal" title="Trung bình" image="Vector (1)">
+                                                    <color key="titleColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="setQuestionLevel" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wcC-Ks-h7V"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chọn ảnh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zun-TJ-NaT">
                                                 <rect key="frame" x="24" y="180.33333333333337" width="72" height="17"/>
@@ -254,6 +259,7 @@
                         <outlet property="collectionView" destination="EFr-Ra-9wV" id="QBb-Qi-8Py"/>
                         <outlet property="doneBtn" destination="MqM-Om-W5f" id="OQq-Qe-Dg0"/>
                         <outlet property="imageView" destination="gnb-xh-FQa" id="eMF-lR-JgY"/>
+                        <outlet property="questionLevel" destination="NlB-mY-73E" id="INp-06-SPJ"/>
                         <outlet property="questionTitle" destination="Zp7-CH-svK" id="uOx-mE-eWW"/>
                         <outlet property="questionView" destination="3bs-HX-Qz6" id="FD5-C8-IWe"/>
                         <outlet property="tableView" destination="zfF-nL-Mee" id="hAY-Bi-4fv"/>
@@ -271,6 +277,7 @@
         <image name="Button (1)" width="56" height="56"/>
         <image name="Button (2)" width="56" height="56"/>
         <image name="Icon-1" width="24" height="24"/>
+        <image name="Vector (1)" width="10" height="6"/>
         <image name="clock" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

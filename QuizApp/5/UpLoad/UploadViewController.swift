@@ -100,7 +100,7 @@ class UploadViewController: UIViewController, UIPopoverPresentationControllerDel
     @IBAction func createExam(){
         let vc = UIStoryboard(name: "CreateExamViewController", bundle: nil).instantiateViewController(withIdentifier: "CreateExamViewController") as! CreateExamViewController
         let numberOfQuestion = Int(numberOfQuestion.text ?? "")
-        vc.question_id = 1
+        vc.question_sort = 1
         vc.numberOfQUestion = numberOfQuestion
         vc.time = Int(time.text ?? "0")
         if mode.text == "Công khai"{
@@ -110,7 +110,7 @@ class UploadViewController: UIViewController, UIPopoverPresentationControllerDel
         }
         vc.titleExam = titleExam.text
         vc.subject_id = subjects[subject.text ?? ""] as? Int
-        vc.listQuestion = [QuestionModel](repeating: QuestionModel(), count: numberOfQuestion ?? 0)
+        vc.listQuestion = [QuestionModel](repeating: QuestionModel( answer_list: []), count: numberOfQuestion ?? 0)
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -150,13 +150,14 @@ extension UploadViewController {
             // do action
         }
         let menu = UIMenu( children : [
-            UIAction(title: "Quản lí", state: .off, handler: optionClosure),
-            UIAction(title: "Lịch sử", state: .off, handler: optionClosure),
-            UIAction(title: "Xóa bỏ", state: .off, handler: optionClosure)
+            UIAction(title: "Quản lí",  state: .off, handler: optionClosure),
+            UIAction(title: "Lịch sử", state: .off, handler: optionClosure ),
+            UIAction(title: "Xóa bỏ", state: .off, handler: optionClosure )
         ])
         actionMenuBtn.menu = menu
         actionMenuBtn.showsMenuAsPrimaryAction = true
         actionMenuBtn.changesSelectionAsPrimaryAction = false
+        
     }
     
     @IBAction func setMode(){

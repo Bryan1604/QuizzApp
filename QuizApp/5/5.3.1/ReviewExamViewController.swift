@@ -12,16 +12,18 @@ class ReviewExamViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var saveBtn: UIButton!
+    //@IBOutlet weak var saveBtn: UIButton!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var updateBtn: UIButton!
     @IBOutlet weak var goToNextQuestionBtn: UIButton!
     @IBOutlet weak var backToPreviousQuestionBtn: UIButton!
     @IBOutlet weak var timeView: UIView!
-    
-    var question_id: Int!
+    @IBOutlet weak var questionTitle: UILabel!
+    var question_sort: Int!
     var numberOfQuestion: Int!
-    var listAnswer: [QuestionModel.Answer] = []
+    var listQuestion: [QuestionModel?] = []
+    var examInfo : InformationModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
@@ -29,8 +31,11 @@ class ReviewExamViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+        
         registerCell()
         fixLayout()
+        
+        questionTitle.text = listQuestion[question_sort - 1]?.question_title
     }
 
     func registerCell(){
@@ -50,19 +55,26 @@ class ReviewExamViewController: UIViewController {
     }
     
     @IBAction func tapToNextQuestion(_ sender: UIButton){
-        if question_id < numberOfQuestion{
-            question_id += 1
+        if question_sort < numberOfQuestion{
+            question_sort += 1
+            questionTitle.text = listQuestion[question_sort - 1]?.question_title
             collectionView.reloadData()
             tableView.reloadData()
         }
     }
     
     @IBAction func tapToPreviousQuestion(_ sender: UIButton){
-        if question_id > 1{
-            question_id -= 1
+        if question_sort > 1{
+            question_sort -= 1
+            questionTitle.text = listQuestion[question_sort - 1]?.question_title
             collectionView.reloadData()
             tableView.reloadData()
         }
+    }
+    
+    @IBAction func save(){
+        
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }
 
@@ -71,14 +83,14 @@ extension ReviewExamViewController: UICollectionViewDelegate, UICollectionViewDa
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return numberOfQuestion
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         cell.number.text = "\(indexPath.row + 1)"
         cell.id = indexPath.row + 1
-        if cell.id == self.question_id{
+        if cell.id == self.question_sort{
             cell.choosen = true
         }else{
             cell.choosen = false
@@ -87,7 +99,8 @@ extension ReviewExamViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        question_id = indexPath.row + 1
+        question_sort = indexPath.row + 1
+        questionTitle.text = listQuestion[question_sort - 1]?.question_title
         collectionView.reloadData()
         tableView.reloadData()
     }
@@ -100,7 +113,32 @@ extension ReviewExamViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AnswerViewCell" ) as! AnswerViewCell
-        cell.content.text = listAnswer[indexPath.row].content
+        cell.content.text = listQuestion[question_sort - 1]?.answer_list[indexPath.row]?.content
         return cell
+    }
+}
+
+extension ReviewExamViewController{
+    @IBAction func createExam() throws{
+        let questionExams = try listQuestion.compactMap { questionModel -> CreateExamRequest.Post.QuestionExam? in
+               guard let questionModel = questionModel else {
+                   return nil
+               }
+            return try CreateExamRequest.Post.QuestionExam(from: questionModel as! Decoder)
+        }
+            let request = CreateExamRequest.Post(question_exam_list: questionExams  , user_id: (examInfo?.subject_id)!, subject_id: (examInfo?.subject_id)!, title: (examInfo?.title)!, time: (examInfo?.time)!, number: (examInfo?.number)!, status: examInfo?.status).route
+            APIManager.session.request(request).responseJSON{ json in
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .useDefaultKeys
+                if let data = json.data, let createExamResponse = try? decoder.decode(CreateExamResponse.self, from: data) {
+                    print(json)
+                }
+            }
+            self.navigationController?.popToRootViewController(animated: true)
+//        }catch {
+//            print("Error creating exam: \(error)")
+//            // Handle the error case here
+//            throw error // rethrow the error to propagate it up the call stack if needed
+//        }
     }
 }
