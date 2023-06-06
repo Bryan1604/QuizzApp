@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class UploadSheetViewController: UIViewController {
 
@@ -13,7 +14,7 @@ class UploadSheetViewController: UIViewController {
     @IBOutlet weak var checkBtn: UIButton!
     
     @IBOutlet weak var view1: UIView!
-    
+    @IBOutlet weak var inputLink: UITextField!
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet var popupView: UIView!
     @IBOutlet weak var backBtn2: UIButton!
@@ -41,9 +42,51 @@ class UploadSheetViewController: UIViewController {
     }
     
     @IBAction func checkAction(_ sender: Any) {
-        animateIn(designedView: blurView)
-        animateIn(designedView: popupView)
+        var headers: HTTPHeaders{
+            var headers = HTTPHeaders()
+            headers["Authorization"] = UserDefaults.standard.string(forKey: "AccessToken")
+            return headers
+        }
+        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+        AF.upload(multipartFormData: { multipartFormData in
+            if let userData = String(user_id).data(using: .utf8){
+                multipartFormData.append(userData, withName: "user_id")
+            }
+            if let google_sheet_url = (self.inputLink.text)?.data(using: .utf8) {
+                multipartFormData.append(google_sheet_url, withName: "google_sheet_url")
+            }
+        },to: "https://asia-northeast1-quiz-app-traning.cloudfunctions.net/postGoogleSheet",
+                  method: .post,
+                  headers: headers
+        ).responseJSON { json in
+            print(json)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .useDefaultKeys
+            if let data = json.data, let postGoogleSheetResponse = try? decoder.decode(PostGoogleSheetResponse.self, from: data) {
+                if postGoogleSheetResponse.statusCode == 200{
+                    self.animateIn(designedView: self.blurView)
+                    self.animateIn(designedView: self.popupView)
+                }
+            }
+        }
     }
+        
+        
+//        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+//        let google_sheet_url = inputLink.text
+//        let request = PostGoogleSheetRequest.Post(user_id: user_id, google_sheet_url: google_sheet_url ?? "").route
+//        APIManager.session.request(request).responseJSON{ json in
+//            print(json)
+//            let decoder = JSONDecoder()
+//            decoder.keyDecodingStrategy = .useDefaultKeys
+//            if let data = json.data, let postGoogleSheetResponse = try? decoder.decode(PostGoogleSheetResponse.self, from: data) {
+//                if postGoogleSheetResponse.statusCode == 200{
+//                    self.animateIn(designedView: self.blurView)
+//                    self.animateIn(designedView: self.popupView)
+//                }
+//            }
+//        }
+//    }
     
     @IBAction func backAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
@@ -74,14 +117,20 @@ class UploadSheetViewController: UIViewController {
             desiredView.removeFromSuperview()
         })
     }
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+extension UploadSheetViewController{
+//    @IBAction func uploadGoogleSheet(){
+//        let user_id = UserDefaults.standard.integer(forKey: "UserId")
+//        let google_sheet_url = inputLink.text
+//        let request = ListDepartmentInfoRequest.Post(user_id: user_id).route
+//        APIManager.session.request(request).responseJSON{ json in
+//            print(json)
+//            let decoder = JSONDecoder()
+//            decoder.keyDecodingStrategy = .useDefaultKeys
+//            if let data = json.data, let listDepartmentInfoResponse = try? decoder.decode(ListDepartmentInfoResponse.self, from: data) {
+//
+//            }
+//        }
+//    }
 }

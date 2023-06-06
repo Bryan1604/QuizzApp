@@ -111,6 +111,7 @@
                         <outlet property="backBtn2" destination="kSo-4y-r9I" id="7HY-fZ-eZr"/>
                         <outlet property="blurView" destination="CA5-V0-46O" id="xiy-wc-hQa"/>
                         <outlet property="checkBtn" destination="FVF-rb-giB" id="qtU-8S-KkD"/>
+                        <outlet property="inputLink" destination="nhR-Ys-mzb" id="6xT-ck-o2f"/>
                         <outlet property="popupView" destination="Zqu-Lb-1o5" id="rQR-oa-TQI"/>
                         <outlet property="view1" destination="K0H-Qw-bOc" id="GdP-mw-rux"/>
                     </connections>

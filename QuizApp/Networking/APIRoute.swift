@@ -35,6 +35,7 @@ enum APIRoute: URLRequestConvertible{
     case getUploadExam__post(param: GetUploadExamRequest.Post)
     case postSaveExam__post(param: PostSaveExamRequest.Post)
     case savedExam__post(param: SavedExamRequest.Post)
+    case postGoogleSheet__post(param: PostGoogleSheetRequest.Post)
     var baseURLString: String{
         return "https://asia-northeast1-quiz-app-traning.cloudfunctions.net"
     }
@@ -94,7 +95,10 @@ enum APIRoute: URLRequestConvertible{
             return .post
         case .savedExam__post:
             return .post
+        case .postGoogleSheet__post:
+            return .post
         }
+    
     }
     
     var path: String{
@@ -151,6 +155,8 @@ enum APIRoute: URLRequestConvertible{
             return APIPath.postSaveExam.rawValue
         case .savedExam__post:
             return APIPath.savedExam.rawValue
+        case .postGoogleSheet__post:
+            return APIPath.postGoogleSheet.rawValue
         }
         
     }
@@ -208,6 +214,8 @@ enum APIRoute: URLRequestConvertible{
         case .postSaveExam__post(let param):
             return param.dictionary
         case .savedExam__post(let param):
+            return param.dictionary
+        case .postGoogleSheet__post(let param):
             return param.dictionary
         }
     }
@@ -271,6 +279,8 @@ enum APIRoute: URLRequestConvertible{
                 case .postUploadFile__post:
                     return try JSONEncoding.default.encode(request, with: parameters)
                 case .checkResetKey__post:
+                    return try JSONEncoding.default.encode(request, with: parameters)
+                case .postGoogleSheet__post:
                     return try JSONEncoding.default.encode(request, with: parameters)
                 default:
                     return try JSONEncoding.default.encode(request, with: parameters)

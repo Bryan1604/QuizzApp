@@ -21,7 +21,7 @@ class ReviewExamViewController: UIViewController {
     @IBOutlet weak var questionTitle: UILabel!
     var question_sort: Int!
     var numberOfQuestion: Int!
-    var listQuestion: [QuestionModel?] = []
+    var listQuestion: [CreateExamRequest.Post.QuestionExam] = []
     var examInfo : InformationModel?
     
     override func viewDidLoad() {
@@ -35,7 +35,7 @@ class ReviewExamViewController: UIViewController {
         registerCell()
         fixLayout()
         
-        questionTitle.text = listQuestion[question_sort - 1]?.question_title
+        questionTitle.text = listQuestion[question_sort - 1].question_title
     }
 
     func registerCell(){
@@ -57,7 +57,7 @@ class ReviewExamViewController: UIViewController {
     @IBAction func tapToNextQuestion(_ sender: UIButton){
         if question_sort < numberOfQuestion{
             question_sort += 1
-            questionTitle.text = listQuestion[question_sort - 1]?.question_title
+            questionTitle.text = listQuestion[question_sort - 1].question_title
             collectionView.reloadData()
             tableView.reloadData()
         }
@@ -66,7 +66,7 @@ class ReviewExamViewController: UIViewController {
     @IBAction func tapToPreviousQuestion(_ sender: UIButton){
         if question_sort > 1{
             question_sort -= 1
-            questionTitle.text = listQuestion[question_sort - 1]?.question_title
+            questionTitle.text = listQuestion[question_sort - 1].question_title
             collectionView.reloadData()
             tableView.reloadData()
         }
@@ -100,7 +100,7 @@ extension ReviewExamViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         question_sort = indexPath.row + 1
-        questionTitle.text = listQuestion[question_sort - 1]?.question_title
+        questionTitle.text = listQuestion[question_sort - 1].question_title
         collectionView.reloadData()
         tableView.reloadData()
     }
@@ -113,28 +113,26 @@ extension ReviewExamViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AnswerViewCell" ) as! AnswerViewCell
-        cell.content.text = listQuestion[question_sort - 1]?.answer_list[indexPath.row]?.content
+        cell.content.text = listQuestion[question_sort - 1].answer_list[indexPath.row]?.content
         return cell
     }
 }
 
 extension ReviewExamViewController{
-    @IBAction func createExam() throws{
-        let questionExams = try listQuestion.compactMap { questionModel -> CreateExamRequest.Post.QuestionExam? in
-               guard let questionModel = questionModel else {
-                   return nil
-               }
-            return try CreateExamRequest.Post.QuestionExam(from: questionModel as! Decoder)
-        }
-            let request = CreateExamRequest.Post(question_exam_list: questionExams  , user_id: (examInfo?.subject_id)!, subject_id: (examInfo?.subject_id)!, title: (examInfo?.title)!, time: (examInfo?.time)!, number: (examInfo?.number)!, status: examInfo?.status).route
+    @IBAction func createExam(){
+        let request = CreateExamRequest.Post(question_exam_list: listQuestion , user_id: UserDefaults.standard.integer(forKey: "UserId"), subject_id: (examInfo?.subject_id)!, title: (examInfo?.title)!, time: (examInfo?.time)!, number: (examInfo?.number)!, status: examInfo?.status).route
+        print(request)
             APIManager.session.request(request).responseJSON{ json in
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .useDefaultKeys
                 if let data = json.data, let createExamResponse = try? decoder.decode(CreateExamResponse.self, from: data) {
                     print(json)
+                    if createExamResponse.statusCode == 200{
+                        self.navigationController?.popToRootViewController(animated: true)
+                    }
                 }
             }
-            self.navigationController?.popToRootViewController(animated: true)
+            
 //        }catch {
 //            print("Error creating exam: \(error)")
 //            // Handle the error case here

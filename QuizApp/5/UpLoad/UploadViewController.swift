@@ -110,7 +110,22 @@ class UploadViewController: UIViewController, UIPopoverPresentationControllerDel
         }
         vc.titleExam = titleExam.text
         vc.subject_id = subjects[subject.text ?? ""] as? Int
-        vc.listQuestion = [QuestionModel](repeating: QuestionModel( answer_list: []), count: numberOfQuestion ?? 0)
+        //vc.listQuestion = Array(repeating: CreateExamRequest.Post.QuestionExam(from: <#Decoder#>), count: 10)
+        
+        vc.listQuestion = []
+
+        for _ in 0..<(numberOfQuestion ?? 0) {
+            let question = CreateExamRequest.Post.QuestionExam(
+                question_title: "",
+                question_image: nil,
+                question_level: 0,
+                question_sort: 0,
+                answer_list: [],
+                question_image_url: nil
+            )
+            vc.listQuestion.append(question)
+        }
+        
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -268,3 +283,5 @@ extension UploadViewController{
         }
     }
 }
+
+

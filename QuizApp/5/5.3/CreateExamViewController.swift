@@ -28,8 +28,11 @@ class CreateExamViewController: UIViewController {
     var titleExam: String!
     var status: Int!
     //var listQuestion = [QuestionModel](repeating: QuestionModel(), count: 10)
-    var listQuestion : [QuestionModel] = []
-    var listAnswer = [QuestionModel.Answer](repeating: QuestionModel.Answer(), count: 4)
+    var listQuestion : [CreateExamRequest.Post.QuestionExam] = []
+    var listAnswer = (0..<4).map { _ in CreateExamRequest.Post.QuestionExam.AnswerList(content: "", type: 0, sort: 0, image_url: nil, image: nil) }
+
+    //var listQuestion : [QuestionModel] = []
+    //var listAnswer = [QuestionModel.Answer](repeating: QuestionModel.Answer(), count: 4)
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
@@ -132,7 +135,7 @@ class CreateExamViewController: UIViewController {
     func addQuestion(){
         listQuestion[question_sort-1].question_sort = self.question_sort
         listQuestion[question_sort-1].answer_list = self.listAnswer
-        listQuestion[question_sort-1].question_title = self.questionTitle.text
+        listQuestion[question_sort-1].question_title = self.questionTitle.text ?? ""
         listQuestion[question_sort-1].question_sort = self.question_sort
     }
     

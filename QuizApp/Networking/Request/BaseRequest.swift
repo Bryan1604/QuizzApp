@@ -38,4 +38,5 @@ enum APIPath: String{
     case getUploadExam = "/getUploadExam"
     case postSaveExam = "/postSaveExam"
     case savedExam = "/savedExam"
+    case postGoogleSheet = "/postGoogleSheet"
 }
