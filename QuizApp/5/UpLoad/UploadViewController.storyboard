@@ -84,6 +84,9 @@
                                                 <state key="normal" title="Excel" image="Excel">
                                                     <color key="titleColor" red="0.52156862745098043" green="0.51764705882352935" blue="0.58039215686274503" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="showFilePicker" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wb1-8p-6rQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8M-2E-hdt">
                                                 <rect key="frame" x="252.5" y="362" width="137.5" height="56"/>

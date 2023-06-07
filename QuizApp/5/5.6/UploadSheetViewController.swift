@@ -48,11 +48,12 @@ class UploadSheetViewController: UIViewController {
             return headers
         }
         let user_id = UserDefaults.standard.integer(forKey: "UserId")
+        let google_sheet_url = self.inputLink.text
         AF.upload(multipartFormData: { multipartFormData in
             if let userData = String(user_id).data(using: .utf8){
                 multipartFormData.append(userData, withName: "user_id")
             }
-            if let google_sheet_url = (self.inputLink.text)?.data(using: .utf8) {
+            if let google_sheet_url = google_sheet_url?.data(using: .utf8) {
                 multipartFormData.append(google_sheet_url, withName: "google_sheet_url")
             }
         },to: "https://asia-northeast1-quiz-app-traning.cloudfunctions.net/postGoogleSheet",

@@ -10,6 +10,7 @@ import UIKit
 import VerticalSlidingPresentationController
 import KUIPopOver
 import Alamofire
+import UniformTypeIdentifiers
 class UploadViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
@@ -63,6 +64,9 @@ class UploadViewController: UIViewController, UIPopoverPresentationControllerDel
         layoutButton(sheetUploadBtn)
         layoutButton(excelUploadBtn)
         layoutButton(shareBtn)
+        
+        numberOfQuestion.keyboardType = .asciiCapableNumberPad
+        time.keyboardType = .asciiCapableNumberPad
 
         handMadeUploadBtn.layer.cornerRadius = 20
         createbtn.layer.cornerRadius = 20
@@ -117,11 +121,11 @@ class UploadViewController: UIViewController, UIPopoverPresentationControllerDel
         for _ in 0..<(numberOfQuestion ?? 0) {
             let question = CreateExamRequest.Post.QuestionExam(
                 question_title: "",
-                question_image: nil,
+                question_image: "",
                 question_level: 0,
                 question_sort: 0,
                 answer_list: [],
-                question_image_url: nil
+                question_image_url: ""
             )
             vc.listQuestion.append(question)
         }
@@ -284,4 +288,23 @@ extension UploadViewController{
     }
 }
 
+extension UploadViewController {
+    @IBAction func showFilePicker(){
+        let supportfile: [UTType] = [UTType.data]
+        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: supportfile, asCopy: true)
+        
+        documentPicker.delegate = self
+        documentPicker.modalPresentationStyle = .overFullScreen
+        
+        self.present(documentPicker, animated: true,completion: nil)
+    }
+}
 
+extension UploadViewController:UIDocumentPickerDelegate{
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        //
+    }
+    func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+        self.dismiss(animated: true)
+    }
+}

@@ -29,7 +29,7 @@ class CreateExamViewController: UIViewController {
     var status: Int!
     //var listQuestion = [QuestionModel](repeating: QuestionModel(), count: 10)
     var listQuestion : [CreateExamRequest.Post.QuestionExam] = []
-    var listAnswer = (0..<4).map { _ in CreateExamRequest.Post.QuestionExam.AnswerList(content: "", type: 0, sort: 0, image_url: nil, image: nil) }
+    var listAnswer = (0..<4).map { _ in CreateExamRequest.Post.QuestionExam.AnswerList(content: "", type: 0, sort: 0, image_url: "", image: "") }
 
     //var listQuestion : [QuestionModel] = []
     //var listAnswer = [QuestionModel.Answer](repeating: QuestionModel.Answer(), count: 4)
